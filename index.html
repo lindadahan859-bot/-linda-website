@@ -4,147 +4,263 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>לינדה דהן</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      background: #f6f4f1;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero {
+      background: #fff;
+      text-align: center;
+      padding: 64px 20px 48px;
+    }
+
+    .hero img.profile {
+      width: 180px;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .hero h1 {
+      margin: 20px 0 10px;
+      font-size: 48px;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    h2 {
+      font-size: 38px;
+      margin: 0 0 18px;
+    }
+
+    h3 {
+      font-size: 28px;
+      margin: 0 0 14px;
+    }
+
+    .intro {
+      font-size: 20px;
+      max-width: 900px;
+      margin-bottom: 40px;
+    }
+
+    .project {
+      background: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      margin-bottom: 36px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .project p {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 22px;
+      max-width: 900px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      background: #eee;
+    }
+
+    .gallery.four {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .video-box {
+      margin-top: 24px;
+      background: #f8f8f8;
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .video-box a {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 20px;
+      background: #222;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      font-size: 16px;
+    }
+
+    .process-wrap,
+    .testimonials {
+      background: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .process-wrap img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 16px;
+      display: block;
+      margin-top: 20px;
+    }
+
+    .quote {
+      background: #f8f8f8;
+      border-radius: 18px;
+      padding: 22px;
+      font-size: 21px;
+      margin-top: 18px;
+    }
+
+    @media (max-width: 900px) {
+      .gallery,
+      .gallery.four {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
 </head>
+<body>
 
-<body style="margin:0;font-family:Arial,sans-serif;direction:rtl;background:#f7f7f5;color:#222;">
-
-<!-- HERO -->
-<section style="padding:60px 20px;text-align:center;background:#ffffff;">
-  <img src="linda-dahan-interior-designer.jpg" style="width:180px;border-radius:18px;">
-  <h1 style="margin:20px 0 10px;font-size:42px;">לינדה דהן</h1>
-  <p style="font-size:22px;">עיצוב פנים | אדריכלות | אומנות ייחודית</p>
-</section>
-
-<!-- אומנות ייחודית -->
-<section style="padding:60px 20px;max-width:1100px;margin:auto;">
-  <h2 style="font-size:34px;margin-bottom:25px;">אומנות ייחודית</h2>
-
-  <p style="font-size:20px;line-height:1.8;max-width:850px;">
-    יצירות שנולדות מתוך החלל עצמו. לא כתוספת, אלא כחלק מהתכנון, מהאור ומהחוויה הכוללת של הבית.
-  </p>
-
-  <!-- עבודה 1 -->
-  <div style="margin-top:60px;">
-    <h3 style="font-size:28px;">I Dare To Be Different</h3>
-    <p style="font-size:18px;line-height:1.8;">
-      שילוב בין חומר, עומק ותאורה שיוצרים נוכחות אמיתית בתוך החלל.
-    </p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px;">
-      <img src="unique-art-01-cover.jpg" style="width:100%;border-radius:14px;">
-      <img src="unique-art-01-in-space.jpg" style="width:100%;border-radius:14px;">
-      <img src="unique-art-01-detail.jpg" style="width:100%;border-radius:14px;">
-    </div>
-
-    <h4 style="margin-top:20px;">רגע מתוך התהליך</h4>
-    <iframe 
-      src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/3399741156857266"
-      width="100%" height="500"
-      style="border:none;overflow:hidden;border-radius:14px;"
-      scrolling="no" frameborder="0" allowfullscreen="true">
-    </iframe>
-  </div>
-
-  <!-- עבודה 2 -->
-  <div style="margin-top:60px;">
-    <h3 style="font-size:28px;">Shaping Spaces</h3>
-    <p style="font-size:18px;">
-      רכות, איזון וחיבור טבעי לחלל הקיים.
-    </p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px;">
-      <img src="unique-art-02-cover.jpg">
-      <img src="unique-art-02-in-space.jpg">
-      <img src="unique-art-02-detail.jpg">
+  <div class="hero">
+    <div class="container">
+      <img class="profile" src="linda-dahan-interior-designer.jpg" alt="לינדה דהן">
+      <h1>לינדה דהן</h1>
+      <p>עיצוב פנים | אדריכלות | אומנות ייחודית</p>
     </div>
   </div>
 
-  <!-- עבודה 3 -->
-  <div style="margin-top:60px;">
-    <h3 style="font-size:28px;">What You See Is Just The Beginning</h3>
-    <p style="font-size:18px;">
-      יצירה עם אמירה חזקה שמגדירה את החלל.
-    </p>
+  <section>
+    <div class="container">
+      <h2>אומנות ייחודית</h2>
+      <p class="intro">
+        יצירות שנולדות מתוך החלל עצמו, מתוך הרגש, ומתוך מחשבה מדויקת על פרופורציות, חומרים, תאורה ונוכחות.
+      </p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px;">
-      <img src="unique-art-03-cover.jpg">
-      <img src="unique-art-03-in-space.jpg">
-      <img src="unique-art-03-detail.jpg">
-      <img src="unique-art-03-with-designer.jpg">
+      <div class="project">
+        <h3>I Dare To Be Different</h3>
+        <p>שילוב בין אור, חומר ונוכחות. היצירה מתחברת לחלל ולא נשארת רק על הקיר.</p>
+        <div class="gallery">
+          <img src="unique-art-01-cover.jpg" alt="">
+          <img src="unique-art-01-in-space.jpg" alt="">
+          <img src="unique-art-01-detail.jpg" alt="">
+        </div>
+        <div class="video-box">
+          <div>רגע מתוך התהליך</div>
+          <a href="https://www.facebook.com/reel/3399741156857266" target="_blank">לצפייה ברילס בפייסבוק</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Shaping Spaces</h3>
+        <p>רכות, איזון וחיבור טבעי לחלל הקיים.</p>
+        <div class="gallery">
+          <img src="unique-art-02-cover.jpg" alt="">
+          <img src="unique-art-02-in-space.jpg" alt="">
+          <img src="unique-art-02-detail.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>What You See Is Just The Beginning</h3>
+        <p>יצירה עם נוכחות חזקה, צבעוניות עוצמתית ושפה גרפית חדה שמגדירה את החלל.</p>
+        <div class="gallery four">
+          <img src="unique-art-03-cover.jpg" alt="">
+          <img src="unique-art-03-in-space.jpg" alt="">
+          <img src="unique-art-03-detail.jpg" alt="">
+          <img src="unique-art-03-with-designer.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Tulips</h3>
+        <p>עבודה עדינה שמכניסה צבע, רכות וחיים לחלל השינה.</p>
+        <div class="gallery four">
+          <img src="unique-art-04-cover.jpg" alt="">
+          <img src="unique-art-04-in-space.jpg" alt="">
+          <img src="unique-art-04-detail.jpg" alt="">
+          <img src="unique-art-04-alt.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Light Connection</h3>
+        <p>כאן היצירה והתאורה ממשיכות זו את זו והופכות את אזור המדרגות לחוויה אחת.</p>
+        <div class="gallery four">
+          <img src="unique-art-05-cover.jpg" alt="">
+          <img src="unique-art-05-in-space.jpg" alt="">
+          <img src="unique-art-05-detail.jpg" alt="">
+          <img src="unique-art-05-with-designer.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>כניסה עם נוכחות</h3>
+        <p>יצירה שמקבלת את מי שנכנס לבית כבר ברגע הראשון, עם אלמנטים תלת מימדיים ותאורה מדויקת.</p>
+        <div class="gallery four">
+          <img src="unique-art-06-cover.jpg" alt="">
+          <img src="unique-art-06-entry.jpg" alt="">
+          <img src="unique-art-06-detail.jpg" alt="">
+          <img src="unique-art-06-in-space.jpg" alt="">
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- עבודה 4 -->
-  <div style="margin-top:60px;">
-    <h3 style="font-size:28px;">Tulips</h3>
-    <p style="font-size:18px;">
-      הכנסת חיים, צבע ורוך לחלל השינה.
-    </p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px;">
-      <img src="unique-art-04-cover.jpg">
-      <img src="unique-art-04-in-space.jpg">
-      <img src="unique-art-04-detail.jpg">
-      <img src="unique-art-04-alt.jpg">
+  <section>
+    <div class="container">
+      <div class="process-wrap">
+        <h2>תהליך היצירה</h2>
+        <p>כל יצירה מתחילה ברעיון, סקיצה ותחושה, וממשיכה דרך תכנון מדויק והתאמה מלאה לחלל שבו היא תחיה.</p>
+        <img src="creation-process.jpg" alt="">
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- עבודה 5 -->
-  <div style="margin-top:60px;">
-    <h3 style="font-size:28px;">Light Connection</h3>
-    <p style="font-size:18px;">
-      חיבור בין יצירה, תאורה ותנועה במרחב.
-    </p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px;">
-      <img src="unique-art-05-cover.jpg">
-      <img src="unique-art-05-in-space.jpg">
-      <img src="unique-art-05-detail.jpg">
-      <img src="unique-art-05-with-designer.jpg">
+  <section>
+    <div class="container">
+      <div class="testimonials">
+        <h2>מה הלקוחות מרגישים</h2>
+        <div class="quote">"כל יום שעובר אני מעריכה אותך יותר. בחלומות הכי טובים לא חלמתי שאפגוש אחת ויחידה כמוך."</div>
+        <div class="quote">"יש לך ראייה אחרת. את רואה דברים שאף אחד לא רואה."</div>
+      </div>
     </div>
-  </div>
-
-  <!-- עבודה 6 -->
-  <div style="margin-top:60px;">
-    <h3 style="font-size:28px;">כניסה עם נוכחות</h3>
-    <p style="font-size:18px;">
-      חוויית כניסה שמתחילה כבר בדלת.
-    </p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px;">
-      <img src="unique-art-06-cover.jpg">
-      <img src="unique-art-06-entry.jpg">
-      <img src="unique-art-06-detail.jpg">
-      <img src="unique-art-06-in-space.jpg">
-    </div>
-  </div>
-
-</section>
-
-<!-- תהליך -->
-<section style="padding:60px 20px;background:#ffffff;">
-  <div style="max-width:1100px;margin:auto;">
-    <h2 style="font-size:34px;">תהליך היצירה</h2>
-    <p style="font-size:20px;line-height:1.8;">
-      כל יצירה מתחילה ברעיון וממשיכה דרך תכנון מדויק עד התאמה מושלמת לחלל.
-    </p>
-    <img src="creation-process.jpg" style="width:100%;max-width:700px;border-radius:14px;margin-top:25px;">
-  </div>
-</section>
-
-<!-- תשבחות -->
-<section style="padding:60px 20px;max-width:900px;margin:auto;">
-  <h2 style="font-size:34px;">מה הלקוחות מרגישים</h2>
-
-  <blockquote style="font-size:22px;background:#ffffff;padding:30px;border-radius:16px;margin-top:20px;">
-    "כל יום שעובר אני מעריכה אותך יותר. בחלומות הכי טובים לא חלמתי שאפגוש אחת ויחידה כמוך."
-  </blockquote>
-
-  <blockquote style="font-size:22px;background:#ffffff;padding:30px;border-radius:16px;margin-top:20px;">
-    "יש לך ראייה אחרת. את רואה דברים שאף אחד לא רואה."
-  </blockquote>
-
-</section>
+  </section>
 
 </body>
 </html>
