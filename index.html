@@ -1,147 +1,459 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>לינדה דהן</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>לינדה דהן</title>
 
-<style>
-body{margin:0;font-family:Arial;direction:rtl;background:#f7f7f5;color:#222}
-header{position:sticky;top:0;background:#fff;padding:15px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
-nav a{margin:0 15px;text-decoration:none;color:#000;font-weight:bold;cursor:pointer}
-section{padding:60px 20px;max-width:1100px;margin:auto}
-h2{font-size:32px;margin-bottom:20px}
+  <style>
+    body{
+      margin:0;
+      font-family:Arial,sans-serif;
+      direction:rtl;
+      background:#f7f7f5;
+      color:#222;
+      line-height:1.7;
+    }
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{cursor:pointer}
-.card img{width:100%;border-radius:14px}
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:#fff;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      padding:16px 0;
+    }
 
-.gallery{display:none;margin-top:20px}
-.gallery img{width:100%;margin-bottom:10px;border-radius:10px}
+    nav{
+      max-width:1200px;
+      margin:auto;
+      padding:0 20px;
+      display:flex;
+      justify-content:center;
+      gap:28px;
+      flex-wrap:wrap;
+    }
 
-.open{display:block}
+    nav a{
+      text-decoration:none;
+      color:#111;
+      font-size:18px;
+      font-weight:700;
+      cursor:pointer;
+    }
 
-.contact-box{background:#fff;padding:30px;border-radius:16px}
-input,textarea{width:100%;padding:10px;margin-top:10px;border-radius:8px;border:1px solid #ccc}
-button{margin-top:15px;padding:12px;border:none;background:black;color:white;border-radius:8px;cursor:pointer}
-</style>
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:0 20px;
+    }
 
+    .hero{
+      text-align:center;
+      background:#fff;
+      padding:60px 20px 50px;
+    }
+
+    .hero img{
+      width:180px;
+      max-width:70%;
+      border-radius:20px;
+    }
+
+    .hero h1{
+      margin:20px 0 10px;
+      font-size:46px;
+    }
+
+    .hero p{
+      margin:0;
+      font-size:22px;
+    }
+
+    section{
+      padding:60px 0;
+    }
+
+    h2{
+      font-size:38px;
+      margin:0 0 18px;
+    }
+
+    .intro{
+      font-size:20px;
+      max-width:900px;
+      margin-bottom:34px;
+    }
+
+    .art-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:28px;
+    }
+
+    .project{
+      background:#fff;
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .slider{
+      position:relative;
+      background:#eee;
+    }
+
+    .slider img{
+      width:100%;
+      display:block;
+      aspect-ratio:4/3;
+      object-fit:cover;
+    }
+
+    .arrow{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.75);
+      color:#fff;
+      border:none;
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      cursor:pointer;
+      font-size:22px;
+      line-height:44px;
+      text-align:center;
+    }
+
+    .arrow.right{
+      right:12px;
+    }
+
+    .arrow.left{
+      left:12px;
+    }
+
+    .project-text{
+      padding:18px 18px 22px;
+    }
+
+    .project-text h3{
+      margin:0 0 10px;
+      font-size:25px;
+    }
+
+    .project-text p{
+      margin:0;
+      font-size:17px;
+    }
+
+    .project-text .video-link{
+      display:inline-block;
+      margin-top:14px;
+      padding:11px 18px;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      border-radius:999px;
+      font-size:15px;
+    }
+
+    .box{
+      background:#fff;
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .process-img{
+      width:100%;
+      max-width:700px;
+      display:block;
+      margin-top:20px;
+      border-radius:16px;
+    }
+
+    .quote{
+      background:#f8f8f8;
+      border-radius:18px;
+      padding:22px;
+      font-size:21px;
+      margin-top:16px;
+    }
+
+    .contact-box{
+      background:#fff;
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .contact-info{
+      font-size:20px;
+      margin-bottom:20px;
+    }
+
+    .contact-info a{
+      color:#111;
+      text-decoration:none;
+    }
+
+    form{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    input, textarea{
+      width:100%;
+      box-sizing:border-box;
+      padding:14px;
+      border:1px solid #d4d4d4;
+      border-radius:12px;
+      font-size:16px;
+      font-family:Arial,sans-serif;
+    }
+
+    textarea{
+      min-height:140px;
+      resize:vertical;
+    }
+
+    button{
+      padding:14px 18px;
+      border:none;
+      background:#111;
+      color:#fff;
+      border-radius:12px;
+      cursor:pointer;
+      font-size:16px;
+      font-weight:700;
+    }
+
+    .small-note{
+      font-size:14px;
+      color:#666;
+      margin-top:10px;
+    }
+
+    @media (max-width: 700px){
+      .hero h1{
+        font-size:36px;
+      }
+
+      .hero p{
+        font-size:19px;
+      }
+
+      h2{
+        font-size:31px;
+      }
+
+      .art-grid{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <a onclick="scrollToSection('art')">אומנות</a>
-    <a onclick="scrollToSection('contact')">צור קשר</a>
-  </nav>
-</header>
+  <header>
+    <nav>
+      <a href="#home">בית</a>
+      <a href="#art">אומנות ייחודית</a>
+      <a href="#projects">פרויקטים</a>
+      <a href="#permits">היתרי בניה</a>
+      <a href="#testimonials">תשבחות</a>
+      <a href="#contact">צור קשר</a>
+    </nav>
+  </header>
 
-<section style="text-align:center">
-  <img src="linda-dahan-interior-designer.jpg" style="width:160px;border-radius:20px">
-  <h1>לינדה דהן</h1>
-  <p>עיצוב פנים | אדריכלות | אומנות ייחודית</p>
-</section>
+  <section id="home" class="hero">
+    <img src="linda-dahan-interior-designer.jpg" alt="לינדה דהן">
+    <h1>לינדה דהן</h1>
+    <p>עיצוב פנים | אדריכלות | אומנות ייחודית</p>
+  </section>
 
-<section id="art">
-<h2>אומנות ייחודית</h2>
+  <section id="art">
+    <div class="container">
+      <h2>אומנות ייחודית</h2>
+      <p class="intro">
+        שש יצירות שנולדו מתוך חללים אמיתיים, מתוך מחשבה מדויקת על חומרים, אור, פרופורציות ונוכחות.
+      </p>
 
-<div class="grid">
+      <div class="art-grid">
 
-<div class="card" onclick="toggleGallery('g1')">
-<img src="unique-art-01-cover.jpg">
-</div>
+        <div class="project">
+          <div class="slider">
+            <img id="img1" src="unique-art-01-cover.jpg" alt="">
+            <button class="arrow right" onclick="prev(1)">❮</button>
+            <button class="arrow left" onclick="next(1)">❯</button>
+          </div>
+          <div class="project-text">
+            <h3>I Dare To Be Different</h3>
+            <p>שילוב בין אור, חומר ונוכחות, כשהיצירה ממשיכה את עצמה אל תוך החלל ויוצרת חוויה שלמה.</p>
+            <a class="video-link" href="https://www.facebook.com/reel/3399741156857266" target="_blank">צפייה בסרטון</a>
+          </div>
+        </div>
 
-<div class="card" onclick="toggleGallery('g2')">
-<img src="unique-art-02-cover.jpg">
-</div>
+        <div class="project">
+          <div class="slider">
+            <img id="img2" src="unique-art-02-cover.jpg" alt="">
+            <button class="arrow right" onclick="prev(2)">❮</button>
+            <button class="arrow left" onclick="next(2)">❯</button>
+          </div>
+          <div class="project-text">
+            <h3>Shaping Spaces</h3>
+            <p>קומפוזיציה שקטה, רכה ומדויקת שמתחברת לחומרים, למסגרת ולתחושת הבית.</p>
+          </div>
+        </div>
 
-<div class="card" onclick="toggleGallery('g3')">
-<img src="unique-art-03-cover.jpg">
-</div>
+        <div class="project">
+          <div class="slider">
+            <img id="img3" src="unique-art-03-cover.jpg" alt="">
+            <button class="arrow right" onclick="prev(3)">❮</button>
+            <button class="arrow left" onclick="next(3)">❯</button>
+          </div>
+          <div class="project-text">
+            <h3>What You See Is Just The Beginning</h3>
+            <p>יצירה עם אמירה חזקה, צבעוניות עוצמתית ונוכחות שמגדירה את החלל כולו.</p>
+          </div>
+        </div>
 
-<div class="card" onclick="toggleGallery('g4')">
-<img src="unique-art-04-cover.jpg">
-</div>
+        <div class="project">
+          <div class="slider">
+            <img id="img4" src="unique-art-04-cover.jpg" alt="">
+            <button class="arrow right" onclick="prev(4)">❮</button>
+            <button class="arrow left" onclick="next(4)">❯</button>
+          </div>
+          <div class="project-text">
+            <h3>Tulips</h3>
+            <p>עבודה עדינה שמכניסה רכות, צבע וחיים לחלל השינה, עם חיבור טבעי בין יצירה לתאורה.</p>
+          </div>
+        </div>
 
-<div class="card" onclick="toggleGallery('g5')">
-<img src="unique-art-05-cover.jpg">
-</div>
+        <div class="project">
+          <div class="slider">
+            <img id="img5" src="unique-art-05-cover.jpg" alt="">
+            <button class="arrow right" onclick="prev(5)">❮</button>
+            <button class="arrow left" onclick="next(5)">❯</button>
+          </div>
+          <div class="project-text">
+            <h3>Light Connection</h3>
+            <p>חיבור בין יצירה, תאורה ותנועה במרחב, כך שהקיר והמדרגות הופכים לחוויה אחת.</p>
+          </div>
+        </div>
 
-<div class="card" onclick="toggleGallery('g6')">
-<img src="unique-art-06-cover.jpg">
-</div>
+        <div class="project">
+          <div class="slider">
+            <img id="img6" src="unique-art-06-cover.jpg" alt="">
+            <button class="arrow right" onclick="prev(6)">❮</button>
+            <button class="arrow left" onclick="next(6)">❯</button>
+          </div>
+          <div class="project-text">
+            <h3>כניסה עם נוכחות</h3>
+            <p>יצירה שמקבלת את מי שנכנס לבית כבר ברגע הראשון ונותנת אופי ברור לכניסה.</p>
+          </div>
+        </div>
 
-</div>
+      </div>
+    </div>
+  </section>
 
-<!-- גלריות -->
+  <section id="projects">
+    <div class="container">
+      <div class="box">
+        <h2>פרויקטים</h2>
+        <p>כאן ייכנסו בהמשך פרויקטים של עיצוב פנים, לפני ואחרי, חללים מתוכננים, תאורה, נגרות וחוויית מגורים.</p>
+      </div>
+    </div>
+  </section>
 
-<div id="g1" class="gallery">
-<img src="unique-art-01-in-space.jpg">
-<img src="unique-art-01-detail.jpg">
-</div>
+  <section id="permits">
+    <div class="container">
+      <div class="box">
+        <h2>היתרי בניה</h2>
+        <p>כאן ייכנסו תכנים על בדיקות זכויות, ליווי תכנוני, הגשות, היתרים ותיאום מול גורמים מקצועיים.</p>
+      </div>
+    </div>
+  </section>
 
-<div id="g2" class="gallery">
-<img src="unique-art-02-in-space.jpg">
-<img src="unique-art-02-detail.jpg">
-</div>
+  <section>
+    <div class="container">
+      <div class="box">
+        <h2>תהליך היצירה</h2>
+        <p>כל יצירה מתחילה ברעיון, סקיצה ותחושה, וממשיכה דרך תכנון מדויק והתאמה מלאה לחלל שבו היא תחיה.</p>
+        <img class="process-img" src="creation-process.jpg" alt="">
+      </div>
+    </div>
+  </section>
 
-<div id="g3" class="gallery">
-<img src="unique-art-03-in-space.jpg">
-<img src="unique-art-03-detail.jpg">
-<img src="unique-art-03-with-designer.jpg">
-</div>
+  <section id="testimonials">
+    <div class="container">
+      <div class="box">
+        <h2>תשבחות</h2>
+        <div class="quote">"כל יום שעובר אני מעריכה אותך יותר. בחלומות הכי טובים לא חלמתי שאפגוש אחת ויחידה כמוך."</div>
+        <div class="quote">"יש לך ראייה אחרת. את רואה דברים שאף אחד לא רואה."</div>
+      </div>
+    </div>
+  </section>
 
-<div id="g4" class="gallery">
-<img src="unique-art-04-in-space.jpg">
-<img src="unique-art-04-detail.jpg">
-</div>
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>צור קשר</h2>
+        <div class="contact-info">
+          <div>📞 <a href="tel:0507555667">050-7555667</a></div>
+          <div>📧 <a href="mailto:lindadahan859@gmail.com">lindadahan859@gmail.com</a></div>
+        </div>
 
-<div id="g5" class="gallery">
-<img src="unique-art-05-in-space.jpg">
-<img src="unique-art-05-detail.jpg">
-<img src="unique-art-05-with-designer.jpg">
-</div>
+        <form action="mailto:lindadahan859@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="שם מלא">
+          <input type="email" name="email" placeholder="אימייל">
+          <textarea name="message" placeholder="איך אפשר לעזור?"></textarea>
+          <button type="submit">שליחה</button>
+        </form>
 
-<div id="g6" class="gallery">
-<img src="unique-art-06-entry.jpg">
-<img src="unique-art-06-detail.jpg">
-<img src="unique-art-06-in-space.jpg">
-</div>
+        <div class="small-note">בלחיצה על שליחה תיפתח הודעת מייל מהמכשיר שלך.</div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <script>
+    const galleries = {
+      1: ["unique-art-01-cover.jpg", "unique-art-01-in-space.jpg", "unique-art-01-detail.jpg"],
+      2: ["unique-art-02-cover.jpg", "unique-art-02-in-space.jpg", "unique-art-02-detail.jpg"],
+      3: ["unique-art-03-cover.jpg", "unique-art-03-in-space.jpg", "unique-art-03-detail.jpg", "unique-art-03-with-designer.jpg"],
+      4: ["unique-art-04-cover.jpg", "unique-art-04-in-space.jpg", "unique-art-04-detail.jpg", "unique-art-04-alt.jpg"],
+      5: ["unique-art-05-cover.jpg", "unique-art-05-in-space.jpg", "unique-art-05-detail.jpg", "unique-art-05-with-designer.jpg"],
+      6: ["unique-art-06-cover.jpg", "unique-art-06-entry.jpg", "unique-art-06-detail.jpg", "unique-art-06-in-space.jpg"]
+    };
 
-<section id="contact">
-<h2>צור קשר</h2>
+    const currentIndex = {
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+      6: 0
+    };
 
-<div class="contact-box">
+    function showImage(id){
+      document.getElementById("img" + id).src = galleries[id][currentIndex[id]];
+    }
 
-<p>📞 050-7555667</p>
-<p>📧 lindadahan859@gmail.com</p>
+    function next(id){
+      currentIndex[id] = (currentIndex[id] + 1) % galleries[id].length;
+      showImage(id);
+    }
 
-<form>
-<input type="text" placeholder="שם">
-<input type="email" placeholder="אימייל">
-<textarea placeholder="הודעה"></textarea>
-<button>שליחה</button>
-</form>
-
-</div>
-
-</section>
-
-<script>
-
-function toggleGallery(id){
-  const el = document.getElementById(id)
-  el.classList.toggle("open")
-}
-
-function scrollToSection(id){
-  document.getElementById(id).scrollIntoView({behavior:'smooth'})
-}
-
-</script>
+    function prev(id){
+      currentIndex[id] = (currentIndex[id] - 1 + galleries[id].length) % galleries[id].length;
+      showImage(id);
+    }
+  </script>
 
 </body>
 </html>
