@@ -1,266 +1,225 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>לינדה דהן</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      direction: rtl;
-      background: #f6f4f1;
-      color: #222;
-      line-height: 1.7;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>לינדה דהן</title>
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+<style>
+body{
+margin:0;
+font-family:Arial;
+direction:rtl;
+background:#f6f4f1;
+color:#222;
+}
 
-    .hero {
-      background: #fff;
-      text-align: center;
-      padding: 64px 20px 48px;
-    }
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
 
-    .hero img.profile {
-      width: 180px;
-      height: auto;
-      border-radius: 20px;
-    }
+nav{
+background:#fff;
+padding:16px;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
 
-    .hero h1 {
-      margin: 20px 0 10px;
-      font-size: 48px;
-    }
+nav ul{
+display:flex;
+justify-content:center;
+gap:30px;
+list-style:none;
+padding:0;
+margin:0;
+}
 
-    .hero p {
-      margin: 0;
-      font-size: 22px;
-    }
+nav a{
+text-decoration:none;
+color:#222;
+font-size:18px;
+}
 
-    section {
-      padding: 64px 0;
-    }
+.hero{
+text-align:center;
+padding:60px 20px;
+background:#fff;
+}
 
-    h2 {
-      font-size: 38px;
-      margin: 0 0 18px;
-    }
+.hero img{
+width:180px;
+border-radius:20px;
+}
 
-    h3 {
-      font-size: 28px;
-      margin: 0 0 14px;
-    }
+.hero h1{
+font-size:42px;
+margin:20px 0 10px;
+}
 
-    .intro {
-      font-size: 20px;
-      max-width: 900px;
-      margin-bottom: 40px;
-    }
+.section{
+padding:60px 0;
+}
 
-    .project {
-      background: #fff;
-      border-radius: 24px;
-      padding: 28px;
-      margin-bottom: 36px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
 
-    .project p {
-      font-size: 18px;
-      margin-top: 0;
-      margin-bottom: 22px;
-      max-width: 900px;
-    }
+.card{
+background:#fff;
+border-radius:20px;
+overflow:hidden;
+cursor:pointer;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:0.3s;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
+.card:hover{
+transform:scale(1.03);
+}
 
-    .gallery img {
-      width: 100%;
-      display: block;
-      border-radius: 16px;
-      object-fit: cover;
-      aspect-ratio: 4 / 3;
-      background: #eee;
-    }
+.card img{
+width:100%;
+display:block;
+}
 
-    .gallery.four {
-      grid-template-columns: repeat(2, 1fr);
-    }
+.gallery{
+display:none;
+margin-top:20px;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
 
-    .video-box {
-      margin-top: 24px;
-      background: #f8f8f8;
-      border-radius: 18px;
-      padding: 20px;
-      text-align: center;
-    }
+.gallery img{
+width:100%;
+border-radius:12px;
+}
 
-    .video-box a {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 12px 20px;
-      background: #222;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 999px;
-      font-size: 16px;
-    }
+.open{
+display:grid;
+}
 
-    .process-wrap,
-    .testimonials {
-      background: #fff;
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    }
+.video-btn{
+margin-top:10px;
+display:inline-block;
+padding:10px 16px;
+background:#000;
+color:#fff;
+border-radius:20px;
+text-decoration:none;
+}
 
-    .process-wrap img {
-      width: 100%;
-      max-width: 700px;
-      border-radius: 16px;
-      display: block;
-      margin-top: 20px;
-    }
-
-    .quote {
-      background: #f8f8f8;
-      border-radius: 18px;
-      padding: 22px;
-      font-size: 21px;
-      margin-top: 18px;
-    }
-
-    @media (max-width: 900px) {
-      .gallery,
-      .gallery.four {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      h2 {
-        font-size: 32px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
 
-  <div class="hero">
-    <div class="container">
-      <img class="profile" src="linda-dahan-interior-designer.jpg" alt="לינדה דהן">
-      <h1>לינדה דהן</h1>
-      <p>עיצוב פנים | אדריכלות | אומנות ייחודית</p>
-    </div>
-  </div>
+<nav>
+<ul>
+<li><a href="#">בית</a></li>
+<li><a href="#art">אומנות ייחודית</a></li>
+<li><a href="#">פרויקטים</a></li>
+<li><a href="#">היתרי בניה</a></li>
+<li><a href="#">תשבוחות</a></li>
+<li><a href="#">צור קשר</a></li>
+</ul>
+</nav>
 
-  <section>
-    <div class="container">
-      <h2>אומנות ייחודית</h2>
-      <p class="intro">
-        יצירות שנולדות מתוך החלל עצמו, מתוך הרגש, ומתוך מחשבה מדויקת על פרופורציות, חומרים, תאורה ונוכחות.
-      </p>
+<div class="hero">
+<img src="linda-dahan-interior-designer.jpg">
+<h1>לינדה דהן</h1>
+<p>עיצוב פנים | אדריכלות | אומנות ייחודית</p>
+</div>
 
-      <div class="project">
-        <h3>I Dare To Be Different</h3>
-        <p>שילוב בין אור, חומר ונוכחות. היצירה מתחברת לחלל ולא נשארת רק על הקיר.</p>
-        <div class="gallery">
-          <img src="unique-art-01-cover.jpg" alt="">
-          <img src="unique-art-01-in-space.jpg" alt="">
-          <img src="unique-art-01-detail.jpg" alt="">
-        </div>
-        <div class="video-box">
-          <div>רגע מתוך התהליך</div>
-          <a href="https://www.facebook.com/reel/3399741156857266" target="_blank">לצפייה ברילס בפייסבוק</a>
-        </div>
-      </div>
+<div class="container">
 
-      <div class="project">
-        <h3>Shaping Spaces</h3>
-        <p>רכות, איזון וחיבור טבעי לחלל הקיים.</p>
-        <div class="gallery">
-          <img src="unique-art-02-cover.jpg" alt="">
-          <img src="unique-art-02-in-space.jpg" alt="">
-          <img src="unique-art-02-detail.jpg" alt="">
-        </div>
-      </div>
+<section id="art" class="section">
+<h2>אומנות ייחודית</h2>
 
-      <div class="project">
-        <h3>What You See Is Just The Beginning</h3>
-        <p>יצירה עם נוכחות חזקה, צבעוניות עוצמתית ושפה גרפית חדה שמגדירה את החלל.</p>
-        <div class="gallery four">
-          <img src="unique-art-03-cover.jpg" alt="">
-          <img src="unique-art-03-in-space.jpg" alt="">
-          <img src="unique-art-03-detail.jpg" alt="">
-          <img src="unique-art-03-with-designer.jpg" alt="">
-        </div>
-      </div>
+<div class="grid">
 
-      <div class="project">
-        <h3>Tulips</h3>
-        <p>עבודה עדינה שמכניסה צבע, רכות וחיים לחלל השינה.</p>
-        <div class="gallery four">
-          <img src="unique-art-04-cover.jpg" alt="">
-          <img src="unique-art-04-in-space.jpg" alt="">
-          <img src="unique-art-04-detail.jpg" alt="">
-          <img src="unique-art-04-alt.jpg" alt="">
-        </div>
-      </div>
+<!-- פרויקט 1 -->
+<div onclick="toggleGallery('g1')" class="card">
+<img src="unique-art-01-cover.jpg">
+</div>
 
-      <div class="project">
-        <h3>Light Connection</h3>
-        <p>כאן היצירה והתאורה ממשיכות זו את זו והופכות את אזור המדרגות לחוויה אחת.</p>
-        <div class="gallery four">
-          <img src="unique-art-05-cover.jpg" alt="">
-          <img src="unique-art-05-in-space.jpg" alt="">
-          <img src="unique-art-05-detail.jpg" alt="">
-          <img src="unique-art-05-with-designer.jpg" alt="">
-        </div>
-      </div>
+<div id="g1" class="gallery">
+<img src="unique-art-01-in-space.jpg">
+<img src="unique-art-01-detail.jpg">
+<a class="video-btn" href="https://www.facebook.com/reel/3399741156857266" target="_blank">צפייה בסרטון</a>
+</div>
 
-      <div class="project">
-        <h3>כניסה עם נוכחות</h3>
-        <p>יצירה שמקבלת את מי שנכנס לבית כבר ברגע הראשון, עם אלמנטים תלת מימדיים ותאורה מדויקת.</p>
-        <div class="gallery four">
-          <img src="unique-art-06-cover.jpg" alt="">
-          <img src="unique-art-06-entry.jpg" alt="">
-          <img src="unique-art-06-detail.jpg" alt="">
-          <img src="unique-art-06-in-space.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- פרויקט 2 -->
+<div onclick="toggleGallery('g2')" class="card">
+<img src="unique-art-02-cover.jpg">
+</div>
 
-  <section>
-    <div class="container">
-      <div class="process-wrap">
-        <h2>תהליך היצירה</h2>
-        <p>כל יצירה מתחילה ברעיון, סקיצה ותחושה, וממשיכה דרך תכנון מדויק והתאמה מלאה לחלל שבו היא תחיה.</p>
-        <img src="creation-process.jpg" alt="">
-      </div>
-    </div>
-  </section>
+<div id="g2" class="gallery">
+<img src="unique-art-02-in-space.jpg">
+<img src="unique-art-02-detail.jpg">
+</div>
 
-  <section>
-    <div class="container">
-      <div class="testimonials">
-        <h2>מה הלקוחות מרגישים</h2>
-        <div class="quote">"כל יום שעובר אני מעריכה אותך יותר. בחלומות הכי טובים לא חלמתי שאפגוש אחת ויחידה כמוך."</div>
-        <div class="quote">"יש לך ראייה אחרת. את רואה דברים שאף אחד לא רואה."</div>
-      </div>
-    </div>
-  </section>
+<!-- פרויקט 3 -->
+<div onclick="toggleGallery('g3')" class="card">
+<img src="unique-art-03-cover.jpg">
+</div>
+
+<div id="g3" class="gallery">
+<img src="unique-art-03-in-space.jpg">
+<img src="unique-art-03-detail.jpg">
+<img src="unique-art-03-with-designer.jpg">
+</div>
+
+<!-- פרויקט 4 -->
+<div onclick="toggleGallery('g4')" class="card">
+<img src="unique-art-04-cover.jpg">
+</div>
+
+<div id="g4" class="gallery">
+<img src="unique-art-04-in-space.jpg">
+<img src="unique-art-04-detail.jpg">
+<img src="unique-art-04-alt.jpg">
+</div>
+
+<!-- פרויקט 5 -->
+<div onclick="toggleGallery('g5')" class="card">
+<img src="unique-art-05-cover.jpg">
+</div>
+
+<div id="g5" class="gallery">
+<img src="unique-art-05-in-space.jpg">
+<img src="unique-art-05-detail.jpg">
+<img src="unique-art-05-with-designer.jpg">
+</div>
+
+<!-- פרויקט 6 -->
+<div onclick="toggleGallery('g6')" class="card">
+<img src="unique-art-06-cover.jpg">
+</div>
+
+<div id="g6" class="gallery">
+<img src="unique-art-06-entry.jpg">
+<img src="unique-art-06-detail.jpg">
+<img src="unique-art-06-in-space.jpg">
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script>
+function toggleGallery(id){
+const el = document.getElementById(id);
+el.classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
