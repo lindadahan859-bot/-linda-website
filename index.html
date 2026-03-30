@@ -471,74 +471,139 @@
   </section>
 
 <section id="contact" style="padding:60px 20px;">
-  <div style="max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+  <style>
+    .contact-grid{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:start;
+    }
 
-    <!-- צד ימין - טקסט -->
-    <div>
-      <h2 style="font-size:40px;margin-bottom:20px;">
-        החלל שלכם יכול להיות הרבה יותר
-      </h2>
+    .contact-text h2{
+      font-size:40px;
+      margin:0 0 20px;
+      line-height:1.2;
+    }
 
-      <p style="font-size:20px;line-height:1.8;">
-        אני מתכננת ומעצבת בתים, דירות, חנויות, משרדים ועסקים,
-        מתוך שילוב בין אדריכלות, עיצוב פנים, הבנה שיווקית ואומנות ייחודית.
-      </p>
+    .contact-text p{
+      font-size:20px;
+      line-height:1.8;
+      margin:0 0 18px;
+    }
 
-      <p style="font-size:20px;line-height:1.8;">
-        אני לא מתחילה מסגנון.<br>
-        אני מתחילה מהאנשים, מהמטרה ומהפוטנציאל.
-      </p>
+    .contact-form-box{
+      background:#ffffff;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
 
-      <p style="font-size:20px;line-height:1.8;">
-        איך אתם חיים.<br>
-        איך הלקוחות שלכם נכנסים.<br>
-        מה צריך לקרות בחלל.<br>
-        ואיך לגרום לכל זה לעבוד נכון - וגם להיראות מעולה.
-      </p>
+    .contact-form-box form{
+      display:grid;
+      gap:15px;
+    }
 
-      <p style="font-size:20px;line-height:1.8;">
-        אם אתם לפני שיפוץ, פתיחת עסק, תכנון חנות, שינוי דירה או בניית חלל חדש -
-        זה בדיוק השלב שבו צריך לחשוב נכון.
-      </p>
+    .contact-form-box input,
+    .contact-form-box textarea{
+      padding:14px;
+      border-radius:12px;
+      border:1px solid #ddd;
+      font-size:16px;
+      width:100%;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    .contact-form-box textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .contact-buttons{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .contact-buttons a,
+    .contact-buttons button{
+      flex:1;
+      text-align:center;
+      padding:14px;
+      border-radius:12px;
+      font-size:16px;
+      text-decoration:none;
+      cursor:pointer;
+      box-sizing:border-box;
+    }
+
+    .contact-buttons a{
+      border:1px solid #ccc;
+      color:#000;
+      background:#fff;
+    }
+
+    .contact-buttons button{
+      border:none;
+      background:#111;
+      color:#fff;
+    }
+
+    @media (max-width: 800px){
+      .contact-grid{
+        grid-template-columns:1fr;
+        gap:24px;
+      }
+
+      .contact-text{
+        order:1;
+      }
+
+      .contact-form-box{
+        order:2;
+        padding:22px;
+      }
+
+      .contact-text h2{
+        font-size:32px;
+      }
+
+      .contact-text p{
+        font-size:18px;
+        line-height:1.7;
+      }
+    }
+  </style>
+
+  <div class="contact-grid">
+
+    <div class="contact-text">
+      <h2>החלל שלכם יכול להיות הרבה יותר</h2>
+
+      <p>אני מתכננת ומעצבת בתים, דירות, חנויות, משרדים ועסקים, מתוך שילוב בין אדריכלות, עיצוב פנים, הבנה שיווקית ואומנות ייחודית.</p>
+
+      <p>אני לא מתחילה מסגנון. אני מתחילה מהאנשים, מהמטרה ומהפוטנציאל.</p>
+
+      <p>איך אתם חיים. איך הלקוחות שלכם נכנסים. מה צריך לקרות בחלל. ואיך לגרום לכל זה לעבוד נכון - וגם להיראות מעולה.</p>
+
+      <p>אם אתם לפני שיפוץ, פתיחת עסק, תכנון חנות, שינוי דירה או בניית חלל חדש - זה בדיוק השלב שבו צריך לחשוב נכון.</p>
     </div>
 
-    <!-- צד שמאל - טופס -->
-    <div style="background:#ffffff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.08);">
+    <div class="contact-form-box">
+      <form action="mailto:lindadahan859@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="שם מלא" required>
+        <input type="tel" name="phone" placeholder="מספר טלפון">
+        <input type="email" name="email" placeholder="אימייל">
+        <textarea name="message" placeholder="ספרו לי בקצרה על הפרויקט"></textarea>
 
-      <form action="mailto:lindadahan859@gmail.com" method="post" enctype="text/plain" style="display:grid;gap:15px;">
-
-        <input type="text" name="name" placeholder="שם מלא" required
-          style="padding:14px;border-radius:12px;border:1px solid #ddd;font-size:16px;">
-
-        <input type="tel" name="phone" placeholder="מספר טלפון"
-          style="padding:14px;border-radius:12px;border:1px solid #ddd;font-size:16px;">
-
-        <input type="email" name="email" placeholder="אימייל"
-          style="padding:14px;border-radius:12px;border:1px solid #ddd;font-size:16px;">
-
-        <textarea name="message" placeholder="ספרו לי בקצרה על הפרויקט"
-          style="padding:14px;border-radius:12px;border:1px solid #ddd;font-size:16px;min-height:120px;"></textarea>
-
-        <!-- כפתורים -->
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
-
-          <!-- וואטסאפ -->
-          <a href="https://wa.me/972507555667"
-             target="_blank"
-             style="flex:1;text-align:center;padding:14px;border-radius:12px;border:1px solid #ccc;text-decoration:none;color:#000;">
-            פנייה ב-WhatsApp
-          </a>
-
-          <!-- שליחה -->
-          <button type="submit"
-            style="flex:1;padding:14px;border:none;border-radius:12px;background:#111;color:#fff;font-size:16px;cursor:pointer;">
-            שליחה
-          </button>
-
+        <div class="contact-buttons">
+          <a href="https://wa.me/972507555667" target="_blank">פנייה ב-WhatsApp</a>
+          <button type="submit">שליחה</button>
         </div>
-
       </form>
-
     </div>
 
   </div>
