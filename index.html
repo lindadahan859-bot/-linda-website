@@ -326,7 +326,7 @@
 
   <header>
     <div class="nav-wrap">
-      <a class="brand" href="#home">לינדה דהן</a>
+      <a class="brand" href="#home">Linda Dahan</a>
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
       <nav id="mainMenu">
@@ -487,6 +487,13 @@
       line-height:1.2;
     }
 
+    .contact-quote{
+      font-size:22px;
+      color:#666;
+      margin:0 0 24px;
+      font-style:italic;
+    }
+
     .contact-text p{
       font-size:20px;
       line-height:1.8;
@@ -498,6 +505,17 @@
       padding:30px;
       border-radius:20px;
       box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .contact-info{
+      font-size:18px;
+      line-height:1.9;
+      margin-bottom:20px;
+    }
+
+    .contact-info a{
+      color:#111;
+      text-decoration:none;
     }
 
     .contact-form-box form{
@@ -552,28 +570,33 @@
       color:#fff;
     }
 
+    .small-note{
+      font-size:14px;
+      color:#666;
+      margin-top:10px;
+    }
+
     @media (max-width: 800px){
       .contact-grid{
         grid-template-columns:1fr;
         gap:24px;
       }
 
-      .contact-text{
-        order:1;
-      }
-
-      .contact-form-box{
-        order:2;
-        padding:22px;
-      }
-
       .contact-text h2{
         font-size:32px;
+      }
+
+      .contact-quote{
+        font-size:20px;
       }
 
       .contact-text p{
         font-size:18px;
         line-height:1.7;
+      }
+
+      .contact-form-box{
+        padding:22px;
       }
     }
   </style>
@@ -583,16 +606,27 @@
     <div class="contact-text">
       <h2>החלל שלכם יכול להיות הרבה יותר</h2>
 
-      <p>אני מתכננת ומעצבת בתים, דירות, חנויות, משרדים ועסקים, מתוך שילוב בין אדריכלות, עיצוב פנים, הבנה שיווקית ואומנות ייחודית.</p>
+      <p class="contact-quote">"סביבה נאה מרחיבה דעתו של אדם"</p>
+
+      <p>אני מתכננת ומעצבת בתים, דירות, חנויות, משרדים ועסקים, מתוך שילוב בין אדריכלות, עיצוב פנים, היתרי בניה, הבנה שיווקית ואומנות ייחודית.</p>
 
       <p>אני לא מתחילה מסגנון. אני מתחילה מהאנשים, מהמטרה ומהפוטנציאל.</p>
 
       <p>איך אתם חיים. איך הלקוחות שלכם נכנסים. מה צריך לקרות בחלל. ואיך לגרום לכל זה לעבוד נכון - וגם להיראות מעולה.</p>
 
-      <p>אם אתם לפני שיפוץ, פתיחת עסק, תכנון חנות, שינוי דירה או בניית חלל חדש - זה בדיוק השלב שבו צריך לחשוב נכון.</p>
+      <p>בנוסף, אני מלווה בעלי נחלות ומשקים בבדיקות תכנוניות, הבנת זכויות בניה ובחינת המצב הקיים מול הוועדות השונות - כדי לקבל תמונה ברורה לפני שמקבלים החלטות.</p>
+
+      <p>אם אתם לפני שיפוץ, פתיחת עסק, תכנון חנות, שינוי דירה, בניית בית חדש או בדיקת נחלה - זה בדיוק השלב שבו צריך לחשוב נכון.</p>
     </div>
 
     <div class="contact-form-box">
+      <div class="contact-info">
+        📞 <a href="tel:0507555667">050-7555667</a><br>
+        📧 <a href="mailto:lindadahan859@gmail.com">lindadahan859@gmail.com</a><br>
+        📍 אלי הורביץ 4, רחובות<br>
+        📅 פגישות בתיאום מראש
+      </div>
+
       <form action="mailto:lindadahan859@gmail.com" method="post" enctype="text/plain">
         <input type="text" name="name" placeholder="שם מלא" required>
         <input type="tel" name="phone" placeholder="מספר טלפון">
@@ -604,6 +638,8 @@
           <button type="submit">שליחה</button>
         </div>
       </form>
+
+      <div class="small-note">בלחיצה על שליחה תיפתח הודעת מייל מהמכשיר שלך.</div>
     </div>
 
   </div>
