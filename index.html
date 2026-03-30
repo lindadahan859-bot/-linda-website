@@ -470,26 +470,79 @@
     </div>
   </section>
 
-  <section id="contact">
-    <div class="container">
-      <div class="contact-box">
-        <h2>צור קשר</h2>
-        <div class="contact-info">
-          <div>📞 <a href="tel:0507555667">050-7555667</a></div>
-          <div>📧 <a href="mailto:lindadahan859@gmail.com">lindadahan859@gmail.com</a></div>
+<section id="contact" style="padding:60px 20px;">
+  <div style="max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+
+    <!-- צד ימין - טקסט -->
+    <div>
+      <h2 style="font-size:40px;margin-bottom:20px;">
+        החלל שלכם יכול להיות הרבה יותר
+      </h2>
+
+      <p style="font-size:20px;line-height:1.8;">
+        אני מתכננת ומעצבת בתים, דירות, חנויות, משרדים ועסקים,
+        מתוך שילוב בין אדריכלות, עיצוב פנים, הבנה שיווקית ואומנות ייחודית.
+      </p>
+
+      <p style="font-size:20px;line-height:1.8;">
+        אני לא מתחילה מסגנון.<br>
+        אני מתחילה מהאנשים, מהמטרה ומהפוטנציאל.
+      </p>
+
+      <p style="font-size:20px;line-height:1.8;">
+        איך אתם חיים.<br>
+        איך הלקוחות שלכם נכנסים.<br>
+        מה צריך לקרות בחלל.<br>
+        ואיך לגרום לכל זה לעבוד נכון - וגם להיראות מעולה.
+      </p>
+
+      <p style="font-size:20px;line-height:1.8;">
+        אם אתם לפני שיפוץ, פתיחת עסק, תכנון חנות, שינוי דירה או בניית חלל חדש -
+        זה בדיוק השלב שבו צריך לחשוב נכון.
+      </p>
+    </div>
+
+    <!-- צד שמאל - טופס -->
+    <div style="background:#ffffff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.08);">
+
+      <form action="mailto:lindadahan859@gmail.com" method="post" enctype="text/plain" style="display:grid;gap:15px;">
+
+        <input type="text" name="name" placeholder="שם מלא" required
+          style="padding:14px;border-radius:12px;border:1px solid #ddd;font-size:16px;">
+
+        <input type="tel" name="phone" placeholder="מספר טלפון"
+          style="padding:14px;border-radius:12px;border:1px solid #ddd;font-size:16px;">
+
+        <input type="email" name="email" placeholder="אימייל"
+          style="padding:14px;border-radius:12px;border:1px solid #ddd;font-size:16px;">
+
+        <textarea name="message" placeholder="ספרו לי בקצרה על הפרויקט"
+          style="padding:14px;border-radius:12px;border:1px solid #ddd;font-size:16px;min-height:120px;"></textarea>
+
+        <!-- כפתורים -->
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
+
+          <!-- וואטסאפ -->
+          <a href="https://wa.me/972507555667"
+             target="_blank"
+             style="flex:1;text-align:center;padding:14px;border-radius:12px;border:1px solid #ccc;text-decoration:none;color:#000;">
+            פנייה ב-WhatsApp
+          </a>
+
+          <!-- שליחה -->
+          <button type="submit"
+            style="flex:1;padding:14px;border:none;border-radius:12px;background:#111;color:#fff;font-size:16px;cursor:pointer;">
+            שליחה
+          </button>
+
         </div>
 
-        <form action="mailto:lindadahan859@gmail.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="שם מלא">
-          <input type="email" name="email" placeholder="אימייל">
-          <textarea name="message" placeholder="איך אפשר לעזור?"></textarea>
-          <button class="submit-btn" type="submit">שליחה</button>
-        </form>
+      </form>
 
-        <div class="small-note">בלחיצה על שליחה תיפתח הודעת מייל מהמכשיר שלך.</div>
-      </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <script>
     const galleries = {
