@@ -658,25 +658,25 @@
 </section>
 
   <script>
-    const galleries = {
-      1: ["unique-art-01-cover.jpg", "unique-art-01-in-space.jpg", "unique-art-01-detail.jpg"],
-      2: ["unique-art-02-cover.jpg", "unique-art-02-in-space.jpg", "unique-art-02-detail.jpg"],
-      3: ["unique-art-03-cover.jpg", "unique-art-03-in-space.jpg", "unique-art-03-detail.jpg", "unique-art-03-with-designer.jpg"],
-      4: ["unique-art-04-cover.jpg", "unique-art-04-in-space.jpg", "unique-art-04-detail.jpg", "unique-art-04-alt.jpg"],
-      5: ["unique-art-05-cover.jpg", "unique-art-05-in-space.jpg", "unique-art-05-detail.jpg", "unique-art-05-with-designer.jpg"],
-      6: ["unique-art-06-cover.jpg", "unique-art-06-entry.jpg", "unique-art-06-detail.jpg", "unique-art-06-in-space.jpg"]
-      7: ["unique-art-07-cover.jpg", "unique-art-07-detail.jpg", "unique-art-07-in-space.jpg"]
-    };
+const galleries = {
+  1: ["unique-art-01-cover.jpg", "unique-art-01-in-space.jpg", "unique-art-01-detail.jpg"],
+  2: ["unique-art-02-cover.jpg", "unique-art-02-in-space.jpg", "unique-art-02-detail.jpg"],
+  3: ["unique-art-03-cover.jpg", "unique-art-03-in-space.jpg", "unique-art-03-detail.jpg", "unique-art-03-with-designer.jpg"],
+  4: ["unique-art-04-cover.jpg", "unique-art-04-in-space.jpg", "unique-art-04-detail.jpg", "unique-art-04-alt.jpg"],
+  5: ["unique-art-05-cover.jpg", "unique-art-05-in-space.jpg", "unique-art-05-detail.jpg", "unique-art-05-with-designer.jpg"],
+  6: ["unique-art-06-cover.jpg", "unique-art-06-entry.jpg", "unique-art-06-detail.jpg", "unique-art-06-in-space.jpg"],
+  7: ["unique-art-07-cover.jpg", "unique-art-07-detail.jpg", "unique-art-07-in-space.jpg"]
+};
 
-    const currentIndex = {
-      1: 0,
-      2: 0,
-      3: 0,
-      4: 0,
-      5: 0,
-      6: 0
-      7: 0
-    };
+const currentIndex = {
+  1: 0,
+  2: 0,
+  3: 0,
+  4: 0,
+  5: 0,
+  6: 0,
+  7: 0
+};
 
     function showImage(id){
       document.getElementById("img" + id).src = galleries[id][currentIndex[id]];
