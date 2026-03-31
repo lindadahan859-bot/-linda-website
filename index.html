@@ -71,11 +71,11 @@
       padding:0 20px;
     }
 
-    /* HERO */
     .hero{
       position:relative;
-      height:68vh; /* קצת יותר אלגנטי */
+      height:68vh;
       overflow:hidden;
+      background:#000;
     }
 
     .video-container{
@@ -84,19 +84,22 @@
       left:0;
       width:100%;
       height:100%;
+      overflow:hidden;
     }
 
-    /* אם זה וידאו רגיל */
     .video-container video{
       width:100%;
       height:100%;
       object-fit:cover;
     }
 
-    /* אם זה iframe */
     .video-container iframe{
-      width:100%;
-      height:100%;
+      position:absolute;
+      top:50%;
+      left:50%;
+      width:177.77vh;
+      height:100vh;
+      transform:translate(-50%, -50%);
       pointer-events:none;
     }
 
@@ -106,7 +109,7 @@
       left:0;
       width:100%;
       height:100%;
-      background:rgba(0,0,0,0.35); /* קצת יותר עדין */
+      background:rgba(0,0,0,0.35);
       z-index:1;
     }
 
@@ -123,7 +126,7 @@
 
     .hero-content h1{
       margin:0 0 14px;
-      font-size:60px; /* קצת פחות כבד */
+      font-size:60px;
       line-height:1.1;
     }
 
@@ -212,49 +215,49 @@
       right:12px;
     }
 
-  .arrow.left{
-    left:12px;
-  }
+    .arrow.left{
+      left:12px;
+    }
 
-  .project-text{
-    padding:18px 18px 22px;
-  }
+    .project-text{
+      padding:18px 18px 22px;
+    }
 
-  .project-text h3{
-    margin:0 0 10px;
-    font-size:25px;
-  }
+    .project-text h3{
+      margin:0 0 10px;
+      font-size:25px;
+    }
 
-  .project-text p{
-    margin:0;
-    font-size:17px;
-  }
+    .project-text p{
+      margin:0;
+      font-size:17px;
+    }
 
-  .project-text .video-link{
-    display:inline-block;
-    margin-top:14px;
-    padding:11px 18px;
-    background:#111;
-    color:#fff;
-    text-decoration:none;
-    border-radius:999px;
-    font-size:15px;
-  }
+    .project-text .video-link{
+      display:inline-block;
+      margin-top:14px;
+      padding:11px 18px;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      border-radius:999px;
+      font-size:15px;
+    }
 
-  .box{
-    background:#fff;
-    border-radius:22px;
-    padding:28px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.08);
-  }
+    .box{
+      background:#fff;
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
 
-  .process-img{
-    width:100%;
-    max-width:700px;
-    display:block;
-    margin-top:20px;
-    border-radius:16px;
-  }
+    .process-img{
+      width:100%;
+      max-width:700px;
+      display:block;
+      margin-top:20px;
+      border-radius:16px;
+    }
 
   .quote{
     background:#f8f8f8;
