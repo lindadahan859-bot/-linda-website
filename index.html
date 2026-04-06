@@ -84,10 +84,7 @@
 
     .video-container{
       position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
+      inset:0;
       overflow:hidden;
     }
 
@@ -103,10 +100,7 @@
 
     .overlay{
       position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
+      inset:0;
       background:rgba(0,0,0,0.35);
       z-index:1;
     }
@@ -151,7 +145,7 @@
     }
 
     section{
-      padding:40px 0;
+      padding:44px 0;
     }
 
     h2{
@@ -159,16 +153,24 @@
       margin:0 0 18px;
     }
 
+    #art .container{
+      text-align:center;
+    }
+
     .intro{
-      font-size:20px;
-      max-width:900px;
-      margin:0 0 18px;
+      font-size:18px;
+      line-height:1.95;
+      max-width:760px;
+      margin:0 auto 18px;
+      text-align:center;
     }
 
     .art-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
       gap:28px;
+      margin-top:28px;
+      text-align:right;
     }
 
     .project{
@@ -223,12 +225,14 @@
 
     .project-text h3{
       margin:0 0 10px;
-      font-size:25px;
+      font-size:24px;
+      line-height:1.3;
     }
 
     .project-text p{
       margin:0;
       font-size:17px;
+      line-height:1.75;
     }
 
     .project-text .video-link{
@@ -289,7 +293,7 @@
 
     .contact-text p{
       font-size:20px;
-      line-height:1.8;
+      line-height:1.85;
       margin:0 0 18px;
     }
 
@@ -363,10 +367,24 @@
       color:#fff;
     }
 
+    .contact-buttons button:disabled{
+      opacity:0.7;
+      cursor:not-allowed;
+    }
+
     .small-note{
       font-size:14px;
       color:#666;
-      margin-top:10px;
+      margin-top:12px;
+      line-height:1.7;
+    }
+
+    .success-message{
+      color:#1d6b3a;
+    }
+
+    .error-message{
+      color:#a33434;
     }
 
     .back-to-top{
@@ -451,10 +469,12 @@
       }
 
       section{
-        padding:28px 0;
+        padding:30px 0;
       }
 
       .intro{
+        font-size:17px;
+        line-height:1.85;
         margin-bottom:14px;
       }
 
@@ -473,7 +493,7 @@
 
       .contact-text p{
         font-size:18px;
-        line-height:1.7;
+        line-height:1.75;
       }
 
       .contact-form-box{
@@ -521,33 +541,38 @@
     </div>
   </header>
 
-<section class="hero" id="home">
-  <div class="video-container">
-    <iframe
-      src="https://www.youtube.com/embed/5Q35cvCw_x4?autoplay=1&mute=1&loop=1&playlist=5Q35cvCw_x4&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1"
-      frameborder="0"
-      allow="autoplay"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <section class="hero" id="home">
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/5Q35cvCw_x4?autoplay=1&mute=1&loop=1&playlist=5Q35cvCw_x4&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1"
+        frameborder="0"
+        allow="autoplay"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-  <div class="overlay"></div>
+    <div class="overlay"></div>
 
-  <div class="hero-content">
-    <h1>Linda Dahan</h1>
-    <p>Architecture & Interior Design</p>
-    <a href="#contact" class="hero-btn">ליצירת קשר</a>
-  </div>
-</section>
+    <div class="hero-content">
+      <h1>Linda Dahan</h1>
+      <p>Architecture & Interior Design</p>
+      <a href="#contact" class="hero-btn">ליצירת קשר</a>
+    </div>
+  </section>
 
   <section id="art">
     <div class="container">
       <h2>יצירה שנולדת לבית אחד בלבד</h2>
-      <p class="intro">יצירות שנולדות מתוך חללים אמיתיים, מתוך מחשבה מדויקת על חומרים, אור, פרופורציות ונוכחות. כל יצירה מתוכננת כחלק בלתי נפרד מהחלל, כך שהיא ממשיכה את עצמה אל תוך הבית ויוצרת חוויה שלמה.</p>
-      <p class="intro">העבודה מותאמת בדיוק לחלל שבו היא נמצאת - לפי המידות, התאורה והחומרים שמרכיבים את הבית: עץ, זכוכית, קנבס, PVC ועוד. היא לא מגיעה מבחוץ, אלא נבנית מתוך המקום עצמו. לכן אין עוד אחת כזאת, ואין דרך לשכפל אותה. מי שנכנס הביתה מבין מיד - זה משהו שלא ראה קודם.</p>
+
+      <p class="intro">
+        יצירות שנולדות מתוך חללים אמיתיים, מתוך מחשבה מדויקת על חומרים, אור, פרופורציות ונוכחות. כל יצירה מתוכננת כחלק בלתי נפרד מהחלל, כך שהיא ממשיכה את עצמה אל תוך הבית ויוצרת חוויה שלמה.
+      </p>
+
+      <p class="intro">
+        העבודה מותאמת בדיוק לחלל שבו היא נמצאת - לפי המידות, התאורה והחומרים שמרכיבים את הבית: עץ, זכוכית, קנבס, PVC ועוד. היא לא מגיעה מבחוץ, אלא נבנית מתוך המקום עצמו. לכן אין עוד אחת כזאת, ואין דרך לשכפל אותה. מי שנכנס הביתה מבין מיד - זה משהו שלא ראה קודם.
+      </p>
 
       <div class="art-grid">
-
         <div class="project">
           <div class="slider">
             <img id="img1" src="unique-art-01-cover.jpg" alt="">
@@ -632,7 +657,6 @@
             <p>יצירה גאומטרית בהתאמה מלאה לחלל, צבעים ותאורה. חיבור בין קווים, חומרים ואלמנטים בבית ליצירת קומפוזיציה מדויקת שמרגישה חלק טבעי מהחלל.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -675,138 +699,126 @@
     </div>
   </section>
 
-<section id="contact" style="padding:60px 20px;">
-  <div class="contact-grid">
-    <div class="contact-text">
-      <h2>החלל שלכם יכול להיות הרבה יותר</h2>
-      <p class="contact-quote">"סביבה נאה מרחיבה דעתו של אדם"</p>
-      <p>אני מתכננת ומעצבת בתים, דירות, חנויות, משרדים ועסקים, מתוך שילוב בין אדריכלות, עיצוב פנים, היתרי בניה, הבנה שיווקית ואומנות ייחודית.</p>
-      <p>אני לא מתחילה מסגנון. אני מתחילה מהאנשים, מהמטרה ומהפוטנציאל.</p>
-      <p>אני בוחנת איך אתם חיים, איך הלקוחות שלכם נכנסים, מה צריך לקרות בחלל, ואיך לגרום לכל זה לעבוד נכון - וגם להיראות מעולה.</p>
-      <p>בנוסף, אני מלווה בעלי נחלות ומשקים בבדיקות תכנוניות, הבנת זכויות בניה ובחינת המצב הקיים מול הוועדות השונות, כדי לקבל תמונה ברורה לפני שמקבלים החלטות.</p>
-      <p>אם אתם לפני שיפוץ, פתיחת עסק, תכנון חנות, שינוי דירה, בניית בית חדש או בדיקת נחלה - זה בדיוק השלב שבו צריך לחשוב נכון.</p>
-    </div>
-
-    <div class="contact-form-box">
-      <div class="contact-info">
-        📞 <a href="tel:0507555667">050-7555667</a><br>
-        📧 <a href="mailto:lindadahan859@gmail.com">lindadahan859@gmail.com</a><br>
-        📍 אלי הורביץ 4, רחובות<br>
-        📅 פגישות בתיאום מראש
+  <section id="contact" style="padding:60px 20px;">
+    <div class="contact-grid">
+      <div class="contact-text">
+        <h2>החלל שלכם יכול להיות הרבה יותר</h2>
+        <p class="contact-quote">"סביבה נאה מרחיבה דעתו של אדם"</p>
+        <p>אני מתכננת ומעצבת בתים, דירות, חנויות, משרדים ועסקים, מתוך שילוב בין אדריכלות, עיצוב פנים, היתרי בניה, הבנה שיווקית ואומנות ייחודית.</p>
+        <p>אני לא מתחילה מסגנון. אני מתחילה מהאנשים, מהמטרה ומהפוטנציאל.</p>
+        <p>אני בוחנת איך אתם חיים, איך הלקוחות שלכם נכנסים, מה צריך לקרות בחלל, ואיך לגרום לכל זה לעבוד נכון - וגם להיראות מעולה.</p>
+        <p>בנוסף, אני מלווה בעלי נחלות ומשקים בבדיקות תכנוניות, הבנת זכויות בניה ובחינת המצב הקיים מול הוועדות השונות, כדי לקבל תמונה ברורה לפני שמקבלים החלטות.</p>
+        <p>אם אתם לפני שיפוץ, פתיחת עסק, תכנון חנות, שינוי דירה, בניית בית חדש או בדיקת נחלה - זה בדיוק השלב שבו צריך לחשוב נכון.</p>
       </div>
 
-      <form id="contactForm" action="https://formsubmit.co/ajax/lindadahan859@gmail.com" method="post">
-        <input type="hidden" name="_subject" value="פנייה חדשה מהאתר Linda Dahan">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-
-        <input type="text" name="name" placeholder="שם מלא" required>
-        <input type="tel" name="phone" placeholder="מספר טלפון" required>
-        <input type="email" name="email" placeholder="אימייל">
-        <textarea name="message" placeholder="ספרו לי בקצרה על הפרויקט"></textarea>
-
-        <div class="contact-buttons">
-          <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank">פנייה ב-WhatsApp</a>
-          <button type="submit">שליחה</button>
+      <div class="contact-form-box">
+        <div class="contact-info">
+          📞 <a href="tel:0507555667">050-7555667</a><br>
+          📧 <a href="mailto:lindadahan859@gmail.com">lindadahan859@gmail.com</a><br>
+          📍 אלי הורביץ 4, רחובות<br>
+          📅 פגישות בתיאום מראש
         </div>
-      </form>
 
-      <div id="formStatus" class="small-note">השאירו פרטים ואחזור אליכם בהקדם.</div>
+        <form id="contactForm" action="https://formsubmit.co/ajax/lindadahan859@gmail.com" method="post">
+          <input type="hidden" name="_subject" value="פנייה חדשה מהאתר Linda Dahan">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+          <input type="text" name="name" placeholder="שם מלא" required>
+          <input type="tel" name="phone" placeholder="מספר טלפון" required>
+          <input type="email" name="email" placeholder="אימייל">
+          <textarea name="message" placeholder="ספרו לי בקצרה על הפרויקט"></textarea>
+
+          <div class="contact-buttons">
+            <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank">פנייה ב-WhatsApp</a>
+            <button type="submit">שליחה</button>
+          </div>
+        </form>
+
+        <div id="formStatus" class="small-note">השאירו פרטים ואחזור אליכם בהקדם.</div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  const galleries = {
-    1: ["unique-art-01-cover.jpg", "unique-art-01-in-space.jpg", "unique-art-01-detail.jpg"],
-    2: ["unique-art-02-cover.jpg", "unique-art-02-in-space.jpg", "unique-art-02-detail.jpg"],
-    3: ["unique-art-03-cover.jpg", "unique-art-03-in-space.jpg", "unique-art-03-detail.jpg", "unique-art-03-with-designer.jpg"],
-    4: ["unique-art-04-cover.jpg", "unique-art-04-in-space.jpg", "unique-art-04-detail.jpg", "unique-art-04-alt.jpg"],
-    5: ["unique-art-05-cover.jpg", "unique-art-05-in-space.jpg", "unique-art-05-detail.jpg", "unique-art-05-with-designer.jpg"],
-    6: ["unique-art-06-cover.jpg", "unique-art-06-entry.jpg", "unique-art-06-detail.jpg", "unique-art-06-in-space.jpg"],
-    7: ["unique-art-07-cover.jpg", "unique-art-07-detail.jpg", "unique-art-07-in-space.jpg"]
-  };
+  <script>
+    const galleries = {
+      1: ["unique-art-01-cover.jpg", "unique-art-01-in-space.jpg", "unique-art-01-detail.jpg"],
+      2: ["unique-art-02-cover.jpg", "unique-art-02-in-space.jpg", "unique-art-02-detail.jpg"],
+      3: ["unique-art-03-cover.jpg", "unique-art-03-in-space.jpg", "unique-art-03-detail.jpg", "unique-art-03-with-designer.jpg"],
+      4: ["unique-art-04-cover.jpg", "unique-art-04-in-space.jpg", "unique-art-04-detail.jpg", "unique-art-04-alt.jpg"],
+      5: ["unique-art-05-cover.jpg", "unique-art-05-in-space.jpg", "unique-art-05-detail.jpg", "unique-art-05-with-designer.jpg"],
+      6: ["unique-art-06-cover.jpg", "unique-art-06-entry.jpg", "unique-art-06-detail.jpg", "unique-art-06-in-space.jpg"],
+      7: ["unique-art-07-cover.jpg", "unique-art-07-detail.jpg", "unique-art-07-in-space.jpg"]
+    };
 
-  const currentIndex = {
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 0,
-    5: 0,
-    6: 0,
-    7: 0
-  };
+    const currentIndex = {
+      1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0
+    };
 
-  function showImage(id) {
-    const img = document.getElementById("img" + id);
-    if (!img) return;
-    img.src = galleries[id][currentIndex[id]];
-  }
+    function showImage(id) {
+      const img = document.getElementById("img" + id);
+      if (!img) return;
+      img.src = galleries[id][currentIndex[id]];
+    }
 
-  function next(id) {
-    currentIndex[id] = (currentIndex[id] + 1) % galleries[id].length;
-    showImage(id);
-  }
+    function next(id) {
+      currentIndex[id] = (currentIndex[id] + 1) % galleries[id].length;
+      showImage(id);
+    }
 
-  function prev(id) {
-    currentIndex[id] = (currentIndex[id] - 1 + galleries[id].length) % galleries[id].length;
-    showImage(id);
-  }
+    function prev(id) {
+      currentIndex[id] = (currentIndex[id] - 1 + galleries[id].length) % galleries[id].length;
+      showImage(id);
+    }
 
-  function toggleMenu() {
-    document.getElementById("mainMenu").classList.toggle("open");
-  }
+    function toggleMenu() {
+      document.getElementById("mainMenu").classList.toggle("open");
+    }
 
-  function closeMenu() {
-    document.getElementById("mainMenu").classList.remove("open");
-  }
+    function closeMenu() {
+      document.getElementById("mainMenu").classList.remove("open");
+    }
 
-  const contactForm = document.getElementById("contactForm");
-  const formStatus = document.getElementById("formStatus");
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", async function(event) {
-      event.preventDefault();
+    if (contactForm) {
+      contactForm.addEventListener("submit", async function(event) {
+        event.preventDefault();
 
-      const submitButton = contactForm.querySelector("button[type='submit']");
-      const formData = new FormData(contactForm);
-      const name = formData.get("name") || "";
-      const phone = formData.get("phone") || "";
-      const email = formData.get("email") || "";
-      const message = formData.get("message") || "";
+        const submitButton = contactForm.querySelector("button[type='submit']");
+        const formData = new FormData(contactForm);
 
-      submitButton.disabled = true;
-      submitButton.textContent = "שולחת...";
-      formStatus.textContent = "שולחת את הפרטים, רגע קטן...";
+        submitButton.disabled = true;
+        submitButton.textContent = "שולחת...";
+        formStatus.className = "small-note";
+        formStatus.textContent = "שולחת את הפרטים, רגע קטן...";
 
-      try {
-        const response = await fetch(contactForm.action, {
-          method: "POST",
-          body: formData,
-          headers: {
-            Accept: "application/json"
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json"
+            }
+          });
+
+          if (!response.ok) {
+            throw new Error("Submission failed");
           }
-        });
 
-        if (!response.ok) {
-          throw new Error("Submission failed");
+          contactForm.reset();
+          formStatus.className = "small-note success-message";
+          formStatus.textContent = "הבקשה התקבלה בהצלחה. אצור קשר בהקדם.";
+        } catch (error) {
+          formStatus.className = "small-note error-message";
+          formStatus.textContent = "אירעה תקלה בשליחה. אפשר לנסות שוב או לפנות אליי ישירות ב-WhatsApp.";
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = "שליחה";
         }
-
-        contactForm.reset();
-        formStatus.textContent = "הפרטים נשלחו בהצלחה. אני אחזור אליכם בהקדם.";
-
-        const whatsappText = `היי לינדה, השארתי עכשיו פרטים באתר.%0Aשם: ${encodeURIComponent(name)}%0Aטלפון: ${encodeURIComponent(phone)}${email ? `%0Aאימייל: ${encodeURIComponent(email)}` : ""}${message ? `%0Aהודעה: ${encodeURIComponent(message)}` : ""}`;
-        window.open(`https://wa.me/972507555667?text=${whatsappText}`, "_blank");
-      } catch (error) {
-        formStatus.textContent = "משהו השתבש בשליחה. אפשר לנסות שוב או לפנות אליי ישירות ב-WhatsApp.";
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = "שליחה";
-      }
-    });
-  }
-</script>
-
+      });
+    }
+  </script>
 </body>
 </html>
-
