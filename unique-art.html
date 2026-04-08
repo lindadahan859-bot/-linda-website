@@ -39,11 +39,15 @@
     }
 
     .brand{
-      font-size:20px;
-      font-weight:700;
-      color:#111;
+      display:flex;
+      align-items:center;
       text-decoration:none;
-      white-space:nowrap;
+    }
+
+    .brand img{
+      height:42px;
+      width:auto;
+      display:block;
     }
 
     .menu-toggle{
@@ -81,8 +85,17 @@
 
     h1{
       font-size:46px;
-      margin:0 0 18px;
+      margin:0 0 10px;
       text-align:center;
+      line-height:1.2;
+    }
+
+    .section-kicker{
+      font-size:22px;
+      font-weight:700;
+      margin:0 0 22px;
+      text-align:center;
+      line-height:1.4;
     }
 
     .intro{
@@ -157,21 +170,34 @@
       line-height:1.3;
     }
 
+    .english-title{
+      direction:ltr;
+      text-align:left;
+      unicode-bidi:embed;
+    }
+
     .project-text p{
       margin:0;
       font-size:17px;
       line-height:1.75;
     }
 
-    .project-text .video-link{
+    .video-link{
       display:inline-block;
       margin-top:14px;
       padding:11px 18px;
+      border-radius:999px;
+      border:1px solid #111;
+      background:#fff;
+      color:#111;
+      text-decoration:none;
+      font-size:15px;
+      transition:all 0.25s ease;
+    }
+
+    .video-link:hover{
       background:#111;
       color:#fff;
-      text-decoration:none;
-      border-radius:999px;
-      font-size:15px;
     }
 
     .box{
@@ -207,12 +233,16 @@
         display:flex;
       }
 
-      .brand{
-        font-size:18px;
+      .brand img{
+        height:34px;
       }
 
       h1{
         font-size:34px;
+      }
+
+      .section-kicker{
+        font-size:20px;
       }
 
       .intro{
@@ -234,7 +264,9 @@
 
   <header>
     <div class="nav-wrap">
-      <a class="brand" href="index.html">Linda Dahan</a>
+      <a class="brand" href="index.html">
+        <img src="logo-black.png" alt="Linda Dahan">
+      </a>
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
       <nav id="mainMenu">
@@ -252,6 +284,7 @@
   <section>
     <div class="container">
       <h1>אומנות ייחודית</h1>
+      <p class="section-kicker">יצירה שנולדת לבית אחד בלבד</p>
 
       <p class="intro">
         יצירות שנולדות מתוך חללים אמיתיים, מתוך מחשבה מדויקת על חומרים, אור, פרופורציות ונוכחות. כל יצירה מתוכננת כחלק בלתי נפרד מהחלל, כך שהיא ממשיכה את עצמה אל תוך הבית ויוצרת חוויה שלמה.
@@ -269,7 +302,7 @@
             <button class="arrow left" onclick="next(1)">❯</button>
           </div>
           <div class="project-text">
-            <h3>I Dare To Be Different</h3>
+            <h3 class="english-title">I Dare To Be Different</h3>
             <p>שילוב בין אור, חומר ונוכחות, כשהיצירה ממשיכה את עצמה אל תוך החלל ויוצרת חוויה שלמה.</p>
           </div>
         </div>
@@ -281,7 +314,7 @@
             <button class="arrow left" onclick="next(2)">❯</button>
           </div>
           <div class="project-text">
-            <h3>Shaping Spaces. Touching Souls</h3>
+            <h3 class="english-title">Shaping Spaces. Touching Souls</h3>
             <p>קומפוזיציה שקטה, רכה ומדויקת שמתחברת לחומרים, למסגרת ולתחושת הבית.</p>
           </div>
         </div>
@@ -293,7 +326,7 @@
             <button class="arrow left" onclick="next(3)">❯</button>
           </div>
           <div class="project-text">
-            <h3>What You See Is Just The Beginning</h3>
+            <h3 class="english-title">What You See Is Just The Beginning</h3>
             <p>יצירה עם אמירה חזקה, צבעוניות עוצמתית ונוכחות שמגדירה את החלל כולו.</p>
           </div>
         </div>
@@ -307,6 +340,7 @@
           <div class="project-text">
             <h3>טוליפים בתנועה</h3>
             <p>הבד לא רק מתוח - הוא זורם. כמו הווילונות, כמו האור בחלל. רכות שמאזנת את הירוק העמוק של המיטה ויוצרת הרמוניה שקטה.</p>
+            <a class="video-link" href="https://www.tiktok.com/@lindadahan/video/7552969327595556103" target="_blank">לצפייה ביצירה בתנועה</a>
           </div>
         </div>
 
@@ -331,7 +365,7 @@
           <div class="project-text">
             <h3>זוג זקנים. אבל לא כזה שראיתם</h3>
             <p>היא ראתה אותם לרגע, ואני הפכתי אותם לשלה. זוג אחד, סיפור אחד, שאין לאף אחד אחר - ונשאר רק שלה.</p>
-            <a class="video-link" href="https://www.facebook.com/reel/3399741156857266" target="_blank">צפייה בסרטון</a>
+            <a class="video-link" href="https://www.facebook.com/reel/3399741156857266" target="_blank">לצפייה ביצירה בתנועה</a>
           </div>
         </div>
 
@@ -342,7 +376,7 @@
             <button class="arrow left" onclick="next(7)">❯</button>
           </div>
           <div class="project-text">
-            <h3>Geometric Flow</h3>
+            <h3 class="english-title">Geometric Flow</h3>
             <p>יצירה גאומטרית בהתאמה מלאה לחלל, צבעים ותאורה. חיבור בין קווים, חומרים ואלמנטים בבית ליצירת קומפוזיציה מדויקת שמרגישה חלק טבעי מהחלל.</p>
           </div>
         </div>
