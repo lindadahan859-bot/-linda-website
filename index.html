@@ -126,12 +126,6 @@
       display:block;
     }
 
-    .hero-content h1{
-      margin:0 0 14px;
-      font-size:56px;
-      line-height:1.1;
-    }
-
     .hero-content p{
       margin:0 0 24px;
       font-size:22px;
@@ -196,6 +190,7 @@
       border-radius:28px;
       overflow:hidden;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
+      transition:0.3s;
     }
 
     .featured-art img{
@@ -203,6 +198,16 @@
       display:block;
       aspect-ratio:4/3;
       object-fit:cover;
+      transition:0.4s ease;
+    }
+
+    .featured-art:hover img{
+      transform:scale(1.04);
+    }
+
+    .featured-art:hover{
+      transform:translateY(-6px);
+      box-shadow:0 14px 32px rgba(0,0,0,0.12);
     }
 
     .featured-art-text{
@@ -221,21 +226,22 @@
       line-height:1.8;
     }
 
-    .preview-btn{
+    .action-btn{
       display:inline-block;
-      padding:12px 22px;
-      border-radius:999px;
-      border:1px solid #111;
-      color:#111;
-      text-decoration:none;
-      font-size:16px;
-      background:#fff;
-      transition:all 0.25s ease;
-    }
-
-    .preview-btn:hover{
+      padding:14px 26px;
+      border-radius:30px;
       background:#111;
       color:#fff;
+      text-decoration:none;
+      font-size:16px;
+      font-weight:600;
+      transition:0.3s;
+      margin-top:18px;
+    }
+
+    .action-btn:hover{
+      background:#000;
+      transform:translateY(-2px);
     }
 
     .projects-grid{
@@ -250,6 +256,7 @@
       border-radius:24px;
       overflow:hidden;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
+      transition:0.3s;
     }
 
     .project-card img{
@@ -257,6 +264,16 @@
       display:block;
       aspect-ratio:4/3;
       object-fit:cover;
+      transition:0.4s ease;
+    }
+
+    .project-card:hover img{
+      transform:scale(1.05);
+    }
+
+    .project-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 14px 32px rgba(0,0,0,0.12);
     }
 
     .project-card-text{
@@ -466,10 +483,6 @@
         height:34px;
       }
 
-      .hero-content h1{
-        font-size:40px;
-      }
-
       .hero-content p{
         font-size:20px;
       }
@@ -599,7 +612,7 @@
             <p>
               שילוב בין אור, חומר ונוכחות, כשהיצירה ממשיכה את עצמה אל תוך החלל ויוצרת חוויה שלמה.
             </p>
-            <a class="preview-btn" href="unique-art.html">לצפייה בכל היצירות</a>
+            <a class="action-btn" href="unique-art.html">צפיה בסרטון</a>
           </div>
         </div>
       </div>
@@ -624,14 +637,16 @@
           <div class="project-card-text">
             <h3>בית מודרני פרטי ביבנה</h3>
             <p>בית פרטי לפרופ׳ חנה לייבה ביבנה, עם שפה נקייה, מדויקת ואלגנטית, ותכנון שמחזיק נוכחות שקטה.</p>
+            <a class="action-btn" href="https://www.facebook.com/reel/1585837298783731" target="_blank">צפיה בסרטון</a>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="duplex-rehovot.jpg" alt="עיצוב פנים לדירת דופלקס ברחובות">
+          <img src="duplex-rehovot.jpg" alt="דירת דופלקס ברחובות">
           <div class="project-card-text">
-            <h3>עיצוב פנים לדירת דופלקס ברחובות</h3>
+            <h3>דירת דופלקס ברחובות</h3>
             <p>דירת דופלקס עם חשיבה על זרימה, חומרים, תאורה ורגעים יומיומיים שצריכים לעבוד יפה ונכון.</p>
+            <a class="action-btn" href="https://www.facebook.com/reel/2143932029426797" target="_blank">צפיה בסרטון</a>
           </div>
         </div>
 
@@ -650,6 +665,30 @@
             <p>יחידת מגורים עם תחושת חו״ל, אווירה שקטה, תכנון מדויק ונוכחות שמחברת בין טבע לחלל עצמו.</p>
           </div>
         </div>
+
+        <div class="project-card">
+          <img src="eilat-studio.jpg" alt="דירת סטודיו באילת">
+          <div class="project-card-text">
+            <h3>דירת סטודיו באילת</h3>
+            <p>תכנון ועיצוב לחלל קומפקטי עם ניצול נכון של כל מטר, זרימה מדויקת ואווירה שלמה גם בשטח קטן.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="baron.jpg" alt="משרד מכירות יביל לפרויקט מגורים">
+          <div class="project-card-text">
+            <h3>משרד מכירות יביל לפרויקט מגורים</h3>
+            <p>תכנון ועיצוב של משרד מכירות בשטח עבור קבלן, בתוך מבנה יביל שמייצר נוכחות, סדר וחוויית קבלה נכונה ללקוחות.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="rehovot.jpg" alt="דירת 80 מ״ר במגדל ברחובות">
+          <div class="project-card-text">
+            <h3>דירת 80 מ״ר במגדל ברחובות</h3>
+            <p>תכנון ועיצוב לדירה במגדל עם חשיבה על פרקטיות, זרימה וחלל שמרגיש מדויק, נעים ומרווח.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -658,7 +697,15 @@
     <div class="container">
       <div class="box">
         <h2>היתרי בניה</h2>
-        <p>כאן ייכנסו תכנים על בדיקות זכויות, ליווי תכנוני, הגשות, היתרים ותיאום מול גורמים מקצועיים.</p>
+        <p>
+          תכנון מקדים הוא לא שלב טכני - הוא הבסיס לכל מה שיבוא אחריו.
+          אני מלווה הגשות לרשויות, עבודה מול יועצים ותיאום בין כל בעלי המקצוע,
+          כולל מפת מדידה, מהנדס חישובים סטטיים, פיקוד העורף, רמ״י,
+          יועץ בטיחות, כיבוי אש ועוד.
+          העבודה שלי היא לראות את התמונה המלאה,
+          לחבר בין כל הגורמים, ולנצח על התהליך כך שיתקדם נכון,
+          בצורה מסודרת, מדויקת וחוקית.
+        </p>
       </div>
     </div>
   </section>
