@@ -153,99 +153,6 @@
       margin:0 0 18px;
     }
 
-    #art .container{
-      text-align:center;
-    }
-
-    .intro{
-      font-size:18px;
-      line-height:1.95;
-      max-width:760px;
-      margin:0 auto 18px;
-      text-align:center;
-    }
-
-    .art-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:28px;
-      margin-top:28px;
-      text-align:right;
-    }
-
-    .project{
-      background:#fff;
-      border-radius:22px;
-      overflow:hidden;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-    }
-
-    .slider{
-      position:relative;
-      background:#eee;
-    }
-
-    .slider img{
-      width:100%;
-      display:block;
-      aspect-ratio:4/3;
-      object-fit:cover;
-    }
-
-    .arrow{
-      position:absolute;
-      top:50%;
-      transform:translateY(-50%);
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      border:none;
-      background:rgba(0,0,0,0.72);
-      color:#fff;
-      cursor:pointer;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:0;
-      font-size:28px;
-      line-height:1;
-    }
-
-    .arrow.right{
-      right:12px;
-    }
-
-    .arrow.left{
-      left:12px;
-    }
-
-    .project-text{
-      padding:18px 18px 22px;
-    }
-
-    .project-text h3{
-      margin:0 0 10px;
-      font-size:24px;
-      line-height:1.3;
-    }
-
-    .project-text p{
-      margin:0;
-      font-size:17px;
-      line-height:1.75;
-    }
-
-    .project-text .video-link{
-      display:inline-block;
-      margin-top:14px;
-      padding:11px 18px;
-      background:#111;
-      color:#fff;
-      text-decoration:none;
-      border-radius:999px;
-      font-size:15px;
-    }
-
     .box{
       background:#fff;
       border-radius:22px;
@@ -253,12 +160,57 @@
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
     }
 
-    .process-img{
+    .art-preview{
+      text-align:center;
+    }
+
+    .art-preview-text{
+      max-width:760px;
+      margin:0 auto 26px;
+      font-size:18px;
+      line-height:1.95;
+    }
+
+    .featured-art{
+      max-width:760px;
+      margin:0 auto;
+      background:#fff;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .featured-art img{
       width:100%;
-      max-width:700px;
       display:block;
-      margin-top:20px;
-      border-radius:16px;
+      aspect-ratio:4/3;
+      object-fit:cover;
+    }
+
+    .featured-art-text{
+      padding:28px 24px 30px;
+    }
+
+    .featured-art-text h3{
+      margin:0 0 14px;
+      font-size:28px;
+      line-height:1.25;
+    }
+
+    .featured-art-text p{
+      margin:0 0 18px;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    .preview-btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:999px;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      font-size:16px;
     }
 
     .quote{
@@ -464,18 +416,21 @@
         font-size:31px;
       }
 
-      .art-grid{
-        grid-template-columns:1fr;
-      }
-
       section{
         padding:30px 0;
       }
 
-      .intro{
+      .art-preview-text{
         font-size:17px;
         line-height:1.85;
-        margin-bottom:14px;
+      }
+
+      .featured-art-text h3{
+        font-size:24px;
+      }
+
+      .featured-art-text p{
+        font-size:17px;
       }
 
       .contact-grid{
@@ -532,7 +487,7 @@
       <nav id="mainMenu">
         <a href="#home" onclick="closeMenu()">בית</a>
         <a href="story.html">הסיפור שלי</a>
-        <a href="#art" onclick="closeMenu()">אומנות ייחודית</a>
+        <a href="unique-art.html">אומנות ייחודית</a>
         <a href="#projects" onclick="closeMenu()">פרויקטים</a>
         <a href="#permits" onclick="closeMenu()">היתרי בניה</a>
         <a href="#testimonials" onclick="closeMenu()">תשבחות</a>
@@ -560,101 +515,22 @@
     </div>
   </section>
 
-  <section id="art">
+  <section id="art-preview">
     <div class="container">
-      <h2>יצירה שנולדת לבית אחד בלבד</h2>
+      <div class="art-preview">
+        <h2>אומנות ייחודית</h2>
+        <p class="art-preview-text">
+          טעימה מתוך עולם של יצירות שנולדות מתוך החלל עצמו. כל עבודה נבנית בהתאמה מדויקת לבית, לחומרים, לאור ולאנשים שחיים בו.
+        </p>
 
-      <p class="intro">
-        יצירות שנולדות מתוך חללים אמיתיים, מתוך מחשבה מדויקת על חומרים, אור, פרופורציות ונוכחות. כל יצירה מתוכננת כחלק בלתי נפרד מהחלל, כך שהיא ממשיכה את עצמה אל תוך הבית ויוצרת חוויה שלמה.
-      </p>
-
-      <p class="intro">
-        העבודה מותאמת בדיוק לחלל שבו היא נמצאת - לפי המידות, התאורה והחומרים שמרכיבים את הבית: עץ, זכוכית, קנבס, PVC ועוד. היא לא מגיעה מבחוץ, אלא נבנית מתוך המקום עצמו. לכן אין עוד אחת כזאת, ואין דרך לשכפל אותה. מי שנכנס הביתה מבין מיד - זה משהו שלא ראה קודם.
-      </p>
-
-      <div class="art-grid">
-        <div class="project">
-          <div class="slider">
-            <img id="img1" src="unique-art-01-cover.jpg" alt="">
-            <button class="arrow right" onclick="prev(1)">❮</button>
-            <button class="arrow left" onclick="next(1)">❯</button>
-          </div>
-          <div class="project-text">
+        <div class="featured-art">
+          <img src="unique-art-01-cover.jpg" alt="I Dare To Be Different">
+          <div class="featured-art-text">
             <h3>I Dare To Be Different</h3>
-            <p>שילוב בין אור, חומר ונוכחות, כשהיצירה ממשיכה את עצמה אל תוך החלל ויוצרת חוויה שלמה.</p>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="slider">
-            <img id="img2" src="unique-art-02-cover.jpg" alt="">
-            <button class="arrow right" onclick="prev(2)">❮</button>
-            <button class="arrow left" onclick="next(2)">❯</button>
-          </div>
-          <div class="project-text">
-            <h3>Shaping Spaces. Touching Souls</h3>
-            <p>קומפוזיציה שקטה, רכה ומדויקת שמתחברת לחומרים, למסגרת ולתחושת הבית.</p>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="slider">
-            <img id="img3" src="unique-art-03-cover.jpg" alt="">
-            <button class="arrow right" onclick="prev(3)">❮</button>
-            <button class="arrow left" onclick="next(3)">❯</button>
-          </div>
-          <div class="project-text">
-            <h3>What You See Is Just The Beginning</h3>
-            <p>יצירה עם אמירה חזקה, צבעוניות עוצמתית ונוכחות שמגדירה את החלל כולו.</p>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="slider">
-            <img id="img4" src="unique-art-04-cover.jpg" alt="">
-            <button class="arrow right" onclick="prev(4)">❮</button>
-            <button class="arrow left" onclick="next(4)">❯</button>
-          </div>
-          <div class="project-text">
-            <h3>טוליפים בתנועה</h3>
-            <p>הבד לא רק מתוח - הוא זורם. כמו הווילונות, כמו האור בחלל. רכות שמאזנת את הירוק העמוק של המיטה ויוצרת הרמוניה שקטה.</p>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="slider">
-            <img id="img5" src="unique-art-05-cover.jpg" alt="">
-            <button class="arrow right" onclick="prev(5)">❮</button>
-            <button class="arrow left" onclick="next(5)">❯</button>
-          </div>
-          <div class="project-text">
-            <h3>בית שחי עם כל הדורות</h3>
-            <p>נגיעה של צבע שמכניסה שמחה לחלל. פרטים שמדברים גם למבוגרים וגם לנכדים, שומרים על איזון בין עיצוב לאופי ויוצרים בית שמרגיש חי באמת.</p>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="slider">
-            <img id="img6" src="unique-art-06-cover.jpg" alt="">
-            <button class="arrow right" onclick="prev(6)">❮</button>
-            <button class="arrow left" onclick="next(6)">❯</button>
-          </div>
-          <div class="project-text">
-            <h3>זוג זקנים. אבל לא כזה שראיתם</h3>
-            <p>היא ראתה אותם לרגע, ואני הפכתי אותם לשלה. זוג אחד, סיפור אחד, שאין לאף אחד אחר - ונשאר רק שלה.</p>
-            <a class="video-link" href="https://www.facebook.com/reel/3399741156857266" target="_blank">צפייה בסרטון</a>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="slider">
-            <img id="img7" src="unique-art-07-cover.jpg" alt="">
-            <button class="arrow right" onclick="prev(7)">❮</button>
-            <button class="arrow left" onclick="next(7)">❯</button>
-          </div>
-          <div class="project-text">
-            <h3>Geometric Flow</h3>
-            <p>יצירה גאומטרית בהתאמה מלאה לחלל, צבעים ותאורה. חיבור בין קווים, חומרים ואלמנטים בבית ליצירת קומפוזיציה מדויקת שמרגישה חלק טבעי מהחלל.</p>
+            <p>
+              שילוב בין אור, חומר ונוכחות, כשהיצירה ממשיכה את עצמה אל תוך החלל ויוצרת חוויה שלמה.
+            </p>
+            <a class="preview-btn" href="unique-art.html">לצפייה בכל היצירות</a>
           </div>
         </div>
       </div>
@@ -675,16 +551,6 @@
       <div class="box">
         <h2>היתרי בניה</h2>
         <p>כאן ייכנסו תכנים על בדיקות זכויות, ליווי תכנוני, הגשות, היתרים ותיאום מול גורמים מקצועיים.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="box">
-        <h2>תהליך היצירה</h2>
-        <p>כל יצירה מתחילה ברעיון, סקיצה ותחושה, וממשיכה דרך תכנון מדויק והתאמה מלאה לחלל שבו היא תחיה.</p>
-        <img class="process-img" src="creation-process.jpg" alt="">
       </div>
     </div>
   </section>
@@ -741,36 +607,6 @@
   </section>
 
   <script>
-    const galleries = {
-      1: ["unique-art-01-cover.jpg", "unique-art-01-in-space.jpg", "unique-art-01-detail.jpg"],
-      2: ["unique-art-02-cover.jpg", "unique-art-02-in-space.jpg", "unique-art-02-detail.jpg"],
-      3: ["unique-art-03-cover.jpg", "unique-art-03-in-space.jpg", "unique-art-03-detail.jpg", "unique-art-03-with-designer.jpg"],
-      4: ["unique-art-04-cover.jpg", "unique-art-04-in-space.jpg", "unique-art-04-detail.jpg", "unique-art-04-alt.jpg"],
-      5: ["unique-art-05-cover.jpg", "unique-art-05-in-space.jpg", "unique-art-05-detail.jpg", "unique-art-05-with-designer.jpg"],
-      6: ["unique-art-06-cover.jpg", "unique-art-06-entry.jpg", "unique-art-06-detail.jpg", "unique-art-06-in-space.jpg"],
-      7: ["unique-art-07-cover.jpg", "unique-art-07-detail.jpg", "unique-art-07-in-space.jpg"]
-    };
-
-    const currentIndex = {
-      1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0
-    };
-
-    function showImage(id) {
-      const img = document.getElementById("img" + id);
-      if (!img) return;
-      img.src = galleries[id][currentIndex[id]];
-    }
-
-    function next(id) {
-      currentIndex[id] = (currentIndex[id] + 1) % galleries[id].length;
-      showImage(id);
-    }
-
-    function prev(id) {
-      currentIndex[id] = (currentIndex[id] - 1 + galleries[id].length) % galleries[id].length;
-      showImage(id);
-    }
-
     function toggleMenu() {
       document.getElementById("mainMenu").classList.toggle("open");
     }
