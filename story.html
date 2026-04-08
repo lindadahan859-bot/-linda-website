@@ -14,46 +14,6 @@
       color:#222;
     }
 
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:#fff;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .nav-wrap{
-      max-width:1200px;
-      margin:auto;
-      padding:14px 20px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .brand{
-      font-size:20px;
-      font-weight:700;
-      text-decoration:none;
-      color:#111;
-      white-space:nowrap;
-    }
-
-    nav{
-      display:flex;
-      gap:24px;
-      flex-wrap:wrap;
-    }
-
-    nav a{
-      text-decoration:none;
-      color:#111;
-      font-size:16px;
-      font-weight:600;
-    }
-
     .wrap{
       max-width:1150px;
       margin:auto;
@@ -153,19 +113,7 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="index.html">Linda Dahan</a>
-      <nav>
-        <a href="index.html#home">בית</a>
-        <a href="story.html" style="font-weight:900;">הסיפור שלי</a>
-        <a href="index.html#art">אומנות</a>
-        <a href="index.html#projects">פרויקטים</a>
-        <a href="index.html#permits">היתרי בניה</a>
-        <a href="index.html#contact">צור קשר</a>
-      </nav>
-    </div>
-  </header>
+  <div id="header"></div>
 
   <div class="wrap">
     <div class="box">
@@ -280,8 +228,6 @@
             <li>יחידת דיור כ־70 מ״ר - “הבית על האגם”, עם תחושה של חו״ל</li>
             <li>טיפול ואישור חריגות בניה ותכנון בריכת שחיה</li>
             <li>חוות דעת מקצועית לפני רכישת נחלה</li>
-            <li>עיצוב פנים מלא לדירת דופלקס ברחובות</li>
-            <li>בית פרטי ביבנה, לאישה יוצאת דופן, פרופסור חנה לייבה - קשר שהפך עם הזמן לאישי ונמצא איתי בלב</li>
             <li>בית פרטי במכון ויצמן בסגנון יפני, שמשלב בתוכו אלמנטים עתיקים שקיבלו בני הזוג כירושה</li>
           </ul>
 
@@ -294,6 +240,22 @@
       </div>
     </div>
   </div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    function toggleMenu() {
+      document.getElementById("mainMenu").classList.toggle("open");
+    }
+
+    function closeMenu() {
+      document.getElementById("mainMenu").classList.remove("open");
+    }
+  </script>
 
 </body>
 </html>
