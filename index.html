@@ -247,6 +247,14 @@
       transform:translateY(-2px);
     }
 
+    .projects-intro{
+      max-width:700px;
+      margin:0 0 30px;
+      font-size:18px;
+      line-height:1.8;
+      color:#444;
+    }
+
     .projects-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -421,6 +429,56 @@
       color:#a33434;
     }
 
+    .site-footer{
+      background:#111;
+      color:#fff;
+      padding:40px 20px;
+      text-align:center;
+      margin-top:20px;
+    }
+
+    .footer-inner{
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .footer-social-title{
+      font-size:20px;
+      margin-bottom:20px;
+      font-weight:600;
+    }
+
+    .footer-socials{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+
+    .footer-socials a{
+      color:#fff;
+      text-decoration:none;
+      font-size:16px;
+      opacity:0.8;
+      transition:0.3s;
+    }
+
+    .footer-socials a:hover{
+      opacity:1;
+    }
+
+    .footer-line{
+      height:1px;
+      background:rgba(255,255,255,0.2);
+      margin:30px auto;
+      width:60%;
+    }
+
+    .footer-copy{
+      font-size:14px;
+      opacity:0.7;
+    }
+
     .back-to-top{
       position:fixed;
       left:20px;
@@ -498,7 +556,8 @@
         padding:30px 0;
       }
 
-      .art-preview-text{
+      .art-preview-text,
+      .projects-intro{
         font-size:17px;
         line-height:1.85;
       }
@@ -535,6 +594,10 @@
 
       .contact-form-box{
         padding:22px;
+      }
+
+      .footer-socials{
+        gap:18px;
       }
 
       .back-to-top{
@@ -625,6 +688,12 @@
   <section id="projects">
     <div class="container">
       <h2>פרויקטים</h2>
+
+      <p class="projects-intro">
+        לכל אחד יש את הסגנון שלו - וזה בדיוק מה שצריך להיות.
+        אני כאן כדי ללוות, להסביר, לדייק ולפתוח אפשרויות,
+        ומתוך זה לבחור יחד את מה שנכון לכם באמת.
+      </p>
 
       <div class="projects-grid">
         <div class="project-card">
@@ -763,6 +832,25 @@
       </div>
     </div>
   </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-social-title">לעוד פרויקטים ותהליכים</div>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/hbrt.lindadahan" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/linda_dahan/" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@lindadahan" target="_blank">TikTok</a>
+        <a href="https://wa.me/972507555667" target="_blank">WhatsApp</a>
+      </div>
+
+      <div class="footer-line"></div>
+
+      <div class="footer-copy">
+        © כל הזכויות שמורות לינדה דהן
+      </div>
+    </div>
+  </footer>
 
   <script>
     function toggleMenu() {
