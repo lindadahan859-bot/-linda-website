@@ -264,20 +264,32 @@
     }
 
     .footer-socials a{
-      text-decoration:none;
-      color:#111;
-      border:1px solid rgba(17,17,17,0.16);
-      padding:10px 18px;
-      border-radius:999px;
-      background:#fff;
+      width:44px;
+      height:44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:#f5f5f5;
       transition:all 0.25s ease;
-      font-size:15px;
+      text-decoration:none;
+    }
+
+    .footer-socials img{
+      width:22px;
+      height:22px;
+      opacity:0.85;
+      display:block;
     }
 
     .footer-socials a:hover{
       background:#111;
-      color:#fff;
-      border-color:#111;
+      transform:translateY(-3px);
+    }
+
+    .footer-socials a:hover img{
+      filter:invert(1);
+      opacity:1;
     }
 
     .footer-line{
@@ -554,10 +566,18 @@
       </div>
 
       <div class="footer-socials">
-        <a href="https://www.facebook.com/hbrt.lindadahan" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/linda_dahan/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@lindadahan" target="_blank">TikTok</a>
-        <a href="https://wa.me/972507555667" target="_blank">WhatsApp</a>
+        <a href="https://www.facebook.com/hbrt.lindadahan" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/linda_dahan/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/@lindadahan" target="_blank" aria-label="TikTok">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+        </a>
+        <a href="https://wa.me/972507555667" target="_blank" aria-label="WhatsApp">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
       </div>
 
       <div class="footer-line"></div>
