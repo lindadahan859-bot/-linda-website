@@ -142,6 +142,75 @@
       margin-bottom:8px;
     }
 
+    .site-footer{
+      background:#fff;
+      margin-top:60px;
+      border-top:1px solid rgba(0,0,0,0.08);
+    }
+
+    .footer-inner{
+      max-width:1200px;
+      margin:auto;
+      padding:42px 20px 34px;
+      text-align:center;
+    }
+
+    .footer-social-title{
+      font-size:22px;
+      font-weight:700;
+      margin-bottom:22px;
+      color:#111;
+    }
+
+    .footer-socials{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footer-socials a{
+      width:44px;
+      height:44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:#f5f5f5;
+      transition:all 0.25s ease;
+      text-decoration:none;
+    }
+
+    .footer-socials img{
+      width:22px;
+      height:22px;
+      opacity:0.85;
+      display:block;
+    }
+
+    .footer-socials a:hover{
+      background:#111;
+      transform:translateY(-3px);
+    }
+
+    .footer-socials a:hover img{
+      filter:invert(1);
+      opacity:1;
+    }
+
+    .footer-line{
+      width:100%;
+      max-width:240px;
+      height:1px;
+      background:rgba(0,0,0,0.12);
+      margin:28px auto 18px;
+    }
+
+    .footer-copy{
+      font-size:14px;
+      color:#666;
+    }
+
     @media (max-width: 900px){
       .grid{
         grid-template-columns:1fr;
@@ -194,12 +263,34 @@
       .brand img{
         height:34px;
       }
+
+      .footer-social-title{
+        font-size:20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div id="header"></div>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html#home">
+        <img src="logo-black.png" alt="Linda Dahan">
+      </a>
+
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav id="mainMenu">
+        <a href="index.html#home" onclick="closeMenu()">בית</a>
+        <a href="story.html" onclick="closeMenu()">הסיפור שלי</a>
+        <a href="unique-art.html" onclick="closeMenu()">אומנות ייחודית</a>
+        <a href="index.html#projects" onclick="closeMenu()">פרויקטים</a>
+        <a href="index.html#permits" onclick="closeMenu()">היתרי בניה</a>
+        <a href="index.html#testimonials" onclick="closeMenu()">תשבחות</a>
+        <a href="index.html#contact" onclick="closeMenu()">צור קשר</a>
+      </nav>
+    </div>
+  </header>
 
   <div class="wrap">
     <div class="box">
@@ -327,13 +418,41 @@
     </div>
   </div>
 
-  <script>
-    fetch("header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = data;
-      });
+  <footer class="site-footer">
+    <div class="footer-inner">
 
+      <div class="footer-social-title">
+        לעוד פרויקטים ותהליכים
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/hbrt.lindadahan" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+
+        <a href="https://www.instagram.com/linda_dahan/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+        </a>
+
+        <a href="https://www.tiktok.com/@lindadahan" target="_blank" aria-label="TikTok">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+        </a>
+
+        <a href="https://wa.me/972507555667" target="_blank" aria-label="WhatsApp">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+      </div>
+
+      <div class="footer-line"></div>
+
+      <div class="footer-copy">
+        © כל הזכויות שמורות לינדה דהן
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
     function toggleMenu() {
       const menu = document.getElementById("mainMenu");
       if (menu) {
