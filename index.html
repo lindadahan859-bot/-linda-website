@@ -430,53 +430,72 @@
     }
 
     .site-footer{
-      background:#111;
-      color:#fff;
-      padding:40px 20px;
-      text-align:center;
-      margin-top:20px;
+      background:#fff;
+      margin-top:60px;
+      border-top:1px solid rgba(0,0,0,0.08);
     }
 
     .footer-inner{
-      max-width:1000px;
+      max-width:1200px;
       margin:auto;
+      padding:42px 20px 34px;
+      text-align:center;
     }
 
     .footer-social-title{
-      font-size:20px;
-      margin-bottom:20px;
-      font-weight:600;
+      font-size:22px;
+      font-weight:700;
+      margin-bottom:22px;
+      color:#111;
     }
 
     .footer-socials{
       display:flex;
       justify-content:center;
-      gap:25px;
+      gap:20px;
       flex-wrap:wrap;
     }
 
     .footer-socials a{
-      color:#fff;
+      width:44px;
+      height:44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:#f5f5f5;
+      transition:all 0.25s ease;
       text-decoration:none;
-      font-size:16px;
-      opacity:0.8;
-      transition:0.3s;
+    }
+
+    .footer-socials img{
+      width:22px;
+      height:22px;
+      opacity:0.85;
+      display:block;
     }
 
     .footer-socials a:hover{
+      background:#111;
+      transform:translateY(-3px);
+    }
+
+    .footer-socials a:hover img{
+      filter:invert(1);
       opacity:1;
     }
 
     .footer-line{
+      width:100%;
+      max-width:240px;
       height:1px;
-      background:rgba(255,255,255,0.2);
-      margin:30px auto;
-      width:60%;
+      background:rgba(0,0,0,0.12);
+      margin:28px auto 18px;
     }
 
     .footer-copy{
       font-size:14px;
-      opacity:0.7;
+      color:#666;
     }
 
     .back-to-top{
@@ -596,8 +615,8 @@
         padding:22px;
       }
 
-      .footer-socials{
-        gap:18px;
+      .footer-social-title{
+        font-size:20px;
       }
 
       .back-to-top{
@@ -829,7 +848,39 @@
     </div>
   </section>
 
-  <div id="footer"></div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-social-title">
+        לעוד פרויקטים ותהליכים
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/hbrt.lindadahan" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+
+        <a href="https://www.instagram.com/linda_dahan/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+        </a>
+
+        <a href="https://www.tiktok.com/@lindadahan" target="_blank" aria-label="TikTok">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+        </a>
+
+        <a href="https://wa.me/972507555667" target="_blank" aria-label="WhatsApp">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+      </div>
+
+      <div class="footer-line"></div>
+
+      <div class="footer-copy">
+        © כל הזכויות שמורות לינדה דהן
+      </div>
+
+    </div>
+  </footer>
 
   <script>
     function toggleMenu() {
@@ -839,12 +890,6 @@
     function closeMenu() {
       document.getElementById("mainMenu").classList.remove("open");
     }
-
-    fetch("footer.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      });
 
     const contactForm = document.getElementById("contactForm");
     const formStatus = document.getElementById("formStatus");
