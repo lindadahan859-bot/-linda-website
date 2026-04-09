@@ -248,10 +248,10 @@
     }
 
     .projects-intro{
-      max-width:700px;
+      max-width:920px;
       margin:0 0 30px;
       font-size:18px;
-      line-height:1.8;
+      line-height:1.9;
       color:#444;
     }
 
@@ -689,11 +689,7 @@
     <div class="container">
       <h2>פרויקטים</h2>
 
-      <p class="projects-intro">
-        לכל אחד יש את הסגנון שלו - וזה בדיוק מה שצריך להיות.
-        אני כאן כדי ללוות, להסביר, לדייק ולפתוח אפשרויות,
-        ומתוך זה לבחור יחד את מה שנכון לכם באמת.
-      </p>
+      <p class="projects-intro">לכל אחד יש את הסגנון שלו - וזה בדיוק מה שצריך להיות. אני כאן כדי ללוות, להסביר, לדייק ולפתוח אפשרויות, ומתוך זה לבחור יחד את מה שנכון לכם באמת.</p>
 
       <div class="projects-grid">
         <div class="project-card">
@@ -823,7 +819,7 @@
           <textarea name="message" placeholder="ספרו לי בקצרה על הפרויקט"></textarea>
 
           <div class="contact-buttons">
-            <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank">פנייה ב-WhatsApp</a>
+            <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%9B%D7%AA%D7%91%D7%AA%D7%99%20%D7%9B%D7%90%D7%9F%20%D7%A2%D7%9D%20%D7%A4%D7%A0%D7%99%D7%99%D7%94" target="_blank">פנייה ב-WhatsApp</a>
             <button type="submit">שליחה</button>
           </div>
         </form>
@@ -833,24 +829,7 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-social-title">לעוד פרויקטים ותהליכים</div>
-
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/hbrt.lindadahan" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/linda_dahan/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@lindadahan" target="_blank">TikTok</a>
-        <a href="https://wa.me/972507555667" target="_blank">WhatsApp</a>
-      </div>
-
-      <div class="footer-line"></div>
-
-      <div class="footer-copy">
-        © כל הזכויות שמורות לינדה דהן
-      </div>
-    </div>
-  </footer>
+  <div id="footer"></div>
 
   <script>
     function toggleMenu() {
@@ -860,6 +839,12 @@
     function closeMenu() {
       document.getElementById("mainMenu").classList.remove("open");
     }
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
 
     const contactForm = document.getElementById("contactForm");
     const formStatus = document.getElementById("formStatus");
