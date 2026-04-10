@@ -15,7 +15,7 @@
       direction:rtl;
       background:#f7f7f5;
       color:#222;
-      line-height:1.75;
+      line-height:1.72;
     }
 
     header{
@@ -82,7 +82,7 @@
     .hero{
       max-width:1200px;
       margin:0 auto;
-      padding:34px 20px 8px;
+      padding:30px 20px 6px;
       text-align:center;
     }
 
@@ -94,15 +94,15 @@
 
     .hero-subtitle{
       max-width:860px;
-      margin:0 auto 18px;
+      margin:0 auto 16px;
       font-size:21px;
       color:#444;
-      line-height:1.6;
+      line-height:1.55;
     }
 
     .hero-image-wrap{
       max-width:1200px;
-      margin:0 auto 20px;
+      margin:0 auto 16px;
       padding:0 20px;
     }
 
@@ -117,28 +117,28 @@
     .page-wrap{
       max-width:1200px;
       margin:auto;
-      padding:0 20px 48px;
+      padding:0 20px 44px;
     }
 
     .section-box{
       background:#fff;
       border-radius:24px;
-      padding:28px;
-      margin-bottom:18px;
+      padding:26px;
+      margin-bottom:16px;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
     }
 
     .section-box h2{
       margin:0 0 10px;
       font-size:28px;
-      line-height:1.3;
+      line-height:1.28;
     }
 
     .section-box p{
       margin:0 0 10px;
       font-size:18px;
       color:#222;
-      line-height:1.75;
+      line-height:1.72;
     }
 
     .section-box p:last-child{
@@ -153,7 +153,7 @@
     .verse{
       font-size:23px;
       font-weight:700;
-      line-height:1.5;
+      line-height:1.45;
       text-align:center;
       margin-bottom:8px;
     }
@@ -175,29 +175,29 @@
     .step-card{
       background:#fafaf8;
       border-radius:20px;
-      padding:22px;
+      padding:20px;
       border:1px solid rgba(0,0,0,0.06);
     }
 
     .step-card h3{
       margin:0 0 8px;
       font-size:22px;
-      line-height:1.3;
+      line-height:1.25;
     }
 
     .step-card p{
       margin:0;
       font-size:16px;
       color:#333;
-      line-height:1.7;
+      line-height:1.68;
     }
 
     .form-box{
       background:#fff;
       border-radius:24px;
-      padding:28px;
+      padding:26px;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
-      margin-top:6px;
+      margin-top:4px;
     }
 
     .form-box h2{
@@ -207,15 +207,15 @@
     }
 
     .form-intro{
-      margin:0 0 20px;
+      margin:0 0 18px;
       font-size:17px;
       color:#444;
-      line-height:1.6;
+      line-height:1.55;
     }
 
     form{
       display:grid;
-      gap:16px;
+      gap:14px;
     }
 
     .field-group{
@@ -244,6 +244,7 @@
 
     input[type="text"],
     input[type="tel"],
+    input[type="email"],
     textarea{
       width:100%;
       box-sizing:border-box;
@@ -268,28 +269,61 @@
       margin-top:-2px;
     }
 
-    .submit-btn{
+    .contact-buttons{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:6px;
+    }
+
+    .contact-buttons a,
+    .contact-buttons button{
+      flex:1;
+      text-align:center;
+      padding:14px;
+      border-radius:12px;
+      font-size:16px;
+      text-decoration:none;
+      cursor:pointer;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    .contact-buttons a{
+      border:1px solid #ccc;
+      color:#000;
+      background:#fff;
+    }
+
+    .contact-buttons button{
       border:none;
       background:#111;
       color:#fff;
-      padding:15px 22px;
-      border-radius:999px;
-      font-size:17px;
-      font-weight:700;
-      cursor:pointer;
-      transition:all 0.25s ease;
-      width:100%;
-      max-width:260px;
     }
 
-    .submit-btn:hover{
-      transform:translateY(-2px);
-      opacity:0.94;
+    .contact-buttons button:disabled{
+      opacity:0.7;
+      cursor:not-allowed;
+    }
+
+    .small-note{
+      font-size:14px;
+      color:#666;
+      margin-top:12px;
+      line-height:1.65;
+    }
+
+    .success-message{
+      color:#1d6b3a;
+    }
+
+    .error-message{
+      color:#a33434;
     }
 
     .site-footer{
       background:#fff;
-      margin-top:48px;
+      margin-top:44px;
       border-top:1px solid rgba(0,0,0,0.08);
     }
 
@@ -384,7 +418,7 @@
       }
 
       .hero{
-        padding-top:28px;
+        padding-top:26px;
       }
 
       .hero h1{
@@ -398,12 +432,12 @@
 
       .hero-image-wrap{
         padding:0 12px;
-        margin-bottom:16px;
+        margin-bottom:14px;
       }
 
       .section-box,
       .form-box{
-        padding:22px;
+        padding:20px;
       }
 
       .section-box h2,
@@ -428,7 +462,7 @@
       }
 
       .page-wrap{
-        padding:0 12px 40px;
+        padding:0 12px 36px;
       }
     }
   </style>
@@ -556,9 +590,10 @@
       <h2>כמה פרטים כדי שאבין בדיוק איך לעזור לכם</h2>
       <p class="form-intro">השאירו פרטים ראשוניים, כדי שאוכל להבין במה מדובר ולחזור אליכם בצורה מדויקת.</p>
 
-      <form action="PASTE-YOUR-FORMSUBMIT-ACTION-HERE" method="POST">
-        <input type="hidden" name="_captcha" value="false">
+      <form id="processForm" action="https://formsubmit.co/ajax/e8fc615a018169f89920a5d28fcde840" method="post">
         <input type="hidden" name="_subject" value="פנייה חדשה מעמוד תהליך העבודה">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
 
         <div class="field-group">
           <div class="field-label">סוג השירות</div>
@@ -583,6 +618,10 @@
           </div>
         </div>
 
+        <input type="text" name="name" placeholder="שם מלא" required>
+        <input type="tel" name="phone" placeholder="מספר טלפון" required>
+        <input type="email" name="email" placeholder="אימייל">
+
         <div class="field-group">
           <label class="field-label" for="feeling">מה הייתם רוצים להרגיש בבית שלכם?</label>
           <div class="helper">למשל: שקט, חופש, סדר, יוקרה, חמימות, אומץ, משהו אחר לגמרי</div>
@@ -591,7 +630,7 @@
 
         <div class="field-group">
           <label class="field-label" for="details">ספרו לי בקצרה מה אתם מחפשים</label>
-          <textarea id="details" name="details"></textarea>
+          <textarea id="details" name="message"></textarea>
         </div>
 
         <div class="field-group">
@@ -607,18 +646,13 @@
           </div>
         </div>
 
-        <div class="field-group">
-          <label class="field-label" for="phone">טלפון</label>
-          <input type="tel" id="phone" name="phone">
+        <div class="contact-buttons">
+          <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%A2%D7%9E%D7%95%D7%93%20%D7%AA%D7%94%D7%9C%D7%99%D7%9A%20%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94" target="_blank">פנייה ב-WhatsApp</a>
+          <button id="submitBtn" type="submit">שליחה</button>
         </div>
-
-        <div class="field-group">
-          <label class="field-label" for="name">שם</label>
-          <input type="text" id="name" name="name">
-        </div>
-
-        <button class="submit-btn" type="submit">שליחה</button>
       </form>
+
+      <div id="formStatus" class="small-note">השאירו פרטים ואחזור אליכם בהקדם.</div>
     </section>
 
   </main>
@@ -658,6 +692,43 @@
 
     function closeMenu() {
       document.getElementById("mainMenu").classList.remove("open");
+    }
+
+    const form = document.getElementById("processForm");
+    const formStatus = document.getElementById("formStatus");
+    const submitButton = document.getElementById("submitBtn");
+
+    if (form) {
+      form.addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        submitButton.disabled = true;
+        submitButton.textContent = "שולח...";
+
+        try {
+          const data = new FormData(form);
+
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: { Accept: "application/json" }
+          });
+
+          if (response.ok) {
+            form.reset();
+            formStatus.className = "small-note success-message";
+            formStatus.textContent = "הבקשה התקבלה בהצלחה. אחזור אליכם בהקדם.";
+          } else {
+            throw new Error();
+          }
+        } catch (error) {
+          formStatus.className = "small-note error-message";
+          formStatus.textContent = "אירעה תקלה. אפשר לנסות שוב או לפנות אליי ישירות ב-WhatsApp.";
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = "שליחה";
+        }
+      });
     }
   </script>
 
