@@ -894,55 +894,96 @@
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("mainMenu").classList.toggle("open");
-    }
+ <script>
+  function toggleMenu() {
+    document.getElementById("mainMenu").classList.toggle("open");
+  }
 
-    function closeMenu() {
-      document.getElementById("mainMenu").classList.remove("open");
-    }
+  function closeMenu() {
+    document.getElementById("mainMenu").classList.remove("open");
+  }
 
-    const contactForm = document.getElementById("contactForm");
-    const formStatus = document.getElementById("formStatus");
+  const contactForm = document.getElementById("contactForm");
+  const formStatus = document.getElementById("formStatus");
 
-    if (contactForm) {
-      contactForm.addEventListener("submit", async function(event) {
-        event.preventDefault();
+  let formStarted = false;
 
-        const submitButton = contactForm.querySelector("button[type='submit']");
-        const formData = new FormData(contactForm);
+  if (contactForm) {
 
-        submitButton.disabled = true;
-        submitButton.textContent = "שולחת...";
-        formStatus.className = "small-note";
-        formStatus.textContent = "שולחת את הפרטים, רגע קטן...";
+    // 🎯 מעקב התחלת מילוי טופס
+    contactForm.querySelectorAll("input, textarea").forEach((el) => {
+      el.addEventListener("focus", () => {
+        if (!formStarted) {
+          formStarted = true;
 
-        try {
-          const response = await fetch(contactForm.action, {
-            method: "POST",
-            body: formData,
-            headers: {
-              Accept: "application/json"
-            }
-          });
-
-          if (!response.ok) {
-            throw new Error("Submission failed");
+          if (typeof gtag === "function") {
+            gtag("event", "form_start", {
+              event_category: "Contact Page",
+              event_label: "User started filling form"
+            });
           }
-
-          contactForm.reset();
-          formStatus.className = "small-note success-message";
-          formStatus.textContent = "הבקשה התקבלה בהצלחה. אצור קשר בהקדם.";
-        } catch (error) {
-          formStatus.className = "small-note error-message";
-          formStatus.textContent = "אירעה תקלה בשליחה. אפשר לנסות שוב או לפנות אליי ישירות ב-WhatsApp.";
-        } finally {
-          submitButton.disabled = false;
-          submitButton.textContent = "שליחה";
         }
       });
-    }
-  </script>
+    });
+
+    contactForm.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const submitButton = contactForm.querySelector("button[type='submit']");
+      const formData = new FormData(contactForm);
+
+      submitButton.disabled = true;
+      submitButton.textContent = "שולחת...";
+      formStatus.className = "small-note";
+      formStatus.textContent = "שולחת את הפרטים, רגע קטן...";
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error("Submission failed");
+        }
+
+        contactForm.reset();
+
+        formStatus.className = "small-note success-message";
+        formStatus.textContent = "הבקשה התקבלה בהצלחה. אצור קשר בהקדם.";
+
+        // 🎯 מעקב שליחה
+        if (typeof gtag === "function") {
+          gtag("event", "form_submit", {
+            event_category: "Contact Page",
+            event_label: "Form submitted successfully"
+          });
+        }
+
+      } catch (error) {
+        formStatus.className = "small-note error-message";
+        formStatus.textContent = "אירעה תקלה בשליחה. אפשר לנסות שוב או לפנות אליי ישירות ב-WhatsApp.";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "שליחה";
+      }
+    });
+  }
+
+  // 🎯 מעקב לחיצה על WhatsApp
+  document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      if (typeof gtag === "function") {
+        gtag("event", "whatsapp_click", {
+          event_category: "Contact",
+          event_label: link.href
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
