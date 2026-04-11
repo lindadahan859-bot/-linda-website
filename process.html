@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XSD3XG8TL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4XSD3XG8TL');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>תהליך העבודה | לינדה דהן</title>
+
   <style>
     html{
       scroll-behavior:smooth;
@@ -697,8 +708,24 @@
     const form = document.getElementById("processForm");
     const formStatus = document.getElementById("formStatus");
     const submitButton = document.getElementById("submitBtn");
+    let processFormStarted = false;
 
     if (form) {
+      form.querySelectorAll("input, textarea").forEach((el) => {
+        el.addEventListener("focus", () => {
+          if (!processFormStarted) {
+            processFormStarted = true;
+
+            if (typeof gtag === "function") {
+              gtag("event", "process_form_start", {
+                event_category: "Process Page",
+                event_label: "User started process form"
+              });
+            }
+          }
+        });
+      });
+
       form.addEventListener("submit", async function(e) {
         e.preventDefault();
 
@@ -718,6 +745,13 @@
             form.reset();
             formStatus.className = "small-note success-message";
             formStatus.textContent = "הבקשה התקבלה בהצלחה. אחזור אליכם בהקדם.";
+
+            if (typeof gtag === "function") {
+              gtag("event", "process_form_submit", {
+                event_category: "Process Page",
+                event_label: "Process form submitted"
+              });
+            }
           } else {
             throw new Error();
           }
@@ -730,6 +764,17 @@
         }
       });
     }
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "whatsapp_click_process", {
+            event_category: "Process Page",
+            event_label: link.href
+          });
+        }
+      });
+    });
   </script>
 
 </body>
