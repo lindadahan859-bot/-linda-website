@@ -2,15 +2,14 @@
 <html lang="he">
 <head>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XSD3XG8TL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4XSD3XG8TL');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XSD3XG8TL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4XSD3XG8TL');
+  </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +40,7 @@
     .nav-wrap{
       max-width:1200px;
       margin:auto;
-      padding:14px 20px;
+      padding:12px 20px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -51,14 +50,26 @@
 
     .brand{
       display:flex;
-      align-items:center;
+      flex-direction:column;
+      align-items:flex-end;
       text-decoration:none;
+      line-height:1.1;
     }
 
     .brand img{
       height:42px;
       width:auto;
       display:block;
+    }
+
+    .brand-subtitle{
+      font-size:12px;
+      letter-spacing:0.8px;
+      color:#555;
+      margin-top:-4px;
+      direction:ltr;
+      text-align:right;
+      white-space:nowrap;
     }
 
     .menu-toggle{
@@ -132,14 +143,16 @@
     }
 
     .hero-logo{
-      width:min(320px, 70vw);
-      margin:0 auto 18px;
+      width:min(300px, 66vw);
+      margin:0 auto 8px;
       display:block;
     }
 
-    .hero-content p{
-      margin:0 0 24px;
-      font-size:22px;
+    .hero-subtitle-he{
+      margin:0 0 16px;
+      font-size:21px;
+      font-weight:500;
+      line-height:1.35;
     }
 
     .hero-btn{
@@ -188,10 +201,10 @@
     }
 
     .art-preview-text{
-      max-width:760px;
+      max-width:820px;
       margin:0 auto 24px;
       font-size:18px;
-      line-height:1.95;
+      line-height:1.9;
     }
 
     .featured-art{
@@ -574,8 +587,20 @@
         height:34px;
       }
 
-      .hero-content p{
-        font-size:20px;
+      .brand-subtitle{
+        font-size:10px;
+        margin-top:-3px;
+      }
+
+      .hero-logo{
+        width:min(240px, 62vw);
+        margin-bottom:6px;
+      }
+
+      .hero-subtitle-he{
+        font-size:18px;
+        line-height:1.3;
+        margin:0 0 14px;
       }
 
       h2{
@@ -658,19 +683,21 @@
     <div class="nav-wrap">
       <a class="brand" href="#home">
         <img src="logo-black.png" alt="Linda Dahan">
+        <span class="brand-subtitle">Architecture & Interior Design</span>
       </a>
+
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-     <nav id="mainMenu">
-  <a href="#home" onclick="closeMenu()">בית</a>
-  <a href="story.html" onclick="closeMenu()">הסיפור שלי</a>
-  <a href="process.html" onclick="closeMenu()">תהליך העבודה</a>
-  <a href="unique-art.html" onclick="closeMenu()">אומנות ייחודית</a>
-  <a href="#projects" onclick="closeMenu()">פרויקטים</a>
-  <a href="#permits" onclick="closeMenu()">היתרי בניה</a>
-  <a href="#testimonials" onclick="closeMenu()">תשבחות</a>
-  <a href="#contact" onclick="closeMenu()">צור קשר</a>
-</nav>
+      <nav id="mainMenu">
+        <a href="#home" onclick="closeMenu()">בית</a>
+        <a href="story.html" onclick="closeMenu()">הסיפור שלי</a>
+        <a href="process.html" onclick="closeMenu()">תהליך העבודה</a>
+        <a href="unique-art.html" onclick="closeMenu()">אומנות ייחודית</a>
+        <a href="#projects" onclick="closeMenu()">פרויקטים</a>
+        <a href="#permits" onclick="closeMenu()">היתרי בניה</a>
+        <a href="#testimonials" onclick="closeMenu()">תשבחות</a>
+        <a href="#contact" onclick="closeMenu()">צור קשר</a>
+      </nav>
     </div>
   </header>
 
@@ -686,25 +713,23 @@
 
     <div class="overlay"></div>
 
- <div class="hero-content">
-  <img class="hero-logo" src="logo-white.png" alt="Linda Dahan">
-
-
-  <p class="hero-subtitle-en">Architecture & Interior Design</p>
-
-  <p class="hero-subtitle-he">תכנון אדריכלי | עיצוב פנים | יצירה בהתאמה אישית</p>
-
-  <a href="#contact" class="hero-btn">ליצירת קשר</a>
-</div>
-</section>
+    <div class="hero-content">
+      <img class="hero-logo" src="logo-white.png" alt="Linda Dahan">
+      <p class="hero-subtitle-he">תכנון אדריכלי | עיצוב פנים | יצירה בהתאמה אישית</p>
+      <a href="#contact" class="hero-btn">ליצירת קשר</a>
+    </div>
+  </section>
 
   <section id="art-preview">
     <div class="container">
       <div class="art-preview">
         <h2>אומנות ייחודית</h2>
-        <p class="section-kicker">יצירה שנולדת לבית אחד בלבד</p>
+        <p class="section-kicker">אומנות שאני יוצרת כחלק מהבית</p>
         <p class="art-preview-text">
-          טעימה מתוך עולם של יצירות שנולדות מתוך החלל עצמו. כל עבודה נבנית בהתאמה מדויקת לבית, לחומרים, לאור ולאנשים שחיים בו.
+          מעבר לתכנון אדריכלי ולעיצוב פנים, אני יוצרת גם את האומנות עצמה, כך שהיא תהיה חלק בלתי נפרד מהחלל ומהאנשים שחיים בו.
+        </p>
+        <p class="art-preview-text">
+          כל יצירה נולדת מתוך הבית, מתוך האור, החומרים, הפרופורציות והתחושה שאנחנו רוצים ליצור. זו לא תמונה שקונים, אלא יצירה שנבנית במיוחד עבור המקום.
         </p>
 
         <div class="featured-art">
@@ -725,7 +750,7 @@
     <div class="container">
       <h2>פרויקטים</h2>
 
-      <p class="projects-intro">לכל אחד יש את הסגנון שלו - וזה בדיוק מה שצריך להיות. אני כאן כדי ללוות, להסביר, לדייק ולפתוח אפשרויות, ומתוך זה לבחור יחד את מה שנכון לכם באמת.</p>
+      <p class="projects-intro">לכל אחד יש את הסגנון שלו, וזה בדיוק מה שצריך להיות. אני כאן כדי ללוות, להסביר, לדייק ולפתוח אפשרויות, ומתוך זה לבחור יחד את מה שנכון לכם באמת.</p>
 
       <div class="projects-grid">
         <div class="project-card">
@@ -802,7 +827,7 @@
       <div class="box">
         <h2>היתרי בניה</h2>
         <p>
-          תכנון מקדים הוא לא שלב טכני - הוא הבסיס לכל מה שיבוא אחריו.
+          תכנון מקדים הוא לא שלב טכני. הוא הבסיס לכל מה שיבוא אחריו.
           אני מלווה הגשות לרשויות, עבודה מול יועצים ותיאום בין כל בעלי המקצוע,
           כולל מפת מדידה, מהנדס חישובים סטטיים, פיקוד העורף, רמ״י,
           יועץ בטיחות, כיבוי אש ועוד.
@@ -831,9 +856,9 @@
         <p class="contact-quote">"סביבה נאה מרחיבה דעתו של אדם"</p>
         <p>אני מתכננת ומעצבת בתים, דירות, חנויות, משרדים ועסקים, מתוך שילוב בין אדריכלות, עיצוב פנים, היתרי בניה, הבנה שיווקית ואומנות ייחודית.</p>
         <p>אני לא מתחילה מסגנון. אני מתחילה מהאנשים, מהמטרה ומהפוטנציאל.</p>
-        <p>אני בוחנת איך אתם חיים, איך הלקוחות שלכם נכנסים, מה צריך לקרות בחלל, ואיך לגרום לכל זה לעבוד נכון - וגם להיראות מעולה.</p>
+        <p>אני בוחנת איך אתם חיים, איך הלקוחות שלכם נכנסים, מה צריך לקרות בחלל, ואיך לגרום לכל זה לעבוד נכון, וגם להיראות מעולה.</p>
         <p>בנוסף, אני מלווה בעלי נחלות ומשקים בבדיקות תכנוניות, הבנת זכויות בניה ובחינת המצב הקיים מול הוועדות השונות, כדי לקבל תמונה ברורה לפני שמקבלים החלטות.</p>
-        <p>אם אתם לפני שיפוץ, פתיחת עסק, תכנון חנות, שינוי דירה, בניית בית חדש או בדיקת נחלה - זה בדיוק השלב שבו צריך לחשוב נכון.</p>
+        <p>אם אתם לפני שיפוץ, פתיחת עסק, תכנון חנות, שינוי דירה, בניית בית חדש או בדיקת נחלה, זה בדיוק השלב שבו צריך לחשוב נכון.</p>
       </div>
 
       <div class="contact-form-box">
@@ -867,7 +892,6 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-
       <div class="footer-social-title">
         לעוד פרויקטים ותהליכים
       </div>
@@ -895,100 +919,111 @@
       <div class="footer-copy">
         © כל הזכויות שמורות לינדה דהן
       </div>
-
     </div>
   </footer>
 
- <script>
-  function toggleMenu() {
-    document.getElementById("mainMenu").classList.toggle("open");
-  }
+  <script>
+    function toggleMenu() {
+      document.getElementById("mainMenu").classList.toggle("open");
+    }
 
-  function closeMenu() {
-    document.getElementById("mainMenu").classList.remove("open");
-  }
+    function closeMenu() {
+      document.getElementById("mainMenu").classList.remove("open");
+    }
 
-  const contactForm = document.getElementById("contactForm");
-  const formStatus = document.getElementById("formStatus");
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
 
-  let formStarted = false;
+    let formStarted = false;
 
-  if (contactForm) {
+    if (contactForm) {
+      contactForm.querySelectorAll("input, textarea").forEach((el) => {
+        el.addEventListener("focus", () => {
+          if (!formStarted) {
+            formStarted = true;
 
-    // 🎯 מעקב התחלת מילוי טופס
-    contactForm.querySelectorAll("input, textarea").forEach((el) => {
-      el.addEventListener("focus", () => {
-        if (!formStarted) {
-          formStarted = true;
+            if (typeof gtag === "function") {
+              gtag("event", "form_start", {
+                event_category: "Contact Page",
+                event_label: "User started filling form"
+              });
+            }
+          }
+        });
+      });
+
+      contactForm.addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const submitButton = contactForm.querySelector("button[type='submit']");
+        const formData = new FormData(contactForm);
+
+        submitButton.disabled = true;
+        submitButton.textContent = "שולחת...";
+        formStatus.className = "small-note";
+        formStatus.textContent = "שולחת את הפרטים, רגע קטן...";
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json"
+            }
+          });
+
+          if (!response.ok) {
+            throw new Error("Submission failed");
+          }
+
+          contactForm.reset();
+          formStatus.className = "small-note success-message";
+          formStatus.textContent = "הבקשה התקבלה בהצלחה. אצור קשר בהקדם.";
 
           if (typeof gtag === "function") {
-            gtag("event", "form_start", {
+            gtag("event", "form_submit", {
               event_category: "Contact Page",
-              event_label: "User started filling form"
+              event_label: "Form submitted successfully"
             });
           }
+        } catch (error) {
+          formStatus.className = "small-note error-message";
+          formStatus.textContent = "אירעה תקלה בשליחה. אפשר לנסות שוב או לפנות אליי ישירות ב-WhatsApp.";
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = "שליחה";
+        }
+      });
+    }
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "whatsapp_click", {
+            event_category: "Contact",
+            event_label: link.href
+          });
         }
       });
     });
 
-    contactForm.addEventListener("submit", async function(event) {
-      event.preventDefault();
-
-      const submitButton = contactForm.querySelector("button[type='submit']");
-      const formData = new FormData(contactForm);
-
-      submitButton.disabled = true;
-      submitButton.textContent = "שולחת...";
-      formStatus.className = "small-note";
-      formStatus.textContent = "שולחת את הפרטים, רגע קטן...";
-
-      try {
-        const response = await fetch(contactForm.action, {
-          method: "POST",
-          body: formData,
-          headers: {
-            Accept: "application/json"
-          }
-        });
-
-        if (!response.ok) {
-          throw new Error("Submission failed");
-        }
-
-        contactForm.reset();
-
-        formStatus.className = "small-note success-message";
-        formStatus.textContent = "הבקשה התקבלה בהצלחה. אצור קשר בהקדם.";
-
-        // 🎯 מעקב שליחה
-        if (typeof gtag === "function") {
-          gtag("event", "form_submit", {
-            event_category: "Contact Page",
-            event_label: "Form submitted successfully"
-          });
-        }
-
-      } catch (error) {
-        formStatus.className = "small-note error-message";
-        formStatus.textContent = "אירעה תקלה בשליחה. אפשר לנסות שוב או לפנות אליי ישירות ב-WhatsApp.";
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = "שליחה";
-      }
-    });
-  }
-
-  // 🎯 מעקב לחיצה על WhatsApp
-  document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
-    link.addEventListener("click", () => {
+    setTimeout(() => {
       if (typeof gtag === "function") {
-        gtag("event", "whatsapp_click", {
-          event_category: "Contact",
-          event_label: link.href
+        gtag("event", "time_30_sec", {
+          event_category: "Engagement",
+          event_label: window.location.pathname
         });
       }
-    });
-  });
-</script>
+    }, 30000);
+
+    setTimeout(() => {
+      if (typeof gtag === "function") {
+        gtag("event", "time_60_sec", {
+          event_category: "Engagement",
+          event_label: window.location.pathname
+        });
+      }
+    }, 60000);
+  </script>
 </body>
 </html>
