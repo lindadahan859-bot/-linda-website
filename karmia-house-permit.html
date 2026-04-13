@@ -26,7 +26,7 @@
       direction:rtl;
       background:#f7f7f5;
       color:#222;
-      line-height:1.65;
+      line-height:1.6;
     }
 
     header{
@@ -161,7 +161,7 @@
     .text-card p{
       margin:0 0 14px;
       font-size:18px;
-      line-height:1.75;
+      line-height:1.72;
     }
 
     .text-card p:last-child{
@@ -237,24 +237,76 @@
       grid-column:span 2;
     }
 
-    .video-teaser{
-      margin:28px 0 0;
+    .video-section{
+      margin:34px 0 0;
       background:#fff;
       border-radius:24px;
       padding:26px;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
     }
 
-    .video-teaser h2{
+    .video-section h2{
       font-size:28px;
       margin:0 0 12px;
       line-height:1.2;
     }
 
-    .video-teaser p{
-      margin:0;
+    .video-section p{
+      margin:0 0 18px;
       font-size:18px;
-      line-height:1.75;
+      line-height:1.72;
+    }
+
+    .video-wrapper{
+      position:relative;
+      width:100%;
+      max-width:900px;
+      margin:auto;
+      aspect-ratio:16 / 9;
+    }
+
+    .video-wrapper iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      border-radius:16px;
+      display:block;
+    }
+
+    .faq-section{
+      margin:30px 0 0;
+      background:#fff;
+      border-radius:24px;
+      padding:26px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .faq-section h2{
+      font-size:28px;
+      margin:0 0 18px;
+      line-height:1.2;
+    }
+
+    .faq-item{
+      padding:14px 0;
+      border-top:1px solid rgba(0,0,0,0.08);
+    }
+
+    .faq-item:first-of-type{
+      border-top:none;
+      padding-top:0;
+    }
+
+    .faq-item h3{
+      font-size:20px;
+      margin:0 0 8px;
+      line-height:1.35;
+    }
+
+    .faq-item p{
+      margin:0;
+      font-size:17px;
+      line-height:1.7;
     }
 
     .project-actions{
@@ -578,19 +630,23 @@
         font-size:18px;
       }
 
-      .text-card{
+      .text-card,
+      .video-section,
+      .faq-section{
         padding:22px;
       }
 
       .text-card h2,
-      .video-teaser h2{
+      .video-section h2,
+      .faq-section h2{
         font-size:25px;
       }
 
       .text-card p,
-      .video-teaser p{
+      .video-section p,
+      .faq-item p{
         font-size:17px;
-        line-height:1.7;
+        line-height:1.68;
       }
 
       .section-heading{
@@ -756,11 +812,43 @@
         </div>
       </section>
 
-      <div class="video-teaser">
+      <div class="video-section">
         <h2>מתכנון והגשה לרשויות ועד ליווי בשטח</h2>
         <p>
-          בסרטון של הפרויקט אפשר יהיה לראות בהמשך גם את הסקיצות, את ההגשות, את העבודה בשטח ואת הדרך שבה תכנון אדריכלי פוגש ביצוע אמיתי.
+          הצצה לתהליך שמחבר בין סקיצה, הגשות, תיאום מול גורמים מקצועיים ועבודה מדויקת בשטח.
         </p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/5Q35cvCw_x4"
+            title="תכנון, הגשה לרשויות וליווי בשטח"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="faq-section">
+        <h2>שאלות ותשובות</h2>
+
+        <div class="faq-item">
+          <h3>מה היה האתגר המרכזי בפרויקט?</h3>
+          <p>
+            פירוק כמעט מלא של הבית הקיים, תוך השארת הממ״ד והתאמת כל התכנון החדש אליו, לצד עבודה מול רשויות ותקנות שהשתנו תוך כדי התהליך.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>אילו גורמים היו מעורבים בתהליך?</h3>
+          <p>
+            מודד מוסמך, מהנדס לחישובים סטטיים, רמ״י, פיקוד העורף, יועץ אינסטלציה, יועץ בטיחות, קבלנים ובעלי מקצוע נוספים בשטח.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>מה כלל הליווי בשטח?</h3>
+          <p>
+            בדיקה של פרטי הביצוע, תיאום מול הקבלנים, מענה לשאלות שעלו תוך כדי העבודה והקפדה על התאמה מלאה בין התכנון לבין מה שקורה בפועל.
+          </p>
+        </div>
       </div>
 
       <div class="project-actions">
