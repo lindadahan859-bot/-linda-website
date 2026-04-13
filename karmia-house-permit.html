@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XSD3XG8TL"></script>
   <script>
@@ -14,7 +13,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>הבית בכרמיה | תכנון מחדש ובניה קלה | לינדה דהן</title>
-  <meta name="description" content="פרויקט הבית בכרמיה - פירוק בית קיים, תכנון מחדש ובניה קלה, ליווי מול פיקוד העורף, רמ״י, מהנדס, קבלנים וכל הגורמים המעורבים בתהליך.">
+  <meta name="description" content="הבית בכרמיה - פירוק בית קיים, תכנון מחדש ובניה קלה, עבודה מול פיקוד העורף, רמ״י, מהנדס, קבלנים וכל הגורמים המעורבים בתהליך.">
 
   <style>
     html{
@@ -27,7 +26,7 @@
       direction:rtl;
       background:#f7f7f5;
       color:#222;
-      line-height:1.7;
+      line-height:1.65;
     }
 
     header{
@@ -88,68 +87,174 @@
       max-width:1200px;
       margin:auto;
       padding:0 20px;
+      box-sizing:border-box;
     }
 
-    .project-hero{
-      padding:34px 0 22px;
+    .hero-cover{
+      position:relative;
+      min-height:70vh;
+      background:url('karmia-house-design-main.jpg') center center / cover no-repeat;
+      display:flex;
+      align-items:flex-end;
+      margin:0 0 28px;
     }
 
-    .project-intro-grid{
-      display:grid;
-      grid-template-columns:1.05fr 0.95fr;
-      gap:34px;
-      align-items:start;
+    .hero-cover::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,0.58), rgba(0,0,0,0.18));
     }
 
-    .project-hero-image img{
+    .hero-inner{
+      position:relative;
+      z-index:2;
       width:100%;
-      display:block;
-      border-radius:28px;
-      object-fit:cover;
-      max-height:760px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+      max-width:1200px;
+      margin:auto;
+      padding:0 20px 46px;
+      box-sizing:border-box;
+      color:#fff;
     }
 
-    .project-text{
-      background:#fff;
-      border-radius:24px;
-      padding:30px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-    }
-
-    .project-kicker{
+    .hero-kicker{
       font-size:18px;
       font-weight:700;
-      color:#666;
-      margin:0 0 10px;
+      margin:0 0 8px;
+      opacity:0.95;
     }
 
     h1{
-      font-size:42px;
-      margin:0 0 18px;
-      line-height:1.2;
+      font-size:52px;
+      margin:0 0 10px;
+      line-height:1.1;
     }
 
-    h2{
-      font-size:30px;
+    .hero-subtitle{
+      font-size:22px;
+      line-height:1.35;
+      margin:0;
+      max-width:780px;
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:26px;
+      align-items:start;
+      margin:0 0 26px;
+    }
+
+    .text-card{
+      background:#fff;
+      border-radius:24px;
+      padding:28px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .text-card h2{
+      font-size:28px;
       margin:0 0 14px;
       line-height:1.2;
     }
 
-    h3{
-      font-size:22px;
-      margin:28px 0 10px;
-      line-height:1.3;
-    }
-
-    .project-text p{
-      margin:0 0 16px;
+    .text-card p{
+      margin:0 0 14px;
       font-size:18px;
-      line-height:1.95;
+      line-height:1.75;
     }
 
-    .project-text p:last-child{
+    .text-card p:last-child{
       margin-bottom:0;
+    }
+
+    .mid-images{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin:0 0 26px;
+    }
+
+    .mid-images img{
+      width:100%;
+      display:block;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      border-radius:22px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .section-heading{
+      font-size:30px;
+      margin:0 0 20px;
+      line-height:1.2;
+    }
+
+    .gallery-section{
+      padding:8px 0 20px;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+      align-items:start;
+    }
+
+    .gallery-item{
+      width:100%;
+      display:block;
+      object-fit:cover;
+      border-radius:22px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+      background:#fff;
+      cursor:pointer;
+      user-select:none;
+      -webkit-user-drag:none;
+    }
+
+    .gallery-item:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 30px rgba(0,0,0,0.12);
+    }
+
+    .gallery-item.square{
+      aspect-ratio:1 / 1;
+    }
+
+    .gallery-item.tall{
+      aspect-ratio:2 / 3;
+    }
+
+    .gallery-item.wide{
+      aspect-ratio:2 / 1;
+      grid-column:span 2;
+    }
+
+    .gallery-item.large{
+      aspect-ratio:4 / 3;
+      grid-column:span 2;
+    }
+
+    .video-teaser{
+      margin:28px 0 0;
+      background:#fff;
+      border-radius:24px;
+      padding:26px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .video-teaser h2{
+      font-size:28px;
+      margin:0 0 12px;
+      line-height:1.2;
+    }
+
+    .video-teaser p{
+      margin:0;
+      font-size:18px;
+      line-height:1.75;
     }
 
     .project-actions{
@@ -194,60 +299,9 @@
       color:#fff;
     }
 
-    .gallery-section{
-      padding:14px 0 60px;
-    }
-
-    .gallery-title{
-      font-size:30px;
-      margin:0 0 22px;
-      line-height:1.2;
-    }
-
-    .gallery-grid{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:18px;
-      align-items:start;
-    }
-
-    .gallery-item{
-      width:100%;
-      display:block;
-      object-fit:cover;
-      border-radius:22px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-      transition:transform 0.25s ease, box-shadow 0.25s ease;
-      background:#fff;
-      cursor:pointer;
-    }
-
-    .gallery-item:hover{
-      transform:translateY(-4px);
-      box-shadow:0 14px 30px rgba(0,0,0,0.12);
-    }
-
-    .gallery-item.square{
-      aspect-ratio:1 / 1;
-    }
-
-    .gallery-item.tall{
-      aspect-ratio:2 / 3;
-    }
-
-    .gallery-item.wide{
-      aspect-ratio:2 / 1;
-      grid-column:span 2;
-    }
-
-    .gallery-item.large{
-      aspect-ratio:4 / 3;
-      grid-column:span 2;
-    }
-
     .site-footer{
       background:#fff;
-      margin-top:20px;
+      margin-top:34px;
       border-top:1px solid rgba(0,0,0,0.08);
     }
 
@@ -353,41 +407,131 @@
     .lightbox{
       position:fixed;
       inset:0;
-      background:rgba(0,0,0,0.9);
+      background:rgba(0,0,0,0.94);
       display:none;
-      justify-content:center;
-      align-items:center;
       z-index:9999;
-      padding:20px;
-      box-sizing:border-box;
-    }
-
-    .lightbox img{
-      max-width:90%;
-      max-height:90%;
-      border-radius:12px;
+      overflow:hidden;
     }
 
     .lightbox.active{
+      display:block;
+    }
+
+    .lightbox-stage{
+      width:100%;
+      height:100%;
       display:flex;
+      align-items:center;
+      justify-content:center;
+      touch-action:pan-y;
+      position:relative;
+    }
+
+    .lightbox img{
+      max-width:92vw;
+      max-height:86vh;
+      border-radius:12px;
+      display:block;
+      margin:auto;
+      object-fit:contain;
+    }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next{
+      position:absolute;
+      border:none;
+      background:rgba(255,255,255,0.14);
+      color:#fff;
+      cursor:pointer;
+      z-index:2;
+    }
+
+    .lightbox-close{
+      top:18px;
+      right:18px;
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      font-size:24px;
+      line-height:1;
+    }
+
+    .lightbox-prev,
+    .lightbox-next{
+      top:50%;
+      transform:translateY(-50%);
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      font-size:22px;
+      line-height:1;
+    }
+
+    .lightbox-prev{
+      right:18px;
+    }
+
+    .lightbox-next{
+      left:18px;
+    }
+
+    .lightbox-counter{
+      position:absolute;
+      bottom:18px;
+      left:50%;
+      transform:translateX(-50%);
+      color:#fff;
+      font-size:14px;
+      background:rgba(255,255,255,0.14);
+      padding:8px 14px;
+      border-radius:999px;
     }
 
     @media (max-width: 900px){
-      .project-intro-grid{
+      .intro-grid{
         grid-template-columns:1fr;
-        gap:20px;
       }
 
       h1{
-        font-size:34px;
+        font-size:38px;
       }
 
-      .gallery-grid{
+      .hero-subtitle{
+        font-size:19px;
+      }
+
+      .mid-images{
         grid-template-columns:1fr;
       }
 
+      .gallery-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:12px;
+        padding-bottom:6px;
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+      }
+
+      .gallery-grid::-webkit-scrollbar{
+        height:6px;
+      }
+
+      .gallery-grid::-webkit-scrollbar-thumb{
+        background:#cfcfcf;
+        border-radius:999px;
+      }
+
+      .gallery-item{
+        min-width:84%;
+        scroll-snap-align:center;
+      }
+
       .gallery-item.wide,
-      .gallery-item.large{
+      .gallery-item.large,
+      .gallery-item.tall,
+      .gallery-item.square{
         grid-column:auto;
         aspect-ratio:4 / 3;
       }
@@ -414,20 +558,42 @@
         height:34px;
       }
 
-      .project-hero{
-        padding:20px 0 12px;
+      .hero-cover{
+        min-height:54vh;
       }
 
-      .project-text{
+      .hero-inner{
+        padding-bottom:28px;
+      }
+
+      h1{
+        font-size:34px;
+      }
+
+      .hero-kicker{
+        font-size:16px;
+      }
+
+      .hero-subtitle{
+        font-size:18px;
+      }
+
+      .text-card{
         padding:22px;
       }
 
-      .project-text p{
-        font-size:17px;
-        line-height:1.9;
+      .text-card h2,
+      .video-teaser h2{
+        font-size:25px;
       }
 
-      .gallery-title{
+      .text-card p,
+      .video-teaser p{
+        font-size:17px;
+        line-height:1.7;
+      }
+
+      .section-heading{
         font-size:26px;
       }
 
@@ -449,6 +615,25 @@
         width:48px;
         height:48px;
         font-size:24px;
+      }
+
+      .lightbox img{
+        max-width:94vw;
+        max-height:78vh;
+      }
+
+      .lightbox-prev,
+      .lightbox-next{
+        width:40px;
+        height:40px;
+      }
+
+      .lightbox-prev{
+        right:10px;
+      }
+
+      .lightbox-next{
+        left:10px;
       }
     }
   </style>
@@ -480,97 +665,107 @@
     </div>
   </header>
 
-  <section class="project-hero">
-    <div class="container">
-      <div class="project-intro-grid">
-        <div class="project-hero-image">
-          <img src="karmia-house-design-main.jpg" alt="הבית בכרמיה בבניה קלה לאחר תכנון מחדש">
-        </div>
-
-        <div class="project-text">
-          <p class="project-kicker">פירוק בית קיים, תכנון מחדש וליווי אינטנסיבי עד לשטח</p>
-          <h1>הבית בכרמיה</h1>
-
-          <p>
-            זהו פרויקט שבו הבית הקיים פורק, ובמקומו תוכנן ונבנה בית גדול יותר בבניה קלה. הממ״ד נשאר במקומו, וכל שאר הבית ירד ותוכנן מחדש מהיסוד.
-          </p>
-
-          <h3>התהליך והתיאום המקצועי</h3>
-
-          <p>
-            תכנון הבית ופיתוח השטח כלל עבודה מול גורמים מקצועיים רבים: מודד מוסמך, מהנדס לחישובים סטטיים, רמ״י, פיקוד העורף, יועץ אינסטלציה ויועץ בטיחות.
-          </p>
-
-          <p>
-            במהלך הפרויקט בוצעו הגשות ואישורים שונים, ביניהם טופס 4 (פטור ממ״ד, בעקבות השארת הממ״ד הקיים והתאמות לדרישות פיקוד העורף), אישור זכויות בנכס ואישור העדר חובות.
-          </p>
-
-          <p>
-            העבודה דרשה הבנה רחבה של התהליך, תיאום בין כל הגורמים ויכולת להוביל את הפרויקט בצורה מדויקת מול הרשויות.
-          </p>
-
-          <h3>העבודה בשטח</h3>
-
-          <p>
-            השלב הביצועי כלל פירוק מלא של הבית הקיים, הגג והשלדה הקודמת, תוך השארת הממ״ד בלבד והתאמה של השלדות החדשות לרצפה הקיימת שלו.
-          </p>
-
-          <p>
-            בוצעו קידוחים ויציקות כלונסאות, כולל בדיקות בטון ביום היציקה, וכן יציקות נוספות לרצפת הבית ולחומה.
-          </p>
-
-          <p>
-            קונסטרוקציית הפלדה בוצעה באמצעות פרופילי I180, תוך שימוש בפלסיב להפרדה בין הברזל לבטון.
-          </p>
-
-          <p>
-            במהלך העבודה בוצעו ריתוכים, צביעה באמצעות קומפרסור, יציקות בטון לתוך תבניות קונסטרוקציה ופריסה לפני ריטוט הבטון, כדי להבטיח ביצוע מדויק ואיכותי.
-          </p>
-
-          <p>
-            הליווי בפרויקט כזה הוא אינטנסיבי ודורש הגעה לשטח, בדיקה מול הקבלנים והקפדה שהם מבינים כל פרט, כדי למנוע אי הבנות ולשמור על התאמה מלאה בין התכנון לביצוע.
-          </p>
-
-          <div class="project-actions">
-            <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%91%D7%9B%D7%A8%D7%9E%D7%99%D7%94%20%D7%95%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%93%D7%95%D7%9E%D7%94" target="_blank" class="cta-btn">דברו איתי על פרויקט דומה</a>
-
-            <a href="index.html#projects" class="back-link">חזרה לכל הפרויקטים</a>
-          </div>
-        </div>
-      </div>
+  <section class="hero-cover">
+    <div class="hero-inner">
+      <p class="hero-kicker">פירוק בית קיים, תכנון מחדש וליווי מדויק בתהליך</p>
+      <h1>הבית בכרמיה</h1>
+      <p class="hero-subtitle">בניה קלה, עבודה מול רשויות, התאמות בשטח וליווי קבלנים עד לביצוע נכון.</p>
     </div>
   </section>
 
-  <section class="gallery-section">
+  <section>
     <div class="container">
-      <h2 class="gallery-title">תמונות מהתהליך</h2>
+      <div class="intro-grid">
+        <div class="text-card">
+          <h2>הסיפור של הפרויקט</h2>
+          <p>
+            זהו פרויקט שבו <strong>הבית הקיים פורק כמעט במלואו</strong>, ובמקומו תוכנן ונבנה בית גדול יותר בבניה קלה. <strong>הממ״ד נשאר במקומו</strong>, וכל שאר הבית תוכנן מחדש מהיסוד.
+          </p>
+          <p>
+            התהליך לא היה לינארי. התכנון עבר <strong>מספר שינויים והתאמות</strong> עד שהגענו לפתרון המדויק, כזה שמתאים גם למבנה הקיים, גם לדרישות הרשויות וגם לאופן שבו הבית אמור לחיות בפועל.
+          </p>
+          <p>
+            זהו פרויקט שממחיש עד כמה תכנון הוא לא רק שרטוט, אלא <strong>תהליך של קבלת החלטות, בדיקות בשטח ודיוק מתמשך</strong> עד לתוצאה הנכונה.
+          </p>
+        </div>
 
-      <div class="gallery-grid">
-        <img src="karmia-house-01.jpg" alt="בדיקות שטח ותכנון ראשוני בכרמיה" class="gallery-item tall">
-        <img src="karmia-house-02.jpg" alt="תיעוד מצב קיים לפני תחילת העבודה" class="gallery-item tall">
+        <div class="text-card">
+          <h2>תכנון, הגשה לרשויות וליווי בשטח</h2>
+          <p>
+            תכנון הבית ופיתוח השטח כלל עבודה מול <strong>מודד מוסמך, מהנדס לחישובים סטטיים, רמ״י, פיקוד העורף, יועץ אינסטלציה ויועץ בטיחות</strong>.
+          </p>
+          <p>
+            במהלך הפרויקט בוצעו הגשות ואישורים שונים, ביניהם <strong>טופס 4 כפטור ממ״ד</strong> בעקבות השארת הממ״ד הקיים, התאמות לדרישות פיקוד העורף, <strong>אישור זכויות בנכס</strong> ו<strong>אישור העדר חובות</strong>.
+          </p>
+          <p>
+            העבודה דרשה <strong>תיאום בין גורמים רבים</strong>, הבנה רחבה של כל שלב והובלה מדויקת של התהליך מול הרשויות והשטח.
+          </p>
+        </div>
+      </div>
 
-        <img src="karmia-house-design-main.jpg" alt="הבית בכרמיה לאחר תכנון מחדש" class="gallery-item large">
+      <div class="mid-images">
+        <img src="karmia-house-01.jpg" alt="בדיקות ותיעוד ראשוני בכרמיה">
+        <img src="karmia-house-design-main.jpg" alt="הבית בכרמיה לאחר תכנון מחדש">
+        <img src="karmia-house-03.jpg" alt="עבודות בשטח בתחילת הפרויקט">
+      </div>
 
-        <img src="karmia-house-03.jpg" alt="עבודות בשטח בתחילת הפרויקט" class="gallery-item square">
-        <img src="karmia-house-04.jpg" alt="המגרש לפני תחילת הבניה" class="gallery-item square">
+      <div class="intro-grid">
+        <div class="text-card">
+          <h2>הביצוע בשטח</h2>
+          <p>
+            השלב הביצועי כלל <strong>פירוק מלא של הבית הקיים, הגג והשלדה הקודמת</strong>, תוך השארת הממ״ד בלבד והתאמה של השלדות החדשות לרצפה הקיימת שלו.
+          </p>
+          <p>
+            בוצעו <strong>קידוחים ויציקות כלונסאות</strong>, כולל בדיקות בטון באותו יום, וכן יציקות נוספות לרצפת הבית ולחומה.
+          </p>
+          <p>
+            קונסטרוקציית הפלדה בוצעה באמצעות <strong>פרופילי I180</strong>, תוך שימוש ב<strong>פלסיב</strong> להפרדה בין הברזל לבטון.
+          </p>
+        </div>
 
-        <img src="karmia-house-05.jpg" alt="עבודות שלד בבניה קלה" class="gallery-item tall">
+        <div class="text-card">
+          <h2>נוכחות שמונעת אי הבנות</h2>
+          <p>
+            במהלך העבודה בוצעו <strong>ריתוכים, צביעה באמצעות קומפרסור</strong>, יציקות בטון לתוך תבניות קונסטרוקציה ופריסה לפני ריטוט הבטון, כדי להבטיח ביצוע מדויק ואיכותי.
+          </p>
+          <p>
+            הליווי בפרויקט כזה הוא אינטנסיבי ודורש <strong>הגעה לשטח, בדיקה מול הקבלנים והקפדה שהם מבינים כל פרט</strong>, כדי למנוע אי הבנות ולשמור על התאמה מלאה בין התכנון לביצוע.
+          </p>
+        </div>
+      </div>
 
-        <img src="karmia-house-06.jpg" alt="הרכבת קונסטרוקציית הבית" class="gallery-item square">
+      <section class="gallery-section">
+        <h2 class="section-heading">תמונות מהתהליך</h2>
 
-        <img src="karmia-house-07.jpg" alt="שלבי בניה מתקדמים בבית בכרמיה" class="gallery-item wide">
+        <div class="gallery-grid" id="galleryGrid">
+          <img src="karmia-house-01.jpg" alt="בדיקות שטח ותכנון ראשוני בכרמיה" class="gallery-item tall">
+          <img src="karmia-house-02.jpg" alt="תיעוד מצב קיים לפני תחילת העבודה" class="gallery-item tall">
+          <img src="karmia-house-design-main.jpg" alt="הבית בכרמיה לאחר תכנון מחדש" class="gallery-item large">
+          <img src="karmia-house-03.jpg" alt="עבודות בשטח בתחילת הפרויקט" class="gallery-item square">
+          <img src="karmia-house-04.jpg" alt="המגרש לפני תחילת הבניה" class="gallery-item square">
+          <img src="karmia-house-05.jpg" alt="עבודות שלד בבניה קלה" class="gallery-item tall">
+          <img src="karmia-house-06.jpg" alt="הרכבת קונסטרוקציית הבית" class="gallery-item square">
+          <img src="karmia-house-07.jpg" alt="שלבי בניה מתקדמים בבית בכרמיה" class="gallery-item wide">
+          <img src="karmia-house-08.jpg" alt="מבט רחב על התקדמות הבניה" class="gallery-item square">
+          <img src="karmia-house-10.jpg" alt="גרמושקה ותכניות עבודה באתר הבניה" class="gallery-item wide">
+          <img src="karmia-house-09.jpg" alt="הבית בכרמיה במהלך הבניה" class="gallery-item square">
+          <img src="karmia-house-11.jpg" alt="עבודות תשתית והתארגנות באתר" class="gallery-item wide">
+          <img src="karmia-house-12.jpg" alt="פרטי ביצוע וחיבורים בשטח" class="gallery-item square">
+          <img src="karmia-house-13.jpg" alt="הבית לאחר שלבי הבניה העיקריים" class="gallery-item tall">
+          <img src="karmia-house-14.jpg" alt="מבט כללי נוסף על הפרויקט בכרמיה" class="gallery-item square">
+        </div>
+      </section>
 
-        <img src="karmia-house-08.jpg" alt="מבט רחב על התקדמות הבניה" class="gallery-item square">
+      <div class="video-teaser">
+        <h2>מתכנון והגשה לרשויות ועד ליווי בשטח</h2>
+        <p>
+          בסרטון של הפרויקט אפשר יהיה לראות בהמשך גם את הסקיצות, את ההגשות, את העבודה בשטח ואת הדרך שבה תכנון אדריכלי פוגש ביצוע אמיתי.
+        </p>
+      </div>
 
-        <img src="karmia-house-10.jpg" alt="גרמושקה ותכניות עבודה באתר הבניה" class="gallery-item wide">
-
-        <img src="karmia-house-09.jpg" alt="הבית בכרמיה במהלך הבניה" class="gallery-item square">
-
-        <img src="karmia-house-11.jpg" alt="עבודות תשתית והתארגנות באתר" class="gallery-item wide">
-
-        <img src="karmia-house-12.jpg" alt="פרטי ביצוע וחיבורים בשטח" class="gallery-item square">
-        <img src="karmia-house-13.jpg" alt="הבית לאחר שלבי הבניה העיקריים" class="gallery-item tall">
-        <img src="karmia-house-14.jpg" alt="מבט כללי נוסף על הפרויקט בכרמיה" class="gallery-item square">
+      <div class="project-actions">
+        <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%91%D7%9B%D7%A8%D7%9E%D7%99%D7%94%20%D7%95%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%93%D7%95%D7%9E%D7%94" target="_blank" class="cta-btn">דברו איתי על פרויקט דומה</a>
+        <a href="index.html#projects" class="back-link">חזרה לכל הפרויקטים</a>
       </div>
     </div>
   </section>
@@ -608,7 +803,13 @@
   </footer>
 
   <div class="lightbox" id="lightbox">
-    <img src="" alt="">
+    <button class="lightbox-close" id="lightboxClose" aria-label="סגירה">×</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="התמונה הקודמת">›</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="התמונה הבאה">‹</button>
+    <div class="lightbox-stage" id="lightboxStage">
+      <img src="" alt="" id="lightboxImage">
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
   </div>
 
   <script>
@@ -620,21 +821,81 @@
       document.getElementById("mainMenu").classList.remove("open");
     }
 
-    const images = document.querySelectorAll('.gallery-item');
+    const galleryImages = Array.from(document.querySelectorAll('.gallery-item'));
     const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
+    const lightboxImg = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    const lightboxStage = document.getElementById('lightboxStage');
 
-    images.forEach(img => {
-      img.addEventListener('click', () => {
-        lightbox.classList.add('active');
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt || '';
-      });
-    });
+    let currentIndex = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-    lightbox.addEventListener('click', () => {
+    function updateLightbox(index) {
+      const img = galleryImages[index];
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || '';
+      lightboxCounter.textContent = `${index + 1} / ${galleryImages.length}`;
+      currentIndex = index;
+    }
+
+    function openLightbox(index) {
+      updateLightbox(index);
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
       lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function showNext() {
+      const nextIndex = (currentIndex + 1) % galleryImages.length;
+      updateLightbox(nextIndex);
+    }
+
+    function showPrev() {
+      const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      updateLightbox(prevIndex);
+    }
+
+    galleryImages.forEach((img, index) => {
+      img.addEventListener('click', () => openLightbox(index));
     });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxNext.addEventListener('click', showNext);
+    lightboxPrev.addEventListener('click', showPrev);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') showPrev();
+      if (e.key === 'ArrowLeft') showNext();
+    });
+
+    lightboxStage.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightboxStage.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) < 40) return;
+      if (diff < 0) {
+        showNext();
+      } else {
+        showPrev();
+      }
+    }, { passive: true });
 
     document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
       link.addEventListener("click", () => {
