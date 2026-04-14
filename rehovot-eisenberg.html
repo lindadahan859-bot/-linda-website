@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מגדלי אייזינברג רחובות | לינדה דהן</title>
+
+<style>
+body{margin:0;font-family:Arial;direction:rtl;background:#f7f7f5;color:#222}
+.container{max-width:1200px;margin:auto;padding:20px}
+
+/* HERO */
+.hero{
+height:70vh;
+background:url('rehovot-main.jpg') center/cover no-repeat;
+display:flex;
+align-items:flex-end;
+color:#fff;
+}
+.hero-text{
+padding:40px;
+background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+.hero h1{font-size:48px;margin:0}
+.hero h2{font-size:22px;margin-top:10px}
+
+/* TEXT */
+.text-block{
+background:#fff;
+padding:30px;
+border-radius:20px;
+margin:30px 0;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+}
+.gallery img{
+width:100%;
+border-radius:16px;
+object-fit:cover;
+cursor:pointer;
+transition:0.3s;
+}
+.gallery img:hover{transform:scale(1.03)}
+
+.big{grid-column:span 2}
+.tall{grid-row:span 2}
+
+/* QUOTE */
+.quote{
+font-size:22px;
+text-align:center;
+margin:40px 0;
+}
+
+/* FAQ */
+.faq{
+background:#fff;
+padding:30px;
+border-radius:20px;
+margin-top:40px;
+}
+
+/* LIGHTBOX */
+.lightbox{
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+.lightbox img{
+max-width:90%;
+max-height:80%;
+}
+.lightbox.active{display:flex}
+
+/* MOBILE */
+@media(max-width:800px){
+.gallery{grid-template-columns:1fr}
+.big{grid-column:span 1}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-text">
+<h1>בלב העיר. בגובה. בתוך החיים.</h1>
+<h2>מגדלי אייזינברג, רחובות</h2>
+</div>
+</section>
+
+<div class="container">
+
+<!-- INTRO -->
+<div class="text-block">
+<p>
+יש משהו מיוחד בלגור בבניין משותף ובגובה -  
+מבט אל <strong>נוף פתוח ואורות עיר שמנצנצים בערב</strong>,  
+תחושה של שקט לצד חיים מסביב.
+</p>
+
+<p>
+הדירה בלב רחובות, סמוך למכון ויצמן ואזור המדע,  
+עם <strong>בתי קפה, מסעדות וחיי יומיום במרחק הליכה</strong>.
+</p>
+
+<p>למי שאוהב לרדת מהבית ולפגוש חיים.</p>
+</div>
+
+<!-- BEFORE -->
+<h3>לפני השינוי</h3>
+
+<div class="gallery">
+
+<img src="rehovot-before-5.jpg" class="big">
+<img src="rehovot-before-1.jpg">
+<img src="rehovot-before-2.jpg">
+<img src="rehovot-before-3.jpg">
+<img src="rehovot-process-1.jpg" class="big">
+
+</div>
+
+<div class="quote">
+מהדירה שהייתה - לחלל שמרגיש אחרת לגמרי
+</div>
+
+<!-- AFTER -->
+<h3>התוצאה</h3>
+
+<div class="gallery">
+
+<img src="rehovot-main.jpg" class="big">
+
+<img src="rehovot-living-2.jpg">
+
+<img src="rehovot-detail-3.jpg" class="tall">
+<img src="rehovot-detail-4.jpg">
+
+<img src="rehovot-detail-1.jpg">
+<img src="rehovot-detail-2.jpg">
+
+<img src="rehovot-detail-5.jpg" class="tall">
+
+<img src="rehovot-bathroom-1.jpg" class="big">
+<img src="rehovot-bathroom-2.jpg">
+<img src="rehovot-bathroom-3.jpg">
+
+<img src="rehovot-balcony-2.jpg" class="tall">
+<img src="rehovot-balcony-1.jpg">
+<img src="rehovot-balcony-3.jpg">
+<img src="rehovot-balcony-4.jpg" class="big">
+
+<img src="rehovot-linda-2.jpg" class="tall">
+<img src="rehovot-linda-3.jpg">
+<img src="rehovot-linda-1.jpg" class="big">
+
+</div>
+
+<!-- TEXT -->
+<div class="text-block">
+
+<h3>חשיבה תכנונית</h3>
+<p>
+בדירה לפני היה סלון.  
+בתכנון החדש נוצרו <strong>ספריה ופינת עבודה</strong> - בהתאם לפרוגרמה.
+</p>
+
+<h3>תאורה</h3>
+<p>
+החלל תוכנן עם <strong>כמה מצבי תאורה</strong> -  
+אור חזק לצד תאורת אווירה ותאורת לילה.
+</p>
+
+<h3>אומנות כחלק מהחלל</h3>
+<p>
+הקירות הפכו לחלק מהעיצוב, עם <strong>אותיות בתלת מימד ושילובי עץ</strong>.
+</p>
+
+<p style="text-align:center; color:#666;">
+האומנות היא חלק מהתכנון - לא תוספת
+</p>
+
+<h3>קמין ואווירה</h3>
+<p>
+הקמין מוסיף <strong>תנועה ואווירה רגועה</strong> לאורך כל השנה.
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="faq">
+<h3>שאלות ותשובות</h3>
+
+<p><strong>איך מרגיש לגור במגדל?</strong><br>
+שילוב בין פרטיות לחיים עירוניים.</p>
+
+<p><strong>דירה קטנה יכולה להיות מרווחת?</strong><br>
+כן, עם תכנון נכון.</p>
+
+<p><strong>למה תאורה חשובה?</strong><br>
+היא מגדירה את האווירה.</p>
+
+<p><strong>איך אומנות עוזרת?</strong><br>
+מוסיפה עומק בלי להעמיס.</p>
+
+</div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+<img id="lightbox-img">
+</div>
+
+<script>
+const images = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+images.forEach(img=>{
+img.onclick=()=>{
+lightbox.classList.add("active");
+lightboxImg.src=img.src;
+};
+});
+
+lightbox.onclick=()=>{
+lightbox.classList.remove("active");
+};
+</script>
+
+</body>
+</html>
