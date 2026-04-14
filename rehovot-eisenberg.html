@@ -13,7 +13,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>מגדלי אייזינברג, רחובות | עיצוב פנים לדירה במגדל | לינדה דהן</title>
-  <meta name="description" content="פרויקט עיצוב פנים לדירת 80 מ״ר במגדלי אייזינברג ברחובות. לפני ואחרי, תכנון מדויק, תאורה, אומנות כחלק מהחלל, קמין ואווירה עירונית נעימה.">
+  <meta name="description" content="פרויקט עיצוב פנים לדירת 80 מ״ר במגדלי אייזינברג ברחובות. לפני ואחרי, מאחורי הקלעים, תכנון מדויק, תאורה, אומנות כחלק מהחלל וקמין באווירה עירונית נעימה.">
 
   <style>
     html{
@@ -152,6 +152,12 @@
       line-height:1.2;
     }
 
+    h4{
+      margin:0 0 10px;
+      font-size:21px;
+      line-height:1.35;
+    }
+
     p{
       margin:0 0 18px;
       font-size:18px;
@@ -164,7 +170,8 @@
     .text-block,
     .quote,
     .faq,
-    .info-card{
+    .info-card,
+    .behind-scenes{
       background:#fff;
       border-radius:24px;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
@@ -195,7 +202,7 @@
       padding:28px;
     }
 
-    .handwritten-note{
+    .emphasis-note{
       text-align:center;
       font-weight:700;
       font-size:18px;
@@ -250,6 +257,64 @@
       aspect-ratio:1 / 1;
     }
 
+    .behind-scenes{
+      margin-top:40px;
+      padding:30px;
+    }
+
+    .behind-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:24px;
+      align-items:start;
+      margin-top:18px;
+    }
+
+    .behind-text p{
+      color:#444;
+    }
+
+    .behind-gallery{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .behind-gallery img{
+      width:100%;
+      display:block;
+      aspect-ratio:4 / 5;
+      object-fit:cover;
+      border-radius:22px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+      cursor:pointer;
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+      background:#fff;
+    }
+
+    .behind-gallery img:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 30px rgba(0,0,0,0.12);
+    }
+
+    .process-btn{
+      display:inline-block;
+      margin-top:10px;
+      padding:12px 22px;
+      border-radius:999px;
+      border:1px solid #111;
+      color:#111;
+      text-decoration:none;
+      font-size:15px;
+      font-weight:600;
+      transition:all 0.25s ease;
+    }
+
+    .process-btn:hover{
+      background:#111;
+      color:#fff;
+    }
+
     .faq{
       margin-top:40px;
       padding:30px;
@@ -271,12 +336,6 @@
     .faq-item:nth-child(2){
       border-top:none;
       padding-top:0;
-    }
-
-    .faq-item h4{
-      margin:0 0 10px;
-      font-size:21px;
-      line-height:1.35;
     }
 
     .faq-item p{
@@ -511,7 +570,12 @@
 
     @media (max-width: 900px){
       .text-split,
-      .faq-items{
+      .faq-items,
+      .behind-grid{
+        grid-template-columns:1fr;
+      }
+
+      .behind-gallery{
         grid-template-columns:1fr;
       }
 
@@ -548,7 +612,8 @@
       .quote,
       .text-block,
       .faq,
-      .info-card{
+      .info-card,
+      .behind-scenes{
         padding:22px;
       }
 
@@ -557,7 +622,7 @@
         font-size:17px;
       }
 
-      .handwritten-note{
+      .emphasis-note{
         font-size:17px;
       }
 
@@ -694,7 +759,32 @@
         <img src="rehovot-before-2.jpg" class="square" alt="המרפסת לפני השינוי">
         <img src="rehovot-before-3.jpg" class="square" alt="פינה נוספת לפני התכנון">
         <img src="rehovot-bathroom-before.jpg" class="square" alt="חדר הרחצה לפני השיפוץ">
-        <img src="rehovot-process-1.jpg" class="wide" alt="שלב פירוק והכנה">
+      </div>
+    </section>
+
+    <section class="behind-scenes">
+      <p class="section-label">התהליך</p>
+      <h2 class="section-title">מאחורי הקלעים</h2>
+
+      <div class="behind-grid">
+        <div class="behind-text">
+          <p>
+            מאחורי כל תמונה יפה יש תהליך.
+            מדידות, החלטות, עבודה בשטח ורגעים שבהם הכל עדיין פתוח.
+          </p>
+
+          <p>
+            זה השלב שבו מתחילים לראות את השינוי קורה באמת,
+            לפני שהחלל נסגר ומקבל את השפה החדשה שלו.
+          </p>
+
+          <a class="process-btn" href="https://vt.tiktok.com/ZSHs4anoY/" target="_blank">לצפייה בתהליך</a>
+        </div>
+
+        <div class="behind-gallery">
+          <img src="rehovot-process-1.jpg" alt="שלב העבודה והריצוף">
+          <img src="rehovot-linda-3.jpg" alt="לינדה דהן במהלך התהליך">
+        </div>
       </div>
     </section>
 
@@ -724,7 +814,6 @@
         <img src="rehovot-balcony-3.jpg" class="square" alt="מבט נוסף על המרפסת">
         <img src="rehovot-balcony-4.jpg" class="wide full-mobile" alt="המרפסת בשעת ערב">
         <img src="rehovot-linda-2.jpg" class="tall" alt="לינדה דהן עם האומנות בחלל">
-        <img src="rehovot-linda-3.jpg" class="square" alt="לינדה בתוך הפרויקט">
         <img src="rehovot-linda-1.jpg" class="large" alt="אומנות כחלק מהתכנון">
       </div>
     </section>
@@ -752,7 +841,7 @@
           <strong>אותיות בתלת מימד ושילובי עץ</strong>.
         </p>
 
-        <div class="handwritten-note">
+        <div class="emphasis-note">
           האומנות היא חלק מהתכנון - לא תוספת
         </div>
 
@@ -846,7 +935,7 @@
       document.getElementById("mainMenu").classList.remove("open");
     }
 
-    const images = Array.from(document.querySelectorAll(".gallery img"));
+    const galleryImages = Array.from(document.querySelectorAll(".gallery img, .behind-gallery img"));
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
     const lightboxClose = document.getElementById("lightboxClose");
@@ -861,13 +950,13 @@
     let touchEndY = 0;
 
     function updateLightbox(index){
-      lightboxImg.src = images[index].src;
-      lightboxImg.alt = images[index].alt || "";
-      lightboxCounter.textContent = `${index + 1} / ${images.length}`;
+      lightboxImg.src = galleryImages[index].src;
+      lightboxImg.alt = galleryImages[index].alt || "";
+      lightboxCounter.textContent = `${index + 1} / ${galleryImages.length}`;
       currentIndex = index;
     }
 
-    images.forEach((img, index) => {
+    galleryImages.forEach((img, index) => {
       img.addEventListener("click", () => {
         updateLightbox(index);
         lightbox.classList.add("active");
@@ -883,12 +972,12 @@
     lightboxClose.addEventListener("click", closeLightbox);
 
     lightboxNext.addEventListener("click", () => {
-      const nextIndex = (currentIndex + 1) % images.length;
+      const nextIndex = (currentIndex + 1) % galleryImages.length;
       updateLightbox(nextIndex);
     });
 
     lightboxPrev.addEventListener("click", () => {
-      const prevIndex = (currentIndex - 1 + images.length) % images.length;
+      const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
       updateLightbox(prevIndex);
     });
 
@@ -906,12 +995,12 @@
       }
 
       if (e.key === "ArrowRight") {
-        const prevIndex = (currentIndex - 1 + images.length) % images.length;
+        const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
         updateLightbox(prevIndex);
       }
 
       if (e.key === "ArrowLeft") {
-        const nextIndex = (currentIndex + 1) % images.length;
+        const nextIndex = (currentIndex + 1) % galleryImages.length;
         updateLightbox(nextIndex);
       }
     });
@@ -930,10 +1019,10 @@
 
       if (Math.abs(diffX) > 70 && Math.abs(diffY) < 50) {
         if (diffX < 0) {
-          const nextIndex = (currentIndex + 1) % images.length;
+          const nextIndex = (currentIndex + 1) % galleryImages.length;
           updateLightbox(nextIndex);
         } else {
-          const prevIndex = (currentIndex - 1 + images.length) % images.length;
+          const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
           updateLightbox(prevIndex);
         }
       }
