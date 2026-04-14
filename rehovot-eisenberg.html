@@ -6,221 +6,434 @@
 <title>מגדלי אייזינברג רחובות | לינדה דהן</title>
 
 <style>
-body{margin:0;font-family:Arial;direction:rtl;background:#f7f7f5;color:#222}
-.container{max-width:1200px;margin:auto;padding:20px}
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  direction:rtl;
+  background:#f7f7f5;
+  color:#222;
+  line-height:1.75;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px 50px;
+  box-sizing:border-box;
+}
 
 /* HERO */
 .hero{
-height:70vh;
-background:url('rehovot-main.jpg') center/cover no-repeat;
-display:flex;
-align-items:flex-end;
-color:#fff;
+  min-height:72vh;
+  background:url('rehovot-main.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:flex-end;
+  color:#fff;
+  position:relative;
 }
-.hero-text{
-padding:40px;
-background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-}
-.hero h1{font-size:48px;margin:0}
-.hero h2{font-size:22px;margin-top:10px}
 
-/* TEXT */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,0.62), rgba(0,0,0,0.18));
+}
+
+.hero-text{
+  position:relative;
+  z-index:1;
+  padding:40px 30px 46px;
+  max-width:900px;
+}
+
+.hero h1{
+  font-size:52px;
+  margin:0 0 10px;
+  line-height:1.08;
+}
+
+.hero h2{
+  font-size:24px;
+  margin:0;
+  font-weight:500;
+}
+
+/* TYPO */
+.section-label{
+  font-size:14px;
+  color:#777;
+  margin:0 0 8px;
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+
+.section-title{
+  font-size:34px;
+  margin:0 0 18px;
+  line-height:1.2;
+}
+
+.section-intro{
+  max-width:900px;
+  font-size:18px;
+  color:#444;
+  margin:0 0 26px;
+}
+
+h3{
+  font-size:26px;
+  margin:0 0 14px;
+  line-height:1.2;
+}
+
+p{
+  margin:0 0 18px;
+  font-size:18px;
+}
+
+p:last-child{
+  margin-bottom:0;
+}
+
+/* CARDS */
+.text-block,
+.quote,
+.faq,
+.info-card{
+  background:#fff;
+  border-radius:24px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
+
 .text-block{
-background:#fff;
-padding:30px;
-border-radius:20px;
-margin:30px 0;
+  padding:30px;
+  margin:34px 0;
+}
+
+.quote{
+  font-size:24px;
+  text-align:center;
+  padding:26px 30px;
+  margin:36px 0;
+  font-weight:700;
+  line-height:1.45;
+}
+
+.text-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-top:10px;
+}
+
+.info-card{
+  padding:28px;
 }
 
 /* GALLERY */
+.gallery-wrap{
+  margin-top:10px;
+}
+
 .gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  align-items:start;
 }
+
 .gallery img{
-width:100%;
-border-radius:16px;
-object-fit:cover;
-cursor:pointer;
-transition:0.3s;
+  width:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:22px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  cursor:pointer;
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+  background:#fff;
 }
-.gallery img:hover{transform:scale(1.03)}
 
-.big{grid-column:span 2}
-.tall{grid-row:span 2}
+.gallery img:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.12);
+}
 
-/* QUOTE */
-.quote{
-font-size:22px;
-text-align:center;
-margin:40px 0;
+.large{
+  grid-column:span 2;
+  aspect-ratio:4 / 3;
+}
+
+.wide{
+  grid-column:span 2;
+  aspect-ratio:2 / 1;
+}
+
+.tall{
+  aspect-ratio:2 / 3;
+}
+
+.square{
+  aspect-ratio:1 / 1;
 }
 
 /* FAQ */
 .faq{
-background:#fff;
-padding:30px;
-border-radius:20px;
-margin-top:40px;
+  margin-top:40px;
+  padding:30px;
+}
+
+.faq-items{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin-top:10px;
+}
+
+.faq-item{
+  padding:18px 0;
+  border-top:1px solid rgba(0,0,0,0.08);
+}
+
+.faq-item:nth-child(1),
+.faq-item:nth-child(2){
+  border-top:none;
+  padding-top:0;
+}
+
+.faq-item h4{
+  margin:0 0 10px;
+  font-size:21px;
+  line-height:1.35;
+}
+
+.faq-item p{
+  margin:0;
+  font-size:17px;
+  color:#444;
+  line-height:1.75;
 }
 
 /* LIGHTBOX */
 .lightbox{
-position:fixed;
-top:0;left:0;
-width:100%;height:100%;
-background:rgba(0,0,0,0.9);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:9999;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  padding:20px;
+  box-sizing:border-box;
 }
+
 .lightbox img{
-max-width:90%;
-max-height:80%;
+  max-width:92vw;
+  max-height:84vh;
+  border-radius:14px;
 }
-.lightbox.active{display:flex}
+
+.lightbox.active{
+  display:flex;
+}
 
 /* MOBILE */
-@media(max-width:800px){
-.gallery{grid-template-columns:1fr}
-.big{grid-column:span 1}
+@media(max-width:900px){
+  .text-split,
+  .faq-items{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .large,
+  .wide{
+    grid-column:span 1;
+    aspect-ratio:4 / 3;
+  }
+
+  .hero{
+    min-height:58vh;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero h2{
+    font-size:20px;
+  }
+
+  .section-title{
+    font-size:28px;
+  }
+
+  h3{
+    font-size:24px;
+  }
+
+  .quote,
+  .text-block,
+  .faq,
+  .info-card{
+    padding:22px;
+  }
+
+  p,
+  .section-intro{
+    font-size:17px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
-<div class="hero-text">
-<h1>בלב העיר. בגובה. בתוך החיים.</h1>
-<h2>מגדלי אייזינברג, רחובות</h2>
-</div>
+  <div class="hero-text">
+    <h1>בלב העיר. בגובה. בתוך החיים.</h1>
+    <h2>מגדלי אייזינברג, רחובות</h2>
+  </div>
 </section>
 
 <div class="container">
 
-<!-- INTRO -->
-<div class="text-block">
-<p>
-יש משהו מיוחד בלגור בבניין משותף ובגובה -  
-מבט אל <strong>נוף פתוח ואורות עיר שמנצנצים בערב</strong>,  
-תחושה של שקט לצד חיים מסביב.
-</p>
+  <div class="text-block">
+    <p>
+      יש משהו מיוחד בלגור בבניין משותף ובגובה -
+      מבט אל <strong>נוף פתוח ואורות עיר שמנצנצים בערב</strong>,
+      תחושה של שקט לצד חיים שמתרחשים סביבך.
+    </p>
 
-<p>
-הדירה בלב רחובות, סמוך למכון ויצמן ואזור המדע,  
-עם <strong>בתי קפה, מסעדות וחיי יומיום במרחק הליכה</strong>.
-</p>
+    <p>
+      הדירה ממוקמת בלב רחובות, סמוך למכון ויצמן ואזור המדע,
+      עם <strong>בתי קפה, מסעדות וחיי יומיום במרחק הליכה</strong>.
+    </p>
 
-<p>למי שאוהב לרדת מהבית ולפגוש חיים.</p>
+    <p>
+      זה בית למי שאוהב לרדת מהבית ולפגוש חיים,
+      אבל גם לחזור לדירה שמרגישה מדויקת, נעימה ומלאת אופי.
+    </p>
+  </div>
+
+  <section class="gallery-wrap">
+    <p class="section-label">מצב קיים</p>
+    <h2 class="section-title">לפני השינוי</h2>
+    <p class="section-intro">
+      לפני התהליך, החלל נשא חלוקה סטנדרטית יותר. בתכנון החדש הוא הוגדר מחדש בהתאם לפרוגרמה, לאורח החיים ולאווירה שרצינו לייצר.
+    </p>
+
+    <div class="gallery">
+      <img src="rehovot-before-5.jpg" class="large" alt="החלל לפני השינוי">
+      <img src="rehovot-before-1.jpg" class="tall" alt="חדר הרחצה לפני התהליך">
+      <img src="rehovot-before-2.jpg" class="square" alt="המרפסת לפני השינוי">
+      <img src="rehovot-before-3.jpg" class="square" alt="פינה נוספת לפני התכנון">
+      <img src="rehovot-process-1.jpg" class="wide" alt="שלב פירוק והכנה">
+    </div>
+  </section>
+
+  <div class="quote">
+    מהדירה שהייתה - לחלל שמרגיש אחרת לגמרי
+  </div>
+
+  <section class="gallery-wrap">
+    <p class="section-label">התוצאה</p>
+    <h2 class="section-title">החלל לאחר התכנון</h2>
+    <p class="section-intro">
+      כאן כבר רואים את השפה החדשה של הבית: ספריה ופינת עבודה במקום הסלון הקודם, תאורה במצבים שונים, אומנות שמשתלבת בקירות, וחלל שמרגיש שלם יותר.
+    </p>
+
+    <div class="gallery">
+      <img src="rehovot-main.jpg" class="large" alt="המבט המרכזי על הדירה">
+      <img src="rehovot-detail-3.jpg" class="tall" alt="פרט עיצובי ליד הקמין">
+      <img src="rehovot-detail-4.jpg" class="square" alt="פרט מדף וחומריות">
+      <img src="rehovot-living-2.jpg" class="square" alt="מבט נוסף על החלל">
+      <img src="rehovot-detail-1.jpg" class="square" alt="פרט עיצובי בכניסה">
+      <img src="rehovot-detail-2.jpg" class="square" alt="פרט משלים בחלל">
+      <img src="rehovot-detail-5.jpg" class="tall" alt="פרט נוסף בחומריות ובצבע">
+      <img src="rehovot-bathroom-1.jpg" class="large" alt="חדר רחצה לאחר התכנון">
+      <img src="rehovot-bathroom-2.jpg" class="square" alt="מבט נוסף על חדר הרחצה">
+      <img src="rehovot-bathroom-3.jpg" class="square" alt="חדר הרחצה מזווית נוספת">
+      <img src="rehovot-balcony-2.jpg" class="tall" alt="המרפסת בלילה">
+      <img src="rehovot-balcony-1.jpg" class="square" alt="המרפסת בעיצוב החדש">
+      <img src="rehovot-balcony-3.jpg" class="square" alt="מבט נוסף על המרפסת">
+      <img src="rehovot-balcony-4.jpg" class="wide" alt="המרפסת בשעת ערב">
+      <img src="rehovot-linda-2.jpg" class="tall" alt="לינדה דהן עם האומנות בחלל">
+      <img src="rehovot-linda-3.jpg" class="square" alt="לינדה בתוך הפרויקט">
+      <img src="rehovot-linda-1.jpg" class="large" alt="אומנות כחלק מהתכנון">
+    </div>
+  </section>
+
+  <div class="text-split">
+    <div class="info-card">
+      <h3>חשיבה תכנונית</h3>
+      <p>
+        בדירה לפני היה סלון. בתכנון החדש נוצרו
+        <strong>ספריה ופינת עבודה</strong> בהתאם לפרוגרמה ולדרך החיים בבית.
+      </p>
+
+      <h3>תאורה</h3>
+      <p>
+        החלל תוכנן עם <strong>כמה מצבי תאורה</strong> -
+        אור חזק לשימוש יומיומי, לצד תאורת אווירה ותאורת לילה רגועה.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>אומנות כחלק מהחלל</h3>
+      <p>
+        בדירה קטנה, הקירות הופכים לחלק מהשפה העיצובית.
+        כאן האומנות נוצרה כחלק מהתכנון, עם
+        <strong>אותיות בתלת מימד ושילובי עץ</strong>.
+      </p>
+
+      <p style="text-align:center; color:#666; font-weight:700;">
+        האומנות היא חלק מהתכנון - לא תוספת
+      </p>
+
+      <h3>קמין ואווירה</h3>
+      <p>
+        הקמין מוסיף <strong>תנועה, עומק ואווירה רגועה</strong>
+        ונותן לבית נוכחות חמה לאורך כל השנה.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <h2 class="section-title">שאלות ותשובות</h2>
+
+    <div class="faq-items">
+      <div class="faq-item">
+        <h4>איך מרגיש לגור במגדל?</h4>
+        <p>שילוב בין פרטיות לבין חיים עירוניים, נוף פתוח ותחושת תנועה מסביב.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>דירה קטנה יכולה להרגיש מרווחת?</h4>
+        <p>כן. כשיש תכנון מדויק, אפשר לייצר תחושת מרחב גם בלי שטח גדול.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>למה תאורה חשובה כל כך?</h4>
+        <p>כי היא משפיעה על האווירה, על התחושה בבית ועל הדרך שבה החלל משתנה בין יום לערב.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>איך אומנות עוזרת בדירה קטנה?</h4>
+        <p>היא מוסיפה אופי, שכבות ועומק לחלל בלי להעמיס עליו בעוד רהיטים.</p>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<!-- BEFORE -->
-<h3>לפני השינוי</h3>
-
-<div class="gallery">
-
-<img src="rehovot-before-5.jpg" class="big">
-<img src="rehovot-before-1.jpg">
-<img src="rehovot-before-2.jpg">
-<img src="rehovot-before-3.jpg">
-<img src="rehovot-process-1.jpg" class="big">
-
-</div>
-
-<div class="quote">
-מהדירה שהייתה - לחלל שמרגיש אחרת לגמרי
-</div>
-
-<!-- AFTER -->
-<h3>התוצאה</h3>
-
-<div class="gallery">
-
-<img src="rehovot-main.jpg" class="big">
-
-<img src="rehovot-living-2.jpg">
-
-<img src="rehovot-detail-3.jpg" class="tall">
-<img src="rehovot-detail-4.jpg">
-
-<img src="rehovot-detail-1.jpg">
-<img src="rehovot-detail-2.jpg">
-
-<img src="rehovot-detail-5.jpg" class="tall">
-
-<img src="rehovot-bathroom-1.jpg" class="big">
-<img src="rehovot-bathroom-2.jpg">
-<img src="rehovot-bathroom-3.jpg">
-
-<img src="rehovot-balcony-2.jpg" class="tall">
-<img src="rehovot-balcony-1.jpg">
-<img src="rehovot-balcony-3.jpg">
-<img src="rehovot-balcony-4.jpg" class="big">
-
-<img src="rehovot-linda-2.jpg" class="tall">
-<img src="rehovot-linda-3.jpg">
-<img src="rehovot-linda-1.jpg" class="big">
-
-</div>
-
-<!-- TEXT -->
-<div class="text-block">
-
-<h3>חשיבה תכנונית</h3>
-<p>
-בדירה לפני היה סלון.  
-בתכנון החדש נוצרו <strong>ספריה ופינת עבודה</strong> - בהתאם לפרוגרמה.
-</p>
-
-<h3>תאורה</h3>
-<p>
-החלל תוכנן עם <strong>כמה מצבי תאורה</strong> -  
-אור חזק לצד תאורת אווירה ותאורת לילה.
-</p>
-
-<h3>אומנות כחלק מהחלל</h3>
-<p>
-הקירות הפכו לחלק מהעיצוב, עם <strong>אותיות בתלת מימד ושילובי עץ</strong>.
-</p>
-
-<p style="text-align:center; color:#666;">
-האומנות היא חלק מהתכנון - לא תוספת
-</p>
-
-<h3>קמין ואווירה</h3>
-<p>
-הקמין מוסיף <strong>תנועה ואווירה רגועה</strong> לאורך כל השנה.
-</p>
-
-</div>
-
-<!-- FAQ -->
-<div class="faq">
-<h3>שאלות ותשובות</h3>
-
-<p><strong>איך מרגיש לגור במגדל?</strong><br>
-שילוב בין פרטיות לחיים עירוניים.</p>
-
-<p><strong>דירה קטנה יכולה להיות מרווחת?</strong><br>
-כן, עם תכנון נכון.</p>
-
-<p><strong>למה תאורה חשובה?</strong><br>
-היא מגדירה את האווירה.</p>
-
-<p><strong>איך אומנות עוזרת?</strong><br>
-מוסיפה עומק בלי להעמיס.</p>
-
-</div>
-
-</div>
-
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
-<img id="lightbox-img">
+  <img id="lightbox-img" alt="">
 </div>
 
 <script>
@@ -228,15 +441,16 @@ const images = document.querySelectorAll(".gallery img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
-images.forEach(img=>{
-img.onclick=()=>{
-lightbox.classList.add("active");
-lightboxImg.src=img.src;
-};
+images.forEach((img) => {
+  img.onclick = () => {
+    lightbox.classList.add("active");
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || "";
+  };
 });
 
-lightbox.onclick=()=>{
-lightbox.classList.remove("active");
+lightbox.onclick = () => {
+  lightbox.classList.remove("active");
 };
 </script>
 
