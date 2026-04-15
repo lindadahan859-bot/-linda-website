@@ -11,28 +11,26 @@
     gtag('config', 'G-4XSD3XG8TL');
   </script>
 
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
 
-  fbq('init', '127944994281591');
-  fbq('track', 'PageView');
-</script>
+    fbq('init', '127944994281591');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-
-<meta charset="UTF-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>לינדה דהן | אדריכלות, עיצוב פנים ואומנות ייחודית</title>
@@ -50,13 +48,26 @@
       color:#222;
       line-height:1.7;
     }
-    .text-block strong{
-  font-weight: 700;
-  color: #000;
-  background: linear-gradient(transparent 60%, #e8e2d8 60%);
-  padding: 2px 4px;
-  border-radius: 4px;
-}
+
+    .text-block strong,
+    .permit-text-block strong{
+      font-weight:700;
+      color:#000;
+      background:linear-gradient(transparent 60%, #e8e2d8 60%);
+      padding:2px 4px;
+      border-radius:4px;
+    }
+
+    .tag{
+      display:inline-block;
+      background:#e8e2d8;
+      color:#000;
+      padding:4px 10px;
+      border-radius:12px;
+      font-size:13px;
+      margin-bottom:8px;
+      line-height:1.4;
+    }
 
     header{
       position:sticky;
@@ -354,9 +365,13 @@
     }
 
     .project-card-text p{
-      margin:0;
+      margin:0 0 12px;
       font-size:17px;
       line-height:1.75;
+    }
+
+    .project-card-text p:last-of-type{
+      margin-bottom:0;
     }
 
     .quote{
@@ -810,22 +825,19 @@
           </div>
         </div>
 
-       <a href="karmia-house-permit.html" class="project-card">
-  <img src="karmia-permit.jpg" alt="היתר בניה לבית בכרמיה">
-  <div class="project-card-text">
-    <div class="tag">תהליך היתר בניה מלא</div>
+        <a href="karmia-house-permit.html" class="project-card">
+          <img src="karmia-permit.jpg" alt="היתר בניה לבית בכרמיה">
+          <div class="project-card-text">
+            <div class="tag">תהליך היתר בניה מלא</div>
+            <h3>היתר בניה לבית בכרמיה</h3>
+            <p>
+              פרויקט תכנון והיתר בניה לבית בבניה קלה,
+              תוך התאמה לרשויות, לתקנים ולמצב הקיים בשטח.
+            </p>
+            <span class="outline-btn">לצפייה בפרויקט</span>
+          </div>
+        </a>
 
-    <h3>היתר בניה לבית בכרמיה</h3>
-
-    <p>
-      פרויקט תכנון והיתר בניה לבית בבניה קלה,
-      תוך התאמה לרשויות, לתקנים ולמצב הקיים בשטח.
-    </p>
-
-    <span class="outline-btn">לצפייה בפרויקט</span>
-  </div>
-</a>
-      
         <div class="project-card">
           <img src="japanese-zen-house-weizmann.jpg" alt="בית פרטי בהשראת הזן היפני במכון ויצמן">
           <div class="project-card-text">
@@ -866,48 +878,37 @@
           </div>
         </div>
 
-     <a href="bnei-brak-jewelry-store.html" class="project-card">
-  <img src="diamond-store-bnei-brak.jpg" alt="חנות תכשיטים בבני ברק">
-  <div class="project-card-text">
-    <span class="tag">פרויקט מסחרי ייחודי • התחיל באישור של רב</span>
+        <a href="bnei-brak-jewelry-store.html" class="project-card">
+          <img src="diamond-store-bnei-brak.jpg" alt="חנות תכשיטים בבני ברק">
+          <div class="project-card-text">
+            <span class="tag">פרויקט מסחרי ייחודי • התחיל באישור של רב</span>
+            <h3>חנות תכשיטים בבני ברק</h3>
+            <p>
+              תכנון ועיצוב חנות תכשיטים בלב בני ברק,
+              עם התאמה מדויקת למקום, לקהל ולחוויה שנכונה לו.
+            </p>
+            <p>
+              לא עוד פרויקט מסחרי -
+              אלא כניסה לעולם עם חוקים אחרים ויצירת חלל שמרגיש מדויק מבפנים ומבחוץ.
+            </p>
+            <span class="outline-btn">לצפייה בפרויקט</span>
+          </div>
+        </a>
 
-    <h3>חנות תכשיטים בבני ברק</h3>
-
-    <p>
-      תכנון ועיצוב חנות תכשיטים בלב בני ברק,
-      עם התאמה מדויקת למקום, לקהל ולחוויה שנכונה לו.
-    </p>
-
-    <p>
-      לא עוד פרויקט מסחרי -
-      אלא כניסה לעולם עם חוקים אחרים ויצירת חלל שמרגיש מדויק מבפנים ומבחוץ.
-    </p>
-
-    <span class="outline-btn">לצפייה בפרויקט</span>
-  </div>
-</a>
-        
         <a href="rehovot-eisenberg.html" class="project-card">
-
-  <img src="rehovot-main.jpg" alt="דירת 80 מ״ר במגדלי אייזינברג רחובות">
-
-  <div class="project-card-text">
-
-    <span class="tag">פרויקט מלא • לפני ואחרי</span>
-
-    <h3>בלב העיר. בגובה. בתוך החיים.</h3>
-
-    <p>
-      דירת 80 מ״ר במגדלי אייזינברג ברחובות,
-      עם חשיבה על חיים בבניין משותף ונוף פתוח.
-      <br><br>
-      תהליך מלא כולל לפני ואחרי ועיצוב שמייצר תחושת בית.
-    </p>
-
-    <div class="outline-btn">לצפייה בפרויקט</div>
-  </div>
-
-</a>
+          <img src="rehovot-main.jpg" alt="דירת 80 מ״ר במגדלי אייזינברג רחובות">
+          <div class="project-card-text">
+            <span class="tag">פרויקט מלא • לפני ואחרי</span>
+            <h3>בלב העיר. בגובה. בתוך החיים.</h3>
+            <p>
+              דירת 80 מ״ר במגדלי אייזינברג ברחובות,
+              עם חשיבה על חיים בבניין משותף ונוף פתוח.
+              <br><br>
+              תהליך מלא כולל לפני ואחרי ועיצוב שמייצר תחושת בית.
+            </p>
+            <div class="outline-btn">לצפייה בפרויקט</div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -917,31 +918,33 @@
       <div class="box">
         <img src="building-permit-house-israel.jpg" alt="היתר בניה לבית פרטי תכנון והגשה לרשויות" style="width:100%; border-radius:18px; margin-bottom:20px;">
 
-       <div class="permit-text-block">
+        <div class="permit-text-block">
+          <h2>רוצים לבנות? היתר בניה הוא תהליך של תכנון והגשה לרשויות</h2>
 
-  <h2>רוצים לבנות? היתר בניה הוא תהליך של תכנון והגשה לרשויות</h2>
+          <p>
+            <strong>היתר בניה חייב להיות מוגש ומלווה על ידי אדריכל מוסמך.</strong>
+          </p>
 
-  <p>
-    <strong>היתר בניה חייב להיות מוגש ומלווה על ידי אדריכל מוסמך.</strong>
-  </p>
+          <p>
+            תהליך ההיתר רלוונטי לא רק לבניה חדשה,
+            אלא גם למצבים נוספים כמו <strong>תוספת ממ״ד</strong>,
+            <strong>הרחבת בית קיים</strong> ו<strong>בריכות שחייה</strong>.
+          </p>
 
-  <p>
-    תהליך ההיתר רלוונטי לא רק לבניה חדשה,  
-    אלא גם למצבים נוספים כמו <strong>תוספת ממ״ד</strong>,  
-    <strong>הרחבת בית קיים</strong> ו<strong>בריכות שחייה</strong>.
-  </p>
+          <p>
+            כשאותו גורם מלווה גם את <strong>התכנון, העיצוב וההגשה</strong>,
+            מתקבל תהליך מדויק, מחובר ונכון יותר.
+          </p>
 
-  <p>
-    כשאותו גורם מלווה גם את <strong>התכנון, העיצוב וההגשה</strong>,  
-    מתקבל תהליך מדויק, מחובר ונכון יותר.
-  </p>
+          <p>
+            כך הדרך הופכת <strong>ברורה, מסודרת ויעילה</strong>,
+            עם פחות טעויות ועם ראייה כוללת של הבית.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    כך הדרך הופכת <strong>ברורה, מסודרת ויעילה</strong>,  
-    עם פחות טעויות ועם ראייה כוללת של הבית.
-  </p>
-
-</div>
   <section id="testimonials">
     <div class="container">
       <div class="box">
@@ -1088,6 +1091,10 @@
               event_category: "Contact Page",
               event_label: "Form submitted successfully"
             });
+          }
+
+          if (typeof fbq === "function") {
+            fbq('track', 'Lead');
           }
         } catch (error) {
           formStatus.className = "small-note error-message";
