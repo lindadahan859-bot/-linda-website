@@ -10,6 +10,26 @@
     gtag('config', 'G-4XSD3XG8TL');
   </script>
 
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '127944994281591');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>חנות תכשיטים בבני ברק | פרויקט שהתחיל באישור של רב | לינדה דהן</title>
@@ -648,7 +668,6 @@
   <div class="container">
 
     <section class="story-block">
-
       <p class="section-label">פרויקט מסחרי</p>
 
       <div class="story-hero">
@@ -744,7 +763,6 @@
         <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%A9%D7%9C%20%D7%97%D7%A0%D7%95%D7%AA%20%D7%94%D7%AA%D7%9B%D7%A9%D7%99%D7%98%D7%99%D7%9D%20%D7%91%D7%91%D7%A0%D7%99%20%D7%91%D7%A8%D7%A7%20%D7%95%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%93%D7%95%D7%9E%D7%94" target="_blank" class="cta-btn">דברו איתי על פרויקט דומה</a>
         <a href="index.html#projects" class="back-link">חזרה לכל הפרויקטים</a>
       </div>
-
     </section>
 
     <div class="quote">
@@ -933,6 +951,38 @@
         }
       }
     }, { passive: true });
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "whatsapp_click", {
+            event_category: "Contact",
+            event_label: link.href
+          });
+        }
+        if (typeof fbq === "function") {
+          fbq('trackCustom', 'WhatsAppClick');
+        }
+      });
+    });
+
+    setTimeout(() => {
+      if (typeof gtag === "function") {
+        gtag("event", "time_30_sec", {
+          event_category: "Engagement",
+          event_label: window.location.pathname
+        });
+      }
+    }, 30000);
+
+    setTimeout(() => {
+      if (typeof gtag === "function") {
+        gtag("event", "time_60_sec", {
+          event_category: "Engagement",
+          event_label: window.location.pathname
+        });
+      }
+    }, 60000);
   </script>
 </body>
 </html>
