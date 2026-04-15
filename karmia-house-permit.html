@@ -10,6 +10,26 @@
     gtag('config', 'G-4XSD3XG8TL');
   </script>
 
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '127944994281591');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>הבית בכרמיה | תכנון מחדש ובניה קלה | לינדה דהן</title>
@@ -168,6 +188,14 @@
       margin-bottom:0;
     }
 
+    .text-card strong{
+      font-weight:700;
+      color:#000;
+      background:linear-gradient(transparent 60%, #e8e2d8 60%);
+      padding:2px 4px;
+      border-radius:4px;
+    }
+
     .mid-images{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -182,6 +210,7 @@
       object-fit:cover;
       border-radius:22px;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
+      cursor:pointer;
     }
 
     .section-heading{
@@ -909,7 +938,7 @@
       document.getElementById("mainMenu").classList.remove("open");
     }
 
-    const galleryImages = Array.from(document.querySelectorAll('.gallery-item'));
+    const galleryImages = Array.from(document.querySelectorAll('.gallery-item, .mid-images img'));
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImage');
     const lightboxClose = document.getElementById('lightboxClose');
@@ -993,6 +1022,9 @@
             event_label: link.href
           });
         }
+        if (typeof fbq === "function") {
+          fbq('trackCustom', 'WhatsAppClick');
+        }
       });
     });
 
@@ -1015,4 +1047,6 @@
     }, 60000);
   </script>
 </body>
-</html>
+</html> ：
+最 ઉપર से שלח לי מעודכן מוכן להעתקה
+## מאשר
