@@ -1135,5 +1135,95 @@
       }
     }, 60000);
   </script>
+  <!-- POPUP LINDA -->
+<div id="lindaPopup" class="popup-overlay">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">×</span>
+
+    <img src="linda-dahan-welcome.jpg" alt="Linda Dahan">
+
+    <h2>אני לינדה דהן</h2>
+    <p>ואני לא מתכננת רק חללים<br>
+    אני מתכננת איך אנשים מרגישים בתוכם</p>
+
+    <small>תכנון אדריכלי | עיצוב פנים | היתרי בניה</small>
+  </div>
+</div>
+
+<style>
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  max-width: 320px;
+  width: 90%;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+.popup-box img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.popup-box h2 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.popup-box p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.popup-box small {
+  display: block;
+  margin-top: 10px;
+  color: #777;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+<script>
+function closePopup() {
+  document.getElementById("lindaPopup").style.display = "none";
+  localStorage.setItem("lindaPopupShown", "true");
+}
+
+window.onload = function() {
+  if (!localStorage.getItem("lindaPopupShown")) {
+    setTimeout(function() {
+      document.getElementById("lindaPopup").style.display = "flex";
+    }, 2000);
+  }
+};
+</script>
 </body>
 </html>
