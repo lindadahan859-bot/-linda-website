@@ -9,17 +9,17 @@
     gtag('js', new Date());
     gtag('config', 'G-4XSD3XG8TL');
   </script>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>חנות תכשיטים בבני ברק | פרויקט שהתחיל באישור של רב | לינדה דהן</title>
-  <meta name="description" content="פרויקט תכנון ועיצוב חנות תכשיטים בבני ברק. סיפור על כניסה לעולם החרדי, יצירת חוויית קנייה מדויקת, התאמת החלל למותג והבנה עמוקה של אנשים, מקום ותחושה.">
-  <meta name="keywords" content="עיצוב חנות תכשיטים, בני ברק, עיצוב פנים מסחרי, עיצוב חנות, לינדה דהן, תכנון חנות, עיצוב חלל מסחרי, מיתוג חלל">
+  <meta name="description" content="פרויקט תכנון ועיצוב חנות תכשיטים בבני ברק. סיפור יוצא דופן, לפני ואחרי, חוויית קנייה, תכנון חלל מסחרי, שפה מותגית ועיצוב שמבין אנשים ומקום.">
+  <meta name="keywords" content="עיצוב חנות תכשיטים, בני ברק, עיצוב פנים מסחרי, לינדה דהן, עיצוב חלל מסחרי, תכנון חנות, לפני ואחרי, חנות תכשיטים בני ברק">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="חנות תכשיטים בבני ברק | פרויקט שהתחיל באישור של רב">
-  <meta property="og:description" content="פרויקט תכנון ועיצוב חנות תכשיטים בבני ברק עם סיפור יוצא דופן, חוויית קנייה מדויקת וחלל שהוא חלק מהמותג.">
+  <meta property="og:description" content="תכנון ועיצוב חנות תכשיטים בבני ברק. פרויקט מסחרי עם סיפור יוצא דופן, לפני ואחרי, וחלל שהוא חלק מהחוויה.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="diamond-store-bnei-brak.jpg">
+  <meta property="og:image" content="bnei-brak-store-after-space-depth.jpg">
   <meta property="og:locale" content="he_IL">
 
   <style>
@@ -98,8 +98,8 @@
     }
 
     .hero{
-      min-height:62vh;
-      background:url('diamond-store-bnei-brak.jpg') center/cover no-repeat;
+      min-height:64vh;
+      background:url('bnei-brak-store-after-space-depth.jpg') center/cover no-repeat;
       display:flex;
       align-items:flex-end;
       color:#fff;
@@ -110,14 +110,14 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,0.62), rgba(0,0,0,0.18));
+      background:linear-gradient(to top, rgba(0,0,0,0.62), rgba(0,0,0,0.20));
     }
 
     .hero-text{
       position:relative;
       z-index:1;
-      padding:40px 30px 46px;
-      max-width:850px;
+      padding:42px 30px 48px;
+      max-width:860px;
     }
 
     .hero h1{
@@ -132,12 +132,31 @@
       font-weight:500;
     }
 
-    .story-block{
+    .story-block,
+    .section-card,
+    .quote{
       background:#fff;
-      padding:40px 28px;
       border-radius:28px;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .story-block{
+      padding:40px 28px;
       margin-top:36px;
+    }
+
+    .section-card{
+      padding:34px 26px;
+      margin-top:36px;
+    }
+
+    .quote{
+      margin-top:34px;
+      padding:24px 28px;
+      text-align:center;
+      font-size:26px;
+      font-weight:700;
+      line-height:1.4;
     }
 
     .section-label{
@@ -148,27 +167,31 @@
       letter-spacing:0.2px;
     }
 
-    .story-block h2{
+    .story-block h2,
+    .section-card h2{
       font-size:38px;
       line-height:1.2;
       margin:0 0 18px;
       color:#111;
     }
 
-    .story-block .lead{
+    .story-block .lead,
+    .section-card .lead{
       font-size:22px;
       color:#444;
       margin-bottom:24px;
     }
 
-    .story-block p{
+    .story-block p,
+    .section-card p{
       font-size:19px;
       line-height:1.95;
       margin:0 0 18px;
       color:#2f2f2f;
     }
 
-    .story-block strong{
+    .story-block strong,
+    .section-card strong{
       font-weight:700;
       color:#000;
       background:linear-gradient(transparent 60%, #e8e2d8 60%);
@@ -176,13 +199,13 @@
       border-radius:4px;
     }
 
-    .story-block .highlight{
+    .highlight{
       font-size:27px;
       line-height:1.45;
       text-align:center;
       font-weight:700;
       color:#111;
-      margin:26px 0;
+      margin:26px 0 !important;
     }
 
     .story-hero{
@@ -224,6 +247,36 @@
       border-radius:22px;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
       cursor:pointer;
+    }
+
+    .before-grid,
+    .after-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+      margin-top:22px;
+    }
+
+    .before-grid img,
+    .after-grid img{
+      width:100%;
+      display:block;
+      border-radius:18px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+      cursor:pointer;
+      object-fit:cover;
+      aspect-ratio:4 / 3;
+    }
+
+    .before-grid img.tall,
+    .after-grid img.tall{
+      aspect-ratio:2 / 3;
+    }
+
+    .before-grid img.wide,
+    .after-grid img.wide{
+      grid-column:span 2;
+      aspect-ratio:2 / 1;
     }
 
     .project-actions{
@@ -450,8 +503,16 @@
     }
 
     @media (max-width: 900px){
-      .story-gallery{
+      .story-gallery,
+      .before-grid,
+      .after-grid{
         grid-template-columns:1fr;
+      }
+
+      .before-grid img.wide,
+      .after-grid img.wide{
+        grid-column:span 1;
+        aspect-ratio:4 / 3;
       }
 
       .hero{
@@ -466,23 +527,27 @@
         font-size:20px;
       }
 
-      .story-block{
+      .story-block,
+      .section-card{
         padding:24px 18px;
       }
 
-      .story-block h2{
+      .story-block h2,
+      .section-card h2{
         font-size:30px;
       }
 
-      .story-block .lead{
+      .story-block .lead,
+      .section-card .lead{
         font-size:19px;
       }
 
-      .story-block p{
+      .story-block p,
+      .section-card p{
         font-size:17px;
       }
 
-      .story-block .highlight{
+      .highlight{
         font-size:24px;
       }
 
@@ -587,7 +652,7 @@
       <p class="section-label">פרויקט מסחרי</p>
 
       <div class="story-hero">
-        <img src="diamond-store-bnei-brak.jpg" alt="חנות תכשיטים בני ברק">
+        <img src="bnei-brak-store-after-space-depth.jpg" alt="חנות תכשיטים בבני ברק - מבט עומק">
       </div>
 
       <h2>חנות תכשיטים בבני ברק | פרויקט שהתחיל באישור של רב</h2>
@@ -613,8 +678,8 @@
       </p>
 
       <div class="story-gallery">
-        <img src="bnei-brak-store-1.jpg" alt="עיצוב חנות תכשיטים בבני ברק">
-        <img src="bnei-brak-store-2.jpg" alt="חלל מסחרי בחנות תכשיטים בבני ברק">
+        <img src="bnei-brak-store-before-wide.jpg" alt="חנות התכשיטים לפני השינוי">
+        <img src="bnei-brak-store-before-security-gate.jpg" alt="הכניסה לחנות לפני השינוי">
       </div>
 
       <p>
@@ -632,7 +697,7 @@
       </p>
 
       <div class="story-full">
-        <img src="bnei-brak-store-wide.jpg" alt="תכנון ועיצוב חנות תכשיטים">
+        <img src="bnei-brak-store-after-main-view.jpg" alt="חנות תכשיטים בבני ברק לאחר העיצוב">
       </div>
 
       <p>
@@ -652,8 +717,8 @@
       </p>
 
       <div class="story-gallery">
-        <img src="bnei-brak-store-3.jpg" alt="תצוגת תכשיטים בחנות">
-        <img src="bnei-brak-store-4.jpg" alt="פרטי תכנון ועיצוב בחנות">
+        <img src="bnei-brak-store-after-display-wall.jpg" alt="קיר תצוגה בחנות התכשיטים">
+        <img src="bnei-brak-store-after-front-counters.jpg" alt="דלפקי מכירה בחנות">
       </div>
 
       <p>
@@ -680,6 +745,47 @@
         <a href="index.html#projects" class="back-link">חזרה לכל הפרויקטים</a>
       </div>
 
+    </section>
+
+    <div class="quote">
+      מהעולם הסגור של בני ברק - לחלל מדויק, מזמין ובעל נוכחות
+    </div>
+
+    <section class="section-card">
+      <p class="section-label">לפני</p>
+      <h2>המצב הקיים</h2>
+      <p class="lead">
+        עוד לפני השינוי, היה ברור שהמקום עובד - אבל לא ממצה את החוויה, התצוגה והתחושה שאפשר ליצור בו.
+      </p>
+
+      <div class="before-grid">
+        <img src="bnei-brak-store-before-wide.jpg" class="wide" alt="חנות התכשיטים לפני השינוי">
+        <img src="bnei-brak-store-before-staff.jpg" alt="צוות החנות במצב הקיים">
+        <img src="bnei-brak-store-before-counters.jpg" alt="דלפקים במצב הקיים">
+        <img src="bnei-brak-store-before-side-area.jpg" class="tall" alt="אזור צדדי לפני השינוי">
+        <img src="bnei-brak-store-before-back-room.jpg" class="tall" alt="חדר אחורי לפני השינוי">
+        <img src="bnei-brak-store-before-security-gate.jpg" alt="כניסה לחנות עם שערי ברזל">
+      </div>
+    </section>
+
+    <section class="section-card">
+      <p class="section-label">אחרי</p>
+      <h2>החלל לאחר התכנון</h2>
+      <p class="lead">
+        חלל מסודר, מדויק ונקי יותר, עם תצוגה ברורה, תחושת כניסה מוקפדת ושפה אחת שעוברת בין המותג, המוצרים והחוויה במקום.
+      </p>
+
+      <div class="after-grid">
+        <img src="bnei-brak-store-after-space-depth.jpg" class="wide" alt="מבט עומק לחלל לאחר העיצוב">
+        <img src="bnei-brak-store-after-main-view.jpg" alt="מבט מרכזי על החנות לאחר העיצוב">
+        <img src="bnei-brak-store-after-showcase.jpg" alt="אזור תצוגה לאחר העיצוב">
+        <img src="bnei-brak-store-after-display-wall.jpg" alt="קיר תצוגה לאחר העיצוב">
+        <img src="bnei-brak-store-after-front-counters.jpg" alt="דלפקים קדמיים לאחר העיצוב">
+        <img src="bnei-brak-store-after-counter-view.jpg" class="tall" alt="מבט לאורך הדלפקים">
+        <img src="bnei-brak-store-after-door-design.jpg" alt="פרט ידיות ועיצוב">
+        <img src="bnei-brak-store-after-styling.jpg" class="tall" alt="פרט סטיילינג עם פרחים">
+        <img src="bnei-brak-store-after-flowers-detail.jpg" alt="פרט פרחים בחלל">
+      </div>
     </section>
 
   </div>
@@ -733,7 +839,9 @@
       document.getElementById("mainMenu").classList.remove("open");
     }
 
-    const galleryImages = Array.from(document.querySelectorAll(".story-hero img, .story-gallery img, .story-full img"));
+    const galleryImages = Array.from(document.querySelectorAll(
+      ".story-hero img, .story-gallery img, .story-full img, .before-grid img, .after-grid img"
+    ));
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
     const lightboxClose = document.getElementById("lightboxClose");
