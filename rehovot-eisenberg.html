@@ -10,6 +10,26 @@
     gtag('config', 'G-4XSD3XG8TL');
   </script>
 
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '127944994281591');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>מגדלי אייזינברג, רחובות | עיצוב פנים לדירה במגדל | לינדה דהן</title>
@@ -165,6 +185,14 @@
 
     p:last-child{
       margin-bottom:0;
+    }
+
+    strong{
+      font-weight:700;
+      color:#000;
+      background:linear-gradient(transparent 60%, #e8e2d8 60%);
+      padding:2px 4px;
+      border-radius:4px;
     }
 
     .text-block,
@@ -1027,6 +1055,38 @@
         }
       }
     }, { passive: true });
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "whatsapp_click", {
+            event_category: "Contact",
+            event_label: link.href
+          });
+        }
+        if (typeof fbq === "function") {
+          fbq('trackCustom', 'WhatsAppClick');
+        }
+      });
+    });
+
+    setTimeout(() => {
+      if (typeof gtag === "function") {
+        gtag("event", "time_30_sec", {
+          event_category: "Engagement",
+          event_label: window.location.pathname
+        });
+      }
+    }, 30000);
+
+    setTimeout(() => {
+      if (typeof gtag === "function") {
+        gtag("event", "time_60_sec", {
+          event_category: "Engagement",
+          event_label: window.location.pathname
+        });
+      }
+    }, 60000);
   </script>
 </body>
 </html>
