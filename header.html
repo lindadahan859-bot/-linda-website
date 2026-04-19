@@ -1,11 +1,10 @@
 <header class="site-header">
   <div class="header-wrap">
-
     <a class="brand" href="index.html">
       <img src="logo-black.png" alt="לינדה דהן">
     </a>
 
-    <button class="menu-toggle" id="menuToggle">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="פתח תפריט">☰</button>
 
     <nav class="main-menu" id="mainMenu">
       <a href="index.html">בית</a>
@@ -17,25 +16,5 @@
       <a href="index.html#testimonials">המלצות</a>
       <a href="index.html#contact" class="header-cta">צור קשר</a>
     </nav>
-
   </div>
 </header>
-
-<script>
-function setupHeaderMenu() {
-  const btn = document.getElementById("menuToggle");
-  const menu = document.getElementById("mainMenu");
-
-  if (!btn || !menu) return;
-
-  btn.onclick = function () {
-    menu.classList.toggle("open");
-  };
-
-  menu.querySelectorAll("a").forEach(link => {
-    link.onclick = function () {
-      menu.classList.remove("open");
-    };
-  });
-}
-</script>
