@@ -16,7 +16,7 @@
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    if(!f._fbq)f.fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -25,9 +25,10 @@
     fbq('init', '127944994281591');
     fbq('track', 'PageView');
   </script>
+
   <noscript>
     <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1"/>
+    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1" alt="">
   </noscript>
 
   <meta charset="UTF-8">
@@ -175,24 +176,43 @@
 
       if (!btn || !menu) return;
 
-      btn.addEventListener("click", function() {
-        menu.classList.toggle("open");
+      btn.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("open");
+        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
 
       menu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", function() {
+        link.addEventListener("click", function () {
           menu.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
         });
+      });
+
+      document.addEventListener("click", function (event) {
+        const clickedInsideMenu = menu.contains(event.target);
+        const clickedButton = btn.contains(event.target);
+
+        if (!clickedInsideMenu && !clickedButton) {
+          menu.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 900) {
+          menu.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        }
       });
     }
 
     async function loadIncludes() {
       try {
-        const headerResponse = await fetch('header.html');
-        document.getElementById('site-header').innerHTML = await headerResponse.text();
+        const headerResponse = await fetch("header.html");
+        document.getElementById("site-header").innerHTML = await headerResponse.text();
 
-        const footerResponse = await fetch('footer.html');
-        document.getElementById('site-footer').innerHTML = await footerResponse.text();
+        const footerResponse = await fetch("footer.html");
+        document.getElementById("site-footer").innerHTML = await footerResponse.text();
 
         setupHeaderMenu();
 
@@ -206,7 +226,7 @@
             }
 
             if (typeof fbq === "function") {
-              fbq('track', 'Contact', { method: 'whatsapp' });
+              fbq("track", "Contact", { method: "whatsapp" });
             }
           });
         });
@@ -217,6 +237,8 @@
 
     loadIncludes();
   </script>
+
+  <script src="site-tools.js"></script>
 
 </body>
 </html>
