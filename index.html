@@ -25,32 +25,26 @@
     fbq('init', '127944994281591');
     fbq('track', 'PageView');
   </script>
+
   <noscript>
     <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1"/>
+    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1" alt="">
   </noscript>
-  <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>לינדה דהן | אדריכלות, עיצוב פנים ואומנות ייחודית</title>
+  <meta name="description" content="לינדה דהן - תכנון אדריכלי, עיצוב פנים, היתרי בנייה, ליווי בתים פרטיים, דירות, עסקים, משקים ונחלות, ואומנות ייחודית בהתאמה אישית.">
+
+  <link rel="stylesheet" href="styles.css">
 
   <style>
     html{
       scroll-behavior:smooth;
     }
 
-    body{
-      margin:0;
-      font-family:Arial,sans-serif;
-      direction:rtl;
-      background:#f7f7f5;
-      color:#222;
-      line-height:1.7;
-    }
-
-    .text-block strong,
-    .permit-text-block strong{
+    .home-page .text-block strong,
+    .home-page .permit-text-block strong{
       font-weight:700;
       color:#000;
       background:linear-gradient(transparent 60%, #e8e2d8 60%);
@@ -58,7 +52,7 @@
       border-radius:4px;
     }
 
-    .tag{
+    .home-page .tag{
       display:inline-block;
       background:#e8e2d8;
       color:#000;
@@ -69,92 +63,26 @@
       line-height:1.4;
     }
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:#fff;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .nav-wrap{
-      max-width:1200px;
-      margin:auto;
-      padding:12px 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .brand{
-      display:flex;
-      flex-direction:column;
-      align-items:flex-end;
-      text-decoration:none;
-      line-height:1.1;
-    }
-
-    .brand img{
-      height:42px;
-      width:auto;
-      display:block;
-    }
-
-    .brand-subtitle{
-      font-size:12px;
-      letter-spacing:0.8px;
-      color:#555;
-      margin-top:-4px;
-      direction:ltr;
-      text-align:right;
-      white-space:nowrap;
-    }
-
-    .menu-toggle{
-      display:none;
-      background:none;
-      border:none;
-      font-size:28px;
-      cursor:pointer;
-      line-height:1;
-    }
-
-    nav{
-      display:flex;
-      gap:28px;
-      flex-wrap:wrap;
-    }
-
-    nav a{
-      text-decoration:none;
-      color:#111;
-      font-size:18px;
-      font-weight:700;
-      cursor:pointer;
-    }
-
-    .container{
+    .home-page .container{
       max-width:1200px;
       margin:auto;
       padding:0 20px;
     }
 
-    .hero{
+    .home-page .hero{
       position:relative;
       height:72vh;
       overflow:hidden;
       background:#000;
     }
 
-    .video-container{
+    .home-page .video-container{
       position:absolute;
       inset:0;
       overflow:hidden;
     }
 
-    .video-container iframe{
+    .home-page .video-container iframe{
       position:absolute;
       top:50%;
       left:50%;
@@ -164,14 +92,14 @@
       pointer-events:none;
     }
 
-    .overlay{
+    .home-page .overlay{
       position:absolute;
       inset:0;
       background:rgba(0,0,0,0.35);
       z-index:1;
     }
 
-    .hero-content{
+    .home-page .hero-content{
       position:absolute;
       top:50%;
       left:50%;
@@ -182,20 +110,21 @@
       width:min(92%, 900px);
     }
 
-    .hero-logo{
+    .home-page .hero-logo{
       width:min(300px, 66vw);
       margin:0 auto 8px;
       display:block;
     }
 
-    .hero-subtitle-he{
+    .home-page .hero-subtitle-he{
       margin:0 0 16px;
       font-size:21px;
       font-weight:500;
       line-height:1.35;
+      color:#fff;
     }
 
-    .hero-btn{
+    .home-page .hero-btn{
       display:inline-block;
       border:1px solid #fff;
       padding:12px 28px;
@@ -207,47 +136,47 @@
       transition:all 0.3s ease;
     }
 
-    .hero-btn:hover{
+    .home-page .hero-btn:hover{
       background:#fff;
       color:#000;
     }
 
-    section{
+    .home-page section{
       padding:46px 0;
     }
 
-    h2{
+    .home-page h2{
       font-size:38px;
       margin:0 0 14px;
       line-height:1.2;
     }
 
-    .section-kicker{
+    .home-page .section-kicker{
       font-size:20px;
       font-weight:700;
       margin:0 0 18px;
       line-height:1.4;
     }
 
-    .box{
+    .home-page .box{
       background:#fff;
       border-radius:24px;
       padding:28px;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
     }
 
-    .art-preview{
+    .home-page .art-preview{
       text-align:center;
     }
 
-    .art-preview-text{
+    .home-page .art-preview-text{
       max-width:820px;
       margin:0 auto 24px;
       font-size:18px;
       line-height:1.9;
     }
 
-    .featured-art{
+    .home-page .featured-art{
       max-width:760px;
       margin:0 auto;
       background:#fff;
@@ -257,7 +186,7 @@
       transition:0.3s;
     }
 
-    .featured-art img{
+    .home-page .featured-art img{
       width:100%;
       display:block;
       aspect-ratio:4/3;
@@ -265,32 +194,32 @@
       transition:0.4s ease;
     }
 
-    .featured-art:hover img{
+    .home-page .featured-art:hover img{
       transform:scale(1.04);
     }
 
-    .featured-art:hover{
+    .home-page .featured-art:hover{
       transform:translateY(-6px);
       box-shadow:0 14px 32px rgba(0,0,0,0.12);
     }
 
-    .featured-art-text{
+    .home-page .featured-art-text{
       padding:28px 24px 30px;
     }
 
-    .featured-art-text h3{
+    .home-page .featured-art-text h3{
       margin:0 0 12px;
       font-size:28px;
       line-height:1.25;
     }
 
-    .featured-art-text p{
+    .home-page .featured-art-text p{
       margin:0 0 18px;
       font-size:18px;
       line-height:1.8;
     }
 
-    .outline-btn{
+    .home-page .outline-btn{
       display:inline-block;
       padding:10px 22px;
       border-radius:999px;
@@ -305,13 +234,13 @@
       margin-top:16px;
     }
 
-    .outline-btn:hover{
+    .home-page .outline-btn:hover{
       background:#111;
       color:#fff;
       transform:translateY(-2px);
     }
 
-    .projects-intro{
+    .home-page .projects-intro{
       max-width:920px;
       margin:0 0 30px;
       font-size:18px;
@@ -319,14 +248,14 @@
       color:#444;
     }
 
-    .projects-grid{
+    .home-page .projects-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
       gap:28px;
       margin-top:28px;
     }
 
-    .project-card{
+    .home-page .project-card{
       display:block;
       background:#fff;
       border-radius:24px;
@@ -337,7 +266,7 @@
       color:inherit;
     }
 
-    .project-card img{
+    .home-page .project-card img{
       width:100%;
       display:block;
       aspect-ratio:4/3;
@@ -345,36 +274,36 @@
       transition:0.4s ease;
     }
 
-    .project-card:hover img{
+    .home-page .project-card:hover img{
       transform:scale(1.05);
     }
 
-    .project-card:hover{
+    .home-page .project-card:hover{
       transform:translateY(-6px);
       box-shadow:0 14px 32px rgba(0,0,0,0.12);
     }
 
-    .project-card-text{
+    .home-page .project-card-text{
       padding:22px 20px 24px;
     }
 
-    .project-card-text h3{
+    .home-page .project-card-text h3{
       margin:0 0 10px;
       font-size:24px;
       line-height:1.3;
     }
 
-    .project-card-text p{
+    .home-page .project-card-text p{
       margin:0 0 12px;
       font-size:17px;
       line-height:1.75;
     }
 
-    .project-card-text p:last-of-type{
+    .home-page .project-card-text p:last-of-type{
       margin-bottom:0;
     }
 
-    .quote{
+    .home-page .quote{
       background:#f8f8f8;
       border-radius:18px;
       padding:22px;
@@ -382,7 +311,7 @@
       margin-top:16px;
     }
 
-    .contact-grid{
+    .home-page .contact-grid{
       max-width:1200px;
       margin:auto;
       display:grid;
@@ -391,73 +320,73 @@
       align-items:start;
     }
 
-    .contact-text h2{
+    .home-page .contact-text h2{
       font-size:40px;
       margin:0 0 20px;
       line-height:1.2;
     }
 
-    .contact-quote{
+    .home-page .contact-quote{
       font-size:22px;
       color:#666;
       margin:0 0 24px;
       font-style:italic;
     }
 
-    .contact-text p{
+    .home-page .contact-text p{
       font-size:20px;
       line-height:1.85;
       margin:0 0 18px;
     }
 
-    .contact-form-box{
+    .home-page .contact-form-box{
       background:#ffffff;
       padding:30px;
       border-radius:20px;
       box-shadow:0 10px 30px rgba(0,0,0,0.08);
     }
 
-    .contact-info{
+    .home-page .contact-info{
       font-size:18px;
       line-height:1.9;
       margin-bottom:20px;
     }
 
-    .contact-info a{
+    .home-page .contact-info a{
       color:#111;
       text-decoration:none;
     }
 
-    .contact-form-box form{
+    .home-page .contact-form-box form{
       display:grid;
       gap:15px;
     }
 
-    .contact-form-box input,
-    .contact-form-box textarea{
+    .home-page .contact-form-box input,
+    .home-page .contact-form-box textarea{
       padding:14px;
       border-radius:12px;
       border:1px solid #ddd;
       font-size:16px;
       width:100%;
       box-sizing:border-box;
-      font-family:Arial,sans-serif;
+      font-family:'Heebo',sans-serif;
     }
 
-    .contact-form-box textarea{
+    .home-page .contact-form-box textarea{
       min-height:120px;
       resize:vertical;
     }
 
-    .contact-buttons{
+    .home-page .contact-buttons{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
       margin-top:10px;
     }
 
-    .contact-buttons a,
-    .contact-buttons button{
+    .home-page .contact-buttons a,
+    .home-page .contact-buttons button{
       flex:1;
       text-align:center;
       padding:14px;
@@ -466,286 +395,184 @@
       text-decoration:none;
       cursor:pointer;
       box-sizing:border-box;
+      font-family:'Heebo',sans-serif;
     }
 
-    .contact-buttons a{
+    .home-page .contact-buttons a{
       border:1px solid #ccc;
       color:#000;
       background:#fff;
     }
 
-    .contact-buttons button{
+    .home-page .contact-buttons button{
       border:none;
       background:#111;
       color:#fff;
     }
 
-    .contact-buttons button:disabled{
+    .home-page .contact-buttons button:disabled{
       opacity:0.7;
       cursor:not-allowed;
     }
 
-    .small-note{
+    .home-page .small-note{
       font-size:14px;
       color:#666;
       margin-top:12px;
       line-height:1.7;
     }
 
-    .success-message{
+    .home-page .success-message{
       color:#1d6b3a;
     }
 
-    .error-message{
+    .home-page .error-message{
       color:#a33434;
     }
 
-    .site-footer{
-      background:#fff;
-      margin-top:60px;
-      border-top:1px solid rgba(0,0,0,0.08);
-    }
-
-    .footer-inner{
-      max-width:1200px;
-      margin:auto;
-      padding:42px 20px 34px;
-      text-align:center;
-    }
-
-    .footer-social-title{
-      font-size:22px;
-      font-weight:700;
-      margin-bottom:22px;
-      color:#111;
-    }
-
-    .footer-socials{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .footer-socials a{
-      width:44px;
-      height:44px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      background:#f5f5f5;
-      transition:all 0.25s ease;
-      text-decoration:none;
-    }
-
-    .footer-socials img{
-      width:22px;
-      height:22px;
-      opacity:0.85;
-      display:block;
-    }
-
-    .footer-socials a:hover{
-      background:#111;
-      transform:translateY(-3px);
-    }
-
-    .footer-socials a:hover img{
-      filter:invert(1);
-      opacity:1;
-    }
-
-    .footer-line{
+    .popup-overlay{
+      position:fixed;
+      top:0;
+      left:0;
       width:100%;
-      max-width:240px;
-      height:1px;
-      background:rgba(0,0,0,0.12);
-      margin:28px auto 18px;
-    }
-
-    .footer-copy{
-      font-size:14px;
-      color:#666;
-    }
-
-    .back-to-top{
-      position:fixed;
-      left:20px;
-      bottom:20px;
-      width:46px;
-      height:46px;
-      border-radius:50%;
-      background:#111;
-      color:#fff;
-      display:flex;
-      align-items:center;
+      height:100%;
+      background:rgba(0,0,0,0.5);
+      display:none;
       justify-content:center;
-      text-decoration:none;
-      font-size:22px;
-      z-index:1200;
-      box-shadow:0 8px 18px rgba(0,0,0,0.18);
+      align-items:center;
+      z-index:9999;
     }
 
-    .whatsapp-btn{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      width:54px;
-      height:54px;
-      border-radius:50%;
-      background:#25D366;
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
+    .popup-box{
+      background:#fff;
+      max-width:280px;
+      width:88%;
+      border-radius:12px;
+      padding:16px;
+      text-align:center;
+      position:relative;
+      animation:fadeIn 0.4s ease;
+    }
+
+    .popup-box img{
+      width:100%;
+      border-radius:10px;
+      margin-bottom:15px;
+    }
+
+    .popup-box h2{
+      margin:10px 0;
+      font-size:20px;
+    }
+
+    .popup-box p{
+      font-size:15px;
+      line-height:1.6;
+      margin:0;
+    }
+
+    .popup-box small{
+      display:block;
+      margin-top:10px;
+      color:#777;
+    }
+
+    .close-btn{
+      position:absolute;
+      top:6px;
+      left:6px;
       font-size:26px;
-      z-index:1200;
-      box-shadow:0 8px 18px rgba(0,0,0,0.18);
+      font-weight:bold;
+      color:#000;
+      background:rgba(255,255,255,0.85);
+      border-radius:50%;
+      width:30px;
+      height:30px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0;transform:translateY(20px);}
+      to{opacity:1;transform:translateY(0);}
     }
 
     @media (max-width: 820px){
-      .hero{
+      .home-page .hero{
         height:58vh;
       }
 
-      .video-container iframe{
+      .home-page .video-container iframe{
         top:38%;
       }
 
-      .menu-toggle{
-        display:block;
-      }
-
-      nav{
-        display:none;
-        width:100%;
-        flex-direction:column;
-        gap:14px;
-        padding-top:14px;
-      }
-
-      nav.open{
-        display:flex;
-      }
-
-      .brand img{
-        height:34px;
-      }
-
-      .brand-subtitle{
-        font-size:10px;
-        margin-top:-3px;
-      }
-
-      .hero-logo{
+      .home-page .hero-logo{
         width:min(240px, 62vw);
         margin-bottom:6px;
       }
 
-      .hero-subtitle-he{
+      .home-page .hero-subtitle-he{
         font-size:18px;
         line-height:1.3;
         margin:0 0 14px;
       }
 
-      h2{
+      .home-page h2{
         font-size:31px;
       }
 
-      section{
+      .home-page section{
         padding:30px 0;
       }
 
-      .art-preview-text,
-      .projects-intro{
+      .home-page .art-preview-text,
+      .home-page .projects-intro{
         font-size:17px;
         line-height:1.85;
       }
 
-      .featured-art-text h3{
+      .home-page .featured-art-text h3{
         font-size:24px;
       }
 
-      .featured-art-text p{
+      .home-page .featured-art-text p{
         font-size:17px;
       }
 
-      .projects-grid{
+      .home-page .projects-grid{
         grid-template-columns:1fr;
       }
 
-      .contact-grid{
+      .home-page .contact-grid{
         grid-template-columns:1fr;
         gap:24px;
       }
 
-      .contact-text h2{
+      .home-page .contact-text h2{
         font-size:32px;
       }
 
-      .contact-quote{
+      .home-page .contact-quote{
         font-size:20px;
       }
 
-      .contact-text p{
+      .home-page .contact-text p{
         font-size:18px;
         line-height:1.75;
       }
 
-      .contact-form-box{
+      .home-page .contact-form-box{
         padding:22px;
-      }
-
-      .footer-social-title{
-        font-size:20px;
-      }
-
-      .back-to-top{
-        left:14px;
-        bottom:14px;
-        width:42px;
-        height:42px;
-        font-size:20px;
-      }
-
-      .whatsapp-btn{
-        right:14px;
-        bottom:14px;
-        width:48px;
-        height:48px;
-        font-size:24px;
       }
     }
   </style>
 </head>
-<body>
+<body class="home-page">
   <div id="top"></div>
 
-  <a href="#top" class="back-to-top" aria-label="חזרה למעלה">↑</a>
-  <a href="https://wa.me/972507555667" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">💬</a>
-
-  <header>
-    <div class="nav-wrap">
-      <a class="brand" href="#home">
-        <img src="logo-black.png" alt="Linda Dahan">
-      </a>
-
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-      <nav id="mainMenu">
-        <a href="#home" onclick="closeMenu()">בית</a>
-        <a href="story.html" onclick="closeMenu()">הסיפור שלי</a>
-        <a href="process.html" onclick="closeMenu()">תהליך העבודה</a>
-        <a href="unique-art.html" onclick="closeMenu()">אומנות ייחודית</a>
-        <a href="#projects" onclick="closeMenu()">פרויקטים</a>
-        <a href="#permits" onclick="closeMenu()">היתרי בניה</a>
-        <a href="#testimonials" onclick="closeMenu()">תשבחות</a>
-        <a href="#contact" onclick="closeMenu()">צור קשר</a>
-      </nav>
-    </div>
-  </header>
+  <div id="site-header"></div>
 
   <section class="hero" id="home">
     <div class="video-container">
@@ -812,7 +639,7 @@
           <div class="project-card-text">
             <h3>בית מודרני פרטי ביבנה</h3>
             <p>בית פרטי לפרופ׳ חנה לייבה ביבנה, עם שפה נקייה, מדויקת ואלגנטית, ותכנון שמחזיק נוכחות שקטה.</p>
-            <a class="outline-btn" href="https://www.facebook.com/reel/1585837298783731" target="_blank">לצפייה בסרטון</a>
+            <a class="outline-btn" href="https://www.facebook.com/reel/1585837298783731" target="_blank" rel="noopener">לצפייה בסרטון</a>
           </div>
         </div>
 
@@ -821,7 +648,7 @@
           <div class="project-card-text">
             <h3>דירת דופלקס ברחובות</h3>
             <p>דירת דופלקס עם חשיבה על זרימה, חומרים, תאורה ורגעים יומיומיים שצריכים לעבוד יפה ונכון.</p>
-            <a class="outline-btn" href="https://www.facebook.com/reel/2143932029426797" target="_blank">לצפייה בסרטון</a>
+            <a class="outline-btn" href="https://www.facebook.com/reel/2143932029426797" target="_blank" rel="noopener">לצפייה בסרטון</a>
           </div>
         </div>
 
@@ -842,7 +669,7 @@
           <img src="japanese-zen-house-weizmann.jpg" alt="בית פרטי בהשראת הזן היפני במכון ויצמן">
           <div class="project-card-text">
             <h3>בית פרטי בהשראת הזן היפני | מכון ויצמן</h3>
-            <p>בית שתוכנן עבור משפחה שחיה שנים ביפן, בהשראת עקרונות הזן – פשטות, שקט ואיזון מדויק בין חלל לחומר.</p>
+            <p>בית שתוכנן עבור משפחה שחיה שנים ביפן, בהשראת עקרונות הזן - פשטות, שקט ואיזון מדויק בין חלל לחומר.</p>
           </div>
         </div>
 
@@ -850,7 +677,7 @@
           <img src="graphic-design-studio-office.jpg" alt="סטודיו לעיצוב גרפי עם קומת קבלה ומשרדים">
           <div class="project-card-text">
             <h3>סטודיו לעיצוב גרפי | חלל עבודה דו-קומתי</h3>
-            <p>סטודיו שתוכנן כשני מפלסים – קומת קבלה ללקוחות וקומת עבודה עליונה למעצבות, עם דגש על פונקציונליות וזרימה נכונה.</p>
+            <p>סטודיו שתוכנן כשני מפלסים - קומת קבלה ללקוחות וקומת עבודה עליונה למעצבות, עם דגש על פונקציונליות וזרימה נכונה.</p>
           </div>
         </div>
 
@@ -971,7 +798,7 @@
         <div class="contact-info">
           📞 <a href="tel:0507555667">050-7555667</a><br>
           📧 <a href="mailto:lindadahan859@gmail.com">lindadahan859@gmail.com</a><br>
-          📍 אלי הורביץ 4, רחובות<br>
+          📍 אהרון אייזנברג 1, רחובות<br>
           📅 פגישות בתיאום מראש
         </div>
 
@@ -986,8 +813,8 @@
           <textarea name="message" placeholder="ספרו לי בקצרה על הפרויקט"></textarea>
 
           <div class="contact-buttons">
-            <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%9B%D7%AA%D7%91%D7%AA%D7%99%20%D7%9B%D7%90%D7%9F%20%D7%A2%D7%9D%20%D7%A4%D7%A0%D7%99%D7%99%D7%94" target="_blank">פנייה ב-WhatsApp</a>
-            <button type="submit">שליחה</button>
+            <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%9B%D7%AA%D7%91%D7%AA%D7%99%20%D7%9B%D7%90%D7%9F%20%D7%A2%D7%9D%20%D7%A4%D7%A0%D7%99%D7%99%D7%94" target="_blank" rel="noopener">פנייה ב-WhatsApp</a>
+            <button type="submit" id="submitBtn">שליחה</button>
           </div>
         </form>
 
@@ -996,46 +823,41 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-social-title">
-        לעוד פרויקטים ותהליכים
-      </div>
+  <div id="site-footer"></div>
 
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/hbrt.lindadahan" target="_blank" aria-label="Facebook">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-        </a>
+  <!-- POPUP LINDA -->
+  <div id="lindaPopup" class="popup-overlay">
+    <div class="popup-box">
+      <span class="close-btn" onclick="closePopup()">×</span>
 
-        <a href="https://www.instagram.com/linda_dahan/" target="_blank" aria-label="Instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
-        </a>
+      <img src="linda-dahan-welcome.jpg" alt="Linda Dahan">
 
-        <a href="https://www.tiktok.com/@lindadahan" target="_blank" aria-label="TikTok">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-        </a>
+      <h2>אני לינדה דהן</h2>
+      <p>ואני לא מתכננת רק חללים<br>
+      אני מתכננת איך אנשים מרגישים בתוכם</p>
 
-        <a href="https://wa.me/972507555667" target="_blank" aria-label="WhatsApp">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-        </a>
-      </div>
-
-      <div class="footer-line"></div>
-
-      <div class="footer-copy">
-        © כל הזכויות שמורות לינדה דהן
-      </div>
+      <small>תכנון אדריכלי | עיצוב פנים | היתרי בניה</small>
     </div>
-  </footer>
+  </div>
 
   <script>
-    function toggleMenu() {
-      document.getElementById("mainMenu").classList.toggle("open");
+    async function loadIncludes() {
+      try {
+        const headerResponse = await fetch("header.html");
+        document.getElementById("site-header").innerHTML = await headerResponse.text();
+
+        const footerResponse = await fetch("footer.html");
+        document.getElementById("site-footer").innerHTML = await footerResponse.text();
+
+        if (typeof setupHeaderMenu === "function") {
+          setupHeaderMenu();
+        }
+      } catch (error) {
+        console.error("Error loading includes:", error);
+      }
     }
 
-    function closeMenu() {
-      document.getElementById("mainMenu").classList.remove("open");
-    }
+    loadIncludes();
 
     const contactForm = document.getElementById("contactForm");
     const formStatus = document.getElementById("formStatus");
@@ -1061,7 +883,7 @@
       contactForm.addEventListener("submit", async function(event) {
         event.preventDefault();
 
-        const submitButton = contactForm.querySelector("button[type='submit']");
+        const submitButton = document.getElementById("submitBtn");
         const formData = new FormData(contactForm);
 
         submitButton.disabled = true;
@@ -1094,7 +916,7 @@
           }
 
           if (typeof fbq === "function") {
-            fbq('track', 'Lead');
+            fbq("track", "Lead");
           }
         } catch (error) {
           formStatus.className = "small-note error-message";
@@ -1113,6 +935,10 @@
             event_category: "Contact",
             event_label: link.href
           });
+        }
+
+        if (typeof fbq === "function") {
+          fbq("track", "Contact", { method: "whatsapp" });
         }
       });
     });
@@ -1134,105 +960,21 @@
         });
       }
     }, 60000);
+
+    function closePopup() {
+      document.getElementById("lindaPopup").style.display = "none";
+      localStorage.setItem("lindaPopupShown", "true");
+    }
+
+    window.addEventListener("load", function() {
+      if (!localStorage.getItem("lindaPopupShown")) {
+        setTimeout(function() {
+          document.getElementById("lindaPopup").style.display = "flex";
+        }, 2000);
+      }
+    });
   </script>
-  <!-- POPUP LINDA -->
-<div id="lindaPopup" class="popup-overlay">
-  <div class="popup-box">
-    <span class="close-btn" onclick="closePopup()">×</span>
 
-    <img src="linda-dahan-welcome.jpg" alt="Linda Dahan">
-
-    <h2>אני לינדה דהן</h2>
-    <p>ואני לא מתכננת רק חללים<br>
-    אני מתכננת איך אנשים מרגישים בתוכם</p>
-
-    <small>תכנון אדריכלי | עיצוב פנים | היתרי בניה</small>
-  </div>
-</div>
-
-<style>
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.popup-box {
-    background: #fff;
-    max-width: 280px;
-    width: 88%;
-    border-radius: 12px;
-    padding: 16px;
-    text-align: center;
-    position: relative;
-    animation: fadeIn 0.4s ease;
-}
-
-.popup-box img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.popup-box h2 {
-  margin: 10px 0;
-  font-size: 20px;
-}
-
-.popup-box p {
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.popup-box small {
-  display: block;
-  margin-top: 10px;
-  color: #777;
-}
-
-.close-btn {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    font-size: 26px;
-    font-weight: bold;
-    color: #000;
-    background: rgba(255,255,255,0.85);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-</style>
-
-<script>
-function closePopup() {
-  document.getElementById("lindaPopup").style.display = "none";
-  localStorage.setItem("lindaPopupShown", "true");
-}
-
-window.onload = function() {
-  if (!localStorage.getItem("lindaPopupShown")) {
-    setTimeout(function() {
-      document.getElementById("lindaPopup").style.display = "flex";
-    }, 2000);
-  }
-};
-</script>
+  <script src="site-tools.js"></script>
 </body>
 </html>
