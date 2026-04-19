@@ -35,68 +35,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>הסיפור שלי | לינדה דהן</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     body{
       margin:0;
-      font-family:Arial,sans-serif;
+      font-family:'Heebo',sans-serif;
       direction:rtl;
       background:#f7f7f5;
       color:#222;
-    }
-
-    header{
-      width:100%;
-      background:#fff;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .nav-wrap{
-      max-width:1200px;
-      margin:auto;
-      padding:14px 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      text-decoration:none;
-    }
-
-    .brand img{
-      height:42px;
-      width:auto;
-      display:block;
-    }
-
-    .menu-toggle{
-      display:none;
-      background:none;
-      border:none;
-      font-size:28px;
-      cursor:pointer;
-      line-height:1;
-    }
-
-    nav{
-      display:flex;
-      gap:28px;
-      flex-wrap:wrap;
-    }
-
-    nav a{
-      text-decoration:none;
-      color:#111;
-      font-size:18px;
-      font-weight:700;
-      cursor:pointer;
     }
 
     .wrap{
@@ -172,75 +121,6 @@
       margin-bottom:8px;
     }
 
-    .site-footer{
-      background:#fff;
-      margin-top:60px;
-      border-top:1px solid rgba(0,0,0,0.08);
-    }
-
-    .footer-inner{
-      max-width:1200px;
-      margin:auto;
-      padding:42px 20px 34px;
-      text-align:center;
-    }
-
-    .footer-social-title{
-      font-size:22px;
-      font-weight:700;
-      margin-bottom:22px;
-      color:#111;
-    }
-
-    .footer-socials{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .footer-socials a{
-      width:44px;
-      height:44px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      background:#f5f5f5;
-      transition:all 0.25s ease;
-      text-decoration:none;
-    }
-
-    .footer-socials img{
-      width:22px;
-      height:22px;
-      opacity:0.85;
-      display:block;
-    }
-
-    .footer-socials a:hover{
-      background:#111;
-      transform:translateY(-3px);
-    }
-
-    .footer-socials a:hover img{
-      filter:invert(1);
-      opacity:1;
-    }
-
-    .footer-line{
-      width:100%;
-      max-width:240px;
-      height:1px;
-      background:rgba(0,0,0,0.12);
-      margin:28px auto 18px;
-    }
-
-    .footer-copy{
-      font-size:14px;
-      color:#666;
-    }
-
     @media (max-width: 900px){
       .grid{
         grid-template-columns:1fr;
@@ -272,56 +152,11 @@
         line-height:1.7;
       }
     }
-
-    @media (max-width: 820px){
-      .menu-toggle{
-        display:block;
-      }
-
-      nav{
-        display:none;
-        width:100%;
-        flex-direction:column;
-        gap:14px;
-        padding-top:14px;
-      }
-
-      nav.open{
-        display:flex;
-      }
-
-      .brand img{
-        height:34px;
-      }
-
-      .footer-social-title{
-        font-size:20px;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="nav-wrap">
-      <a class="brand" href="index.html#home">
-        <img src="logo-black.png" alt="Linda Dahan">
-      </a>
-
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-      <nav id="mainMenu">
-        <a href="index.html#home" onclick="closeMenu()">בית</a>
-        <a href="story.html" onclick="closeMenu()">הסיפור שלי</a>
-        <a href="unique-art.html" onclick="closeMenu()">אומנות ייחודית</a>
-        <a href="index.html#projects" onclick="closeMenu()">פרויקטים</a>
-        <a href="process.html" onclick="closeMenu()">תהליך העבודה</a>
-        <a href="index.html#permits" onclick="closeMenu()">היתרי בניה</a>
-        <a href="index.html#testimonials" onclick="closeMenu()">תשבחות</a>
-        <a href="index.html#contact" onclick="closeMenu()">צור קשר</a>
-      </nav>
-    </div>
-  </header>
+  <div id="site-header"></div>
 
   <div class="wrap">
     <div class="box">
@@ -357,7 +192,7 @@
 
           <p><strong>תמיד עבדתי עם אנשים שמעזים.</strong> ותמיד הייתי שם איתם ברגעים של החלטות גדולות.</p>
 
-          <p>האמת היא שתמיד הסתכלתי על הכול כ־<strong>Win Win</strong>, וכל פרויקט היה עבורי תהליך משותף.</p>
+          <p>האמת היא שתמיד הסתכלתי על הכול כ-<strong>Win Win</strong>, וכל פרויקט היה עבורי תהליך משותף.</p>
 
           <p>גם היום, לקוחות שליוויתי בעולם העסקי, חוזרים אליי כשהם רוצים לבנות, לשפץ, להוסיף, או כשהם ממשיכים לגדול - עבור עצמם או עבור הילדים שלהם.</p>
 
@@ -432,8 +267,8 @@
           <ul>
             <li>נחלה למשפחת יוחננוף - תכנון כולל פל״ח, מגורים ופינת חי</li>
             <li>בית בבניה קלה בכרמיה, בהתאם לכל הדרישות והתקנים לשנת 2026</li>
-            <li>בית בסגנון כפרי, כ־250 מ״ר</li>
-            <li>יחידת דיור כ־70 מ״ר - “הבית על האגם”, עם תחושה של חו״ל</li>
+            <li>בית בסגנון כפרי, כ-250 מ״ר</li>
+            <li>יחידת דיור כ-70 מ״ר - “הבית על האגם”, עם תחושה של חו״ל</li>
             <li>טיפול ואישור חריגות בניה ותכנון בריכת שחיה</li>
             <li>חוות דעת מקצועית לפני רכישת נחלה</li>
             <li>בית פרטי במכון ויצמן בסגנון יפני, שמשלב בתוכו אלמנטים עתיקים שקיבלו בני הזוג כירושה</li>
@@ -449,69 +284,43 @@
     </div>
   </div>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-
-      <div class="footer-social-title">
-        לעוד פרויקטים ותהליכים
-      </div>
-
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/hbrt.lindadahan" target="_blank" aria-label="Facebook">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-        </a>
-
-        <a href="https://www.instagram.com/linda_dahan/" target="_blank" aria-label="Instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
-        </a>
-
-        <a href="https://www.tiktok.com/@lindadahan" target="_blank" aria-label="TikTok">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-        </a>
-
-        <a href="https://wa.me/972507555667" target="_blank" aria-label="WhatsApp">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-        </a>
-      </div>
-
-      <div class="footer-line"></div>
-
-      <div class="footer-copy">
-        © כל הזכויות שמורות לינדה דהן
-      </div>
-
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("mainMenu");
-      if (menu) {
-        menu.classList.toggle("open");
-      }
-    }
+    async function loadIncludes() {
+      try {
+        const headerResponse = await fetch('header.html');
+        const headerHtml = await headerResponse.text();
+        document.getElementById('site-header').innerHTML = headerHtml;
 
-    function closeMenu() {
-      const menu = document.getElementById("mainMenu");
-      if (menu) {
-        menu.classList.remove("open");
-      }
-    }
+        const footerResponse = await fetch('footer.html');
+        const footerHtml = await footerResponse.text();
+        document.getElementById('site-footer').innerHTML = footerHtml;
 
-    document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
-      link.addEventListener("click", () => {
-        if (typeof gtag === "function") {
-          gtag("event", "whatsapp_click_story", {
-            event_category: "Story Page",
-            event_label: link.href
+        if (typeof setupHeaderMenu === 'function') {
+          setupHeaderMenu();
+        }
+
+        document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+          link.addEventListener("click", () => {
+            if (typeof gtag === "function") {
+              gtag("event", "whatsapp_click_story", {
+                event_category: "Story Page",
+                event_label: link.href
+              });
+            }
+
+            if (typeof fbq === "function") {
+              fbq('track', 'Contact', { method: 'whatsapp' });
+            }
           });
-        }
+        });
+      } catch (error) {
+        console.error('Error loading header/footer:', error);
+      }
+    }
 
-        if (typeof fbq === "function") {
-          fbq('track', 'Contact', { method: 'whatsapp' });
-        }
-      });
-    });
+    loadIncludes();
   </script>
 
 </body>
