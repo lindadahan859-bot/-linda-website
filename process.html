@@ -16,7 +16,7 @@
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    if(!f._fbq)f.fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -25,91 +25,19 @@
     fbq('init', '127944994281591');
     fbq('track', 'PageView');
   </script>
+
   <noscript>
     <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1"/>
+    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1" alt="">
   </noscript>
-  <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>תהליך העבודה | לינדה דהן</title>
 
+  <link rel="stylesheet" href="styles.css">
+
   <style>
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      margin:0;
-      font-family:Arial,sans-serif;
-      direction:rtl;
-      background:#f7f7f5;
-      color:#222;
-      line-height:1.72;
-    }
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:#fff;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .nav-wrap{
-      max-width:1200px;
-      margin:auto;
-      padding:14px 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      text-decoration:none;
-    }
-
-    .brand img{
-      height:42px;
-      width:auto;
-      display:block;
-    }
-
-    .menu-toggle{
-      display:none;
-      background:none;
-      border:none;
-      font-size:28px;
-      cursor:pointer;
-      line-height:1;
-      color:#111;
-    }
-
-    nav{
-      display:flex;
-      gap:28px;
-      flex-wrap:wrap;
-    }
-
-    nav a{
-      text-decoration:none;
-      color:#111;
-      font-size:18px;
-      font-weight:700;
-      cursor:pointer;
-    }
-
-    nav a.active{
-      color:#000;
-      border-bottom:2px solid #000;
-      padding-bottom:4px;
-    }
-
     .hero{
       max-width:1200px;
       margin:0 auto;
@@ -273,23 +201,35 @@
       color:#222;
     }
 
+    .two-cols{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
     input[type="text"],
     input[type="tel"],
     input[type="email"],
-    textarea{
+    input[type="number"],
+    textarea,
+    input[type="file"]{
       width:100%;
       box-sizing:border-box;
       border:1px solid #d7d7d2;
       border-radius:14px;
       padding:14px 16px;
       font-size:16px;
-      font-family:Arial,sans-serif;
+      font-family:'Heebo',sans-serif;
       background:#fff;
       color:#111;
     }
 
+    input[type="file"]{
+      padding:12px 16px;
+    }
+
     textarea{
-      min-height:110px;
+      min-height:120px;
       resize:vertical;
       line-height:1.7;
     }
@@ -298,6 +238,7 @@
       font-size:14px;
       color:#666;
       margin-top:-2px;
+      line-height:1.6;
     }
 
     .contact-buttons{
@@ -317,7 +258,7 @@
       text-decoration:none;
       cursor:pointer;
       box-sizing:border-box;
-      font-family:Arial,sans-serif;
+      font-family:'Heebo',sans-serif;
     }
 
     .contact-buttons a{
@@ -352,102 +293,17 @@
       color:#a33434;
     }
 
-    .site-footer{
-      background:#fff;
-      margin-top:44px;
-      border-top:1px solid rgba(0,0,0,0.08);
-    }
-
-    .footer-inner{
-      max-width:1200px;
-      margin:auto;
-      padding:42px 20px 34px;
-      text-align:center;
-    }
-
-    .footer-social-title{
-      font-size:22px;
-      font-weight:700;
-      margin-bottom:22px;
-      color:#111;
-    }
-
-    .footer-socials{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .footer-socials a{
-      width:44px;
-      height:44px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      background:#f5f5f5;
-      transition:all 0.25s ease;
-      text-decoration:none;
-    }
-
-    .footer-socials img{
-      width:22px;
-      height:22px;
-      opacity:0.85;
-      display:block;
-    }
-
-    .footer-socials a:hover{
-      background:#111;
-      transform:translateY(-3px);
-    }
-
-    .footer-socials a:hover img{
-      filter:invert(1);
-      opacity:1;
-    }
-
-    .footer-line{
-      width:100%;
-      max-width:240px;
-      height:1px;
-      background:rgba(0,0,0,0.12);
-      margin:28px auto 18px;
-    }
-
-    .footer-copy{
-      font-size:14px;
-      color:#666;
-    }
-
     @media (max-width: 900px){
       .process-steps{
+        grid-template-columns:1fr;
+      }
+
+      .two-cols{
         grid-template-columns:1fr;
       }
     }
 
     @media (max-width: 820px){
-      .menu-toggle{
-        display:block;
-      }
-
-      nav{
-        display:none;
-        width:100%;
-        flex-direction:column;
-        gap:14px;
-        padding-top:14px;
-      }
-
-      nav.open{
-        display:flex;
-      }
-
-      .brand img{
-        height:34px;
-      }
-
       .hero{
         padding-top:26px;
       }
@@ -500,26 +356,7 @@
 </head>
 <body>
 
-  <header>
-    <div class="nav-wrap">
-      <a class="brand" href="index.html#home">
-        <img src="logo-black.png" alt="Linda Dahan">
-      </a>
-
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-      <nav id="mainMenu">
-        <a href="index.html#home" onclick="closeMenu()">בית</a>
-        <a href="story.html" onclick="closeMenu()">הסיפור שלי</a>
-        <a href="unique-art.html" onclick="closeMenu()">אומנות ייחודית</a>
-        <a href="index.html#projects" onclick="closeMenu()">פרויקטים</a>
-        <a href="process.html" onclick="closeMenu()" class="active">תהליך העבודה</a>
-        <a href="index.html#permits" onclick="closeMenu()">היתרי בניה</a>
-        <a href="index.html#testimonials" onclick="closeMenu()">תשבחות</a>
-        <a href="index.html#contact" onclick="closeMenu()">צור קשר</a>
-      </nav>
-    </div>
-  </header>
+  <div id="site-header"></div>
 
   <section class="hero">
     <h1>תהליך העבודה</h1>
@@ -617,11 +454,11 @@
       <p><span class="highlight">המטרה היא לא רק בית יפה. המטרה היא בית שמרגיש נכון.</span></p>
     </section>
 
-    <section class="form-box">
+    <section class="form-box" id="contact">
       <h2>כמה פרטים כדי שאבין בדיוק איך לעזור לכם</h2>
-      <p class="form-intro">השאירו פרטים ראשוניים, כדי שאוכל להבין במה מדובר ולחזור אליכם בצורה מדויקת.</p>
+      <p class="form-intro">השאירו פרטים מדויקים, כדי שאוכל להבין במה מדובר ולחזור אליכם בצורה חכמה ולא בערך.</p>
 
-      <form id="processForm" action="https://formsubmit.co/ajax/e8fc615a018169f89920a5d28fcde840" method="post">
+      <form id="processForm" action="https://formsubmit.co/ajax/e8fc615a018169f89920a5d28fcde840" method="post" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="פנייה חדשה מעמוד תהליך העבודה">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -649,9 +486,23 @@
           </div>
         </div>
 
-        <input type="text" name="name" placeholder="שם מלא" required>
-        <input type="tel" name="phone" placeholder="מספר טלפון" required>
+        <div class="two-cols">
+          <input type="text" name="name" placeholder="שם מלא" required>
+          <input type="tel" name="phone" placeholder="מספר טלפון" required>
+        </div>
+
         <input type="email" name="email" placeholder="אימייל">
+
+        <div class="two-cols">
+          <input type="text" name="rooms" placeholder="כמה חדרים יש בנכס?">
+          <input type="number" name="size_sqm" placeholder="גודל הנכס במ״ר" min="1" step="1">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="fullAddress">כתובת מלאה של הפרויקט</label>
+          <div class="helper">עיר, רחוב, מספר בית, קומה אם צריך. פחות "רחובות", יותר "רחובות, הרצל 12, קומה 3".</div>
+          <input type="text" id="fullAddress" name="full_address" placeholder="כתובת מלאה">
+        </div>
 
         <div class="field-group">
           <label class="field-label" for="feeling">מה הייתם רוצים להרגיש בבית שלכם?</label>
@@ -661,12 +512,14 @@
 
         <div class="field-group">
           <label class="field-label" for="details">ספרו לי בקצרה מה אתם מחפשים</label>
+          <div class="helper">מה מפריע לכם היום, מה חשוב לכם לשנות, ואם יש משהו דחוף במיוחד.</div>
           <textarea id="details" name="message"></textarea>
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="location">איפה נמצא הפרויקט?</label>
-          <input type="text" id="location" name="location">
+          <label class="field-label" for="photos">תמונות של הנכס</label>
+          <div class="helper">אפשר לצרף כמה תמונות של החלל הקיים. אם הקבצים כבדים מדי, אפשר גם לשלוח אחר כך ב-WhatsApp.</div>
+          <input type="file" id="photos" name="attachment" accept="image/*" multiple>
         </div>
 
         <div class="field-group">
@@ -674,56 +527,41 @@
           <div class="check-group">
             <label class="check-option"><input type="checkbox" name="contact_method" value="טלפון"> טלפון</label>
             <label class="check-option"><input type="checkbox" name="contact_method" value="וואטסאפ"> וואטסאפ</label>
+            <label class="check-option"><input type="checkbox" name="contact_method" value="אימייל"> אימייל</label>
           </div>
         </div>
 
         <div class="contact-buttons">
-          <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%A2%D7%9E%D7%95%D7%93%20%D7%AA%D7%94%D7%9C%D7%99%D7%9A%20%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94" target="_blank">פנייה ב-WhatsApp</a>
+          <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%A2%D7%9E%D7%95%D7%93%20%D7%AA%D7%94%D7%9C%D7%99%D7%9A%20%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94" target="_blank" rel="noopener">פנייה ב-WhatsApp</a>
           <button id="submitBtn" type="submit">שליחה</button>
         </div>
       </form>
 
-      <div id="formStatus" class="small-note">השאירו פרטים ואחזור אליכם בהקדם.</div>
+      <div id="formStatus" class="small-note">השאירו פרטים ואחזור אליכם בהקדם. ככל שתכתבו יותר מדויק, כך גם המענה יהיה מדויק יותר.</div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-social-title">לעוד פרויקטים ותהליכים</div>
-
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/hbrt.lindadahan" target="_blank" aria-label="Facebook">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-        </a>
-
-        <a href="https://www.instagram.com/linda_dahan/" target="_blank" aria-label="Instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
-        </a>
-
-        <a href="https://www.tiktok.com/@lindadahan" target="_blank" aria-label="TikTok">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-        </a>
-
-        <a href="https://wa.me/972507555667" target="_blank" aria-label="WhatsApp">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-        </a>
-      </div>
-
-      <div class="footer-line"></div>
-
-      <div class="footer-copy">© כל הזכויות שמורות לינדה דהן</div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
   <script>
-    function toggleMenu() {
-      document.getElementById("mainMenu").classList.toggle("open");
+    async function loadIncludes() {
+      try {
+        const headerResponse = await fetch("header.html");
+        document.getElementById("site-header").innerHTML = await headerResponse.text();
+
+        const footerResponse = await fetch("footer.html");
+        document.getElementById("site-footer").innerHTML = await footerResponse.text();
+
+        if (typeof setupHeaderMenu === "function") {
+          setupHeaderMenu();
+        }
+      } catch (error) {
+        console.error("Error loading includes:", error);
+      }
     }
 
-    function closeMenu() {
-      document.getElementById("mainMenu").classList.remove("open");
-    }
+    loadIncludes();
 
     const form = document.getElementById("processForm");
     const formStatus = document.getElementById("formStatus");
@@ -744,7 +582,7 @@
             }
 
             if (typeof fbq === "function") {
-              fbq('trackCustom', 'ProcessFormStart');
+              fbq("trackCustom", "ProcessFormStart");
             }
           }
         });
@@ -778,7 +616,8 @@
             }
 
             if (typeof fbq === "function") {
-              fbq('trackCustom', 'ProcessFormSubmit');
+              fbq("trackCustom", "ProcessFormSubmit");
+              fbq("track", "Lead");
             }
           } else {
             throw new Error();
@@ -803,11 +642,13 @@
         }
 
         if (typeof fbq === "function") {
-          fbq('track', 'Contact', { method: 'whatsapp' });
+          fbq("track", "Contact", { method: "whatsapp" });
         }
       });
     });
   </script>
+
+  <script src="site-tools.js"></script>
 
 </body>
 </html>
