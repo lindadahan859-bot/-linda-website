@@ -24,93 +24,28 @@
     fbq('init', '127944994281591');
     fbq('track', 'PageView');
   </script>
+
   <noscript>
     <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1"/>
+    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1" alt="">
   </noscript>
-  <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>הבית בכרמיה | תכנון מחדש ובניה קלה | לינדה דהן</title>
   <meta name="description" content="הבית בכרמיה - פירוק בית קיים, תכנון מחדש ובניה קלה, ליווי מול רמ״י ופיקוד העורף, דיוק תכניות, בחירת חומרים וליווי גם אחרי ההיתר.">
 
+  <link rel="stylesheet" href="styles.css">
+
   <style>
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      margin:0;
-      font-family:Arial,sans-serif;
-      direction:rtl;
-      background:#f7f7f5;
-      color:#222;
-      line-height:1.68;
-    }
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:#fff;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .nav-wrap{
-      max-width:1200px;
-      margin:auto;
-      padding:12px 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .brand{
-      display:flex;
-      text-decoration:none;
-      align-items:center;
-    }
-
-    .brand img{
-      height:42px;
-      width:auto;
-      display:block;
-    }
-
-    .menu-toggle{
-      display:none;
-      background:none;
-      border:none;
-      font-size:28px;
-      cursor:pointer;
-      line-height:1;
-    }
-
-    nav{
-      display:flex;
-      gap:28px;
-      flex-wrap:wrap;
-    }
-
-    nav a{
-      text-decoration:none;
-      color:#111;
-      font-size:18px;
-      font-weight:700;
-      cursor:pointer;
-    }
-
-    .container{
+    .karmia-page .container{
       max-width:1200px;
       margin:auto;
       padding:0 20px;
       box-sizing:border-box;
     }
 
-    .hero-cover{
+    .karmia-page .hero-cover{
       position:relative;
       min-height:70vh;
       background:url('karmia-house-design-main.jpg') center center / cover no-repeat;
@@ -119,14 +54,14 @@
       margin:0 0 28px;
     }
 
-    .hero-cover::before{
+    .karmia-page .hero-cover::before{
       content:"";
       position:absolute;
       inset:0;
       background:linear-gradient(to top, rgba(0,0,0,0.58), rgba(0,0,0,0.18));
     }
 
-    .hero-inner{
+    .karmia-page .hero-inner{
       position:relative;
       z-index:2;
       width:100%;
@@ -137,27 +72,27 @@
       color:#fff;
     }
 
-    .hero-kicker{
+    .karmia-page .hero-kicker{
       font-size:18px;
       font-weight:700;
       margin:0 0 8px;
       opacity:0.95;
     }
 
-    h1{
+    .karmia-page h1{
       font-size:52px;
       margin:0 0 10px;
       line-height:1.1;
     }
 
-    .hero-subtitle{
+    .karmia-page .hero-subtitle{
       font-size:22px;
       line-height:1.35;
       margin:0;
       max-width:780px;
     }
 
-    .intro-grid{
+    .karmia-page .intro-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:26px;
@@ -165,30 +100,31 @@
       margin:0 0 26px;
     }
 
-    .text-card{
+    .karmia-page .text-card{
       background:#fff;
       border-radius:24px;
       padding:28px;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
     }
 
-    .text-card h2{
+    .karmia-page .text-card h2{
       font-size:28px;
       margin:0 0 14px;
       line-height:1.2;
     }
 
-    .text-card p{
+    .karmia-page .text-card p{
       margin:0 0 14px;
       font-size:18px;
       line-height:1.72;
+      color:#222;
     }
 
-    .text-card p:last-child{
+    .karmia-page .text-card p:last-child{
       margin-bottom:0;
     }
 
-    .text-card strong{
+    .karmia-page .text-card strong{
       font-weight:700;
       color:#000;
       background:linear-gradient(transparent 60%, #e8e2d8 60%);
@@ -196,14 +132,14 @@
       border-radius:4px;
     }
 
-    .mid-images{
+    .karmia-page .mid-images{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:18px;
       margin:0 0 26px;
     }
 
-    .mid-images img{
+    .karmia-page .mid-images img{
       width:100%;
       display:block;
       aspect-ratio:4/3;
@@ -213,24 +149,24 @@
       cursor:pointer;
     }
 
-    .section-heading{
+    .karmia-page .section-heading{
       font-size:30px;
       margin:0 0 20px;
       line-height:1.2;
     }
 
-    .gallery-section{
+    .karmia-page .gallery-section{
       padding:8px 0 20px;
     }
 
-    .gallery-grid{
+    .karmia-page .gallery-grid{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
       gap:18px;
       align-items:start;
     }
 
-    .gallery-item{
+    .karmia-page .gallery-item{
       width:100%;
       display:block;
       object-fit:cover;
@@ -243,37 +179,37 @@
       -webkit-user-drag:none;
     }
 
-    .gallery-item:hover{
+    .karmia-page .gallery-item:hover{
       transform:translateY(-4px);
       box-shadow:0 14px 30px rgba(0,0,0,0.12);
     }
 
-    .gallery-item.square{
+    .karmia-page .gallery-item.square{
       aspect-ratio:1 / 1;
     }
 
-    .gallery-item.tall{
+    .karmia-page .gallery-item.tall{
       aspect-ratio:2 / 3;
     }
 
-    .gallery-item.wide{
+    .karmia-page .gallery-item.wide{
       aspect-ratio:2 / 1;
       grid-column:span 2;
     }
 
-    .gallery-item.large{
+    .karmia-page .gallery-item.large{
       aspect-ratio:4 / 3;
       grid-column:span 2;
     }
 
-    .support-gallery{
+    .karmia-page .support-gallery{
       display:grid;
       grid-template-columns:repeat(5,1fr);
       gap:16px;
       margin-top:20px;
     }
 
-    .support-gallery img{
+    .karmia-page .support-gallery img{
       width:100%;
       display:block;
       border-radius:20px;
@@ -284,7 +220,7 @@
       background:#fff;
     }
 
-    .faq-section{
+    .karmia-page .faq-section{
       margin:30px 0 0;
       background:#fff;
       border-radius:24px;
@@ -292,42 +228,42 @@
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
     }
 
-    .faq-section h2{
+    .karmia-page .faq-section h2{
       font-size:28px;
       margin:0 0 18px;
       line-height:1.2;
     }
 
-    .faq-item{
+    .karmia-page .faq-item{
       padding:14px 0;
       border-top:1px solid rgba(0,0,0,0.08);
     }
 
-    .faq-item:first-of-type{
+    .karmia-page .faq-item:first-of-type{
       border-top:none;
       padding-top:0;
     }
 
-    .faq-item h3{
+    .karmia-page .faq-item h3{
       font-size:20px;
       margin:0 0 8px;
       line-height:1.35;
     }
 
-    .faq-item p{
+    .karmia-page .faq-item p{
       margin:0;
       font-size:17px;
       line-height:1.7;
     }
 
-    .project-actions{
+    .karmia-page .project-actions{
       margin-top:30px;
       display:flex;
       gap:14px;
       flex-wrap:wrap;
     }
 
-    .cta-btn{
+    .karmia-page .cta-btn{
       display:inline-block;
       padding:12px 22px;
       border-radius:30px;
@@ -340,12 +276,12 @@
       transition:all 0.25s ease;
     }
 
-    .cta-btn:hover{
+    .karmia-page .cta-btn:hover{
       background:#fff;
       color:#111;
     }
 
-    .back-link{
+    .karmia-page .back-link{
       display:inline-block;
       text-decoration:none;
       color:#111;
@@ -357,117 +293,12 @@
       transition:all 0.25s ease;
     }
 
-    .back-link:hover{
+    .karmia-page .back-link:hover{
       background:#111;
       color:#fff;
     }
 
-    .site-footer{
-      background:#fff;
-      margin-top:34px;
-      border-top:1px solid rgba(0,0,0,0.08);
-    }
-
-    .footer-inner{
-      max-width:1200px;
-      margin:auto;
-      padding:42px 20px 34px;
-      text-align:center;
-    }
-
-    .footer-social-title{
-      font-size:22px;
-      font-weight:700;
-      margin-bottom:22px;
-      color:#111;
-    }
-
-    .footer-socials{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .footer-socials a{
-      width:44px;
-      height:44px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      background:#f5f5f5;
-      transition:all 0.25s ease;
-      text-decoration:none;
-    }
-
-    .footer-socials img{
-      width:22px;
-      height:22px;
-      opacity:0.85;
-      display:block;
-    }
-
-    .footer-socials a:hover{
-      background:#111;
-      transform:translateY(-3px);
-    }
-
-    .footer-socials a:hover img{
-      filter:invert(1);
-      opacity:1;
-    }
-
-    .footer-line{
-      width:100%;
-      max-width:240px;
-      height:1px;
-      background:rgba(0,0,0,0.12);
-      margin:28px auto 18px;
-    }
-
-    .footer-copy{
-      font-size:14px;
-      color:#666;
-    }
-
-    .back-to-top{
-      position:fixed;
-      left:20px;
-      bottom:20px;
-      width:46px;
-      height:46px;
-      border-radius:50%;
-      background:#111;
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
-      font-size:22px;
-      z-index:1200;
-      box-shadow:0 8px 18px rgba(0,0,0,0.18);
-    }
-
-    .whatsapp-btn{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      width:54px;
-      height:54px;
-      border-radius:50%;
-      background:#25D366;
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
-      font-size:26px;
-      z-index:1200;
-      box-shadow:0 8px 18px rgba(0,0,0,0.18);
-    }
-
-    .lightbox{
+    .karmia-page .lightbox{
       position:fixed;
       inset:0;
       background:rgba(0,0,0,0.94);
@@ -476,11 +307,11 @@
       overflow:hidden;
     }
 
-    .lightbox.active{
+    .karmia-page .lightbox.active{
       display:block;
     }
 
-    .lightbox-stage{
+    .karmia-page .lightbox-stage{
       width:100%;
       height:100%;
       display:flex;
@@ -490,7 +321,7 @@
       position:relative;
     }
 
-    .lightbox img{
+    .karmia-page .lightbox img{
       max-width:92vw;
       max-height:86vh;
       border-radius:12px;
@@ -499,9 +330,9 @@
       object-fit:contain;
     }
 
-    .lightbox-close,
-    .lightbox-prev,
-    .lightbox-next{
+    .karmia-page .lightbox-close,
+    .karmia-page .lightbox-prev,
+    .karmia-page .lightbox-next{
       position:absolute;
       border:none;
       background:rgba(255,255,255,0.14);
@@ -510,7 +341,7 @@
       z-index:2;
     }
 
-    .lightbox-close{
+    .karmia-page .lightbox-close{
       top:18px;
       right:18px;
       width:42px;
@@ -520,8 +351,8 @@
       line-height:1;
     }
 
-    .lightbox-prev,
-    .lightbox-next{
+    .karmia-page .lightbox-prev,
+    .karmia-page .lightbox-next{
       top:50%;
       transform:translateY(-50%);
       width:44px;
@@ -531,15 +362,15 @@
       line-height:1;
     }
 
-    .lightbox-prev{
+    .karmia-page .lightbox-prev{
       right:18px;
     }
 
-    .lightbox-next{
+    .karmia-page .lightbox-next{
       left:18px;
     }
 
-    .lightbox-counter{
+    .karmia-page .lightbox-counter{
       position:absolute;
       bottom:18px;
       left:50%;
@@ -552,29 +383,29 @@
     }
 
     @media (max-width: 980px){
-      .support-gallery{
+      .karmia-page .support-gallery{
         grid-template-columns:repeat(2,1fr);
       }
     }
 
     @media (max-width: 900px){
-      .intro-grid{
+      .karmia-page .intro-grid{
         grid-template-columns:1fr;
       }
 
-      h1{
+      .karmia-page h1{
         font-size:38px;
       }
 
-      .hero-subtitle{
+      .karmia-page .hero-subtitle{
         font-size:19px;
       }
 
-      .mid-images{
+      .karmia-page .mid-images{
         grid-template-columns:1fr;
       }
 
-      .gallery-grid{
+      .karmia-page .gallery-grid{
         display:flex;
         overflow-x:auto;
         gap:12px;
@@ -583,161 +414,99 @@
         -webkit-overflow-scrolling:touch;
       }
 
-      .gallery-grid::-webkit-scrollbar{
+      .karmia-page .gallery-grid::-webkit-scrollbar{
         height:6px;
       }
 
-      .gallery-grid::-webkit-scrollbar-thumb{
+      .karmia-page .gallery-grid::-webkit-scrollbar-thumb{
         background:#cfcfcf;
         border-radius:999px;
       }
 
-      .gallery-item{
+      .karmia-page .gallery-item{
         min-width:84%;
         scroll-snap-align:center;
       }
 
-      .gallery-item.wide,
-      .gallery-item.large,
-      .gallery-item.tall,
-      .gallery-item.square{
+      .karmia-page .gallery-item.wide,
+      .karmia-page .gallery-item.large,
+      .karmia-page .gallery-item.tall,
+      .karmia-page .gallery-item.square{
         grid-column:auto;
         aspect-ratio:4 / 3;
       }
     }
 
     @media (max-width: 820px){
-      .menu-toggle{
-        display:block;
-      }
-
-      nav{
-        display:none;
-        width:100%;
-        flex-direction:column;
-        gap:14px;
-        padding-top:14px;
-      }
-
-      nav.open{
-        display:flex;
-      }
-
-      .brand img{
-        height:34px;
-      }
-
-      .hero-cover{
+      .karmia-page .hero-cover{
         min-height:54vh;
       }
 
-      .hero-inner{
+      .karmia-page .hero-inner{
         padding-bottom:28px;
       }
 
-      h1{
+      .karmia-page h1{
         font-size:34px;
       }
 
-      .hero-kicker{
+      .karmia-page .hero-kicker{
         font-size:16px;
       }
 
-      .hero-subtitle{
+      .karmia-page .hero-subtitle{
         font-size:18px;
       }
 
-      .text-card,
-      .faq-section{
+      .karmia-page .text-card,
+      .karmia-page .faq-section{
         padding:22px;
       }
 
-      .text-card h2,
-      .faq-section h2{
+      .karmia-page .text-card h2,
+      .karmia-page .faq-section h2{
         font-size:25px;
       }
 
-      .text-card p,
-      .faq-item p{
+      .karmia-page .text-card p,
+      .karmia-page .faq-item p{
         font-size:17px;
         line-height:1.68;
       }
 
-      .section-heading{
+      .karmia-page .section-heading{
         font-size:26px;
       }
 
-      .support-gallery{
+      .karmia-page .support-gallery{
         grid-template-columns:1fr;
       }
 
-      .footer-social-title{
-        font-size:20px;
-      }
-
-      .back-to-top{
-        left:14px;
-        bottom:14px;
-        width:42px;
-        height:42px;
-        font-size:20px;
-      }
-
-      .whatsapp-btn{
-        right:14px;
-        bottom:14px;
-        width:48px;
-        height:48px;
-        font-size:24px;
-      }
-
-      .lightbox img{
+      .karmia-page .lightbox img{
         max-width:94vw;
         max-height:78vh;
       }
 
-      .lightbox-prev,
-      .lightbox-next{
+      .karmia-page .lightbox-prev,
+      .karmia-page .lightbox-next{
         width:40px;
         height:40px;
       }
 
-      .lightbox-prev{
+      .karmia-page .lightbox-prev{
         right:10px;
       }
 
-      .lightbox-next{
+      .karmia-page .lightbox-next{
         left:10px;
       }
     }
   </style>
 </head>
-<body>
+<body class="karmia-page">
   <div id="top"></div>
 
-  <a href="#top" class="back-to-top" aria-label="חזרה למעלה">↑</a>
-  <a href="https://wa.me/972507555667" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">💬</a>
-
-  <header>
-    <div class="nav-wrap">
-      <a class="brand" href="index.html#home">
-        <img src="logo-black.png" alt="Linda Dahan">
-      </a>
-
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-      <nav id="mainMenu">
-        <a href="index.html#home" onclick="closeMenu()">בית</a>
-        <a href="story.html" onclick="closeMenu()">הסיפור שלי</a>
-        <a href="process.html" onclick="closeMenu()">תהליך העבודה</a>
-        <a href="unique-art.html" onclick="closeMenu()">אומנות ייחודית</a>
-        <a href="index.html#projects" onclick="closeMenu()">פרויקטים</a>
-        <a href="index.html#permits" onclick="closeMenu()">היתרי בניה</a>
-        <a href="index.html#testimonials" onclick="closeMenu()">תשבחות</a>
-        <a href="index.html#contact" onclick="closeMenu()">צור קשר</a>
-      </nav>
-    </div>
-  </header>
+  <div id="site-header"></div>
 
   <section class="hero-cover">
     <div class="hero-inner">
@@ -867,14 +636,29 @@
       </section>
 
       <section class="gallery-section">
+        <h2 class="section-heading">לפני תחילת התהליך</h2>
+
+        <div class="text-card" style="margin-bottom:20px;">
+          <p>
+            כך נראה הבית והמגרש לפני תחילת התכנון והעבודה בשטח.
+            התמונות האלו מציגות את <strong>המצב הקיים</strong>, לפני הפירוק, לפני ההתאמות ולפני תחילת הבנייה מחדש.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <img src="karmia-house-04.jpg" alt="המגרש לפני תחילת התהליך בכרמיה" class="gallery-item tall">
+          <img src="karmia-house-02.jpg" alt="הבית הקיים לפני תחילת העבודה בכרמיה" class="gallery-item tall">
+          <img src="karmia-house-09.jpg" alt="מבט נוסף על הבית הקיים לפני תחילת הפרויקט" class="gallery-item large">
+        </div>
+      </section>
+
+      <section class="gallery-section">
         <h2 class="section-heading">תמונות מהתהליך</h2>
 
         <div class="gallery-grid" id="galleryGrid">
           <img src="karmia-house-01.jpg" alt="בדיקות שטח ותכנון ראשוני בכרמיה" class="gallery-item tall">
-          <img src="karmia-house-02.jpg" alt="תיעוד מצב קיים לפני תחילת העבודה" class="gallery-item tall">
           <img src="karmia-house-design-main.jpg" alt="הבית בכרמיה לאחר תכנון מחדש" class="gallery-item large">
           <img src="karmia-house-03.jpg" alt="עבודות בשטח בתחילת הפרויקט" class="gallery-item square">
-          <img src="karmia-house-04.jpg" alt="המגרש לפני תחילת הבניה" class="gallery-item square">
           <img src="karmia-house-05.jpg" alt="עבודות שלד בבניה קלה" class="gallery-item tall">
           <img src="karmia-house-06.jpg" alt="הרכבת קונסטרוקציית הבית" class="gallery-item square">
           <img src="karmia-house-07.jpg" alt="שלבי בניה מתקדמים בבית בכרמיה" class="gallery-item wide">
@@ -882,7 +666,6 @@
           <img src="karmia-framing-01.jpg" alt="מבט על מחיצות הפנים והתקדמות השלד בפרויקט כרמיה" class="gallery-item large">
           <img src="karmia-framing-02.jpg" alt="מבט נוסף על חלוקת הפנים והמחיצות בבית בכרמיה" class="gallery-item large">
           <img src="karmia-house-10.jpg" alt="גרמושקה ותכניות עבודה באתר הבניה" class="gallery-item wide">
-          <img src="karmia-house-09.jpg" alt="הבית בכרמיה במהלך הבניה" class="gallery-item square">
           <img src="karmia-house-11.jpg" alt="עבודות תשתית והתארגנות באתר" class="gallery-item wide">
           <img src="karmia-house-12.jpg" alt="פרטי ביצוע וחיבורים בשטח" class="gallery-item square">
           <img src="karmia-house-13.jpg" alt="הבית לאחר שלבי הבניה העיקריים" class="gallery-item tall">
@@ -923,43 +706,13 @@
       </div>
 
       <div class="project-actions">
-        <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%91%D7%9B%D7%A8%D7%9E%D7%99%D7%94%20%D7%95%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%93%D7%95%D7%9E%D7%94" target="_blank" class="cta-btn">דברו איתי על פרויקט דומה</a>
+        <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%91%D7%9B%D7%A8%D7%9E%D7%99%D7%94%20%D7%95%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%93%D7%95%D7%9E%D7%94" target="_blank" rel="noopener" class="cta-btn">דברו איתי על פרויקט דומה</a>
         <a href="index.html#projects" class="back-link">חזרה לכל הפרויקטים</a>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-social-title">
-        לעוד פרויקטים ותהליכים
-      </div>
-
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/hbrt.lindadahan" target="_blank" aria-label="Facebook">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-        </a>
-
-        <a href="https://www.instagram.com/linda_dahan/" target="_blank" aria-label="Instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
-        </a>
-
-        <a href="https://www.tiktok.com/@lindadahan" target="_blank" aria-label="TikTok">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-        </a>
-
-        <a href="https://wa.me/972507555667" target="_blank" aria-label="WhatsApp">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-        </a>
-      </div>
-
-      <div class="footer-line"></div>
-
-      <div class="footer-copy">
-        © כל הזכויות שמורות לינדה דהן
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightboxClose" aria-label="סגירה">×</button>
@@ -972,13 +725,23 @@
   </div>
 
   <script>
-    function toggleMenu() {
-      document.getElementById("mainMenu").classList.toggle("open");
+    async function loadIncludes() {
+      try {
+        const headerResponse = await fetch("header.html");
+        document.getElementById("site-header").innerHTML = await headerResponse.text();
+
+        const footerResponse = await fetch("footer.html");
+        document.getElementById("site-footer").innerHTML = await footerResponse.text();
+
+        if (typeof setupHeaderMenu === "function") {
+          setupHeaderMenu();
+        }
+      } catch (error) {
+        console.error("Error loading includes:", error);
+      }
     }
 
-    function closeMenu() {
-      document.getElementById("mainMenu").classList.remove("open");
-    }
+    loadIncludes();
 
     const galleryImages = Array.from(document.querySelectorAll('.gallery-item, .mid-images img, .support-gallery img'));
     const lightbox = document.getElementById('lightbox');
@@ -1066,6 +829,7 @@
         }
         if (typeof fbq === "function") {
           fbq('trackCustom', 'WhatsAppClick');
+          fbq('track', 'Contact', { method: 'whatsapp' });
         }
       });
     });
@@ -1088,5 +852,7 @@
       }
     }, 60000);
   </script>
+
+  <script src="site-tools.js"></script>
 </body>
 </html>
