@@ -1,509 +1,104 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>הצעה מותאמת למשפחת ברנדט | לינדה דהן</title>
-
-  <link rel="stylesheet" href="styles.css">
-
-  <style>
-    .offer-page{
-      max-width:1200px;
-      margin:auto;
-      padding:0 20px 44px;
-    }
-
-    .offer-hero{
-      max-width:1200px;
-      margin:0 auto;
-      padding:30px 20px 6px;
-      text-align:center;
-    }
-
-    .offer-hero h1{
-      font-size:46px;
-      margin:0 0 8px;
-      line-height:1.2;
-    }
-
-    .offer-hero-subtitle{
-      max-width:920px;
-      margin:0 auto 16px;
-      font-size:21px;
-      color:#444;
-      line-height:1.55;
-    }
-
-    .offer-hero-image-wrap{
-      max-width:1200px;
-      margin:0 auto 16px;
-      padding:0 20px;
-    }
-
-    .offer-hero-image{
-      width:100%;
-      display:block;
-      border-radius:26px;
-      box-shadow:0 10px 28px rgba(0,0,0,0.12);
-      object-fit:cover;
-    }
-
-    .offer-section-box{
-      background:#fff;
-      border-radius:24px;
-      padding:26px;
-      margin-bottom:16px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-    }
-
-    .offer-section-box h2{
-      margin:0 0 10px;
-      font-size:28px;
-      line-height:1.28;
-    }
-
-    .offer-section-box h3{
-      margin:0 0 8px;
-      font-size:22px;
-      line-height:1.3;
-    }
-
-    .offer-section-box p{
-      margin:0 0 10px;
-      font-size:18px;
-      color:#222;
-      line-height:1.72;
-    }
-
-    .offer-section-box p:last-child{
-      margin-bottom:0;
-    }
-
-    .offer-highlight{
-      font-weight:700;
-      color:#000;
-    }
-
-    .offer-grid{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:16px;
-      margin-top:10px;
-    }
-
-    .offer-card{
-      background:#fafaf8;
-      border-radius:20px;
-      padding:20px;
-      border:1px solid rgba(0,0,0,0.06);
-    }
-
-    .offer-card ul{
-      margin:0;
-      padding-right:18px;
-    }
-
-    .offer-card li{
-      margin-bottom:8px;
-      font-size:16px;
-      color:#333;
-      line-height:1.68;
-    }
-
-    .offer-price-box{
-      background:#fffaf3;
-      border:1px solid rgba(0,0,0,0.08);
-      border-radius:20px;
-      padding:20px;
-      margin-top:14px;
-    }
-
-    .offer-price-title{
-      font-size:18px;
-      font-weight:700;
-      margin-bottom:6px;
-      color:#111;
-    }
-
-    .offer-price-value{
-      font-size:30px;
-      font-weight:700;
-      line-height:1.3;
-      color:#111;
-      margin-bottom:6px;
-    }
-
-    .offer-small-note{
-      font-size:14px;
-      color:#666;
-      line-height:1.65;
-      margin-top:10px;
-    }
-
-    .offer-cta{
-      background:#fff;
-      border-radius:24px;
-      padding:28px 26px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-      margin-top:4px;
-      text-align:center;
-    }
-
-    .offer-cta h2{
-      margin:0 0 8px;
-      font-size:30px;
-      line-height:1.3;
-    }
-
-    .offer-cta p{
-      margin:0 0 14px;
-      font-size:17px;
-      color:#444;
-      line-height:1.7;
-    }
-
-    .offer-contact-buttons{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:8px;
-      justify-content:center;
-    }
-
-    .offer-contact-buttons a{
-      min-width:220px;
-      text-align:center;
-      padding:14px 18px;
-      border-radius:12px;
-      font-size:16px;
-      text-decoration:none;
-      cursor:pointer;
-      box-sizing:border-box;
-      font-family:'Heebo',sans-serif;
-    }
-
-    .offer-contact-buttons a.primary{
-      border:none;
-      background:#111;
-      color:#fff;
-    }
-
-    .offer-contact-buttons a.secondary{
-      border:1px solid #ccc;
-      color:#000;
-      background:#fff;
-    }
-
-    @media (max-width: 900px){
-      .offer-grid{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 820px){
-      .offer-hero{
-        padding-top:26px;
-      }
-
-      .offer-hero h1{
-        font-size:34px;
-      }
-
-      .offer-hero-subtitle{
-        font-size:18px;
-        margin-bottom:14px;
-      }
-
-      .offer-hero-image-wrap{
-        padding:0 12px;
-        margin-bottom:14px;
-      }
-
-      .offer-section-box,
-      .offer-cta{
-        padding:20px;
-      }
-
-      .offer-section-box h2,
-      .offer-cta h2{
-        font-size:24px;
-      }
-
-      .offer-section-box h3{
-        font-size:20px;
-      }
-
-      .offer-section-box p,
-      .offer-card li{
-        font-size:16px;
-      }
-
-      .offer-page{
-        padding:0 12px 36px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>הצעה מותאמת למשפחת ברנדט | לינדה דהן</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.offer-page{max-width:1180px;margin:0 auto;padding:28px 18px 60px}
+.offer-hero{padding:20px 0 10px;text-align:center}
+.offer-hero h1{font-size:46px;line-height:1.2;margin:0 0 10px}
+.offer-sub{font-size:22px;color:#555;max-width:900px;margin:0 auto}
+.offer-box{background:#fff;border-radius:26px;padding:28px;margin:0 0 18px;box-shadow:0 10px 28px rgba(0,0,0,.08)}
+.offer-box h2{font-size:30px;margin:0 0 14px}
+.offer-box h3{font-size:22px;margin:0 0 10px}
+.offer-box p{font-size:18px;line-height:1.8;color:#222;margin:0 0 12px}
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+.offer-card{background:#fafaf8;border-radius:22px;padding:22px;border:1px solid rgba(0,0,0,.06)}
+.offer-card ul{margin:0;padding-right:20px}
+.offer-card li{margin:0 0 8px;font-size:17px;line-height:1.7}
+.offer-img{width:100%;border-radius:26px;display:block;box-shadow:0 10px 28px rgba(0,0,0,.08);margin:0 0 18px}
+.offer-price{background:#fff8ef;border-radius:22px;padding:22px;margin-top:16px;border:1px solid rgba(0,0,0,.07)}
+.offer-price strong{display:block;font-size:34px;margin-top:6px}
+.offer-note{font-size:14px;color:#666;line-height:1.7;margin-top:8px}
+.offer-cta{text-align:center}
+.offer-btn{display:inline-block;background:#111;color:#fff;text-decoration:none;padding:16px 28px;border-radius:14px;font-size:18px;font-weight:700;margin-top:8px}
+@media(max-width:900px){.offer-grid{grid-template-columns:1fr}.offer-hero h1{font-size:34px}.offer-sub{font-size:18px}.offer-box{padding:22px}.offer-box h2{font-size:25px}.offer-box p,.offer-card li{font-size:16px}}
+</style>
 </head>
 <body>
-
-  <div id="site-header"></div>
-
-  <section class="offer-hero">
-    <h1>הצעה מותאמת למשפחת ברנדט</h1>
-    <p class="offer-hero-subtitle">תהליך בדיקה, תכנון וליווי לנחלה במגוב 48, נווה מבטח</p>
-  </section>
-
-  <div class="offer-hero-image-wrap">
-    <img class="offer-hero-image" src="neve-mivtah-map.jpg" alt="מפת מצב קיים לנחלה בנווה מבטח">
-  </div>
-
-  <main class="offer-page">
-
-    <section class="offer-section-box">
-      <h2>פתיח</h2>
-      <p>בהמשך לפגישתנו מיום 16.4.26, ולאחר היכרות ראשונית עם הנחלה ועם הצרכים שעלו בשיחה עם בני המשפחה, ריכזתי עבורכם הצעה ראשונית לתהליך נכון, מקצועי וארוך טווח.</p>
-      <p>מן הפגישה עלה כי יוגב ברנדט מתגורר כיום בנחלה, נמרוד ברנדט מתגורר כיום בתל אביב, וקיים אח נוסף צעיר יותר. מצב זה מייצר צרכים שונים בהווה, לצד חשיבה עתידית רחבה עבור המשפחה כולה.</p>
-      <p>מדובר בנכס משפחתי בעל ערך משמעותי, אשר החלטות התכנון בו ישפיעו לשנים קדימה. לכן נכון להתחיל בבדיקה יסודית ובחשיבה כוללת, טרם קבלת החלטות על מיקום הבתים, חלוקת השטחים או השקעות עתידיות.</p>
-    </section>
-
-    <section class="offer-section-box">
-      <h2>למה חשוב להתחיל נכון</h2>
-      <p>תכנון נחלה משפחתית שונה מתכנון מגרש רגיל. כאשר מספר בני משפחה עתידים להתגורר בנכס אחד, נדרש לבחון כבר בשלב הראשון לא רק את אפשרויות הבניה הקיימות כיום, אלא גם את הגמישות העתידית של המשק לשנים הבאות.</p>
-      <p>תהליך נכון בתחילתו מסייע למנוע טעויות יקרות, שינויים חוזרים, חוסר נוחות בין בני המשפחה והוצאות בלתי צפויות בהמשך הדרך.</p>
-    </section>
-
-    <section class="offer-section-box">
-      <h2>שלב א - בדיקת היתכנות ותכנון אב לנחלה</h2>
-      <p>שלב זה נועד לייצר תמונה מקצועית מלאה של מצב הנחלה כיום, לצד בחינת אפשרויות הפיתוח הנכונות לעתיד.</p>
-
-      <div class="offer-grid">
-        <div class="offer-card">
-          <h3>בדיקה תכנונית ורגולטורית</h3>
-          <ul>
-            <li>בחינת מסמכי תכנון החלים על הנכס.</li>
-            <li>בדיקת זכויות בניה עדכניות.</li>
-            <li>בדיקת מגבלות בניה, קווי בניין, גישות ותנועה.</li>
-            <li>בדיקת מצב קיים של המבנים בנחלה והשפעתם על המשך התכנון.</li>
-            <li>בחינת אפשרויות עתידיות בהתאם למצב התכנוני התקף.</li>
-          </ul>
-        </div>
-
-        <div class="offer-card">
-          <h3>בדיקה תפקודית ומשפחתית</h3>
-          <ul>
-            <li>מיפוי צרכי בני המשפחה בהווה.</li>
-            <li>בחינת צרכי מגורים עתידיים.</li>
-            <li>גמישות לדורות הבאים.</li>
-            <li>עצמאות ופרטיות בין יחידות המגורים.</li>
-            <li>חלוקת שטחים נכונה ונעימה לשימוש.</li>
-          </ul>
-        </div>
-
-        <div class="offer-card">
-          <h3>חשיבה תכנונית ראשונית</h3>
-          <ul>
-            <li>בחינת מספר חלופות בינוי.</li>
-            <li>מיקום בתי המגורים על המגרש.</li>
-            <li>בחינת חצרות פרטיות ומשותפות.</li>
-            <li>גישות נוחות לכל יחידה.</li>
-            <li>בחינת פוטנציאל הרחבה עתידי.</li>
-          </ul>
-        </div>
-
-        <div class="offer-card">
-          <h3>תוצרי השלב</h3>
-          <ul>
-            <li>סקיצה עקרונית ראשונית למשק.</li>
-            <li>פגישת סיכום מקצועית.</li>
-            <li>המלצות להמשך הדרך.</li>
-            <li>סדר פעולות מומלץ להמשך.</li>
-            <li>בסיס מדויק לתכנון פרטני של כל בית.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="offer-price-box">
-        <div class="offer-price-title">שכר טרחה עבור שלב א</div>
-        <div class="offer-price-value">₪24,000 + מע״מ</div>
-        <p class="offer-small-note">במידה ויוחלט להמשיך לתכנון מלא של בתי המגורים, ₪10,000 יקוזזו מהמשך ההתקשרות.</p>
-      </div>
-    </section>
-
-    <section class="offer-section-box">
-      <h2>שלב ב - תכנון אדריכלי פרטני לכל בית</h2>
-      <p>לאחר סיום שלב ההיתכנות ובחירת כיוון תכנוני, ניתן להתקדם לתכנון מלא עבור כל בית בנפרד, בהתאם לצרכים, לאורח החיים ולפרוגרמה האישית של כל אחד מבני המשפחה.</p>
-
-      <div class="offer-grid">
-        <div class="offer-card">
-          <h3>תחילת שלב זה כוללת</h3>
-          <ul>
-            <li>שאלון פרוגרמה אישי.</li>
-            <li>הבנת אורח החיים והרגלי המגורים.</li>
-            <li>צרכי אירוח ומשפחה.</li>
-            <li>פתרונות אחסון.</li>
-            <li>עבודה מהבית במידת הצורך.</li>
-            <li>תכנון לטווח ארוך וצרכים משתנים לאורך השנים.</li>
-          </ul>
-        </div>
-
-        <div class="offer-card">
-          <h3>שלב זה כולל בין היתר</h3>
-          <ul>
-            <li>תכנון חלופות ראשוניות.</li>
-            <li>גיבוש סקיצה נבחרת.</li>
-            <li>תכנון אדריכלי מלא.</li>
-            <li>תוכניות העמדה וחלוקה.</li>
-            <li>חזיתות וחתכים.</li>
-            <li>חישובי שטחים.</li>
-            <li>תכנון ממ״ד בהתאם לצרכים.</li>
-            <li>תכנון פתחים ואור טבעי.</li>
-            <li>קשר בין פנים לחוץ.</li>
-            <li>הכנת תכניות להגשה.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="offer-price-box">
-        <div class="offer-price-title">עלות תכנון אדריכלי לכל בית</div>
-        <div class="offer-price-value">החל מ־₪98,000 + מע״מ</div>
-      </div>
-    </section>
-
-    <section class="offer-section-box">
-      <h2>שלב ג - רישוי, היתרים ותיאומים</h2>
-      <p>לאחר השלמת התכנון האדריכלי, מתחיל שלב הרישוי והטיפול מול הגורמים הרלוונטיים.</p>
-
-      <div class="offer-grid">
-        <div class="offer-card">
-          <h3>שלב זה עשוי לכלול</h3>
-          <ul>
-            <li>פתיחת תיק מידע.</li>
-            <li>הכנת בקשה להיתר.</li>
-            <li>העלאה למערכות הרישוי הרלוונטיות.</li>
-            <li>טיפול בהערות הוועדה.</li>
-            <li>התאמות נדרשות לפי דרישות הרשויות.</li>
-          </ul>
-        </div>
-
-        <div class="offer-card">
-          <h3>תיאומים וליווי</h3>
-          <ul>
-            <li>תיאום מול מודד ומהנדס.</li>
-            <li>תיאום מול יועצים מקצועיים לפי הצורך.</li>
-            <li>טיפול מול פיקוד העורף בנושא מרחבים מוגנים.</li>
-            <li>בחינת דרישות מול רמ״י במידת הצורך.</li>
-            <li>השלמות עד לקבלת אישור.</li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="offer-small-note">תהליך זה מושפע מדרישות כל רשות ומזמני טיפול שאינם בשליטת המתכננת.</p>
-    </section>
-
-    <div class="offer-hero-image-wrap">
-      <img class="offer-hero-image" src="interior-design.jpg" alt="עיצוב פנים לבית פרטי">
-    </div>
-
-    <section class="offer-section-box">
-      <h2>שלב ד - עיצוב פנים מלא לכל בית</h2>
-      <p>לאחר השלמת התכנון האדריכלי, ניתן להתקדם לתכנון פנים מלא עבור כל בית בנפרד, המתרגם את מעטפת הבית לחוויית מגורים שלמה, מדויקת ופונקציונלית.</p>
-
-      <div class="offer-grid">
-        <div class="offer-card">
-          <h3>השירות כולל בין היתר</h3>
-          <ul>
-            <li>חלוקת פנים מדויקת.</li>
-            <li>תכנון מטבח מפורט.</li>
-            <li>תכנון חדרי רחצה.</li>
-            <li>תוכניות חשמל, תאורה ותקשורת.</li>
-            <li>תקרות, גבס והנמכות.</li>
-            <li>תוכניות ריצוף וחיפויים.</li>
-          </ul>
-        </div>
-
-        <div class="offer-card">
-          <h3>ליווי ותיאום</h3>
-          <ul>
-            <li>נגרות מותאמת אישית.</li>
-            <li>פתרונות אחסון.</li>
-            <li>בחירת חומרי גמר.</li>
-            <li>התאמת צבעוניות וחומרים.</li>
-            <li>ליווי בחירות מול ספקים.</li>
-            <li>פגישות מתואמות מראש עם הקבלן המבצע ובעלי המקצוע בשלבי מפתח של הפרויקט, לצורך בקרה, הכוונה והתאמה לתכניות.</li>
-            <li>מענה לשאלות ביצוע לאורך הדרך.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="offer-price-box">
-        <div class="offer-price-title">עלות עיצוב פנים לכל בית</div>
-        <div class="offer-price-value">החל מ־₪58,000 + מע״מ</div>
-      </div>
-    </section>
-
-    <section class="offer-section-box">
-      <h2>תיאום מול גורמי חוץ</h2>
-      <p>תהליך תכנון ורישוי של נחלה עשוי לכלול התנהלות מול גורמים שונים כגון מוסדות תכנון, רמ״י, פיקוד העורף, יועצים מקצועיים ורשויות נוספות.</p>
-      <p>פעולות אלו מבוצעות בהתאם לדרישות כל גורם ולשלב הפרויקט, ובשיתוף המזמינים לפי הצורך.</p>
-      <p>המסמך הוכן לאחר פגישה ראשונית ועיון בחומרי רקע שנמסרו על ידי המשפחה, לרבות תכניות, מדידות ומסמכים קיימים.</p>
-    </section>
-
-    <section class="offer-cta">
-      <h2>להמשך הדרך</h2>
-      <p>המסמך הנוכחי מהווה הצעה ראשונית לצורך קבלת כיוון משותף. לאחר אישור עקרוני, יועבר מסמך התקשרות מפורט הכולל היקף עבודה מלא, שלבי תהליך, תנאים מסחריים ומסמכי ליווי נוספים.</p>
-      <p>אשמח ללוות אתכם בתהליך מקצועי, רגוע ומדויק, מתוך ראייה רחבה של המשפחה ושל עתיד הנחלה.</p>
-
-      <div class="offer-contact-buttons">
-        <a id="offerContinueBtn" class="primary" href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%A8%D7%90%D7%99%D7%A0%D7%95%20%D7%90%D7%AA%20%D7%94%D7%94%D7%A6%D7%A2%D7%94%20%D7%9C%D7%A0%D7%95%D7%95%D7%94%20%D7%9E%D7%91%D7%98%D7%97%20%D7%95%D7%A0%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%94%D7%9E%D7%A9%D7%9A%20%D7%AA%D7%94%D7%9C%D7%99%D7%9A" target="_blank" rel="noopener">לתיאום המשך תהליך</a>
-      </div>
-
-      <p class="offer-small-note">לינדה דהן</p>
-    </section>
-  </main>
-
-  <div id="site-footer"></div>
-
-  <script>
-    async function loadIncludes() {
-      try {
-        const headerResponse = await fetch('header.html');
-        document.getElementById('site-header').innerHTML = await headerResponse.text();
-
-        const footerResponse = await fetch('footer.html');
-        document.getElementById('site-footer').innerHTML = await footerResponse.text();
-
-        if (typeof setupHeaderMenu === 'function') {
-          setupHeaderMenu();
-        }
-      } catch (error) {
-        console.error('Error loading includes:', error);
-      }
-    }
-
-    loadIncludes();
-
-    const offerContinueBtn = document.getElementById('offerContinueBtn');
-
-    if (offerContinueBtn) {
-      offerContinueBtn.addEventListener('click', () => {
-        if (typeof gtag === 'function') {
-          gtag('event', 'private_offer_continue_click', {
-            event_category: 'Private Offer',
-            event_label: 'Neve Mivtah Continue Process'
-          });
-        }
-
-        if (typeof fbq === 'function') {
-          fbq('trackCustom', 'PrivateOfferContinueClick', {
-            offer_name: 'Neve Mivtah'
-          });
-          fbq('track', 'Contact', { method: 'whatsapp' });
-        }
-      });
-    }
-  </script>
-
-  <script src="site-tools.js"></script>
+<div id="site-header"></div>
+<main class="offer-page">
+<section class="offer-hero">
+<h1>הצעה מותאמת למשפחת ברנדט</h1>
+<p class="offer-sub">תהליך בדיקה, תכנון וליווי לנחלה במגוב 48, נווה מבטח</p>
+</section>
+<img src="neve-mivtah-map.jpg" alt="מפת הנחלה בנווה מבטח" class="offer-img">
+<section class="offer-box">
+<h2>פתיח</h2>
+<p>בהמשך לפגישתנו מיום 16.4.26, ולאחר היכרות ראשונית עם הנחלה ועם הצרכים שעלו בשיחה עם בני המשפחה, ריכזתי עבורכם הצעה ראשונית לתהליך נכון, מקצועי וארוך טווח.</p>
+<p>מן הפגישה עלה כי יוגב ברנדט מתגורר כיום בבית הקדמי הקיים בשטח של כ־90 מ"ר, אשר ייבחן במסגרת התכנון מחדש, לרבות אפשרות הריסה והקמה מחודשת. נמרוד ברנדט מתגורר כיום בתל אביב, וקיים אח נוסף צעיר יותר.</p>
+<p>מדובר בנכס משפחתי בעל ערך משמעותי, אשר החלטות התכנון בו ישפיעו לשנים קדימה. לכן נכון להתחיל בבדיקה יסודית ובחשיבה כוללת, טרם קבלת החלטות על מיקום הבתים, חלוקת השטחים או השקעות עתידיות.</p>
+</section>
+<section class="offer-box">
+<h2>למה חשוב להתחיל נכון</h2>
+<p>תכנון נחלה משפחתית שונה מתכנון מגרש רגיל. כאשר מספר בני משפחה עתידים להתגורר בנכס אחד, נדרש לבחון כבר בשלב הראשון לא רק את אפשרויות הבניה הקיימות כיום, אלא גם את הגמישות העתידית של המשק לשנים הבאות.</p>
+<p>תהליך נכון בתחילתו מסייע למנוע טעויות יקרות, שינויים חוזרים, חוסר נוחות בין בני המשפחה והוצאות בלתי צפויות בהמשך הדרך.</p>
+</section>
+<section class="offer-box">
+<h2>שלב א - בדיקת היתכנות ותכנון אב לנחלה</h2>
+<p>שלב זה נועד לייצר תמונה מקצועית מלאה של מצב הנחלה כיום, לצד בחינת אפשרויות הפיתוח הנכונות לעתיד.</p>
+<div class="offer-grid">
+<div class="offer-card"><h3>בדיקה תכנונית ורגולטורית</h3><ul><li>בחינת מסמכי תכנון החלים על הנכס</li><li>בדיקת זכויות בניה עדכניות</li><li>בדיקת מגבלות בניה וקווי בניין</li><li>בדיקת מצב קיים של המבנים בנחלה</li><li>בחינת הבית הקדמי הקיים בשטח של כ־90 מ"ר</li><li>בחינת השלכות תכנוניות של הריסה או החלפה</li><li>בדיקת גישות, תנועה וחניה</li></ul></div>
+<div class="offer-card"><h3>בדיקה תפקודית ומשפחתית</h3><ul><li>מיפוי צרכי בני המשפחה בהווה</li><li>בחינת צרכי מגורים עתידיים</li><li>גמישות לדורות הבאים</li><li>עצמאות ופרטיות בין יחידות המגורים</li><li>חלוקת שטחים נכונה ונעימה לשימוש</li></ul></div>
+<div class="offer-card"><h3>חשיבה תכנונית ראשונית</h3><ul><li>בחינת מספר חלופות בינוי</li><li>מיקום בתי המגורים על המגרש</li><li>בחינת חצרות פרטיות ומשותפות</li><li>גישות נוחות לכל יחידה</li><li>פוטנציאל הרחבה עתידי</li></ul></div>
+<div class="offer-card"><h3>תוצרי השלב</h3><ul><li>סקיצה עקרונית ראשונית למשק</li><li>פגישת סיכום מקצועית</li><li>המלצות להמשך הדרך</li><li>סדר פעולות מומלץ להמשך</li><li>בסיס מדויק לתכנון כל בית</li></ul></div>
+</div>
+<div class="offer-price">שכר טרחה עבור שלב א<strong>₪24,000 + מע״מ</strong><div class="offer-note">במידה ויוחלט להמשיך לתכנון מלא של בתי המגורים, ₪10,000 יקוזזו מהמשך ההתקשרות.</div></div>
+</section>
+<section class="offer-box">
+<h2>שלב ב - תכנון אדריכלי פרטני לכל בית</h2>
+<div class="offer-grid">
+<div class="offer-card"><h3>תחילת שלב זה כוללת</h3><ul><li>שאלון פרוגרמה אישי</li><li>הבנת אורח החיים והרגלי המגורים</li><li>צרכי אירוח ומשפחה</li><li>פתרונות אחסון</li><li>עבודה מהבית במידת הצורך</li><li>תכנון לטווח ארוך</li></ul></div>
+<div class="offer-card"><h3>שלב זה כולל בין היתר</h3><ul><li>תכנון חלופות ראשוניות</li><li>גיבוש סקיצה נבחרת</li><li>תכנון אדריכלי מלא</li><li>תוכניות העמדה וחלוקה</li><li>חזיתות וחתכים</li><li>חישובי שטחים</li><li>תכנון ממ״ד בהתאם לצרכים</li><li>הכנת תכניות להגשה</li></ul></div>
+</div>
+<div class="offer-price">עלות תכנון אדריכלי לכל בית<strong>החל מ־₪98,000 + מע״מ</strong></div>
+</section>
+<section class="offer-box">
+<h2>שלב ג - רישוי, היתרים ותיאומים</h2>
+<div class="offer-grid">
+<div class="offer-card"><h3>רישוי והגשה</h3><ul><li>פתיחת תיק מידע</li><li>הכנת בקשה להיתר</li><li>העלאה למערכות הרישוי</li><li>טיפול בהערות הוועדה</li><li>תיקונים והתאמות</li></ul></div>
+<div class="offer-card"><h3>תיאום גורמים מקצועיים</h3><ul><li>תיאום מול מודד מוסמך</li><li>תיאום מול מהנדס קונסטרוקציה</li><li>יועץ אינסטלציה / סניטרי</li><li>יועץ בטיחות / נגישות / כיבוי אש לפי צורך</li><li>פיקוד העורף למרחבים מוגנים</li><li>רמ״י במידת הצורך</li></ul></div>
+</div>
+<p class="offer-note">תהליך זה מושפע מדרישות כל רשות ומזמני טיפול שאינם בשליטת המתכננת.</p>
+</section>
+<img src="interior-design.jpg" alt="עיצוב פנים לבית פרטי" class="offer-img">
+<section class="offer-box">
+<h2>שלב ד - עיצוב פנים מלא לכל בית</h2>
+<div class="offer-grid">
+<div class="offer-card"><h3>תכנון פנים</h3><ul><li>חלוקת פנים מדויקת</li><li>תכנון מטבח מפורט</li><li>חדרי רחצה</li><li>תוכניות חשמל ותאורה</li><li>ריצופים וחיפויים</li><li>נגרות מותאמת אישית</li></ul></div>
+<div class="offer-card"><h3>ליווי ותיאום</h3><ul><li>בחירת חומרי גמר</li><li>התאמת צבעוניות וחומרים</li><li>ליווי בחירות מול ספקים</li><li>פגישות מתואמות מראש עם הקבלן המבצע ובעלי המקצוע בשלבי מפתח של הפרויקט</li><li>מענה לשאלות ביצוע לאורך הדרך</li></ul></div>
+</div>
+<div class="offer-price">עלות עיצוב פנים לכל בית<strong>החל מ־₪58,000 + מע״מ</strong></div>
+</section>
+<section class="offer-box">
+<h2>שירותים, אגרות והוצאות חיצוניות שאינם כלולים</h2>
+<p>שכר הטרחה מתייחס לשירותי התכנון והליווי האדריכלי בלבד.</p>
+<ul><li>מודד מוסמך</li><li>מהנדס קונסטרוקציה</li><li>יועצים מקצועיים לפי צורך</li><li>אגרות בניה והיטלים</li><li>אגרות רישוי ורשויות</li><li>הדפסות מיוחדות והגשות חיצוניות</li><li>תשלומים לרמ״י ככל שיחולו</li><li>שירותים משפטיים או שמאיים ככל שיידרשו</li></ul>
+</section>
+<section class="offer-box offer-cta">
+<h2>להמשך הדרך</h2>
+<p>המסמך הנוכחי מהווה הצעה ראשונית לצורך קבלת כיוון משותף. לאחר אישור עקרוני, יועבר מסמך התקשרות מפורט הכולל היקף עבודה מלא, שלבי תהליך ומסמכי ליווי נוספים.</p>
+<a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%A8%D7%90%D7%99%D7%A0%D7%95%20%D7%90%D7%AA%20%D7%94%D7%94%D7%A6%D7%A2%D7%94%20%D7%95%D7%A0%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%9E%D7%A9%D7%99%D7%9A" class="offer-btn" target="_blank" rel="noopener">לתיאום המשך תהליך</a>
+<p class="offer-note">לינדה דהן</p>
+</section>
+</main>
+<div id="site-footer"></div>
+<script>
+async function loadIncludes(){try{const h=await fetch('header.html');document.getElementById('site-header').innerHTML=await h.text();const f=await fetch('footer.html');document.getElementById('site-footer').innerHTML=await f.text();if(typeof setupHeaderMenu==='function'){setupHeaderMenu();}}catch(e){console.error(e)}}loadIncludes();
+</script>
+<script src="site-tools.js"></script>
 </body>
 </html>
