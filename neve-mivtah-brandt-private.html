@@ -50,15 +50,15 @@
 
     .offer-box h3 {
       font-size: 20px;
-      margin: 0 0 16px;
+      margin: 0 0 14px;
       line-height: 1.35;
     }
 
     .offer-box p {
       font-size: 18px;
-      line-height: 1.9;
+      line-height: 1.8;
       color: #222;
-      margin: 0 0 14px;
+      margin: 0 0 12px;
     }
 
     .offer-box p:last-child {
@@ -89,10 +89,22 @@
 
     .offer-card li,
     .offer-box li {
-      margin: 0 0 14px;
+      margin: 0 0 8px;
       font-size: 17px;
-      line-height: 1.9;
+      line-height: 1.55;
       color: #2a2a2a;
+      position: relative;
+      padding-right: 16px;
+    }
+
+    .offer-card li::before,
+    .offer-box li::before {
+      content: "-";
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #555;
+      font-weight: 600;
     }
 
     .offer-card li:last-child,
@@ -112,31 +124,31 @@
     .offer-price {
       background: #fff8ef;
       border-radius: 24px;
-      padding: 22px 24px 18px;
+      padding: 20px 24px 16px;
       margin-top: 18px;
       border: 1px solid rgba(0, 0, 0, 0.07);
     }
 
     .offer-price-title {
       font-size: 18px;
-      line-height: 1.6;
+      line-height: 1.55;
       color: #444;
       margin: 0 0 6px;
     }
 
     .offer-price strong {
-  display: block;
-  font-size: 28px;
-  line-height: 1.35;
-  margin-top: 4px;
-  color: #222;
-  font-weight: 600;
-}
+      display: block;
+      font-size: 24px;
+      line-height: 1.35;
+      margin-top: 4px;
+      color: #222;
+      font-weight: 600;
+    }
 
     .offer-note {
       font-size: 14px;
       color: #666;
-      line-height: 1.8;
+      line-height: 1.75;
       margin-top: 10px;
     }
 
@@ -190,11 +202,11 @@
       .offer-card li,
       .offer-box li {
         font-size: 16px;
-        line-height: 1.85;
+        line-height: 1.6;
       }
 
       .offer-price strong {
-        font-size: 29px;
+        font-size: 22px;
       }
     }
   </style>
@@ -314,7 +326,7 @@
           </ul>
         </div>
       </div>
-
+    </section>
 
     <section class="offer-box">
       <h2>שלב ג - רישוי, היתרים ותיאומים</h2>
@@ -330,8 +342,7 @@
             <li>תיקונים והתאמות</li>
           </ul>
         </div>
-        
-      
+
         <div class="offer-card">
           <h3>תיאום גורמים מקצועיים</h3>
           <ul>
@@ -346,14 +357,13 @@
       </div>
 
       <p class="offer-note">תהליך זה מושפע מדרישות כל רשות ומזמני טיפול שאינם בשליטת המתכננת.</p>
-    </section>
 
-         <div class="offer-price">
+      <div class="offer-price">
         <div class="offer-price-title">עלות תכנון אדריכלי לכל בית</div>
         <strong>₪98,000 + מע״מ</strong>
       </div>
     </section>
-      
+
     <img src="interior-design.jpg" alt="עיצוב פנים לבית פרטי" class="offer-img">
 
     <section class="offer-box">
@@ -384,6 +394,12 @@
         </div>
       </div>
 
+      <div class="offer-price">
+        <div class="offer-price-title">עלות עיצוב פנים לכל בית</div>
+        <strong>₪58,000 + מע״מ</strong>
+      </div>
+    </section>
+
     <section class="offer-box">
       <h2>שירותים, אגרות והוצאות חיצוניות שאינם כלולים</h2>
       <p>שכר הטרחה מתייחס לשירותי התכנון והליווי האדריכלי בלבד.</p>
@@ -399,12 +415,6 @@
       </ul>
     </section>
 
-       <div class="offer-price">
-        <div class="offer-price-title">עלות עיצוב פנים לכל בית</div>
-        <strong>₪58,000 + מע״מ</strong>
-      </div>
-    </section>
-    
     <section class="offer-box offer-cta">
       <h2>להמשך הדרך</h2>
       <p>המסמך הנוכחי מהווה הצעה ראשונית לצורך קבלת כיוון משותף. לאחר אישור עקרוני, יועבר מסמך התקשרות מפורט הכולל היקף עבודה מלא, שלבי תהליך ומסמכי ליווי נוספים.</p>
