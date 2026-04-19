@@ -29,130 +29,12 @@
     <img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1"/>
   </noscript>
-  <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>הסיפור שלי | לינדה דהן</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body{
-      margin:0;
-      font-family:'Heebo',sans-serif;
-      direction:rtl;
-      background:#f7f7f5;
-      color:#222;
-    }
-
-    .wrap{
-      max-width:1150px;
-      margin:auto;
-      padding:40px 20px 60px;
-    }
-
-    .box{
-      background:#fff;
-      border-radius:24px;
-      padding:40px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:380px 1fr;
-      gap:42px;
-      align-items:start;
-    }
-
-    .grid img{
-      width:100%;
-      border-radius:22px;
-      display:block;
-    }
-
-    h1{
-      font-size:38px;
-      margin:0 0 22px;
-      line-height:1.2;
-    }
-
-    h2{
-      font-size:22px;
-      margin:30px 0 12px;
-      line-height:1.3;
-    }
-
-    p{
-      font-size:17px;
-      line-height:1.75;
-      margin:0 0 12px;
-    }
-
-    strong{
-      font-weight:700;
-      color:#000;
-    }
-
-    .quote-line{
-      font-size:18px;
-      font-weight:700;
-      margin:14px 0 18px;
-    }
-
-    .year-title{
-      font-size:24px;
-      font-weight:700;
-      margin:34px 0 14px;
-      line-height:1.3;
-    }
-
-    ul{
-      margin:0 0 18px;
-      padding-right:20px;
-    }
-
-    li{
-      font-size:17px;
-      line-height:1.75;
-      margin-bottom:8px;
-    }
-
-    @media (max-width: 900px){
-      .grid{
-        grid-template-columns:1fr;
-      }
-
-      .grid img{
-        max-width:320px;
-        margin:auto;
-      }
-
-      .box{
-        padding:24px;
-      }
-
-      .wrap{
-        padding:24px 12px 40px;
-      }
-
-      h1{
-        font-size:32px;
-      }
-
-      h2{
-        font-size:20px;
-      }
-
-      p, li{
-        font-size:16px;
-        line-height:1.7;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -287,19 +169,32 @@
   <div id="site-footer"></div>
 
   <script>
+    function setupHeaderMenu() {
+      const btn = document.getElementById("menuToggle");
+      const menu = document.getElementById("mainMenu");
+
+      if (!btn || !menu) return;
+
+      btn.addEventListener("click", function() {
+        menu.classList.toggle("open");
+      });
+
+      menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function() {
+          menu.classList.remove("open");
+        });
+      });
+    }
+
     async function loadIncludes() {
       try {
         const headerResponse = await fetch('header.html');
-        const headerHtml = await headerResponse.text();
-        document.getElementById('site-header').innerHTML = headerHtml;
+        document.getElementById('site-header').innerHTML = await headerResponse.text();
 
         const footerResponse = await fetch('footer.html');
-        const footerHtml = await footerResponse.text();
-        document.getElementById('site-footer').innerHTML = footerHtml;
+        document.getElementById('site-footer').innerHTML = await footerResponse.text();
 
-        if (typeof setupHeaderMenu === 'function') {
-          setupHeaderMenu();
-        }
+        setupHeaderMenu();
 
         document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
           link.addEventListener("click", () => {
@@ -316,7 +211,7 @@
           });
         });
       } catch (error) {
-        console.error('Error loading header/footer:', error);
+        console.error("Error loading includes:", error);
       }
     }
 
