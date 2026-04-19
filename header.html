@@ -1,20 +1,41 @@
-<header>
-  <div class="nav-wrap">
-    <a class="brand" href="index.html#home">
-      <img src="logo-black.png" alt="Linda Dahan">
+<header class="site-header">
+  <div class="header-wrap">
+
+    <a class="brand" href="index.html">
+      <img src="logo-black.png" alt="לינדה דהן">
     </a>
 
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <button class="menu-toggle" id="menuToggle">☰</button>
 
-      <nav id="mainMenu">
-      <a href="index.html#home" onclick="closeMenu()">בית</a>
-      <a href="story.html" onclick="closeMenu()">הסיפור שלי</a>
-      <a href="unique-art.html" onclick="closeMenu()">אומנות ייחודית</a>
-      <a href="index.html#projects" onclick="closeMenu()">פרויקטים</a>
-      <a href="process.html" onclick="closeMenu()">תהליך העבודה</a>
-      <a href="index.html#permits" onclick="closeMenu()">היתרי בניה</a>
-      <a href="index.html#testimonials" onclick="closeMenu()">תשבחות</a>
-      <a href="index.html#contact" onclick="closeMenu()">צור קשר</a>
+    <nav class="main-menu" id="mainMenu">
+      <a href="index.html">בית</a>
+      <a href="story.html">הסיפור שלי</a>
+      <a href="process.html">תהליך העבודה</a>
+      <a href="unique-art.html">אומנות ייחודית</a>
+      <a href="index.html#projects">פרויקטים</a>
+      <a href="index.html#permits">היתרי בנייה</a>
+      <a href="index.html#testimonials">המלצות</a>
+      <a href="index.html#contact" class="header-cta">צור קשר</a>
     </nav>
+
   </div>
 </header>
+
+<script>
+function setupHeaderMenu() {
+  const btn = document.getElementById("menuToggle");
+  const menu = document.getElementById("mainMenu");
+
+  if (!btn || !menu) return;
+
+  btn.onclick = function () {
+    menu.classList.toggle("open");
+  };
+
+  menu.querySelectorAll("a").forEach(link => {
+    link.onclick = function () {
+      menu.classList.remove("open");
+    };
+  });
+}
+</script>
