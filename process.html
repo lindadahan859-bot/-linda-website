@@ -1,654 +1,395 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XSD3XG8TL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4XSD3XG8TL');
-  </script>
+<title>תהליך העבודה | לינדה דהן</title>
+<meta name="description" content="תהליך העבודה של לינדה דהן - שיפוץ, בנייה, עיצוב פנים, היתרי בנייה וליווי אישי מדויק מהשלב הראשון ועד התוצאה.">
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f.fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+<link rel="stylesheet" href="styles.css">
 
-    fbq('init', '127944994281591');
-    fbq('track', 'PageView');
-  </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XSD3XG8TL"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4XSD3XG8TL');
+</script>
 
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=127944994281591&ev=PageView&noscript=1" alt="">
-  </noscript>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f.fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>תהליך העבודה | לינדה דהן</title>
+fbq('init', '127944994281591');
+fbq('track', 'PageView');
+</script>
 
-  <link rel="stylesheet" href="styles.css">
+<style>
+.process-page{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
 
-  <style>
-    .hero{
-      max-width:1200px;
-      margin:0 auto;
-      padding:30px 20px 6px;
-      text-align:center;
-    }
+.process-hero{
+text-align:center;
+margin-bottom:40px;
+}
 
-    .hero h1{
-      font-size:46px;
-      margin:0 0 8px;
-      line-height:1.2;
-    }
+.process-hero h1{
+font-size:52px;
+margin-bottom:14px;
+line-height:1.2;
+}
 
-    .hero-subtitle{
-      max-width:860px;
-      margin:0 auto 16px;
-      font-size:21px;
-      color:#444;
-      line-height:1.55;
-    }
+.process-hero p{
+font-size:22px;
+color:#555;
+max-width:760px;
+margin:auto;
+line-height:1.7;
+}
 
-    .hero-image-wrap{
-      max-width:1200px;
-      margin:0 auto 16px;
-      padding:0 20px;
-    }
+.process-box{
+background:#fff;
+border-radius:24px;
+padding:35px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+margin-bottom:28px;
+}
 
-    .hero-image{
-      width:100%;
-      display:block;
-      border-radius:26px;
-      box-shadow:0 10px 28px rgba(0,0,0,0.12);
-      object-fit:cover;
-    }
+.process-box h2{
+font-size:34px;
+margin-bottom:14px;
+}
 
-    .page-wrap{
-      max-width:1200px;
-      margin:auto;
-      padding:0 20px 44px;
-    }
+.process-box p{
+font-size:19px;
+line-height:1.9;
+color:#333;
+margin-bottom:14px;
+}
 
-    .section-box{
-      background:#fff;
-      border-radius:24px;
-      padding:26px;
-      margin-bottom:16px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-    }
+.process-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+margin-top:25px;
+}
 
-    .section-box h2{
-      margin:0 0 10px;
-      font-size:28px;
-      line-height:1.28;
-    }
+.step-card{
+background:#faf8f5;
+padding:22px;
+border-radius:18px;
+}
 
-    .section-box p{
-      margin:0 0 10px;
-      font-size:18px;
-      color:#222;
-      line-height:1.72;
-    }
+.step-card h3{
+font-size:24px;
+margin-bottom:10px;
+}
 
-    .section-box p:last-child{
-      margin-bottom:0;
-    }
+.step-card p{
+font-size:17px;
+margin:0;
+line-height:1.8;
+}
 
-    .highlight{
-      font-weight:700;
-      color:#000;
-    }
+.form-box{
+background:#fff;
+border-radius:24px;
+padding:35px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
 
-    .verse{
-      font-size:23px;
-      font-weight:700;
-      line-height:1.45;
-      text-align:center;
-      margin-bottom:8px;
-    }
+.form-box h2{
+font-size:38px;
+margin-bottom:10px;
+}
 
-    .verse-source{
-      text-align:center;
-      color:#666;
-      font-size:14px;
-      margin-bottom:12px;
-    }
+.form-intro{
+font-size:18px;
+color:#555;
+margin-bottom:24px;
+line-height:1.8;
+}
 
-    .process-steps{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:16px;
-      margin-top:8px;
-    }
+form{
+display:grid;
+gap:16px;
+}
 
-    .step-card{
-      background:#fafaf8;
-      border-radius:20px;
-      padding:20px;
-      border:1px solid rgba(0,0,0,0.06);
-    }
+.two-cols{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
 
-    .step-card h3{
-      margin:0 0 8px;
-      font-size:22px;
-      line-height:1.25;
-    }
+.field-group{
+display:grid;
+gap:8px;
+}
 
-    .step-card p{
-      margin:0;
-      font-size:16px;
-      color:#333;
-      line-height:1.68;
-    }
+.field-label{
+font-weight:700;
+font-size:18px;
+}
 
-    .form-box{
-      background:#fff;
-      border-radius:24px;
-      padding:26px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-      margin-top:4px;
-    }
+.check-group{
+display:grid;
+gap:10px;
+}
 
-    .form-box h2{
-      margin:0 0 8px;
-      font-size:30px;
-      line-height:1.3;
-    }
+.check-option{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:16px;
+}
 
-    .form-intro{
-      margin:0 0 18px;
-      font-size:17px;
-      color:#444;
-      line-height:1.55;
-    }
+input,
+textarea{
+width:100%;
+padding:14px 16px;
+border:1px solid #ddd;
+border-radius:14px;
+font-size:16px;
+font-family:inherit;
+box-sizing:border-box;
+}
 
-    form{
-      display:grid;
-      gap:14px;
-    }
+textarea{
+min-height:120px;
+resize:vertical;
+}
 
-    .field-group{
-      display:grid;
-      gap:8px;
-    }
+.helper{
+font-size:14px;
+color:#666;
+line-height:1.7;
+}
 
-    .field-label{
-      font-size:18px;
-      font-weight:700;
-      color:#111;
-    }
+.submit-btn{
+background:#111;
+color:#fff;
+border:none;
+padding:16px;
+border-radius:14px;
+font-size:18px;
+cursor:pointer;
+}
 
-    .check-group{
-      display:grid;
-      gap:8px;
-    }
+.whatsapp-link{
+display:block;
+text-align:center;
+padding:15px;
+border-radius:14px;
+border:1px solid #ddd;
+text-decoration:none;
+color:#111;
+font-size:17px;
+}
 
-    .check-option{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-size:16px;
-      color:#222;
-    }
+.button-row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+}
 
-    .two-cols{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-    }
+@media(max-width:900px){
 
-    input[type="text"],
-    input[type="tel"],
-    input[type="email"],
-    input[type="number"],
-    textarea,
-    input[type="file"]{
-      width:100%;
-      box-sizing:border-box;
-      border:1px solid #d7d7d2;
-      border-radius:14px;
-      padding:14px 16px;
-      font-size:16px;
-      font-family:'Heebo',sans-serif;
-      background:#fff;
-      color:#111;
-    }
+.process-grid,
+.two-cols,
+.button-row{
+grid-template-columns:1fr;
+}
 
-    input[type="file"]{
-      padding:12px 16px;
-    }
+.process-hero h1{
+font-size:38px;
+}
 
-    textarea{
-      min-height:120px;
-      resize:vertical;
-      line-height:1.7;
-    }
+.process-hero p{
+font-size:18px;
+}
 
-    .helper{
-      font-size:14px;
-      color:#666;
-      margin-top:-2px;
-      line-height:1.6;
-    }
+.process-box,
+.form-box{
+padding:22px;
+}
 
-    .contact-buttons{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:6px;
-    }
-
-    .contact-buttons a,
-    .contact-buttons button{
-      flex:1;
-      text-align:center;
-      padding:14px;
-      border-radius:12px;
-      font-size:16px;
-      text-decoration:none;
-      cursor:pointer;
-      box-sizing:border-box;
-      font-family:'Heebo',sans-serif;
-    }
-
-    .contact-buttons a{
-      border:1px solid #ccc;
-      color:#000;
-      background:#fff;
-    }
-
-    .contact-buttons button{
-      border:none;
-      background:#111;
-      color:#fff;
-    }
-
-    .contact-buttons button:disabled{
-      opacity:0.7;
-      cursor:not-allowed;
-    }
-
-    .small-note{
-      font-size:14px;
-      color:#666;
-      margin-top:12px;
-      line-height:1.65;
-    }
-
-    .success-message{
-      color:#1d6b3a;
-    }
-
-    .error-message{
-      color:#a33434;
-    }
-
-    @media (max-width: 900px){
-      .process-steps{
-        grid-template-columns:1fr;
-      }
-
-      .two-cols{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 820px){
-      .hero{
-        padding-top:26px;
-      }
-
-      .hero h1{
-        font-size:34px;
-      }
-
-      .hero-subtitle{
-        font-size:18px;
-        margin-bottom:14px;
-      }
-
-      .hero-image-wrap{
-        padding:0 12px;
-        margin-bottom:14px;
-      }
-
-      .section-box,
-      .form-box{
-        padding:20px;
-      }
-
-      .section-box h2,
-      .form-box h2{
-        font-size:24px;
-      }
-
-      .section-box p{
-        font-size:16px;
-      }
-
-      .step-card h3{
-        font-size:20px;
-      }
-
-      .step-card p{
-        font-size:15px;
-      }
-
-      .verse{
-        font-size:21px;
-      }
-
-      .page-wrap{
-        padding:0 12px 36px;
-      }
-    }
-  </style>
+.form-box h2{
+font-size:30px;
+}
+}
+</style>
 </head>
+
 <body>
 
-  <div id="site-header"></div>
+<div id="site-header"></div>
 
-  <section class="hero">
-    <h1>תהליך העבודה</h1>
-    <p class="hero-subtitle">עיצוב פנים וליווי מלא - מהבנה של החיים שלכם ועד ביצוע מדויק</p>
-  </section>
+<main class="process-page">
 
-  <div class="hero-image-wrap">
-    <img class="hero-image" src="facecover.jpg" alt="תהליך העבודה - לינדה דהן">
-  </div>
+<section class="process-hero">
+<h1>תהליך העבודה</h1>
+<p>שיפוץ, בנייה או עיצוב מחדש מתחילים נכון כשמבינים קודם את האנשים שחיים בבית.</p>
+</section>
 
-  <main class="page-wrap">
+<section class="process-box">
+<h2>איך אני עובדת</h2>
 
-    <section class="section-box">
-      <h2>משהו לא מרגיש נכון</h2>
-      <p>נכנסים הביתה ואין שקט. לפעמים יש עומס. לפעמים אין זרימה. לפעמים הכול נראה יפה, אבל זה לא <span class="highlight">מרגיש נכון</span>. זה לא באמת אתם.</p>
-      <p>בית צריך להיות יפה. אבל <span class="highlight">יפה בעיניים שלכם</span>. כזה שנעים להיות בו. כזה שמרגיש נכון.</p>
-      <p><span class="highlight">וכרגע זה פשוט לא מרגיש בית.</span></p>
-    </section>
+<p>
+לפני צבעים, ריהוט וחומרים, אני קודם מבינה אתכם.  
+איך אתם חיים, מה חסר לכם, מה מעיק עליכם ומה הייתם רוצים להרגיש בבית.
+</p>
 
-    <section class="section-box">
-      <div class="verse">כָּל כְּבוּדָה בַת־מֶלֶךְ פְּנִימָה</div>
-      <div class="verse-source">תהילים מ״ה, י״ד</div>
-      <p>היופי האמיתי לא מתחיל ממה שרואים מבחוץ, אלא ממה שמרגישים מבפנים. כך גם הבית. הוא לא נבנה כדי להרשים אחרים, אלא כדי להיות נכון למי שחי בו.</p>
-    </section>
+<p>
+בית נכון הוא לא רק יפה. הוא נעים, מדויק, זורם ומרגיש שלכם.
+</p>
 
-    <section class="section-box">
-      <h2>עיצוב הוא לא מה שיפה בעיניים של אחרים</h2>
-      <p>לא כולם צריכים לאהוב את הבית שלכם. לא כולם יבינו אותו. וזה בדיוק בסדר. הבית שלכם הוא לא תצוגה, הוא לא טרנד, והוא לא נועד לרצות. הוא המקום שבו אתם חיים.</p>
-    </section>
+<div class="process-grid">
 
-    <section class="section-box">
-      <h2>בליווי שלי אתם לומדים להעיז</h2>
-      <p>להפסיק לפחד. להפסיק לחשוב מה יגידו. לבחור דברים שלא כולם בוחרים. להביא את עצמכם באמת.</p>
-      <p>יש מי שיבחר קו נקי ושקט ויש מי שיבחר צבע, תנועה ונוכחות. <span class="highlight">הכול נכון.</span></p>
-      <p><span class="highlight">I Dare To Be Different</span> זו לא סיסמה. זו דרך.</p>
-    </section>
+<div class="step-card">
+<h3>פגישת היכרות</h3>
+<p>שיחה שמבינה אתכם באמת ואת הצרכים של הבית.</p>
+</div>
 
-    <section class="section-box">
-      <h2>התהליך מתחיל בכם</h2>
-      <p>לפני צבעים, לפני חומרים, לפני ריהוט, אנחנו עוצרים. מבינים איך אתם חיים, מה עובד לכם, מה לא עובד, מה חסר ומה חשוב לכם לשנות.</p>
-      <p>אני שולחת שאלון קצר, אבל הוא לא טכני. הוא אישי. הוא נוגע בדיוק בדברים שלא תמיד עוצרים לחשוב עליהם.</p>
-      <p>שאלות כמו <span class="highlight">מה חסר לכם בבית היום</span>, <span class="highlight">איפה אתם מרגישים עומס</span>, <span class="highlight">מה הייתם רוצים להרגיש כשאתם נכנסים הביתה</span>, ו<span class="highlight">מה נכון לכם להשאיר ומה הגיע הזמן לשחרר כדי לפנות מקום לחדש</span>.</p>
-      <p><span class="highlight">עיצוב אמיתי לא מתחיל מקירות. הוא מתחיל מאנשים.</span></p>
-    </section>
+<div class="step-card">
+<h3>דיוק כיוון</h3>
+<p>מבינים מה נכון לשנות, מה לשמר ואיך נכון להתקדם.</p>
+</div>
 
-    <section class="section-box">
-      <h2>איך זה עובד בפועל</h2>
-      <div class="process-steps">
-        <div class="step-card">
-          <h3>פגישת היכרות</h3>
-          <p>אנחנו מתחילים בשיחה שממנה מבינים מי אתם, איך אתם חיים, מה מפריע לכם היום, ומה אתם באמת רוצים ליצור.</p>
-        </div>
+<div class="step-card">
+<h3>תכנון ועיצוב</h3>
+<p>חלוקה נכונה, פתרונות חכמים, חומרים וסגנון.</p>
+</div>
 
-        <div class="step-card">
-          <h3>הבנה עמוקה</h3>
-          <p>באמצעות השאלון והשיחה, מתחילה להתבהר התמונה האמיתית של הבית ושל האנשים שחיים בו.</p>
-        </div>
+<div class="step-card">
+<h3>ליווי עד התוצאה</h3>
+<p>סיורים, בחירות, אנשי מקצוע ובקרה בשטח.</p>
+</div>
 
-        <div class="step-card">
-          <h3>מדידה ותכנון מדויק</h3>
-          <p>במידת הצורך, אני עובדת עם אנשי מקצוע חיצוניים למדידה מדויקת של הנכס, כדי שהתכנון יהיה מדויק לביצוע ולא רק יפה על הנייר.</p>
-        </div>
+</div>
+</section>
 
-        <div class="step-card">
-          <h3>סקיצות וחלופות</h3>
-          <p>כאן מתחיל שלב התכנון, עם כיוונים, חלופות ודיוק של כל פרט עד שמתקבלת תוכנית שמרגישה נכונה.</p>
-        </div>
+<section class="form-box" id="contact">
 
-        <div class="step-card">
-          <h3>לוחות השראה ובחירות</h3>
-          <p>אנחנו מדייקים את השפה של הבית - צבעים, חומרים, טקסטורות ותחושה כללית. לאחר מכן יוצאים יחד לסיורים ובחירות מתוך הבנה אמיתית ולא מתוך קטלוג.</p>
-        </div>
+<h2>שיפוץ, בנייה או עיצוב מחדש? בואו נתחיל נכון</h2>
 
-        <div class="step-card">
-          <h3>תוכניות לביצוע</h3>
-          <p>הבית יורד לקרקע עם תוכניות עבודה, העמדות, פתרונות מדויקים וחיבור בין כל הפרטים.</p>
-        </div>
+<p class="form-intro">
+מלאו כמה פרטים ואחזור אליכם כדי להבין מה נכון לבית ולשלב שבו אתם נמצאים.
+</p>
 
-        <div class="step-card">
-          <h3>ליווי בשטח</h3>
-          <p>אני מגיעה, בודקת, מכוונת ומלווה, כדי לוודא שהכול מתחבר בדיוק כמו שתוכנן, לא רק על הנייר, אלא במציאות.</p>
-        </div>
+<form id="processForm" action="https://formsubmit.co/ajax/e8fc615a018169f89920a5d28fcde840" method="POST">
 
-        <div class="step-card">
-          <h3>חיים חדשים בבית</h3>
-          <p>המטרה היא לא רק לעצב בית יפה, אלא לעזור לכם לחיות בו אחרת, להשתחרר ממה שלא משרת אתכם, ולתת מקום לחדש.</p>
-        </div>
-      </div>
-    </section>
+<input type="hidden" name="_subject" value="פנייה חדשה מעמוד תהליך העבודה">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
 
-    <section class="section-box">
-      <h2>זה לא תהליך שמתאים לכולם</h2>
-      <p>זה לא תהליך מהיר. הוא דורש פתיחות, הקשבה ורצון לדייק.</p>
-      <p>אני לא עובדת על הרבה פרויקטים במקביל, כדי לתת לכל תהליך את המקום והעומק שהוא צריך.</p>
-      <p><span class="highlight">המטרה היא לא רק בית יפה. המטרה היא בית שמרגיש נכון.</span></p>
-    </section>
+<div class="field-group">
+<div class="field-label">סוג השירות</div>
 
-    <section class="form-box" id="contact">
-      <h2>כמה פרטים כדי שאבין בדיוק איך לעזור לכם</h2>
-      <p class="form-intro">השאירו פרטים מדויקים, כדי שאוכל להבין במה מדובר ולחזור אליכם בצורה חכמה ולא בערך.</p>
+<div class="check-group">
+<label class="check-option"><input type="checkbox" name="service" value="שיפוץ"> שיפוץ</label>
+<label class="check-option"><input type="checkbox" name="service" value="עיצוב פנים"> עיצוב פנים</label>
+<label class="check-option"><input type="checkbox" name="service" value="אדריכלות"> אדריכלות</label>
+<label class="check-option"><input type="checkbox" name="service" value="היתרי בנייה"> היתרי בנייה</label>
+<label class="check-option"><input type="checkbox" name="service" value="לפני רכישה"> לפני רכישת נכס</label>
+</div>
+</div>
 
-      <form id="processForm" action="https://formsubmit.co/ajax/e8fc615a018169f89920a5d28fcde840" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="_subject" value="פנייה חדשה מעמוד תהליך העבודה">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+<div class="field-group">
+<div class="field-label">סוג הנכס</div>
 
-        <div class="field-group">
-          <div class="field-label">סוג השירות</div>
-          <div class="check-group">
-            <label class="check-option"><input type="checkbox" name="service" value="אדריכלות ועיצוב פנים"> אדריכלות ועיצוב פנים</label>
-            <label class="check-option"><input type="checkbox" name="service" value="היתרי בניה"> היתרי בניה</label>
-            <label class="check-option"><input type="checkbox" name="service" value="עיצוב פנים"> עיצוב פנים</label>
-            <label class="check-option"><input type="checkbox" name="service" value="שיפוץ בית שגרים בו"> שיפוץ בית שגרים בו</label>
-            <label class="check-option"><input type="checkbox" name="service" value="דירת קבלן"> דירת קבלן</label>
-            <label class="check-option"><input type="checkbox" name="service" value="עסק"> עסק</label>
-          </div>
-        </div>
+<div class="check-group">
+<label class="check-option"><input type="checkbox" name="property" value="דירה"> דירה</label>
+<label class="check-option"><input type="checkbox" name="property" value="בית פרטי"> בית פרטי</label>
+<label class="check-option"><input type="checkbox" name="property" value="נחלה / משק"> נחלה / משק</label>
+<label class="check-option"><input type="checkbox" name="property" value="עסק"> עסק</label>
+</div>
+</div>
 
-        <div class="field-group">
-          <div class="field-label">סוג הנכס</div>
-          <div class="check-group">
-            <label class="check-option"><input type="checkbox" name="property" value="בית בבניין"> בית בבניין</label>
-            <label class="check-option"><input type="checkbox" name="property" value="בית פרטי"> בית פרטי</label>
-            <label class="check-option"><input type="checkbox" name="property" value="נחלה / משק"> נחלה / משק</label>
-            <label class="check-option"><input type="checkbox" name="property" value="מסחרי"> מסחרי</label>
-            <label class="check-option"><input type="checkbox" name="property" value="אחר"> אחר</label>
-          </div>
-        </div>
+<div class="two-cols">
+<input type="text" name="name" placeholder="שם מלא" required>
+<input type="tel" name="phone" placeholder="טלפון" required>
+</div>
 
-        <div class="two-cols">
-          <input type="text" name="name" placeholder="שם מלא" required>
-          <input type="tel" name="phone" placeholder="מספר טלפון" required>
-        </div>
+<input type="email" name="email" placeholder="אימייל">
 
-        <input type="email" name="email" placeholder="אימייל">
+<div class="two-cols">
+<input type="text" name="rooms" placeholder="כמה חדרים?">
+<input type="text" name="size_sqm" placeholder="גודל במ״ר">
+</div>
 
-        <div class="two-cols">
-          <input type="text" name="rooms" placeholder="כמה חדרים יש בנכס?">
-          <input type="number" name="size_sqm" placeholder="גודל הנכס במ״ר" min="1" step="1">
-        </div>
+<div class="field-group">
+<label class="field-label">כתובת מלאה של הפרויקט</label>
+<div class="helper">עיר, רחוב ומספר בית</div>
+<input type="text" name="full_address" placeholder="לדוגמה: רחובות, הרצל 12">
+</div>
 
-        <div class="field-group">
-          <label class="field-label" for="fullAddress">כתובת מלאה של הפרויקט</label>
-          <div class="helper">עיר, רחוב, מספר בית, קומה אם צריך. פחות "רחובות", יותר "רחובות, הרצל 12, קומה 3".</div>
-          <input type="text" id="fullAddress" name="full_address" placeholder="כתובת מלאה">
-        </div>
+<div class="field-group">
+<label class="field-label">איך הייתם רוצים שהבית ירגיש?</label>
+<div class="helper">שקט, חמימות, סדר, יוקרה, קלילות או כל דבר אחר</div>
+<textarea name="feeling"></textarea>
+</div>
 
-        <div class="field-group">
-          <label class="field-label" for="feeling">מה הייתם רוצים להרגיש בבית שלכם?</label>
-          <div class="helper">למשל: שקט, חופש, סדר, יוקרה, חמימות, אומץ, משהו אחר לגמרי</div>
-          <textarea id="feeling" name="feeling"></textarea>
-        </div>
+<div class="field-group">
+<label class="field-label">ספרו לי בקצרה על הפרויקט</label>
+<div class="helper">מה מפריע היום, מה חשוב לשנות ומה הייתם רוצים שיקרה</div>
+<textarea name="message"></textarea>
+</div>
 
-        <div class="field-group">
-          <label class="field-label" for="details">ספרו לי בקצרה מה אתם מחפשים</label>
-          <div class="helper">מה מפריע לכם היום, מה חשוב לכם לשנות, ואם יש משהו דחוף במיוחד.</div>
-          <textarea id="details" name="message"></textarea>
-        </div>
+<div class="field-group">
+<label class="field-label">תמונות של הנכס</label>
+<div class="helper">אחרי שליחת הטופס אפשר לשלוח תמונות ישירות ב-WhatsApp</div>
+</div>
 
-        <div class="field-group">
-          <label class="field-label" for="photos">תמונות של הנכס</label>
-          <div class="helper">אפשר לצרף כמה תמונות של החלל הקיים. אם הקבצים כבדים מדי, אפשר גם לשלוח אחר כך ב-WhatsApp.</div>
-          <input type="file" id="photos" name="attachment" accept="image/*" multiple>
-        </div>
+<div class="button-row">
+<a class="whatsapp-link" target="_blank"
+href="https://wa.me/972507555667?text=היי לינדה, אשמח לשלוח תמונות של הנכס">
+שליחת תמונות ב-WhatsApp
+</a>
 
-        <div class="field-group">
-          <div class="field-label">איך נוח שאחזור אליכם?</div>
-          <div class="check-group">
-            <label class="check-option"><input type="checkbox" name="contact_method" value="טלפון"> טלפון</label>
-            <label class="check-option"><input type="checkbox" name="contact_method" value="וואטסאפ"> וואטסאפ</label>
-            <label class="check-option"><input type="checkbox" name="contact_method" value="אימייל"> אימייל</label>
-          </div>
-        </div>
+<button class="submit-btn" type="submit">
+שליחת טופס
+</button>
+</div>
 
-        <div class="contact-buttons">
-          <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%A2%D7%9E%D7%95%D7%93%20%D7%AA%D7%94%D7%9C%D7%99%D7%9A%20%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94" target="_blank" rel="noopener">פנייה ב-WhatsApp</a>
-          <button id="submitBtn" type="submit">שליחה</button>
-        </div>
-      </form>
+</form>
 
-      <div id="formStatus" class="small-note">השאירו פרטים ואחזור אליכם בהקדם. ככל שתכתבו יותר מדויק, כך גם המענה יהיה מדויק יותר.</div>
-    </section>
+</section>
 
-  </main>
+</main>
 
-  <div id="site-footer"></div>
+<div id="site-footer"></div>
 
-  <script>
-    async function loadIncludes() {
-      try {
-        const headerResponse = await fetch("header.html");
-        document.getElementById("site-header").innerHTML = await headerResponse.text();
+<script>
+async function loadIncludes(){
 
-        const footerResponse = await fetch("footer.html");
-        document.getElementById("site-footer").innerHTML = await footerResponse.text();
+const header = await fetch("header.html");
+document.getElementById("site-header").innerHTML = await header.text();
 
-        if (typeof setupHeaderMenu === "function") {
-          setupHeaderMenu();
-        }
-      } catch (error) {
-        console.error("Error loading includes:", error);
-      }
-    }
+const footer = await fetch("footer.html");
+document.getElementById("site-footer").innerHTML = await footer.text();
 
-    loadIncludes();
+if(typeof setupHeaderMenu === "function"){
+setupHeaderMenu();
+}
+}
 
-    const form = document.getElementById("processForm");
-    const formStatus = document.getElementById("formStatus");
-    const submitButton = document.getElementById("submitBtn");
-    let processFormStarted = false;
+loadIncludes();
+</script>
 
-    if (form) {
-      form.querySelectorAll("input, textarea").forEach((el) => {
-        el.addEventListener("focus", () => {
-          if (!processFormStarted) {
-            processFormStarted = true;
-
-            if (typeof gtag === "function") {
-              gtag("event", "process_form_start", {
-                event_category: "Process Page",
-                event_label: "User started process form"
-              });
-            }
-
-            if (typeof fbq === "function") {
-              fbq("trackCustom", "ProcessFormStart");
-            }
-          }
-        });
-      });
-
-      form.addEventListener("submit", async function(e) {
-        e.preventDefault();
-
-        submitButton.disabled = true;
-        submitButton.textContent = "שולח...";
-
-        try {
-          const data = new FormData(form);
-
-          const response = await fetch(form.action, {
-            method: "POST",
-            body: data,
-            headers: { Accept: "application/json" }
-          });
-
-          if (response.ok) {
-            form.reset();
-            formStatus.className = "small-note success-message";
-            formStatus.textContent = "הבקשה התקבלה בהצלחה. אחזור אליכם בהקדם.";
-
-            if (typeof gtag === "function") {
-              gtag("event", "process_form_submit", {
-                event_category: "Process Page",
-                event_label: "Process form submitted"
-              });
-            }
-
-            if (typeof fbq === "function") {
-              fbq("trackCustom", "ProcessFormSubmit");
-              fbq("track", "Lead");
-            }
-          } else {
-            throw new Error();
-          }
-        } catch (error) {
-          formStatus.className = "small-note error-message";
-          formStatus.textContent = "אירעה תקלה. אפשר לנסות שוב או לפנות אליי ישירות ב-WhatsApp.";
-        } finally {
-          submitButton.disabled = false;
-          submitButton.textContent = "שליחה";
-        }
-      });
-    }
-
-    document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
-      link.addEventListener("click", () => {
-        if (typeof gtag === "function") {
-          gtag("event", "whatsapp_click_process", {
-            event_category: "Process Page",
-            event_label: link.href
-          });
-        }
-
-        if (typeof fbq === "function") {
-          fbq("track", "Contact", { method: "whatsapp" });
-        }
-      });
-    });
-  </script>
-
-  <script src="site-tools.js"></script>
+<script src="site-tools.js"></script>
 
 </body>
 </html>
