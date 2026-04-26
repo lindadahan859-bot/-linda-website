@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupHeaderMenuWhenReady();
   injectSiteToolsStyles();
   createFloatingButtons();
+  createBackToTopButton();
   createCookieBanner();
 
   function setupHeaderMenuWhenReady() {
@@ -142,6 +143,32 @@ document.addEventListener("DOMContentLoaded", function () {
         color: #ffffff;
       }
 
+      .site-back-to-top {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 99999;
+        min-height: 44px;
+        padding: 0 15px;
+        border-radius: 999px;
+        border: 1px solid rgba(0,0,0,0.1);
+        background: rgba(255,255,255,0.96);
+        color: #111;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        backdrop-filter: blur(8px);
+        font-family: 'Heebo', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .site-back-to-top.show {
+        display: inline-flex;
+      }
+
       .site-cookie-banner {
         position: fixed;
         right: 18px;
@@ -217,6 +244,13 @@ document.addEventListener("DOMContentLoaded", function () {
           min-height: 42px;
           padding: 0 14px;
           font-size: 14px;
+        }
+
+        .site-back-to-top {
+          right: 12px;
+          bottom: 12px;
+          min-height: 42px;
+          padding: 0 13px;
         }
 
         .site-cookie-banner {
@@ -297,6 +331,38 @@ document.addEventListener("DOMContentLoaded", function () {
     wrapper.appendChild(whatsappBtn);
     wrapper.appendChild(contactBtn);
     document.body.appendChild(wrapper);
+  }
+
+  function createBackToTopButton() {
+    if (document.getElementById("site-back-to-top")) return;
+
+    const btn = document.createElement("button");
+    btn.id = "site-back-to-top";
+    btn.className = "site-back-to-top";
+    btn.type = "button";
+    btn.setAttribute("aria-label", "חזרה לראש העמוד");
+    btn.innerHTML = "↑ למעלה";
+
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      trackGA("back_to_top_click", {
+        event_category: "navigation",
+        event_label: window.location.pathname
+      });
+    });
+
+    document.body.appendChild(btn);
+
+    function toggleButton() {
+      if (window.scrollY > 520) {
+        btn.classList.add("show");
+      } else {
+        btn.classList.remove("show");
+      }
+    }
+
+    window.addEventListener("scroll", toggleButton, { passive: true });
+    toggleButton();
   }
 
   function createCookieBanner() {
