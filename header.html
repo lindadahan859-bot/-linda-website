@@ -5,7 +5,7 @@
       <img src="logo-black.png" alt="לינדה דהן">
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="פתחי תפריט" aria-expanded="false" aria-controls="mainMenu">
+    <button class="menu-toggle" id="menuToggle" aria-label="פתחי תפריט" aria-expanded="false" aria-controls="mainMenu" type="button">
       ☰
     </button>
 
@@ -22,41 +22,3 @@
 
   </div>
 </header>
-
-<script>
-function setupHeaderMenu() {
-  const btn = document.getElementById("menuToggle");
-  const menu = document.getElementById("mainMenu");
-
-  if (!btn || !menu) return;
-
-  btn.addEventListener("click", function () {
-    const isOpen = menu.classList.toggle("open");
-    btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  });
-
-  menu.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", function () {
-      menu.classList.remove("open");
-      btn.setAttribute("aria-expanded", "false");
-    });
-  });
-
-  document.addEventListener("click", function (event) {
-    const clickedInsideMenu = menu.contains(event.target);
-    const clickedButton = btn.contains(event.target);
-
-    if (!clickedInsideMenu && !clickedButton) {
-      menu.classList.remove("open");
-      btn.setAttribute("aria-expanded", "false");
-    }
-  });
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 900) {
-      menu.classList.remove("open");
-      btn.setAttribute("aria-expanded", "false");
-    }
-  });
-}
-</script>
