@@ -844,3 +844,9 @@ li {
     text-align: center;
   }
 }
+
+/* HOME PROJECT TAG OVERRIDE */
+.home-page .tag.gold {
+  background: #e8e2d8 !important;
+  color: #000 !important;
+}
