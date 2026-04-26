@@ -9,9 +9,63 @@ document.addEventListener("DOMContentLoaded", function () {
     cookieKey: "lindaarch_cookie_consent_v1"
   };
 
+  setupHeaderMenuWhenReady();
   injectSiteToolsStyles();
   createFloatingButtons();
   createCookieBanner();
+
+  function setupHeaderMenuWhenReady() {
+    let attempts = 0;
+    const timer = window.setInterval(function () {
+      attempts += 1;
+
+      const btn = document.getElementById("menuToggle");
+      const menu = document.getElementById("mainMenu");
+
+      if (btn && menu) {
+        window.clearInterval(timer);
+
+        if (btn.dataset.menuReady === "true") return;
+        btn.dataset.menuReady = "true";
+
+        btn.addEventListener("click", function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          const isOpen = menu.classList.toggle("open");
+          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            menu.classList.remove("open");
+            btn.setAttribute("aria-expanded", "false");
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          const clickedInsideMenu = menu.contains(event.target);
+          const clickedButton = btn.contains(event.target);
+
+          if (!clickedInsideMenu && !clickedButton) {
+            menu.classList.remove("open");
+            btn.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 900) {
+            menu.classList.remove("open");
+            btn.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+
+      if (attempts > 60) {
+        window.clearInterval(timer);
+      }
+    }, 100);
+  }
 
   function trackGA(eventName, params = {}) {
     if (typeof window.gtag === "function") {
