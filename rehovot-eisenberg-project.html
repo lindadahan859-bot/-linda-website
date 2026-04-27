@@ -7,7 +7,7 @@
   <meta name="description" content="פרויקט עיצוב פנים במגדלי אייזינברג ברחובות.">
   <link rel="stylesheet" href="styles.css">
   <style>
-    body{font-family:'Heebo',sans-serif;background:#f7f7f5;color:#222;margin:0;direction:rtl}.project-hero{min-height:62vh;background:url('rehovot-main.jpg') center/cover no-repeat;display:flex;align-items:flex-end;position:relative;color:#fff}.project-hero:before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.14))}.project-hero-text{position:relative;padding:44px 24px;max-width:980px}.project-hero h1{font-size:48px;margin:0 0 10px;color:#fff}.project-hero p{font-size:22px;margin:0;color:#fff}.project-wrap{max-width:1120px;margin:auto;padding:34px 20px 70px}.project-card{background:#fff;border-radius:26px;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:30px;margin:0 0 28px}.project-card h2{font-size:32px;margin:0 0 14px}.project-card p{font-size:18px;line-height:1.85}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery a{display:block;cursor:zoom-in;text-decoration:none}.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,.08);transition:transform .25s ease,box-shadow .25s ease}.gallery a:hover img{transform:scale(1.015);box-shadow:0 12px 32px rgba(0,0,0,.14)}.gallery img.tall{aspect-ratio:2/3}.gallery a.wide{grid-column:span 2}.gallery img.wide{aspect-ratio:2/1}.project-actions{display:flex;gap:14px;flex-wrap:wrap}.project-actions a{display:inline-block;border:1px solid #111;border-radius:999px;padding:12px 22px;text-decoration:none;color:#111;font-weight:600}.project-actions a.primary{background:#111;color:#fff}.image-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:9999;padding:24px}.image-lightbox.open{display:flex}.image-lightbox img{max-width:94vw;max-height:88vh;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.35)}.image-lightbox button{position:absolute;top:18px;left:18px;border:0;background:#fff;color:#111;border-radius:999px;width:44px;height:44px;font-size:28px;line-height:1;cursor:pointer}@media(max-width:900px){.project-hero{min-height:52vh}.project-hero h1{font-size:34px}.project-hero p{font-size:19px}.project-card{padding:22px}.gallery{grid-template-columns:1fr}.gallery a.wide{grid-column:span 1}.gallery img.wide{aspect-ratio:4/3}.image-lightbox{padding:14px}.image-lightbox button{top:12px;left:12px}}
+    body{font-family:'Heebo',sans-serif;background:#f7f7f5;color:#222;margin:0;direction:rtl}.project-hero{min-height:62vh;background:url('rehovot-main.jpg') center/cover no-repeat;display:flex;align-items:flex-end;position:relative;color:#fff}.project-hero:before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.14))}.project-hero-text{position:relative;padding:44px 24px;max-width:980px}.project-hero h1{font-size:48px;margin:0 0 10px;color:#fff}.project-hero p{font-size:22px;margin:0;color:#fff}.project-wrap{max-width:1120px;margin:auto;padding:34px 20px 70px}.project-card{background:#fff;border-radius:26px;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:30px;margin:0 0 28px}.project-card h2{font-size:32px;margin:0 0 14px}.project-card p{font-size:18px;line-height:1.85}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery a{display:block;cursor:zoom-in;text-decoration:none}.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,.08);transition:transform .25s ease,box-shadow .25s ease}.gallery a:hover img{transform:scale(1.015);box-shadow:0 12px 32px rgba(0,0,0,.14)}.gallery img.tall{aspect-ratio:2/3}.gallery a.wide{grid-column:span 2}.gallery img.wide{aspect-ratio:2/1}.project-actions{display:flex;gap:14px;flex-wrap:wrap}.project-actions a{display:inline-block;border:1px solid #111;border-radius:999px;padding:12px 22px;text-decoration:none;color:#111;font-weight:600}.project-actions a.primary{background:#111;color:#fff}.image-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:9999;padding:24px}.image-lightbox.open{display:flex}.image-lightbox img{max-width:94vw;max-height:88vh;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.35)}.image-lightbox button{position:absolute;border:0;background:rgba(255,255,255,.94);color:#111;border-radius:999px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}.image-lightbox .lightbox-close{top:18px;left:18px;width:44px;height:44px;font-size:28px;line-height:1}.image-lightbox .lightbox-arrow{top:50%;transform:translateY(-50%);width:52px;height:52px;font-size:38px;line-height:1}.image-lightbox .lightbox-prev{right:24px}.image-lightbox .lightbox-next{left:24px}.image-lightbox .lightbox-counter{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.92);color:#111;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600}@media(max-width:900px){.project-hero{min-height:52vh}.project-hero h1{font-size:34px}.project-hero p{font-size:19px}.project-card{padding:22px}.gallery{grid-template-columns:1fr}.gallery a.wide{grid-column:span 1}.gallery img.wide{aspect-ratio:4/3}.image-lightbox{padding:14px}.image-lightbox .lightbox-close{top:12px;left:12px}.image-lightbox .lightbox-arrow{width:44px;height:44px;font-size:32px}.image-lightbox .lightbox-prev{right:12px}.image-lightbox .lightbox-next{left:12px}.image-lightbox img{max-width:92vw;max-height:82vh}}
   </style>
 </head>
 <body>
@@ -77,8 +77,11 @@
   </main>
 
   <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
-    <button type="button" aria-label="סגירת תמונה">×</button>
+    <button type="button" class="lightbox-close" aria-label="סגירת תמונה">×</button>
+    <button type="button" class="lightbox-arrow lightbox-prev" aria-label="תמונה קודמת">‹</button>
     <img src="" alt="">
+    <button type="button" class="lightbox-arrow lightbox-next" aria-label="תמונה הבאה">›</button>
+    <div class="lightbox-counter" aria-live="polite"></div>
   </div>
 
   <div id="site-footer"></div>
@@ -89,10 +92,30 @@
   <script>
     const lightbox=document.getElementById('image-lightbox');
     const lightboxImage=lightbox.querySelector('img');
+    const counter=lightbox.querySelector('.lightbox-counter');
+    const links=[...document.querySelectorAll('[data-lightbox]')];
+    let currentIndex=0;
+    let touchStartX=0;
+    const showImage=index=>{
+      currentIndex=(index+links.length)%links.length;
+      const link=links[currentIndex];
+      const img=link.querySelector('img');
+      lightboxImage.src=link.href;
+      lightboxImage.alt=img?img.alt:'';
+      counter.textContent=(currentIndex+1)+' / '+links.length;
+    };
+    const openLightbox=index=>{showImage(index);lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');};
     const closeLightbox=()=>{lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');lightboxImage.src='';lightboxImage.alt='';};
-    document.querySelectorAll('[data-lightbox]').forEach(link=>{link.addEventListener('click',event=>{event.preventDefault();const img=link.querySelector('img');lightboxImage.src=link.href;lightboxImage.alt=img?img.alt:'';lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');});});
-    lightbox.addEventListener('click',event=>{if(event.target===lightbox||event.target.tagName==='BUTTON')closeLightbox();});
-    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeLightbox();});
+    const nextImage=()=>showImage(currentIndex+1);
+    const prevImage=()=>showImage(currentIndex-1);
+    links.forEach((link,index)=>{link.addEventListener('click',event=>{event.preventDefault();openLightbox(index);});});
+    lightbox.querySelector('.lightbox-close').addEventListener('click',closeLightbox);
+    lightbox.querySelector('.lightbox-next').addEventListener('click',event=>{event.stopPropagation();nextImage();});
+    lightbox.querySelector('.lightbox-prev').addEventListener('click',event=>{event.stopPropagation();prevImage();});
+    lightbox.addEventListener('click',event=>{if(event.target===lightbox)closeLightbox();});
+    document.addEventListener('keydown',event=>{if(!lightbox.classList.contains('open'))return;if(event.key==='Escape')closeLightbox();if(event.key==='ArrowLeft')nextImage();if(event.key==='ArrowRight')prevImage();});
+    lightbox.addEventListener('touchstart',event=>{touchStartX=event.changedTouches[0].clientX;},{passive:true});
+    lightbox.addEventListener('touchend',event=>{const diff=event.changedTouches[0].clientX-touchStartX;if(Math.abs(diff)>50){diff<0?nextImage():prevImage();}},{passive:true});
   </script>
   <script src="site-tools.js"></script>
 </body>
