@@ -3,6 +3,14 @@ document.addEventListener('DOMContentLoaded',function(){
   setupMenu();
   addFloatingButtons();
   addTopButton();
+  setupSmartTracking();
+
+  function trackEvent(name,params){
+    params=params||{};
+    params.page_path=window.location.pathname;
+    if(typeof window.gtag==='function')window.gtag('event',name,params);
+    if(typeof window.fbq==='function'&&name.indexOf('whatsapp')>-1)window.fbq('track','Contact',{source:name});
+  }
 
   function injectFixStyles(){
     if(document.getElementById('linda-menu-fixes'))return;
@@ -22,8 +30,7 @@ document.addEventListener('DOMContentLoaded',function(){
         clearInterval(timer);
         if(btn.dataset.ready==='1')return;
         btn.dataset.ready='1';
-        btn.onclick=function(e){e.preventDefault();e.stopPropagation();var open=menu.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');};
-
+        btn.onclick=function(e){e.preventDefault();e.stopPropagation();var open=menu.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');trackEvent('menu_toggle',{state:open?'open':'closed'});};
         menu.querySelectorAll('.menu-item-has-submenu').forEach(function(wrap){
           var toggle=wrap.querySelector('.submenu-toggle');
           if(!toggle)return;
@@ -31,8 +38,7 @@ document.addEventListener('DOMContentLoaded',function(){
           function paint(open){toggle.innerHTML=label+' <span class="submenu-arrow">'+(open?'▲':'▼')+'</span>';toggle.setAttribute('aria-expanded',open?'true':'false');}
           paint(false);
           toggle.onclick=function(e){
-            e.preventDefault();
-            e.stopPropagation();
+            e.preventDefault();e.stopPropagation();
             var open=!wrap.classList.contains('open');
             menu.querySelectorAll('.menu-item-has-submenu').forEach(function(other){if(other!==wrap)other.classList.remove('open');});
             wrap.classList.toggle('open',open);
@@ -42,10 +48,10 @@ document.addEventListener('DOMContentLoaded',function(){
               otherToggle.innerHTML=otherLabel+' <span class="submenu-arrow">'+(otherOpen?'▲':'▼')+'</span>';
               otherToggle.setAttribute('aria-expanded',otherOpen?'true':'false');
             });
+            if(open)trackEvent('submenu_open',{menu_label:label});
           };
         });
-
-        menu.querySelectorAll('a').forEach(function(a){a.onclick=function(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');};});
+        menu.querySelectorAll('a').forEach(function(a){a.onclick=function(){trackEvent('nav_click',{link_text:a.textContent.trim(),link_url:a.getAttribute('href')});menu.classList.remove('open');btn.setAttribute('aria-expanded','false');};});
         document.addEventListener('click',function(e){if(!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');menu.querySelectorAll('.menu-item-has-submenu').forEach(function(w){w.classList.remove('open');});}});
       }
       if(tries>60)clearInterval(timer);
@@ -54,32 +60,36 @@ document.addEventListener('DOMContentLoaded',function(){
 
   function addFloatingButtons(){
     if(document.getElementById('site-tools-floating'))return;
-    var box=document.createElement('div');
-    box.id='site-tools-floating';
-    box.className='site-tools-floating';
-    var w=document.createElement('a');
-    w.className='site-tools-btn site-tools-btn-whatsapp';
-    w.href='https://wa.me/972507555667';
-    w.target='_blank';
-    w.rel='noopener';
-    w.textContent='WhatsApp';
-    var c=document.createElement('a');
-    c.className='site-tools-btn site-tools-btn-contact';
-    c.href='#contact';
-    c.textContent='צור קשר';
+    var box=document.createElement('div');box.id='site-tools-floating';box.className='site-tools-floating';
+    var msg='היי לינדה, ראיתי את האתר ואשמח לבדוק התאמה לפרויקט שלי';
+    if(window.location.pathname.indexOf('faq')>-1)msg='היי לינדה, קראתי את שאלות ותשובות באתר ואשמח לבדוק התאמה לפרויקט שלי';
+    var w=document.createElement('a');w.className='site-tools-btn site-tools-btn-whatsapp';w.href='https://wa.me/972507555667?text='+encodeURIComponent(msg);w.target='_blank';w.rel='noopener';w.textContent='WhatsApp';
+    var c=document.createElement('a');c.className='site-tools-btn site-tools-btn-contact';c.href='process.html#contact';c.textContent='צור קשר';
+    w.onclick=function(){trackEvent('whatsapp_click',{button_location:'floating'});};
+    c.onclick=function(){trackEvent('contact_click',{button_location:'floating'});};
     box.appendChild(w);box.appendChild(c);document.body.appendChild(box);
   }
 
   function addTopButton(){
     if(document.getElementById('site-back-to-top'))return;
-    var b=document.createElement('button');
-    b.id='site-back-to-top';
-    b.className='site-back-to-top';
-    b.type='button';
-    b.textContent='↑ למעלה';
-    b.onclick=function(){window.scrollTo({top:0,behavior:'smooth'});};
+    var b=document.createElement('button');b.id='site-back-to-top';b.className='site-back-to-top';b.type='button';b.textContent='↑ למעלה';
+    b.onclick=function(){trackEvent('back_to_top_click');window.scrollTo({top:0,behavior:'smooth'});};
     document.body.appendChild(b);
-    function show(){b.classList.toggle('show',window.scrollY>520);}
-    window.addEventListener('scroll',show,{passive:true});show();
+    function show(){b.classList.toggle('show',window.scrollY>520);}window.addEventListener('scroll',show,{passive:true});show();
+  }
+
+  function setupSmartTracking(){
+    document.addEventListener('click',function(e){
+      var a=e.target.closest('a');if(!a)return;
+      var href=a.getAttribute('href')||'';
+      if(href.indexOf('wa.me')>-1)trackEvent('whatsapp_click',{link_text:a.textContent.trim()||'whatsapp'});
+      if(href.indexOf('faq.html')>-1)trackEvent('faq_click',{source:'nav_or_link'});
+      if(href.indexOf('process.html#contact')>-1||href==='#contact')trackEvent('lead_form_intent',{source:a.textContent.trim()});
+      if(href.indexOf('facebook.com/reel')>-1)trackEvent('video_click',{source:'faq_video'});
+    });
+    var forms=document.querySelectorAll('form');
+    forms.forEach(function(form){
+      form.addEventListener('submit',function(){trackEvent('form_submit_attempt',{form_id:form.id||'form'});});
+    });
   }
 });
