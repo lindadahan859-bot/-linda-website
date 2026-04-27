@@ -69,15 +69,51 @@ ul {
   gap: 24px;
 }
 
-.main-menu a {
+.main-menu a,
+.submenu-toggle {
   font-size: 16px;
   font-weight: 400;
   color: #1f1f1f;
   transition: color 0.2s ease;
 }
 
-.main-menu a:hover {
+.main-menu a:hover,
+.submenu-toggle:hover {
   color: #9f6e38;
+}
+
+.menu-item-has-submenu {
+  position: relative;
+}
+
+.submenu-toggle {
+  border: none;
+  background: transparent;
+  font-family: 'Heebo', sans-serif;
+  cursor: pointer;
+  padding: 0;
+}
+
+.submenu {
+  display: none;
+  min-width: 220px;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+.menu-item-has-submenu.open .submenu {
+  display: flex;
+}
+
+.submenu a {
+  display: block;
+  width: 100%;
+  white-space: normal;
+  line-height: 1.5;
 }
 
 .header-cta {
@@ -344,7 +380,8 @@ li {
     gap: 16px;
   }
 
-  .main-menu a {
+  .main-menu a,
+  .submenu-toggle {
     font-size: 15px;
   }
 
@@ -384,9 +421,45 @@ li {
     display: flex;
   }
 
-  .main-menu a {
+  .main-menu a,
+  .submenu-toggle {
     width: 100%;
     font-size: 16px;
+    text-align: right;
+  }
+
+  .menu-item-has-submenu {
+    width: 100%;
+  }
+
+  .submenu-toggle {
+    display: block;
+    padding: 0;
+  }
+
+  .submenu {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 14px 4px;
+    background: #fafaf8;
+    border-radius: 14px;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.06);
+    gap: 0;
+  }
+
+  .submenu a {
+    display: block;
+    width: 100%;
+    padding: 9px 0;
+    font-size: 15px;
+    line-height: 1.45;
+    white-space: normal;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .submenu a:last-child {
+    border-bottom: none;
   }
 
   .brand img {
