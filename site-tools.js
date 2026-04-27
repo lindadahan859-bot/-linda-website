@@ -1,8 +1,21 @@
 document.addEventListener('DOMContentLoaded',function(){
   injectFixStyles();
+  injectHeaderFallback();
   setupMenu();
   addFloatingButtons();
   addTopButton();
+
+  function injectHeaderFallback(){
+    setTimeout(function(){
+      var holder=document.getElementById('site-header');
+      if(!holder)return;
+      if(holder.querySelector('.site-header'))return;
+      holder.innerHTML='<header class="site-header"><div class="header-wrap"><a class="brand" href="index.html" aria-label="לינדה דהן - דף הבית"><img src="logo-black.png" alt="לינדה דהן"></a><button class="menu-toggle" id="menuToggle" aria-label="פתחי תפריט" aria-expanded="false" aria-controls="mainMenu" type="button">☰</button><nav class="main-menu" id="mainMenu" aria-label="תפריט ראשי"><a href="index.html">בית</a><div class="menu-item-has-submenu"><button class="submenu-toggle" type="button" aria-expanded="false">הסיפור שלי</button><div class="submenu"><a href="story.html">הסיפור שלי</a><a href="index.html#testimonials">המלצות</a></div></div><a href="process.html">תהליך העבודה</a><a href="unique-art.html">אומנות ייחודית</a><div class="menu-item-has-submenu"><button class="submenu-toggle" type="button" aria-expanded="false">פרויקטים</button><div class="submenu"><a href="blenheim-rehovot.html">רחובות דופלקס</a><a href="rehovot-eisenberg-project.html">מגדלי אייזינברג רחובות</a><a href="bnei-brak-jewelry-store.html">חנות תכשיטים בבני ברק</a><a href="karmia-house-permit.html">כרמיה תכנון והיתר בניה</a></div></div><a href="index.html#permits">היתרי בנייה</a><a href="faq.html">שאלות ותשובות</a><a href="index.html#contact" class="header-cta">צור קשר</a></nav></div></header>';
+      var btn=document.getElementById('menuToggle');
+      if(btn)btn.dataset.ready='';
+      setupMenu();
+    },1200);
+  }
 
   function injectFixStyles(){
     if(document.getElementById('linda-menu-fixes'))return;
@@ -29,18 +42,7 @@ document.addEventListener('DOMContentLoaded',function(){
           var label=toggle.textContent.replace(/[▼▲]/g,'').trim()||'תפריט';
           function paint(open){toggle.innerHTML=label+' <span class="submenu-arrow">'+(open?'▲':'▼')+'</span>';toggle.setAttribute('aria-expanded',open?'true':'false');}
           paint(false);
-          toggle.onclick=function(e){
-            e.preventDefault();e.stopPropagation();
-            var open=!wrap.classList.contains('open');
-            menu.querySelectorAll('.menu-item-has-submenu').forEach(function(other){if(other!==wrap)other.classList.remove('open');});
-            wrap.classList.toggle('open',open);
-            menu.querySelectorAll('.menu-item-has-submenu .submenu-toggle').forEach(function(otherToggle){
-              var otherLabel=otherToggle.textContent.replace(/[▼▲]/g,'').trim()||'תפריט';
-              var otherOpen=otherToggle.closest('.menu-item-has-submenu').classList.contains('open');
-              otherToggle.innerHTML=otherLabel+' <span class="submenu-arrow">'+(otherOpen?'▲':'▼')+'</span>';
-              otherToggle.setAttribute('aria-expanded',otherOpen?'true':'false');
-            });
-          };
+          toggle.onclick=function(e){e.preventDefault();e.stopPropagation();var open=!wrap.classList.contains('open');menu.querySelectorAll('.menu-item-has-submenu').forEach(function(other){if(other!==wrap)other.classList.remove('open');});wrap.classList.toggle('open',open);menu.querySelectorAll('.menu-item-has-submenu .submenu-toggle').forEach(function(otherToggle){var otherLabel=otherToggle.textContent.replace(/[▼▲]/g,'').trim()||'תפריט';var otherOpen=otherToggle.closest('.menu-item-has-submenu').classList.contains('open');otherToggle.innerHTML=otherLabel+' <span class="submenu-arrow">'+(otherOpen?'▲':'▼')+'</span>';otherToggle.setAttribute('aria-expanded',otherOpen?'true':'false');});};
         });
         menu.querySelectorAll('a').forEach(function(a){a.onclick=function(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');};});
         document.addEventListener('click',function(e){if(!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');menu.querySelectorAll('.menu-item-has-submenu').forEach(function(w){w.classList.remove('open');});}});
@@ -49,21 +51,6 @@ document.addEventListener('DOMContentLoaded',function(){
     },100);
   }
 
-  function addFloatingButtons(){
-    if(document.getElementById('site-tools-floating'))return;
-    var box=document.createElement('div');box.id='site-tools-floating';box.className='site-tools-floating';
-    var msg='היי לינדה, ראיתי את האתר ואשמח לבדוק התאמה לפרויקט שלי';
-    if(window.location.pathname.indexOf('faq')>-1)msg='היי לינדה, קראתי את שאלות ותשובות באתר ואשמח לבדוק התאמה לפרויקט שלי';
-    var w=document.createElement('a');w.className='site-tools-btn site-tools-btn-whatsapp';w.href='https://wa.me/972507555667?text='+encodeURIComponent(msg);w.target='_blank';w.rel='noopener';w.textContent='WhatsApp';
-    var c=document.createElement('a');c.className='site-tools-btn site-tools-btn-contact';c.href='process.html#contact';c.textContent='צור קשר';
-    box.appendChild(w);box.appendChild(c);document.body.appendChild(box);
-  }
-
-  function addTopButton(){
-    if(document.getElementById('site-back-to-top'))return;
-    var b=document.createElement('button');b.id='site-back-to-top';b.className='site-back-to-top';b.type='button';b.textContent='↑ למעלה';
-    b.onclick=function(){window.scrollTo({top:0,behavior:'smooth'});};
-    document.body.appendChild(b);
-    function show(){b.classList.toggle('show',window.scrollY>520);}window.addEventListener('scroll',show,{passive:true});show();
-  }
+  function addFloatingButtons(){if(document.getElementById('site-tools-floating'))return;var box=document.createElement('div');box.id='site-tools-floating';box.className='site-tools-floating';var msg='היי לינדה, ראיתי את האתר ואשמח לבדוק התאמה לפרויקט שלי';if(window.location.pathname.indexOf('faq')>-1)msg='היי לינדה, קראתי את שאלות ותשובות באתר ואשמח לבדוק התאמה לפרויקט שלי';var w=document.createElement('a');w.className='site-tools-btn site-tools-btn-whatsapp';w.href='https://wa.me/972507555667?text='+encodeURIComponent(msg);w.target='_blank';w.rel='noopener';w.textContent='WhatsApp';var c=document.createElement('a');c.className='site-tools-btn site-tools-btn-contact';c.href='process.html#contact';c.textContent='צור קשר';box.appendChild(w);box.appendChild(c);document.body.appendChild(box);}
+  function addTopButton(){if(document.getElementById('site-back-to-top'))return;var b=document.createElement('button');b.id='site-back-to-top';b.className='site-back-to-top';b.type='button';b.textContent='↑ למעלה';b.onclick=function(){window.scrollTo({top:0,behavior:'smooth'});};document.body.appendChild(b);function show(){b.classList.toggle('show',window.scrollY>520);}window.addEventListener('scroll',show,{passive:true});show();}
 });
