@@ -7,7 +7,7 @@
   <meta name="description" content="פרויקט עיצוב פנים במגדלי אייזינברג ברחובות.">
   <link rel="stylesheet" href="styles.css">
   <style>
-    body{font-family:'Heebo',sans-serif;background:#f7f7f5;color:#222;margin:0;direction:rtl}.project-hero{min-height:62vh;background:url('rehovot-main.jpg') center/cover no-repeat;display:flex;align-items:flex-end;position:relative;color:#fff}.project-hero:before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.14))}.project-hero-text{position:relative;padding:44px 24px;max-width:980px}.project-hero h1{font-size:48px;margin:0 0 10px;color:#fff}.project-hero p{font-size:22px;margin:0;color:#fff}.project-wrap{max-width:1120px;margin:auto;padding:34px 20px 70px}.project-card{background:#fff;border-radius:26px;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:30px;margin:0 0 28px}.project-card h2{font-size:32px;margin:0 0 14px}.project-card p{font-size:18px;line-height:1.85}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,.08)}.gallery img.tall{aspect-ratio:2/3}.gallery img.wide{grid-column:span 2;aspect-ratio:2/1}.project-actions{display:flex;gap:14px;flex-wrap:wrap}.project-actions a{display:inline-block;border:1px solid #111;border-radius:999px;padding:12px 22px;text-decoration:none;color:#111;font-weight:600}.project-actions a.primary{background:#111;color:#fff}@media(max-width:900px){.project-hero{min-height:52vh}.project-hero h1{font-size:34px}.project-hero p{font-size:19px}.project-card{padding:22px}.gallery{grid-template-columns:1fr}.gallery img.wide{grid-column:span 1;aspect-ratio:4/3}}
+    body{font-family:'Heebo',sans-serif;background:#f7f7f5;color:#222;margin:0;direction:rtl}.project-hero{min-height:62vh;background:url('rehovot-main.jpg') center/cover no-repeat;display:flex;align-items:flex-end;position:relative;color:#fff}.project-hero:before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.14))}.project-hero-text{position:relative;padding:44px 24px;max-width:980px}.project-hero h1{font-size:48px;margin:0 0 10px;color:#fff}.project-hero p{font-size:22px;margin:0;color:#fff}.project-wrap{max-width:1120px;margin:auto;padding:34px 20px 70px}.project-card{background:#fff;border-radius:26px;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:30px;margin:0 0 28px}.project-card h2{font-size:32px;margin:0 0 14px}.project-card p{font-size:18px;line-height:1.85}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery a{display:block;cursor:zoom-in;text-decoration:none}.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,.08);transition:transform .25s ease,box-shadow .25s ease}.gallery a:hover img{transform:scale(1.015);box-shadow:0 12px 32px rgba(0,0,0,.14)}.gallery img.tall{aspect-ratio:2/3}.gallery a.wide{grid-column:span 2}.gallery img.wide{aspect-ratio:2/1}.project-actions{display:flex;gap:14px;flex-wrap:wrap}.project-actions a{display:inline-block;border:1px solid #111;border-radius:999px;padding:12px 22px;text-decoration:none;color:#111;font-weight:600}.project-actions a.primary{background:#111;color:#fff}.image-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:9999;padding:24px}.image-lightbox.open{display:flex}.image-lightbox img{max-width:94vw;max-height:88vh;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.35)}.image-lightbox button{position:absolute;top:18px;left:18px;border:0;background:#fff;color:#111;border-radius:999px;width:44px;height:44px;font-size:28px;line-height:1;cursor:pointer}@media(max-width:900px){.project-hero{min-height:52vh}.project-hero h1{font-size:34px}.project-hero p{font-size:19px}.project-card{padding:22px}.gallery{grid-template-columns:1fr}.gallery a.wide{grid-column:span 1}.gallery img.wide{aspect-ratio:4/3}.image-lightbox{padding:14px}.image-lightbox button{top:12px;left:12px}}
   </style>
 </head>
 <body>
@@ -31,11 +31,11 @@
     <section class="project-card">
       <h2>לפני השינוי</h2>
       <div class="gallery">
-        <img src="rehovot-before-5.jpg" class="wide" alt="החלל לפני השינוי">
-        <img src="rehovot-before-1.jpg" class="tall" alt="לפני התהליך">
-        <img src="rehovot-before-2.jpg" alt="המרפסת לפני השינוי">
-        <img src="rehovot-before-3.jpg" alt="פינה נוספת לפני התכנון">
-        <img src="rehovot-bathroom-before.jpg" alt="חדר הרחצה לפני השיפוץ">
+        <a href="rehovot-before-5.jpg" class="wide" data-lightbox><img src="rehovot-before-5.jpg" class="wide" alt="החלל לפני השינוי"></a>
+        <a href="rehovot-before-1.jpg" data-lightbox><img src="rehovot-before-1.jpg" class="tall" alt="לפני התהליך"></a>
+        <a href="rehovot-before-2.jpg" data-lightbox><img src="rehovot-before-2.jpg" alt="המרפסת לפני השינוי"></a>
+        <a href="rehovot-before-3.jpg" data-lightbox><img src="rehovot-before-3.jpg" alt="פינה נוספת לפני התכנון"></a>
+        <a href="rehovot-bathroom-before.jpg" data-lightbox><img src="rehovot-bathroom-before.jpg" alt="חדר הרחצה לפני השיפוץ"></a>
       </div>
     </section>
 
@@ -43,8 +43,8 @@
       <h2>מאחורי הקלעים</h2>
       <p>מאחורי כל תמונה יפה יש תהליך: מדידות, החלטות, עבודה בשטח ורגעים שבהם הכול עדיין פתוח.</p>
       <div class="gallery">
-        <img src="rehovot-process-1.jpg" alt="שלב העבודה והריצוף">
-        <img src="rehovot-linda-3.jpg" alt="לינדה דהן במהלך התהליך">
+        <a href="rehovot-process-1.jpg" data-lightbox><img src="rehovot-process-1.jpg" alt="שלב העבודה והריצוף"></a>
+        <a href="rehovot-linda-3.jpg" data-lightbox><img src="rehovot-linda-3.jpg" alt="לינדה דהן במהלך התהליך"></a>
       </div>
     </section>
 
@@ -52,16 +52,16 @@
       <h2>החלל לאחר התכנון</h2>
       <p>השפה החדשה של הבית כוללת ספריה ופינת עבודה, תאורה בכמה מצבים, אומנות שמשתלבת בקירות וחלל שמרגיש שלם יותר.</p>
       <div class="gallery">
-        <img src="rehovot-main.jpg" class="wide" alt="המבט המרכזי על הדירה">
-        <img src="rehovot-living-3.jpg" alt="חלל המגורים לאחר התכנון">
-        <img src="rehovot-detail-6.jpg" class="tall" alt="פרטי נגרות ופתחים">
-        <img src="rehovot-detail-3.jpg" class="tall" alt="פרט ליד הקמין">
-        <img src="rehovot-detail-4.jpg" alt="פרט חומריות">
-        <img src="rehovot-detail-1.jpg" alt="פרט עיצובי בכניסה">
-        <img src="rehovot-bathroom-1.jpg" class="wide" alt="חדר רחצה לאחר התכנון">
-        <img src="rehovot-balcony-1.jpg" alt="המרפסת בעיצוב החדש">
-        <img src="rehovot-balcony-4.jpg" class="wide" alt="המרפסת בשעת ערב">
-        <img src="rehovot-linda-1.jpg" class="wide" alt="אומנות כחלק מהתכנון">
+        <a href="rehovot-main.jpg" class="wide" data-lightbox><img src="rehovot-main.jpg" class="wide" alt="המבט המרכזי על הדירה"></a>
+        <a href="rehovot-living-3.jpg" data-lightbox><img src="rehovot-living-3.jpg" alt="חלל המגורים לאחר התכנון"></a>
+        <a href="rehovot-detail-6.jpg" data-lightbox><img src="rehovot-detail-6.jpg" class="tall" alt="פרטי נגרות ופתחים"></a>
+        <a href="rehovot-detail-3.jpg" data-lightbox><img src="rehovot-detail-3.jpg" class="tall" alt="פרט ליד הקמין"></a>
+        <a href="rehovot-detail-4.jpg" data-lightbox><img src="rehovot-detail-4.jpg" alt="פרט חומריות"></a>
+        <a href="rehovot-detail-1.jpg" data-lightbox><img src="rehovot-detail-1.jpg" alt="פרט עיצובי בכניסה"></a>
+        <a href="rehovot-bathroom-1.jpg" class="wide" data-lightbox><img src="rehovot-bathroom-1.jpg" class="wide" alt="חדר רחצה לאחר התכנון"></a>
+        <a href="rehovot-balcony-1.jpg" data-lightbox><img src="rehovot-balcony-1.jpg" alt="המרפסת בעיצוב החדש"></a>
+        <a href="rehovot-balcony-4.jpg" class="wide" data-lightbox><img src="rehovot-balcony-4.jpg" class="wide" alt="המרפסת בשעת ערב"></a>
+        <a href="rehovot-linda-1.jpg" class="wide" data-lightbox><img src="rehovot-linda-1.jpg" class="wide" alt="אומנות כחלק מהתכנון"></a>
       </div>
     </section>
 
@@ -76,10 +76,23 @@
     </section>
   </main>
 
+  <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+    <button type="button" aria-label="סגירת תמונה">×</button>
+    <img src="" alt="">
+  </div>
+
   <div id="site-footer"></div>
 
   <script>
     async function loadIncludes(){try{document.getElementById('site-header').innerHTML=await (await fetch('header.html')).text();document.getElementById('site-footer').innerHTML=await (await fetch('footer.html')).text();}catch(e){console.error(e)}}loadIncludes();
+  </script>
+  <script>
+    const lightbox=document.getElementById('image-lightbox');
+    const lightboxImage=lightbox.querySelector('img');
+    const closeLightbox=()=>{lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');lightboxImage.src='';lightboxImage.alt='';};
+    document.querySelectorAll('[data-lightbox]').forEach(link=>{link.addEventListener('click',event=>{event.preventDefault();const img=link.querySelector('img');lightboxImage.src=link.href;lightboxImage.alt=img?img.alt:'';lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');});});
+    lightbox.addEventListener('click',event=>{if(event.target===lightbox||event.target.tagName==='BUTTON')closeLightbox();});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeLightbox();});
   </script>
   <script src="site-tools.js"></script>
 </body>
