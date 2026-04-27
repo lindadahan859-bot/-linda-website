@@ -11,7 +11,15 @@
 
     <nav class="main-menu" id="mainMenu" aria-label="תפריט ראשי">
       <a href="index.html">בית</a>
-      <a href="story.html">הסיפור שלי</a>
+
+      <div class="menu-item-has-submenu">
+        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="storySubmenu">הסיפור שלי</button>
+        <div class="submenu" id="storySubmenu">
+          <a href="story.html">הסיפור שלי</a>
+          <a href="index.html#testimonials">המלצות</a>
+        </div>
+      </div>
+
       <a href="process.html">תהליך העבודה</a>
       <a href="unique-art.html">אומנות ייחודית</a>
 
@@ -26,7 +34,7 @@
       </div>
 
       <a href="index.html#permits">היתרי בנייה</a>
-      <a href="index.html#testimonials">המלצות</a>
+      <a href="faq.html">שאלות ותשובות</a>
       <a href="index.html#contact" class="header-cta">צור קשר</a>
     </nav>
 
