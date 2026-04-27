@@ -23,16 +23,30 @@ document.addEventListener('DOMContentLoaded',function(){
         if(btn.dataset.ready==='1')return;
         btn.dataset.ready='1';
         btn.onclick=function(e){e.preventDefault();e.stopPropagation();var open=menu.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');};
-        var wrap=menu.querySelector('.menu-item-has-submenu');
-        var toggle=menu.querySelector('.submenu-toggle');
-        if(wrap&&toggle){
-          var label=toggle.textContent.replace(/[▼▲]/g,'').trim()||'פרויקטים';
+
+        menu.querySelectorAll('.menu-item-has-submenu').forEach(function(wrap){
+          var toggle=wrap.querySelector('.submenu-toggle');
+          if(!toggle)return;
+          var label=toggle.textContent.replace(/[▼▲]/g,'').trim()||'תפריט';
           function paint(open){toggle.innerHTML=label+' <span class="submenu-arrow">'+(open?'▲':'▼')+'</span>';toggle.setAttribute('aria-expanded',open?'true':'false');}
           paint(false);
-          toggle.onclick=function(e){e.preventDefault();e.stopPropagation();paint(wrap.classList.toggle('open'));};
-        }
+          toggle.onclick=function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            var open=!wrap.classList.contains('open');
+            menu.querySelectorAll('.menu-item-has-submenu').forEach(function(other){if(other!==wrap)other.classList.remove('open');});
+            wrap.classList.toggle('open',open);
+            menu.querySelectorAll('.menu-item-has-submenu .submenu-toggle').forEach(function(otherToggle){
+              var otherLabel=otherToggle.textContent.replace(/[▼▲]/g,'').trim()||'תפריט';
+              var otherOpen=otherToggle.closest('.menu-item-has-submenu').classList.contains('open');
+              otherToggle.innerHTML=otherLabel+' <span class="submenu-arrow">'+(otherOpen?'▲':'▼')+'</span>';
+              otherToggle.setAttribute('aria-expanded',otherOpen?'true':'false');
+            });
+          };
+        });
+
         menu.querySelectorAll('a').forEach(function(a){a.onclick=function(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');};});
-        document.addEventListener('click',function(e){if(!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
+        document.addEventListener('click',function(e){if(!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');menu.querySelectorAll('.menu-item-has-submenu').forEach(function(w){w.classList.remove('open');});}});
       }
       if(tries>60)clearInterval(timer);
     },100);
