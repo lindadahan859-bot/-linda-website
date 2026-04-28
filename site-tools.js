@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   setupMenu();
   addFloatingButtons();
   addTopButton();
-  reduceVideoOverlay();
 
   function injectFixStyles() {
     var old = document.getElementById('linda-menu-fixes');
@@ -33,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
         pointer-events:auto!important;
       }
       .site-tools-btn-whatsapp{
-        width:58px!important;
-        height:58px!important;
-        min-width:58px!important;
-        min-height:58px!important;
+        width:64px!important;
+        height:64px!important;
+        min-width:64px!important;
+        min-height:64px!important;
         border-radius:16px!important;
         background:#25D366!important;
         color:#fff!important;
@@ -44,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
         border:1px solid rgba(255,255,255,.45)!important;
       }
       .site-tools-btn-whatsapp svg{
-        width:34px!important;
-        height:34px!important;
+        width:39px!important;
+        height:39px!important;
         fill:#fff!important;
         display:block!important;
       }
@@ -63,7 +62,9 @@ document.addEventListener('DOMContentLoaded', function () {
         right:12px!important;
         bottom:18px!important;
         z-index:99999!important;
-        display:none!important;
+        display:inline-flex!important;
+        align-items:center!important;
+        justify-content:center!important;
         width:50px!important;
         height:50px!important;
         border-radius:50%!important;
@@ -75,11 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         line-height:1!important;
         font-weight:700!important;
         pointer-events:auto!important;
-      }
-      .site-back-to-top.show{
-        display:inline-flex!important;
-        align-items:center!important;
-        justify-content:center!important;
+        opacity:.95!important;
       }
       .menu-toggle{
         display:block!important;
@@ -91,25 +88,10 @@ document.addEventListener('DOMContentLoaded', function () {
       .main-menu.open{
         display:flex!important;
       }
-      .video-container::after,
-      .hero-video::after,
-      .video-wrap::after{
-        content:''!important;
-        position:absolute!important;
-        inset:0!important;
-        z-index:5!important;
-        background:transparent!important;
-        pointer-events:auto!important;
-      }
-      .video-container,
-      .hero-video,
-      .video-wrap{
-        position:relative!important;
-      }
       .video-container iframe,
       .hero-video iframe,
       .video-wrap iframe{
-        pointer-events:none!important;
+        pointer-events:auto!important;
       }
       @media(max-width:900px){
         .site-tools-floating{left:18px!important;bottom:14px!important;}
@@ -127,34 +109,12 @@ document.addEventListener('DOMContentLoaded', function () {
       var menu = document.getElementById('mainMenu');
       if (btn && menu) {
         clearInterval(timer);
-        btn.dataset.ready = '1';
         btn.onclick = function (e) {
           e.preventDefault();
           e.stopPropagation();
           var open = menu.classList.toggle('open');
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
         };
-
-        menu.querySelectorAll('.menu-item-has-submenu').forEach(function (wrap) {
-          var toggle = wrap.querySelector('.submenu-toggle');
-          if (!toggle) return;
-          var label = toggle.textContent.replace(/[▼▲]/g, '').trim() || 'תפריט';
-          function paint(isOpen) {
-            toggle.innerHTML = label + ' <span class="submenu-arrow">' + (isOpen ? '▲' : '▼') + '</span>';
-            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-          }
-          paint(false);
-          toggle.onclick = function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            var isOpen = !wrap.classList.contains('open');
-            menu.querySelectorAll('.menu-item-has-submenu').forEach(function (other) {
-              if (other !== wrap) other.classList.remove('open');
-            });
-            wrap.classList.toggle('open', isOpen);
-            paint(isOpen);
-          };
-        });
       }
       if (tries > 60) clearInterval(timer);
     }, 100);
@@ -167,10 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
     box.className = 'site-tools-floating';
 
     var msg = 'היי לינדה, ראיתי את האתר ואשמח לבדוק התאמה לפרויקט שלי';
-    if (window.location.pathname.indexOf('faq') > -1) {
-      msg = 'היי לינדה, קראתי את שאלות ותשובות באתר ואשמח לבדוק התאמה לפרויקט שלי';
-    }
-
     var w = document.createElement('a');
     w.className = 'site-tools-btn site-tools-btn-whatsapp';
     w.href = 'https://wa.me/972507555667?text=' + encodeURIComponent(msg);
@@ -198,20 +154,5 @@ document.addEventListener('DOMContentLoaded', function () {
     b.innerHTML = '↑';
     b.onclick = function () { window.scrollTo({ top: 0, behavior: 'smooth' }); };
     document.body.appendChild(b);
-    function show() { b.classList.toggle('show', window.scrollY > 220); }
-    window.addEventListener('scroll', show, { passive: true });
-    show();
-  }
-
-  function reduceVideoOverlay() {
-    document.querySelectorAll('iframe').forEach(function (f) {
-      var src = f.getAttribute('src') || '';
-      if (src.indexOf('youtube.com') > -1 && src.indexOf('controls=0') === -1) {
-        f.setAttribute('src', src + (src.indexOf('?') > -1 ? '&' : '?') + 'controls=0&modestbranding=1&rel=0');
-      }
-      if (src.indexOf('facebook.com') > -1) {
-        f.style.pointerEvents = 'none';
-      }
-    });
   }
 });
