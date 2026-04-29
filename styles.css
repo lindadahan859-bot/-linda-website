@@ -1002,6 +1002,7 @@ li {
 
 .home-page .video-container iframe {
   pointer-events: none !important;
-  transform: scale(1.08) !important;
+  transform: scale(1) !important;
+  top: -4% !important;
   transform-origin: center center !important;
 }
