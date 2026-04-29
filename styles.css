@@ -1000,11 +1000,7 @@ li {
   overflow: hidden !important;
 }
 
-.home-page .video-container iframe {
-  pointer-events: none !important;
-  top: 50% !important;
-  left: 50% !important;
-  width: 177.77vh !important;
-  height: 100vh !important;
-  transform: translate(-50%, -50%) !important;
-}
+.home-page .hero-video {
+  width: 100%;
+  height: 100%;
+object-fit: contain;}
