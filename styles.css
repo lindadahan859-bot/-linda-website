@@ -1002,7 +1002,10 @@ li {
 
 .home-page .video-container iframe {
   pointer-events: none !important;
-  transform: scale(1) !important;
-  top: -4% !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: max(100vw, 177.77vh) !important;
+  height: max(100vh, 56.25vw) !important;
+  transform: translate(-50%, -50%) scale(1.08) !important;
   transform-origin: center center !important;
 }
