@@ -928,11 +928,6 @@ li {
   color: #000 !important;
 }
 
-.home-page .tag.gold {
-  background: #e8e2d8 !important;
-  color: #000 !important;
-}
-
 /* DESKTOP MENU FIX */
 @media (min-width: 901px) {
   .menu-toggle {
@@ -977,8 +972,9 @@ li {
   content: "" !important;
   position: absolute !important;
   inset: 0 !important;
-  z-index: 5 !important;
+  z-index: 999 !important;
   background: transparent !important;
+  pointer-events: auto !important;
 }
 
 .home-page .video-container iframe {
