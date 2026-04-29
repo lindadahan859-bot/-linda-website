@@ -22,7 +22,8 @@
     .leiba-tab{padding:10px 16px;border-radius:999px;background:#faf8f4;border:1px solid rgba(0,0,0,.08);font-weight:600;}
     .leiba-tab.active{background:#9a642f;color:#fff;border-color:#9a642f;}
     .leiba-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px;}
-    .leiba-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 8px 22px rgba(0,0,0,.08);}
+    .leiba-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 8px 22px rgba(0,0,0,.08);cursor:pointer;transition:.25s ease;}
+    .leiba-gallery img:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.14);}
     .leiba-gallery img.wide{grid-column:span 2;aspect-ratio:16/9;}
     .leiba-points{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;}
     .leiba-point{background:#faf8f4;border:1px solid rgba(0,0,0,.06);border-radius:22px;padding:22px;}
@@ -32,7 +33,16 @@
     .leiba-btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid #111;background:#fff;color:#111;text-decoration:none;font-weight:600;transition:.25s ease;}
     .leiba-btn.primary{background:#9a642f;border-color:#9a642f;color:#fff;}
     .leiba-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.12);}
-    @media(max-width:800px){.leiba-hero{min-height:54vh}.leiba-wrap{padding:34px 14px 56px}.leiba-card{padding:26px 20px;border-radius:24px}.leiba-card h2{font-size:29px}.leiba-card p{font-size:17px;line-height:1.85}.leiba-gallery{grid-template-columns:1fr}.leiba-gallery img.wide{grid-column:span 1;aspect-ratio:4/3}.leiba-points{grid-template-columns:1fr}}
+    .leiba-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:999999;padding:22px;}
+    .leiba-lightbox.active{display:flex;}
+    .leiba-lightbox img{max-width:min(92vw,1200px);max-height:86vh;object-fit:contain;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.35);}
+    .leiba-lightbox-close,.leiba-lightbox-nav{position:absolute;border:0;background:rgba(255,255,255,.92);color:#111;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.22);}
+    .leiba-lightbox-close{top:18px;left:18px;width:46px;height:46px;border-radius:50%;font-size:34px;line-height:1;}
+    .leiba-lightbox-nav{top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;font-size:42px;line-height:1;}
+    .leiba-lightbox-prev{right:18px;}
+    .leiba-lightbox-next{left:18px;}
+    .leiba-lightbox-counter{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.92);color:#111;border-radius:999px;padding:8px 16px;font-weight:700;}
+    @media(max-width:800px){.leiba-hero{min-height:54vh}.leiba-wrap{padding:34px 14px 56px}.leiba-card{padding:26px 20px;border-radius:24px}.leiba-card h2{font-size:29px}.leiba-card p{font-size:17px;line-height:1.85}.leiba-gallery{grid-template-columns:1fr}.leiba-gallery img.wide{grid-column:span 1;aspect-ratio:4/3}.leiba-points{grid-template-columns:1fr}.leiba-lightbox{padding:12px}.leiba-lightbox img{max-width:94vw;max-height:82vh;border-radius:14px}.leiba-lightbox-close{top:12px;left:12px;width:42px;height:42px}.leiba-lightbox-nav{width:46px;height:46px;font-size:36px}.leiba-lightbox-prev{right:10px}.leiba-lightbox-next{left:10px}}
   </style>
 </head>
 <body class="leiba-page">
@@ -108,6 +118,15 @@
   </main>
 
   <div id="site-footer"></div>
+
+  <div class="leiba-lightbox" id="leibaLightbox">
+    <button class="leiba-lightbox-close" id="leibaLightboxClose" aria-label="סגירה">×</button>
+    <button class="leiba-lightbox-nav leiba-lightbox-prev" id="leibaLightboxPrev" aria-label="התמונה הקודמת">‹</button>
+    <img id="leibaLightboxImg" alt="">
+    <button class="leiba-lightbox-nav leiba-lightbox-next" id="leibaLightboxNext" aria-label="התמונה הבאה">›</button>
+    <div class="leiba-lightbox-counter" id="leibaLightboxCounter"></div>
+  </div>
+
   <script>
     async function loadIncludes(){
       try{
@@ -116,6 +135,78 @@
       }catch(e){console.error(e)}
     }
     loadIncludes();
+
+    const leibaGalleryImages = Array.from(document.querySelectorAll('.leiba-gallery img'));
+    const leibaLightbox = document.getElementById('leibaLightbox');
+    const leibaLightboxImg = document.getElementById('leibaLightboxImg');
+    const leibaLightboxClose = document.getElementById('leibaLightboxClose');
+    const leibaLightboxPrev = document.getElementById('leibaLightboxPrev');
+    const leibaLightboxNext = document.getElementById('leibaLightboxNext');
+    const leibaLightboxCounter = document.getElementById('leibaLightboxCounter');
+    let leibaCurrentIndex = 0;
+    let leibaTouchStartX = 0;
+    let leibaTouchStartY = 0;
+
+    function updateLeibaLightbox(index){
+      leibaLightboxImg.src = leibaGalleryImages[index].src;
+      leibaLightboxImg.alt = leibaGalleryImages[index].alt || '';
+      leibaLightboxCounter.textContent = `${index + 1} / ${leibaGalleryImages.length}`;
+      leibaCurrentIndex = index;
+    }
+
+    function openLeibaLightbox(index){
+      updateLeibaLightbox(index);
+      leibaLightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLeibaLightbox(){
+      leibaLightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function nextLeibaImage(){
+      updateLeibaLightbox((leibaCurrentIndex + 1) % leibaGalleryImages.length);
+    }
+
+    function prevLeibaImage(){
+      updateLeibaLightbox((leibaCurrentIndex - 1 + leibaGalleryImages.length) % leibaGalleryImages.length);
+    }
+
+    leibaGalleryImages.forEach((img,index)=>{
+      img.addEventListener('click',()=>openLeibaLightbox(index));
+    });
+
+    leibaLightboxClose.addEventListener('click',closeLeibaLightbox);
+    leibaLightboxNext.addEventListener('click',nextLeibaImage);
+    leibaLightboxPrev.addEventListener('click',prevLeibaImage);
+
+    leibaLightbox.addEventListener('click',(e)=>{
+      if(e.target===leibaLightbox) closeLeibaLightbox();
+    });
+
+    document.addEventListener('keydown',(e)=>{
+      if(!leibaLightbox.classList.contains('active')) return;
+      if(e.key==='Escape') closeLeibaLightbox();
+      if(e.key==='ArrowLeft') nextLeibaImage();
+      if(e.key==='ArrowRight') prevLeibaImage();
+    });
+
+    leibaLightbox.addEventListener('touchstart',(e)=>{
+      leibaTouchStartX = e.changedTouches[0].screenX;
+      leibaTouchStartY = e.changedTouches[0].screenY;
+    },{passive:true});
+
+    leibaLightbox.addEventListener('touchend',(e)=>{
+      const endX = e.changedTouches[0].screenX;
+      const endY = e.changedTouches[0].screenY;
+      const diffX = endX - leibaTouchStartX;
+      const diffY = endY - leibaTouchStartY;
+      if(Math.abs(diffX)>55 && Math.abs(diffX)>Math.abs(diffY)){
+        if(diffX>0) prevLeibaImage();
+        else nextLeibaImage();
+      }
+    },{passive:true});
   </script>
   <script src="site-tools.js"></script>
 </body>
