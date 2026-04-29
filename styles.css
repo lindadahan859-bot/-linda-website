@@ -977,9 +977,6 @@ li {
   pointer-events: auto !important;
 }
 
-.home-page .video-container iframe {
-  pointer-events: none !important;
-}
 
 /* FLOATING BUTTONS VISIBILITY */
 .site-tools-btn-whatsapp {
@@ -997,4 +994,14 @@ li {
   background: #9a642f !important;
   color: #fff !important;
   box-shadow: 0 12px 26px rgba(80,45,15,.34) !important;
+}
+/* HERO VIDEO CLEAN */
+.home-page .video-container {
+  overflow: hidden !important;
+}
+
+.home-page .video-container iframe {
+  pointer-events: none !important;
+  transform: scale(1.18) !important;
+  transform-origin: center center !important;
 }
