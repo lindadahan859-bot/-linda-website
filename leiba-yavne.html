@@ -45,9 +45,25 @@
     .leiba-lightbox-next::before{content:"‹";}
     .leiba-lightbox-nav:hover{background:rgba(0,0,0,0.7);transform:translateY(-50%) scale(1.08);}
     .leiba-lightbox-counter{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.92);color:#111;border-radius:999px;padding:8px 16px;font-weight:700;}
-    @media(max-width:800px){.leiba-hero{min-height:54vh}.leiba-wrap{padding:34px 14px 56px}.leiba-card{padding:26px 20px;border-radius:24px}.leiba-card h2{font-size:29px}.leiba-card p{font-size:17px;line-height:1.85}.leiba-gallery{grid-template-columns:1fr}.leiba-gallery img.wide{grid-column:span 1;aspect-ratio:4/3}.leiba-points{grid-template-columns:1fr}.leiba-lightbox{padding:0}.leiba-lightbox img{max-width:100vw;max-height:100vh;border-radius:0}.leiba-lightbox-close{top:12px;left:12px;width:38px;height:38px;font-size:26px;background:rgba(0,0,0,.45)}.leiba-lightbox-nav{width:38px;height:38px;font-size:24px;background:rgba(0,0,0,.38);backdrop-filter:blur(5px)}.leiba-lightbox-prev{right:10px}.leiba-lightbox-next{left:10px}}
+    @media(max-width:800px){
+      .leiba-hero{min-height:54vh}
+      .leiba-wrap{padding:34px 14px 56px}
+      .leiba-card{padding:26px 20px;border-radius:24px}
+      .leiba-card h2{font-size:29px}
+      .leiba-card p{font-size:17px;line-height:1.85}
+      .leiba-gallery{grid-template-columns:1fr}
+      .leiba-gallery img.wide{grid-column:span 1;aspect-ratio:4/3}
+      .leiba-points{grid-template-columns:1fr}
+      .leiba-lightbox{padding:0}
+      .leiba-lightbox img{max-width:100vw;max-height:100vh;border-radius:0}
+      .leiba-lightbox-close{top:12px;left:12px;width:38px;height:38px;font-size:26px;background:rgba(0,0,0,.45)}
+      .leiba-lightbox-nav{width:38px;height:38px;font-size:24px;background:rgba(0,0,0,.38);backdrop-filter:blur(5px)}
+      .leiba-lightbox-prev{right:10px}
+      .leiba-lightbox-next{left:10px}
+    }
   </style>
 </head>
+
 <body class="leiba-page">
   <div id="site-header"></div>
 
@@ -64,21 +80,192 @@
       <h2>בית שלא מתוכנן כחדרים נפרדים, אלא כמערכת חיים</h2>
       <p>הבית ביבנה נבנה מתוך הסתכלות על התנועה בבית, על קווי הראייה, על השקט שצריך לשמור ועל המקומות שבהם המשפחה באמת נפגשת.</p>
       <p>כרגע מוצג כאן תת־הנושא הראשון בפרויקט: <strong>חדר המשפחה והטלוויזיה</strong>. בהמשך יתווספו אזורים נוספים בבית, בהתאם לצילום ולהתקדמות החומרים.</p>
-      <div class="leiba-tabs"><span class="leiba-tab active">חדר משפחה / טלוויזיה</span><span class="leiba-tab">מטבח - יעלה בהמשך</span><span class="leiba-tab">פינת אוכל - יעלה בהמשך</span><span class="leiba-tab">סלון - יעלה בהמשך</span></div>
+
+      <div class="leiba-tabs">
+        <span class="leiba-tab active">חדר משפחה / טלוויזיה</span>
+        <span class="leiba-tab">מטבח - יעלה בהמשך</span>
+        <span class="leiba-tab">פינת אוכל - יעלה בהמשך</span>
+        <span class="leiba-tab">סלון - יעלה בהמשך</span>
+      </div>
     </section>
-    <section class="leiba-card"><span class="leiba-kicker">חדר משפחה / טלוויזיה</span><h2>חלל משפחתי שמחבר בין הנכדים, השקט והבית</h2><p>חדר המשפחה תוכנן כך שהנכדים יוכלו לשחק, לצפות וליהנות, בזמן שהבית נשאר שקט ונעים. הדלת השקופה מאפשרת קשר עין מהחלל הציבורי, גם כשהדלת סגורה והרעש נשאר בפנים.</p><p>הקלפות והאחסון תוכננו בגובה ובאופן שמאפשרים לילדים לראות ולהגיע לדברים בעצמם. ספסל הישיבה המפנק מוסיף מקום שהייה, והקמין שמתחת לטלוויזיה יוצר בערב תחושה חמימה ואינטימית.</p><p>גם גוף התאורה הלבן על חיפוי העץ הוא חלק מהסיפור: נקודת אור מול הכניסה, שמושכת את המבט ומחברת בין חומר, תאורה ואווירה.</p></section>
-    <section class="leiba-card"><h2>גלריית חדר המשפחה</h2><div class="leiba-gallery"><img class="wide" src="leiba-yavne-hero.jpg" alt="חדר משפחה בבית פרטי ביבנה - מבט כללי"><img src="leiba-yavne-living-room.jpg" alt="חדר טלוויזיה משפחתי ביבנה"><img src="leiba-yavne-kitchen.jpg" alt="מבט רחב אל חדר המשפחה והכורסה"><img src="leiba-yavne-bedroom.jpg" alt="ספסל ישיבה ואחסון בחדר המשפחה"><img src="leiba-yavne-bathroom.jpg" alt="מדרך פתוח ואחסון נגיש לנכדים"><img src="leiba-yavne-details.jpg" alt="קמין, טלוויזיה וחיפוי עץ"><img src="leiba-yavne-lighting.jpg" alt="גוף תאורה לבן על קיר בחדר המשפחה"><img src="leiba-yavne-corner.jpg" alt="פינת ישיבה וקיר טלוויזיה"><img src="leiba-yavne-entry.jpg" alt="מבט מהכניסה אל חדר המשפחה"><img src="leiba-yavne-doorway.jpg" alt="דלת זכוכית וקשר עין לחדר המשפחה"><img src="leiba-yavne-tv-room.jpg" alt="חדר טלוויזיה עם כורסה וקמין"><img src="leiba-yavne-bench.jpg" alt="ספסל ישיבה מרופד בחיפוי עץ"><img src="leiba-yavne-storage-bench.jpg" alt="אחסון פתוח ונגיש מתחת לספסל"><img src="leiba-yavne-seat-detail.jpg" alt="פרט ישיבה וספסל בחדר המשפחה"></div></section>
-    <section class="leiba-card"><h2>המחשבה שמאחורי התכנון</h2><div class="leiba-points"><div class="leiba-point"><h3>קשר עין</h3><p>הדלת השקופה מאפשרת לראות את הנכדים בלי לפתוח את החדר ובלי לוותר על שקט.</p></div><div class="leiba-point"><h3>עצמאות לילדים</h3><p>קלפות פתוחות ואחסון נגיש מאפשרים לילדים לראות, לבחור ולהגיע בעצמם.</p></div><div class="leiba-point"><h3>אווירה בערב</h3><p>קמין, עץ ותאורה חמימה הופכים את החדר לפינה משפחתית נעימה ומזמינה.</p></div></div></section>
-    <section class="leiba-card"><h2>זה בדיוק הערך של תכנון טוב</h2><p>תכנון טוב לא עוצר ביופי. הוא שואל איך הבית מתנהל באמת, מי משתמש בכל חלל, איפה צריך שקט, איפה צריך קשר עין, ואיך אפשר ליצור מקום שעובד נכון לאורך זמן.</p><p>בבית הזה כל פרט נולד ממחשבה: מהכניסה, דרך מבט אל חדר המשפחה, ועד התאורה, החומרים והצבע שמבצבצים ברגע הנכון.</p><div class="leiba-actions"><a class="leiba-btn primary" href="index.html#contact">לשיחה על הפרויקט שלכם</a><a class="leiba-btn" href="index.html#projects">חזרה לפרויקטים</a></div></section>
+
+    <section class="leiba-card">
+      <span class="leiba-kicker">חדר משפחה / טלוויזיה</span>
+      <h2>חלל משפחתי שמחבר בין הנכדים, השקט והבית</h2>
+      <p>חדר המשפחה תוכנן כך שהנכדים יוכלו לשחק, לצפות וליהנות, בזמן שהבית נשאר שקט ונעים. הדלת השקופה מאפשרת קשר עין מהחלל הציבורי, גם כשהדלת סגורה והרעש נשאר בפנים.</p>
+      <p>הקלפות והאחסון תוכננו בגובה ובאופן שמאפשרים לילדים לראות ולהגיע לדברים בעצמם. ספסל הישיבה המפנק מוסיף מקום שהייה, והקמין שמתחת לטלוויזיה יוצר בערב תחושה חמימה ואינטימית.</p>
+      <p>גם גוף התאורה הלבן על חיפוי העץ הוא חלק מהסיפור: נקודת אור מול הכניסה, שמושכת את המבט ומחברת בין חומר, תאורה ואווירה.</p>
+    </section>
+
+    <section class="leiba-card">
+      <h2>לפני התהליך</h2>
+      <p>כך נראה חדר המשפחה לפני התכנון - חלל שלא איפשר שימוש נעים, מסודר ומחובר לחיי המשפחה.</p>
+
+      <div class="leiba-gallery">
+        <img src="leiba-before-tv-room-entry.jpg" alt="לפני - כניסה לחדר המשפחה">
+        <img src="leiba-before-tv-room-overview.jpg" alt="לפני - מבט כללי על חדר המשפחה">
+        <img src="leiba-before-tv-room-sofa.jpg" alt="לפני - אזור הישיבה בחדר המשפחה">
+        <img src="leiba-before-tv-room-library.jpg" alt="לפני - ספריה וחדר טלוויזיה">
+        <img src="leiba-before-tv-room-tv-wall.jpg" alt="לפני - קיר הטלוויזיה">
+        <img src="leiba-before-tv-room-red-sofa.jpg" alt="לפני - ספה אדומה בחדר המשפחה">
+        <img src="leiba-before-tv-room-corner.jpg" alt="לפני - פינת חדר המשפחה">
+      </div>
+
+      <p style="text-align:center;font-weight:600;margin:40px 0;">
+        זה לא היה רק שינוי עיצובי - זה שינוי בחוויית החיים בבית.
+      </p>
+
+      <h2>אחרי התכנון</h2>
+      <p>תכנון שמחבר בין ישיבה, אחסון, תאורה וחוויית שימוש אמיתית למשפחה.</p>
+
+      <div class="leiba-gallery">
+        <img class="wide" src="leiba-yavne-hero.jpg" alt="אחרי - מבט כללי על חדר המשפחה">
+        <img src="leiba-yavne-living-room.jpg" alt="אחרי - חדר טלוויזיה משפחתי">
+        <img src="leiba-yavne-kitchen.jpg" alt="אחרי - מבט רחב אל חדר המשפחה והכורסה">
+        <img src="leiba-yavne-bedroom.jpg" alt="אחרי - ספסל ישיבה ואחסון בחדר המשפחה">
+        <img src="leiba-yavne-bathroom.jpg" alt="אחרי - מדרך פתוח ואחסון נגיש לנכדים">
+        <img src="leiba-yavne-details.jpg" alt="אחרי - קמין, טלוויזיה וחיפוי עץ">
+        <img src="leiba-yavne-lighting.jpg" alt="אחרי - גוף תאורה לבן על קיר בחדר המשפחה">
+        <img src="leiba-yavne-corner.jpg" alt="אחרי - פינת ישיבה וקיר טלוויזיה">
+        <img src="leiba-yavne-entry.jpg" alt="אחרי - מבט מהכניסה אל חדר המשפחה">
+        <img src="leiba-yavne-doorway.jpg" alt="אחרי - דלת זכוכית וקשר עין לחדר המשפחה">
+        <img src="leiba-yavne-tv-room.jpg" alt="אחרי - חדר טלוויזיה עם כורסה וקמין">
+        <img src="leiba-yavne-bench.jpg" alt="אחרי - ספסל ישיבה מרופד בחיפוי עץ">
+        <img src="leiba-yavne-storage-bench.jpg" alt="אחרי - אחסון פתוח ונגיש מתחת לספסל">
+        <img src="leiba-yavne-seat-detail.jpg" alt="אחרי - פרט ישיבה וספסל בחדר המשפחה">
+      </div>
+    </section>
+
+    <section class="leiba-card">
+      <h2>המחשבה שמאחורי התכנון</h2>
+      <div class="leiba-points">
+        <div class="leiba-point">
+          <h3>קשר עין</h3>
+          <p>הדלת השקופה מאפשרת לראות את הנכדים בלי לפתוח את החדר ובלי לוותר על שקט.</p>
+        </div>
+        <div class="leiba-point">
+          <h3>עצמאות לילדים</h3>
+          <p>קלפות פתוחות ואחסון נגיש מאפשרים לילדים לראות, לבחור ולהגיע בעצמם.</p>
+        </div>
+        <div class="leiba-point">
+          <h3>אווירה בערב</h3>
+          <p>קמין, עץ ותאורה חמימה הופכים את החדר לפינה משפחתית נעימה ומזמינה.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="leiba-card">
+      <h2>זה בדיוק הערך של תכנון טוב</h2>
+      <p>תכנון טוב לא עוצר ביופי. הוא שואל איך הבית מתנהל באמת, מי משתמש בכל חלל, איפה צריך שקט, איפה צריך קשר עין, ואיך אפשר ליצור מקום שעובד נכון לאורך זמן.</p>
+      <p>בבית הזה כל פרט נולד ממחשבה: מהכניסה, דרך מבט אל חדר המשפחה, ועד התאורה, החומרים והצבע שמבצבצים ברגע הנכון.</p>
+
+      <div class="leiba-actions">
+        <a class="leiba-btn primary" href="index.html#contact">לשיחה על הפרויקט שלכם</a>
+        <a class="leiba-btn" href="index.html#projects">חזרה לפרויקטים</a>
+      </div>
+    </section>
   </main>
+
   <div id="site-footer"></div>
-  <div class="leiba-lightbox" id="leibaLightbox"><button class="leiba-lightbox-close" id="leibaLightboxClose" aria-label="סגירה">×</button><button class="leiba-lightbox-nav leiba-lightbox-prev" id="leibaLightboxPrev" aria-label="התמונה הקודמת"></button><img id="leibaLightboxImg" alt=""><button class="leiba-lightbox-nav leiba-lightbox-next" id="leibaLightboxNext" aria-label="התמונה הבאה"></button><div class="leiba-lightbox-counter" id="leibaLightboxCounter"></div></div>
+
+  <div class="leiba-lightbox" id="leibaLightbox">
+    <button class="leiba-lightbox-close" id="leibaLightboxClose" aria-label="סגירה">×</button>
+    <button class="leiba-lightbox-nav leiba-lightbox-prev" id="leibaLightboxPrev" aria-label="התמונה הקודמת"></button>
+    <img id="leibaLightboxImg" alt="">
+    <button class="leiba-lightbox-nav leiba-lightbox-next" id="leibaLightboxNext" aria-label="התמונה הבאה"></button>
+    <div class="leiba-lightbox-counter" id="leibaLightboxCounter"></div>
+  </div>
+
   <script>
-    async function loadIncludes(){try{document.getElementById('site-header').innerHTML=await (await fetch('header.html')).text();document.getElementById('site-footer').innerHTML=await (await fetch('footer.html')).text();}catch(e){console.error(e)}}loadIncludes();
-    const leibaGalleryImages=Array.from(document.querySelectorAll('.leiba-gallery img'));const leibaLightbox=document.getElementById('leibaLightbox');const leibaLightboxImg=document.getElementById('leibaLightboxImg');const leibaLightboxClose=document.getElementById('leibaLightboxClose');const leibaLightboxPrev=document.getElementById('leibaLightboxPrev');const leibaLightboxNext=document.getElementById('leibaLightboxNext');const leibaLightboxCounter=document.getElementById('leibaLightboxCounter');let leibaCurrentIndex=0;let leibaTouchStartX=0;let leibaTouchStartY=0;
-    function updateLeibaLightbox(index){leibaLightboxImg.src=leibaGalleryImages[index].src;leibaLightboxImg.alt=leibaGalleryImages[index].alt||'';leibaLightboxCounter.textContent=`${index+1} / ${leibaGalleryImages.length}`;leibaCurrentIndex=index}function openLeibaLightbox(index){updateLeibaLightbox(index);leibaLightbox.classList.add('active');document.body.style.overflow='hidden'}function closeLeibaLightbox(){leibaLightbox.classList.remove('active');document.body.style.overflow=''}function nextLeibaImage(){updateLeibaLightbox((leibaCurrentIndex+1)%leibaGalleryImages.length)}function prevLeibaImage(){updateLeibaLightbox((leibaCurrentIndex-1+leibaGalleryImages.length)%leibaGalleryImages.length)}
-    leibaGalleryImages.forEach((img,index)=>{img.addEventListener('click',()=>openLeibaLightbox(index))});leibaLightboxClose.addEventListener('click',closeLeibaLightbox);leibaLightboxNext.addEventListener('click',nextLeibaImage);leibaLightboxPrev.addEventListener('click',prevLeibaImage);leibaLightbox.addEventListener('click',(e)=>{if(e.target===leibaLightbox)closeLeibaLightbox()});document.addEventListener('keydown',(e)=>{if(!leibaLightbox.classList.contains('active'))return;if(e.key==='Escape')closeLeibaLightbox();if(e.key==='ArrowLeft')nextLeibaImage();if(e.key==='ArrowRight')prevLeibaImage()});leibaLightbox.addEventListener('touchstart',(e)=>{leibaTouchStartX=e.changedTouches[0].screenX;leibaTouchStartY=e.changedTouches[0].screenY},{passive:true});leibaLightbox.addEventListener('touchend',(e)=>{const endX=e.changedTouches[0].screenX;const endY=e.changedTouches[0].screenY;const diffX=endX-leibaTouchStartX;const diffY=endY-leibaTouchStartY;if(Math.abs(diffX)>55&&Math.abs(diffX)>Math.abs(diffY)){if(diffX>0)prevLeibaImage();else nextLeibaImage()}},{passive:true});
+    async function loadIncludes(){
+      try{
+        document.getElementById('site-header').innerHTML = await (await fetch('header.html')).text();
+        document.getElementById('site-footer').innerHTML = await (await fetch('footer.html')).text();
+
+        if (typeof setupHeaderMenu === "function") {
+          setupHeaderMenu();
+        }
+      }catch(e){
+        console.error(e);
+      }
+    }
+    loadIncludes();
+
+    const leibaGalleryImages = Array.from(document.querySelectorAll('.leiba-gallery img'));
+    const leibaLightbox = document.getElementById('leibaLightbox');
+    const leibaLightboxImg = document.getElementById('leibaLightboxImg');
+    const leibaLightboxClose = document.getElementById('leibaLightboxClose');
+    const leibaLightboxPrev = document.getElementById('leibaLightboxPrev');
+    const leibaLightboxNext = document.getElementById('leibaLightboxNext');
+    const leibaLightboxCounter = document.getElementById('leibaLightboxCounter');
+
+    let leibaCurrentIndex = 0;
+    let leibaTouchStartX = 0;
+    let leibaTouchStartY = 0;
+
+    function updateLeibaLightbox(index){
+      leibaLightboxImg.src = leibaGalleryImages[index].src;
+      leibaLightboxImg.alt = leibaGalleryImages[index].alt || '';
+      leibaLightboxCounter.textContent = `${index + 1} / ${leibaGalleryImages.length}`;
+      leibaCurrentIndex = index;
+    }
+
+    function openLeibaLightbox(index){
+      updateLeibaLightbox(index);
+      leibaLightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLeibaLightbox(){
+      leibaLightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function nextLeibaImage(){
+      updateLeibaLightbox((leibaCurrentIndex + 1) % leibaGalleryImages.length);
+    }
+
+    function prevLeibaImage(){
+      updateLeibaLightbox((leibaCurrentIndex - 1 + leibaGalleryImages.length) % leibaGalleryImages.length);
+    }
+
+    leibaGalleryImages.forEach((img,index)=>{
+      img.addEventListener('click',()=>openLeibaLightbox(index));
+    });
+
+    leibaLightboxClose.addEventListener('click',closeLeibaLightbox);
+    leibaLightboxNext.addEventListener('click',nextLeibaImage);
+    leibaLightboxPrev.addEventListener('click',prevLeibaImage);
+
+    leibaLightbox.addEventListener('click',(e)=>{
+      if(e.target === leibaLightbox) closeLeibaLightbox();
+    });
+
+    document.addEventListener('keydown',(e)=>{
+      if(!leibaLightbox.classList.contains('active')) return;
+      if(e.key === 'Escape') closeLeibaLightbox();
+      if(e.key === 'ArrowLeft') nextLeibaImage();
+      if(e.key === 'ArrowRight') prevLeibaImage();
+    });
+
+    leibaLightbox.addEventListener('touchstart',(e)=>{
+      leibaTouchStartX = e.changedTouches[0].screenX;
+      leibaTouchStartY = e.changedTouches[0].screenY;
+    },{passive:true});
+
+    leibaLightbox.addEventListener('touchend',(e)=>{
+      const endX = e.changedTouches[0].screenX;
+      const endY = e.changedTouches[0].screenY;
+      const diffX = endX - leibaTouchStartX;
+      const diffY = endY - leibaTouchStartY;
+
+      if(Math.abs(diffX) > 55 && Math.abs(diffX) > Math.abs(diffY)){
+        if(diffX > 0) prevLeibaImage();
+        else nextLeibaImage();
+      }
+    },{passive:true});
   </script>
+
   <script src="site-tools.js"></script>
 </body>
 </html>
