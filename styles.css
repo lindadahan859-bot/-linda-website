@@ -930,8 +930,13 @@ li {
 
 /* DESKTOP MENU FIX */
 @media (min-width: 901px) {
-  .menu-toggle {
+  .menu-toggle,
+  .site-header .menu-toggle,
+  #menuToggle {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 
   .main-menu {
