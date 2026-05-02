@@ -221,6 +221,56 @@
       color: #fff;
     }
 
+    .nahalot-faq {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .nahalot-faq details {
+      background: #faf8f4;
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .nahalot-faq summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 18px 22px;
+      font-size: 19px;
+      font-weight: 800;
+      color: #111;
+      position: relative;
+    }
+
+    .nahalot-faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .nahalot-faq summary::after {
+      content: "+";
+      position: absolute;
+      left: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 28px;
+      font-weight: 400;
+      color: #9a642f;
+    }
+
+    .nahalot-faq details[open] summary::after {
+      content: "−";
+    }
+
+    .nahalot-faq .faq-answer {
+      padding: 0 22px 20px;
+      font-size: 18px;
+      line-height: 1.85;
+      color: #333;
+    }
+
     .nahalot-note {
       font-size: 14px !important;
       color: #666 !important;
@@ -274,6 +324,15 @@
 
       .nahalot-actions a {
         text-align: center;
+      }
+
+      .nahalot-faq summary {
+        font-size: 18px;
+        padding-left: 48px;
+      }
+
+      .nahalot-faq .faq-answer {
+        font-size: 17px;
       }
     }
   </style>
@@ -350,6 +409,69 @@
       <div class="nahalot-actions">
         <a href="https://www.gov.il/he/departments/israel_land_authority" target="_blank" rel="noopener">לקריאה באתר רמ״י</a>
         <a href="https://www.gov.il/he/departments/iplan" target="_blank" rel="noopener">לקריאה באתר מינהל התכנון</a>
+      </div>
+    </section>
+
+    <section class="nahalot-card">
+      <h2>שאלות ותשובות על נחלות ומשקים</h2>
+      <p>ריכזתי כאן שאלות שחוזרות כמעט בכל שיחה עם בעלי נחלות. התשובות הן כלליות בלבד, וכל נחלה דורשת בדיקה פרטנית לפי התב״ע, רמ״י, הוועדה והמצב הקיים בשטח.</p>
+
+      <div class="nahalot-faq">
+        <details>
+          <summary>האם אפשר לבנות בית שלישי בנחלה?</summary>
+          <div class="faq-answer">
+            האפשרות לבית שלישי תלויה בתב״ע החלה על הנחלה, בזכויות המאושרות, בדרישות הוועדה, במצב ההסדרה מול רמ״י ובמצב הבנייה הקיים בשטח. לא מתחילים מתשובה של “כן” או “לא”. קודם בודקים את המסמכים ואת המצב בפועל.
+          </div>
+        </details>
+
+        <details>
+          <summary>מה זה היוון בנחלה?</summary>
+          <div class="faq-answer">
+            היוון הוא תשלום שמטרתו להסדיר מראש זכויות חכירה ושימוש בקרקע לתקופה ארוכה. בנחלות, המשמעות של היוון משתנה לפי מצב הזכויות, החלטות רמ״י, התב״ע והפעולות שרוצים לבצע בנחלה.
+          </div>
+        </details>
+
+        <details>
+          <summary>מה ההבדל בין דמי חכירה לדמי רכישה?</summary>
+          <div class="faq-answer">
+            דמי חכירה קשורים לזכויות השימוש והחכירה בקרקע. דמי רכישה הם תשלום לרמ״י שבמקרים מסוימים נדרש לצורך רכישת זכויות נוספות או מימוש רחב יותר של הזכויות בחלקת המגורים. זה נושא שחייב בדיקה מול רמ״י ואנשי מקצוע, כי לא כל נחלה נמצאת באותו מצב.
+          </div>
+        </details>
+
+        <details>
+          <summary>מה זה פרצלציה בנחלה?</summary>
+          <div class="faq-answer">
+            פרצלציה היא חלוקה או הסדרה של חלקים בקרקע. בנחלה זה יכול להיות תהליך רגיש ומורכב, כי הוא נוגע גם לזכויות, גם לתב״ע, גם לרמ״י, גם לוועדה וגם למשפחה. לכן לא ניגשים לזה רק כשרטוט חלוקה, אלא כבדיקה תכנונית ומשפטית רחבה.
+          </div>
+        </details>
+
+        <details>
+          <summary>מה זה פל״ח?</summary>
+          <div class="faq-answer">
+            פל״ח הוא פעילות לא חקלאית בנחלה, למשל שימוש עסקי, מבנה שירות, קליניקה, אחסנה או פעילות אחרת שאינה חקלאות רגילה. לא כל שימוש מותר אוטומטית, ולעיתים נדרשת בדיקה או הסדרה מול הוועדה, רמ״י והרשויות.
+          </div>
+        </details>
+
+        <details>
+          <summary>למה צריך לפתוח תיק מידע?</summary>
+          <div class="faq-answer">
+            תיק מידע נותן תמונה ראשונית על זכויות, מגבלות, דרישות, קווי בניין, תנאים וגורמים מעורבים. בנחלות זה חשוב במיוחד, כי פעמים רבות פתיחת תיק מידע חושפת דברים שלא היו ידועים לבעלי הזכויות לפני תחילת התכנון.
+          </div>
+        </details>
+
+        <details>
+          <summary>האם כל מה שקיים בשטח נחשב מוסדר?</summary>
+          <div class="faq-answer">
+            לא. הרבה פעמים קיימים בשטח מבנים, שימושים או תוספות שנבנו לאורך השנים, אבל לא ברור אם הם מוסדרים תכנונית. לכן לפני כל תכנון חדש חשוב לבדוק את המצב הקיים ולא להניח שכל מה שנמצא בשטח מאושר.
+          </div>
+        </details>
+
+        <details>
+          <summary>האם את מחליפה עורך דין או שמאי?</summary>
+          <div class="faq-answer">
+            לא. הליווי שלי הוא תכנוני ואדריכלי. במקרים שבהם נדרש בירור משפטי, שמאי או רמ״י, אני יודעת להפנות את הלקוח להבין מה צריך לבדוק ועם אילו בעלי מקצוע נכון להתייעץ, כדי שהתכנון לא יעמוד באוויר.
+          </div>
+        </details>
       </div>
     </section>
 
