@@ -3,39 +3,470 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>מושבים, נחלות ומשקים | לינדה דהן</title>
-  <meta name="description" content="תכנון, עיצוב והסדרת חשיבה תכנונית במושבים, נחלות ומשקים. לפני שמתחילים לתכנן, עושים סדר בזכויות, שימושים, משפחה ומה שקורה באמת בשטח.">
+  <meta name="description" content="תכנון ועיצוב במושבים, נחלות ומשקים. לפני שמתחילים לתכנן, עושים סדר בזכויות, תיק מידע, תב״ע, רמ״י, היוון, פרצלציה, פל״ח ובית שלישי.">
   <link rel="canonical" href="https://www.lindaarch.com/moshavim-nahalot.html">
+
   <meta property="og:title" content="מושבים, נחלות ומשקים | לינדה דהן">
   <meta property="og:description" content="בנחלה לא מתכננים רק בית. עושים סדר בזכויות, במשפחה, בשימושים קיימים ובתכנון שמחזיק מציאות.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.lindaarch.com/moshavim-nahalot.html">
   <meta property="og:image" content="https://www.lindaarch.com/logo-white.png">
+
   <link rel="stylesheet" href="styles.css">
+
   <style>
-    body{font-family:'Heebo',sans-serif;background:#f7f4ef;color:#222;margin:0;direction:rtl}.nahalot-hero{position:relative;height:72vh;min-height:520px;overflow:hidden;background:#111;color:#fff}.nahalot-hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0;transition:opacity .35s ease}.nahalot-hero.video-ready video{opacity:1}.nahalot-hero:before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,#f7f4ef,#d8c7ad);z-index:0}.nahalot-hero.video-ready:before{opacity:0;transition:opacity .35s ease}.nahalot-hero:after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.52),rgba(0,0,0,.08));z-index:1}.nahalot-hero-content{position:absolute;z-index:2;right:50%;bottom:58px;transform:translateX(50%);width:min(1120px,90%)}.nahalot-kicker{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:8px 16px;margin-bottom:16px;font-weight:700}.nahalot-hero h1{font-size:clamp(38px,6vw,68px);line-height:1.08;margin:0 0 16px;color:#fff}.nahalot-hero p{max-width:820px;font-size:clamp(19px,2.2vw,25px);line-height:1.65;margin:0;color:#fff}.nahalot-wrap{max-width:1120px;margin:auto;padding:46px 20px 82px}.nahalot-card{background:#fff;border-radius:28px;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:34px 30px;margin-bottom:24px}.nahalot-card h2{font-size:34px;line-height:1.25;margin:0 0 16px;color:#111}.nahalot-card p{font-size:19px;line-height:1.9;color:#333;margin:0 0 16px}.nahalot-card strong{font-weight:800;color:#111}.nahalot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}.nahalot-grid.two{grid-template-columns:repeat(2,1fr)}.nahalot-mini{background:#faf8f4;border:1px solid rgba(0,0,0,.06);border-radius:22px;padding:22px}.nahalot-mini h3{font-size:21px;margin:0 0 10px}.nahalot-mini p{font-size:17px;line-height:1.75;margin:0}.nahalot-list{display:grid;gap:12px;margin-top:14px}.nahalot-list div{background:#faf8f4;border-radius:18px;padding:17px 20px;font-size:18px;line-height:1.7}.nahalot-highlight{background:#fff8ef;border:1px solid rgba(154,100,47,.18);border-radius:22px;padding:22px;margin:18px 0}.nahalot-highlight p{margin:0;font-size:21px;line-height:1.75;color:#111}.nahalot-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}.nahalot-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid #111;color:#111;background:#fff;text-decoration:none;font-weight:700}.nahalot-actions a.primary{background:#111;color:#fff}.nahalot-note{font-size:14px!important;color:#666!important;line-height:1.75!important}@media(max-width:850px){.nahalot-hero{height:58vh;min-height:430px}.nahalot-hero-content{bottom:34px}.nahalot-wrap{padding:34px 14px 58px}.nahalot-card{padding:24px 20px;border-radius:24px}.nahalot-card h2{font-size:29px}.nahalot-card p{font-size:17px;line-height:1.85}.nahalot-grid,.nahalot-grid.two{grid-template-columns:1fr}.nahalot-highlight p{font-size:18px}.nahalot-actions{flex-direction:column}.nahalot-actions a{text-align:center}}
+    body {
+      font-family: "Heebo", Arial, sans-serif;
+      background: #f7f4ef;
+      color: #222;
+      margin: 0;
+      direction: rtl;
+    }
+
+    .nahalot-hero {
+      position: relative;
+      height: 72vh;
+      min-height: 520px;
+      overflow: hidden;
+      background: #111;
+      color: #fff;
+    }
+
+    .nahalot-hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .nahalot-hero.video-ready video {
+      opacity: 1;
+    }
+
+    .nahalot-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, #f7f4ef, #d8c7ad);
+      z-index: 0;
+    }
+
+    .nahalot-hero.video-ready::before {
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .nahalot-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.10));
+      z-index: 1;
+    }
+
+    .nahalot-hero-content {
+      position: absolute;
+      z-index: 2;
+      right: 50%;
+      bottom: 58px;
+      transform: translateX(50%);
+      width: min(1120px, 90%);
+    }
+
+    .nahalot-kicker {
+      display: inline-block;
+      background: rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 999px;
+      padding: 8px 16px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .nahalot-hero h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.08;
+      margin: 0 0 16px;
+      color: #fff;
+    }
+
+    .nahalot-hero p {
+      max-width: 840px;
+      font-size: clamp(19px, 2.2vw, 25px);
+      line-height: 1.65;
+      margin: 0;
+      color: #fff;
+    }
+
+    .nahalot-wrap {
+      max-width: 1120px;
+      margin: auto;
+      padding: 46px 20px 82px;
+    }
+
+    .nahalot-card {
+      background: #fff;
+      border-radius: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      padding: 34px 30px;
+      margin-bottom: 24px;
+    }
+
+    .nahalot-card h2 {
+      font-size: 34px;
+      line-height: 1.25;
+      margin: 0 0 16px;
+      color: #111;
+    }
+
+    .nahalot-card p {
+      font-size: 19px;
+      line-height: 1.9;
+      color: #333;
+      margin: 0 0 16px;
+    }
+
+    .nahalot-card strong {
+      font-weight: 800;
+      color: #111;
+    }
+
+    .nahalot-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .nahalot-list div {
+      background: #faf8f4;
+      border-radius: 18px;
+      padding: 17px 20px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .nahalot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .nahalot-grid.two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nahalot-mini {
+      background: #faf8f4;
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .nahalot-mini h3 {
+      font-size: 21px;
+      margin: 0 0 10px;
+    }
+
+    .nahalot-mini p {
+      font-size: 17px;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .nahalot-highlight {
+      background: #fff8ef;
+      border: 1px solid rgba(154,100,47,.18);
+      border-radius: 22px;
+      padding: 22px;
+      margin: 18px 0;
+    }
+
+    .nahalot-highlight p {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.75;
+      color: #111;
+    }
+
+    .nahalot-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .nahalot-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid #111;
+      color: #111;
+      background: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .nahalot-actions a.primary {
+      background: #111;
+      color: #fff;
+    }
+
+    .nahalot-note {
+      font-size: 14px !important;
+      color: #666 !important;
+      line-height: 1.75 !important;
+    }
+
+    @media (max-width: 850px) {
+      .nahalot-hero {
+        height: 58vh;
+        min-height: 430px;
+      }
+
+      .nahalot-hero-content {
+        bottom: 34px;
+      }
+
+      .nahalot-wrap {
+        padding: 34px 14px 58px;
+      }
+
+      .nahalot-card {
+        padding: 24px 20px;
+        border-radius: 24px;
+      }
+
+      .nahalot-card h2 {
+        font-size: 29px;
+      }
+
+      .nahalot-card p {
+        font-size: 17px;
+        line-height: 1.85;
+      }
+
+      .nahalot-list div {
+        font-size: 17px;
+      }
+
+      .nahalot-grid,
+      .nahalot-grid.two {
+        grid-template-columns: 1fr;
+      }
+
+      .nahalot-highlight p {
+        font-size: 18px;
+      }
+
+      .nahalot-actions {
+        flex-direction: column;
+      }
+
+      .nahalot-actions a {
+        text-align: center;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div id="top"></div>
   <div id="site-header"></div>
-  <section class="nahalot-hero" id="nahalotHero"><video id="nahalotHeroVideo" autoplay muted loop playsinline preload="auto"><source src="moshavim-nahalot-hero.mp4" type="video/mp4"><source src="moshavim-nahalot-hero.mov" type="video/quicktime"></video><div class="nahalot-hero-content"><span class="nahalot-kicker">מושבים • נחלות • משקים</span><h1>לפני שמתכננים בנחלה, עושים סדר</h1><p>בנחלה לא מתכננים רק בית. מתכננים משפחה, זכויות, שימושים קיימים, עתיד ומה באמת אפשר לבצע בשטח.</p></div></section>
+
+  <section class="nahalot-hero" id="nahalotHero">
+    <video id="nahalotHeroVideo" autoplay muted loop playsinline preload="auto">
+      <source src="moshavim-nahalot-hero.mp4" type="video/mp4">
+      <source src="moshavim-nahalot-hero.mov" type="video/quicktime">
+    </video>
+
+    <div class="nahalot-hero-content">
+      <span class="nahalot-kicker">מושבים • נחלות • משקים</span>
+      <h1>לפני שמתכננים בנחלה, עושים סדר</h1>
+      <p>בנחלה לא מתכננים רק בית. מתכננים משפחה, זכויות, שימושים קיימים, תב״ע, רמ״י, ועדה ומה באמת אפשר לבצע בשטח.</p>
+    </div>
+  </section>
+
   <main class="nahalot-wrap">
-    <section class="nahalot-card"><h2>זה לא עוד בית פרטי</h2><p>בנחלה יש שכבות שלא תמיד רואים במבט ראשון: מבנים קיימים, שימושים שהתפתחו לאורך השנים, זכויות, בני משפחה, בני זוג, יורשים, מגבלות תכנון והחלטות שיכולות להשפיע על שנים קדימה.</p><p>לכן לפני שקופצים לתוכנית יפה, צריך לעצור רגע ולעשות סדר. אחרת, התכנון עלול להיראות מצוין על הנייר ולהיתקע מול המציאות.</p><div class="nahalot-highlight"><p><strong>בנחלה, הטעות הכי יקרה היא להתחיל לתכנן לפני שמבינים את התמונה.</strong></p></div></section>
-    <section class="nahalot-card"><h2>מה חשוב לבדוק לפני תחילת תכנון?</h2><div class="nahalot-list"><div><strong>מצב הזכויות:</strong> מי בעלי הזכויות, איך הנחלה רשומה ומה צריך לברר מול הגורמים הרלוונטיים.</div><div><strong>מצב הבנייה הקיימת:</strong> מה קיים בשטח, מה מוסדר ומה דורש בדיקה.</div><div><strong>המשפחה:</strong> האם יש הסכמות, ילדים, בני זוג או יורשים שצריך לקחת בחשבון כבר בתחילת הדרך.</div><div><strong>שימושים קיימים:</strong> מחסנים, יחידות, מבני עזר, עסקים או שימושים שהתפתחו עם השנים ולא תמיד הוסדרו.</div><div><strong>מידע תכנוני מול הוועדה:</strong> פתיחת בקשה לתיק מידע, בדיקת זכויות, מגבלות, קווי בניין ודרישות ראשוניות של הוועדה. פתיחת תיק מידע כרוכה בתשלום אגרה לרשות, לפי הנהלים והדרישות של אותה ועדה.</div><div><strong>העתיד:</strong> לא רק מה רוצים לבנות עכשיו, אלא איך המשק יכול לעבוד נכון גם בעוד עשר ועשרים שנה.</div></div><div class="nahalot-highlight"><p><strong>כמעט בכל נחלה שאני נכנסת אליה, פתיחת תיק מידע מגלה דברים שלא ידעו עליהם בכלל.</strong></p></div></section>
-    <section class="nahalot-card"><h2>הנקודה המשפחתית</h2><p>במשקים ונחלות התכנון כמעט תמיד נוגע גם במשפחה. העברת זכויות, בן ממשיך, בני זוג, הסכמים פנימיים, רצון ההורים, רצון הילדים ומה קורה ביום שאחרי - כל אלה יכולים להשפיע על הדרך שבה מתכננים.</p><p>אני לא מחליפה עורך דין, שמאי או גורם מוסמך. אני כן יודעת לעזור ללקוחות להבין מה צריך לברר לפני שמתכננים, כדי שהתכנון לא יעמוד לבד בלי בסיס נכון.</p></section>
-    <section class="nahalot-card"><h2>איך אני ניגשת לתהליך כזה?</h2><div class="nahalot-grid"><div class="nahalot-mini"><h3>1. קודם מבינים</h3><p>לא מתחילים מתמונה יפה. מתחילים מהשטח, מהצרכים, מהמשפחה, מהבדיקות מול הוועדה ומהמגבלות.</p></div><div class="nahalot-mini"><h3>2. עושים סדר</h3><p>מפרידים בין רצון, אפשרות, מגבלה, אגרות ותשלומים חיצוניים, וסיכון. זה שלב שחוסך הרבה בלגן בהמשך.</p></div><div class="nahalot-mini"><h3>3. מתכננים נכון</h3><p>רק אחרי שהבסיס ברור, אפשר לתכנן בית, חצר, מבנים, תנועה, אירוח וחיים אמיתיים.</p></div></div></section>
-    <section class="nahalot-card"><h2>איך נראה תהליך אמיתי בנחלה?</h2><p>ברוב הנחלות שאני מגיעה אליהן, מתחילים מתכנון - ורק באמצע מבינים שיש דברים שלא בדקו בכלל.</p><p>לכן התהליך מתחיל אחרת. לא מהבית, אלא מהנחלה כולה.</p><div class="nahalot-grid two"><div class="nahalot-mini"><h3>שלב ראשון - בדיקה והבנה</h3><p>בדיקה של זכויות, מצב קיים, מגבלות, שימושים בשטח, גישות, חניה ומה באמת אפשר לבצע.</p></div><div class="nahalot-mini"><h3>שלב שני - תיק מידע ותכנון אב</h3><p>פתיחת בקשה לתיק מידע מול הוועדה, הבנת הדרישות, מיקום הבתים, חלוקת השטח, חצרות, גישות וחשיבה לטווח ארוך למשפחה כולה.</p></div><div class="nahalot-mini"><h3>שלב שלישי - תכנון לכל בית</h3><p>רק אחרי שהתמונה ברורה, מתחילים לתכנן את הבית עצמו בהתאם לאנשים, לאורח החיים ולצרכים האמיתיים.</p></div><div class="nahalot-mini"><h3>שלב רביעי - רישוי ותיאומים</h3><p>עבודה מול הוועדה, רשויות, מודד, מהנדס, יועצים, תכניות והיתרים כדי להפוך את התכנון למציאות.</p></div></div></section>
-    <section class="nahalot-card"><h2>נושאים שמטרידים כמעט כל בעל נחלה</h2><p>כמעט בכל פגישה עולים אותם נושאים. לא תמיד יודעים איך לגשת אליהם, אבל הם משפיעים על כל התכנון.</p><div class="nahalot-list"><div><strong>היוון ודמי רכישה:</strong> שאלות על תשלומים לרמ״י, משמעות ההיוון ומה נכון לעשות בכל מקרה.</div><div><strong>פרצלציה וחלוקת השטח:</strong> האם ואיך ניתן לחלק את הנחלה, ומה המשמעות התכנונית והמשפחתית של זה.</div><div><strong>בית שלישי בנחלה:</strong> מה באמת התב״ע מאפשרת היום, ומה התנאים לבנייה של יחידות נוספות.</div><div><strong>פל״ח ושימושים נוספים:</strong> אפשרויות לשימושים חקלאיים ולא חקלאיים, ומה מותר ומה דורש בדיקה.</div><div><strong>מה באמת אפשר לבנות:</strong> לא רק מה רוצים, אלא מה מותר בפועל לפי התכנון, הוועדה והזכויות.</div></div><div class="nahalot-highlight"><p><strong>כל אחד מהנושאים האלה יכול להשפיע על התכנון כולו - ולכן חשוב להבין אותם לפני שמתחילים לבנות.</strong></p></div></section>
-    <section class="nahalot-card"><h2>קנייה של נחלה - נטו או ברוטו?</h2><p>הרבה אנשים שמתחילים לבדוק רכישת נחלה נתקלים במושגים כמו <strong>עסקת נטו</strong> ו־<strong>עסקת ברוטו</strong> - וזה מבלבל.</p><div class="nahalot-list"><div><strong>עסקת ברוטו:</strong> המחיר שמפורסם כולל בתוכו את העלויות הנלוות, והמוכר הוא זה שמתמודד עם התשלומים.</div><div><strong>עסקת נטו:</strong> המחיר שמפורסם הוא הסכום שהמוכר רוצה לקבל, וכל העלויות הנוספות חלות על הקונה.</div></div><div class="nahalot-highlight"><p><strong>אותו נכס יכול להופיע פעם כנטו ופעם כברוטו - ולכן חשוב להבין מה באמת כולל המחיר לפני שמתקדמים.</strong></p></div><p>מעבר למחיר עצמו, יש משמעות רחבה יותר: מי נושא בעלויות, איך זה משפיע על התקציב הכולל, ואילו בדיקות צריך לעשות לפני קבלת החלטה.</p></section>
-    <section class="nahalot-card"><h2>3 טעויות שבעלי נחלות עושים לפני תכנון</h2><div class="nahalot-list"><div><strong>מתחילים מהבית במקום מהמשק:</strong> מתכננים בית אחד בלי להבין איך כל הנחלה תעבוד בעתיד.</div><div><strong>לא בודקים את המצב הקיים:</strong> מניחים שכל מה שקיים בשטח מוסדר, ואז מגלים שהמציאות מורכבת יותר.</div><div><strong>לא פותחים בדיקות מול הוועדה בזמן:</strong> מתחילים להתקדם בלי תיק מידע, בלי דרישות ראשוניות ובלי להבין אילו אגרות, יועצים או מסמכים יידרשו בהמשך.</div><div><strong>לא מדברים על המשפחה בזמן:</strong> דוחים שיחות על זכויות, בני זוג, ילדים וחלוקה - ואז התכנון הופך רגיש יותר.</div></div></section>
-    <section class="nahalot-card"><h2>מה כולל ליווי מקצועי בנחלה?</h2><div class="nahalot-grid two"><div class="nahalot-mini"><h3>בדיקה תכנונית מול הוועדה</h3><p>פתיחת בקשה לתיק מידע במידת הצורך, הבנת זכויות, מגבלות, קווי בניין, דרישות הוועדה והמשמעות של המבנים הקיימים.</p></div><div class="nahalot-mini"><h3>חשיבה משפחתית</h3><p>מיפוי צרכי המשפחה, פרטיות בין יחידות, גמישות עתידית וחלוקה נוחה לשימוש יומיומי.</p></div><div class="nahalot-mini"><h3>תכנון אדריכלי</h3><p>חלופות בינוי, העמדת בתים, חצרות, תנועה, חניה, פתחים, אור ויכולת הרחבה עתידית.</p></div><div class="nahalot-mini"><h3>המשך לרישוי ועיצוב</h3><p>הכנה לתהליך היתר, תיאום בעלי מקצוע ובהמשך גם תכנון פנים מדויק לכל בית.</p></div></div></section>
-    <section class="nahalot-card"><h2>מה חשוב לדעת על תשלומים חיצוניים?</h2><p>מעבר לשכר הטרחה עבור התכנון והליווי, בתהליך כזה יכולים להיות תשלומים לגורמים חיצוניים: אגרה לפתיחת תיק מידע, אגרות רישוי, מודד, מהנדס, יועצים, תשלומים לרשויות או לרמ״י ככל שיידרשו, ושירותים משפטיים או שמאיים במידת הצורך.</p><p>לכן כבר בתחילת התהליך חשוב להבין שלא כל העלויות הן חלק מעבודת התכנון עצמה. חלקן שייכות לרשויות, לוועדה או לבעלי מקצוע חיצוניים.</p></section>
-    <section class="nahalot-card"><h2>למי העמוד הזה מתאים?</h2><p>לבעלי נחלות, משפחות במושבים, הורים שרוצים להסדיר זכויות בחייהם, ילדים שנכנסים לתהליך, משפחות עם מבנים קיימים בשטח, או מי שרוצה להתחיל תכנון בלי להיתקע בהמשך.</p><p>המטרה היא לא להפחיד. המטרה היא לעשות סדר. כי בנחלה, מי שמתחילה נכון - חוסכת לעצמה הרבה כאב ראש.</p><div class="nahalot-actions"><a class="primary" href="https://wa.me/972507555667" target="_blank" rel="noopener">דברו איתי ב-WhatsApp</a><a href="process.html#contact">מילוי טופס</a></div></section>
-    <section class="nahalot-card"><p class="nahalot-note">המידע בעמוד זה כללי בלבד ואינו מהווה ייעוץ משפטי, שמאי, תכנוני מחייב או תחליף לבדיקה מול רמ״י, הוועדה המקומית, המועצה, עורך דין או כל גורם מוסמך אחר. אגרות ותשלומים חיצוניים משתנים בהתאם לרשות, לוועדה, לסוג הבקשה ולדרישות המקצועיות בתיק.</p></section>
+
+    <section class="nahalot-card">
+      <h2>זה לא עוד בית פרטי</h2>
+      <p>בנחלה יש שכבות שלא תמיד רואים במבט ראשון: מבנים קיימים, שימושים שהתפתחו לאורך השנים, זכויות, בני משפחה, בני זוג, יורשים, מגבלות תכנון והחלטות שיכולות להשפיע על שנים קדימה.</p>
+      <p>לכן לפני שקופצים לתוכנית יפה, צריך לעצור רגע ולעשות סדר. אחרת, התכנון עלול להיראות מצוין על הנייר ולהיתקע מול המציאות.</p>
+
+      <div class="nahalot-highlight">
+        <p><strong>בנחלה, הטעות הכי יקרה היא להתחיל לתכנן לפני שמבינים את התמונה.</strong></p>
+      </div>
+    </section>
+
+    <section class="nahalot-card">
+      <h2>מה חשוב לבדוק לפני תחילת תכנון?</h2>
+
+      <div class="nahalot-list">
+        <div><strong>מצב הזכויות:</strong> מי בעלי הזכויות, איך הנחלה רשומה ומה צריך לברר מול הגורמים הרלוונטיים.</div>
+        <div><strong>מצב הבנייה הקיימת:</strong> מה קיים בשטח, מה מוסדר ומה דורש בדיקה לפני שמתקדמים.</div>
+        <div><strong>מידע תכנוני מול הוועדה:</strong> פתיחת בקשה לתיק מידע, בדיקת זכויות, מגבלות, קווי בניין ודרישות ראשוניות. פתיחת תיק מידע כרוכה בתשלום אגרה לרשות.</div>
+        <div><strong>תב״ע וזכויות בנייה:</strong> מה באמת מאפשרת התוכנית החלה על הנחלה, ומה דורש בדיקה נוספת.</div>
+        <div><strong>המשפחה:</strong> הסכמות, ילדים, בני זוג, יורשים וחשיבה קדימה לפני שמקבעים תכנון.</div>
+        <div><strong>השימושים הקיימים:</strong> מחסנים, מבני עזר, יחידות, פל״ח או שימושים שהתפתחו עם השנים ולא תמיד הוסדרו.</div>
+      </div>
+
+      <div class="nahalot-highlight">
+        <p><strong>כמעט בכל נחלה שאני נכנסת אליה, פתיחת תיק מידע מגלה דברים שלא ידעו עליהם בכלל.</strong></p>
+      </div>
+    </section>
+
+    <section class="nahalot-card">
+      <h2>היוון, פרצלציה, בית שלישי ופל״ח</h2>
+      <p>אלה נושאים שמטרידים כמעט כל בעל נחלה, ובצדק. הם יכולים לשנות את התכנון, את התקציב, את חלוקת השטח ואת ההחלטות בתוך המשפחה.</p>
+
+      <div class="nahalot-list">
+        <div><strong>היוון ודמי רכישה:</strong> במשקים רבים שלא נרכשו או הוסדרו בשנים האחרונות, נדרש לבדוק מול רמ״י מה מצב הזכויות ומה המשמעות של היוון, דמי רכישה או תשלומים נלווים.</div>
+        <div><strong>פרצלציה וחלוקת השטח:</strong> לפני חלוקה או הפרדה של חלקים בנחלה, צריך לבדוק את מצב הזכויות, התב״ע, רמ״י, הוועדה וההשלכות המשפחתיות.</div>
+        <div><strong>בית שלישי בנחלה:</strong> האפשרות לבית נוסף תלויה בתב״ע, בזכויות המאושרות, בהסדרת המשק ובדרישות הגורמים הרלוונטיים. לא מניחים מראש שמותר - בודקים.</div>
+        <div><strong>פל״ח ושימושים נוספים:</strong> שימושים לא חקלאיים, מבני עזר, פעילות עסקית או שימושים שהתפתחו בשטח דורשים בדיקה והסדרה לפי המצב התכנוני והנחיות הרשויות.</div>
+        <div><strong>הסדרת המשק:</strong> במקרים רבים, לפני פרצלציה, בית שלישי או מימוש זכויות נוספות, צריך לבדוק שימושים קיימים, תשלומים, רמ״י, ועדה ומסמכים מקצועיים.</div>
+      </div>
+
+      <div class="nahalot-highlight">
+        <p><strong>ברוב הנחלות, מה שאנשים חושבים שמותר לבנות - לא בהכרח תואם את מה שמותר בפועל.</strong></p>
+      </div>
+    </section>
+
+    <section class="nahalot-card">
+      <h2>הנקודה המשפחתית</h2>
+      <p>במשקים ונחלות התכנון כמעט תמיד נוגע גם במשפחה. העברת זכויות, בן ממשיך, בני זוג, הסכמים פנימיים, רצון ההורים, רצון הילדים ומה קורה ביום שאחרי - כל אלה יכולים להשפיע על הדרך שבה מתכננים.</p>
+      <p>אני לא מחליפה עורך דין, שמאי או גורם מוסמך. אני כן יודעת לעזור ללקוחות להבין מה צריך לברר לפני שמתכננים, כדי שהתכנון לא יעמוד לבד בלי בסיס נכון.</p>
+    </section>
+
+    <section class="nahalot-card">
+      <h2>איך נראה תהליך אמיתי בנחלה?</h2>
+      <p>ברוב הנחלות שאני מגיעה אליהן, מתחילים מתכנון - ורק באמצע מבינים שיש דברים שלא בדקו בכלל. לכן התהליך מתחיל אחרת: לא מהבית, אלא מהנחלה כולה.</p>
+
+      <div class="nahalot-grid two">
+        <div class="nahalot-mini">
+          <h3>1. בדיקה והבנה</h3>
+          <p>זכויות, מצב קיים, מגבלות, שימושים בשטח, גישות, חניה ומה באמת אפשר לבצע.</p>
+        </div>
+
+        <div class="nahalot-mini">
+          <h3>2. תיק מידע ותכנון אב</h3>
+          <p>פתיחת תיק מידע מול הוועדה, הבנת הדרישות, מיקום בתים, חלוקת השטח וחשיבה לטווח ארוך.</p>
+        </div>
+
+        <div class="nahalot-mini">
+          <h3>3. תכנון לכל בית</h3>
+          <p>רק אחרי שהתמונה ברורה, מתחילים לתכנן את הבית עצמו לפי האנשים, אורח החיים והצרכים.</p>
+        </div>
+
+        <div class="nahalot-mini">
+          <h3>4. רישוי ותיאומים</h3>
+          <p>עבודה מול הוועדה, רשויות, מודד, מהנדס, יועצים ותוכניות עד להפיכת התכנון למציאות.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="nahalot-card">
+      <h2>3 טעויות שבעלי נחלות עושים לפני תכנון</h2>
+
+      <div class="nahalot-list">
+        <div><strong>מתחילים מהבית במקום מהמשק:</strong> מתכננים בית אחד בלי להבין איך כל הנחלה תעבוד בעתיד.</div>
+        <div><strong>לא בודקים את המצב הקיים:</strong> מניחים שכל מה שקיים בשטח מוסדר, ואז מגלים שהמציאות מורכבת יותר.</div>
+        <div><strong>לא פותחים בדיקות מול הוועדה בזמן:</strong> מתקדמים בלי תיק מידע, בלי דרישות ראשוניות ובלי להבין אילו אגרות, יועצים או מסמכים יידרשו.</div>
+        <div><strong>לא בודקים היוון, פרצלציה ופל״ח:</strong> אלה נושאים שיכולים לשנות את כל הכדאיות ואת כל התכנון.</div>
+        <div><strong>לא מדברים על המשפחה בזמן:</strong> דוחים שיחות על זכויות, בני זוג, ילדים וחלוקה - ואז התכנון הופך רגיש יותר.</div>
+      </div>
+    </section>
+
+    <section class="nahalot-card">
+      <h2>מה כולל ליווי מקצועי בנחלה?</h2>
+
+      <div class="nahalot-grid two">
+        <div class="nahalot-mini">
+          <h3>בדיקה מול הוועדה</h3>
+          <p>תיק מידע, זכויות, מגבלות, קווי בניין, דרישות הוועדה והמשמעות של המבנים הקיימים.</p>
+        </div>
+
+        <div class="nahalot-mini">
+          <h3>בדיקות מול רמ״י</h3>
+          <p>היוון, דמי רכישה, הסדרת שימושים, פרצלציה, פל״ח או זכויות נוספות ככל שהן רלוונטיות לנחלה.</p>
+        </div>
+
+        <div class="nahalot-mini">
+          <h3>חשיבה משפחתית</h3>
+          <p>פרטיות בין יחידות, גמישות עתידית, חצרות, תנועה וחלוקה נוחה לשימוש יומיומי.</p>
+        </div>
+
+        <div class="nahalot-mini">
+          <h3>תכנון אדריכלי</h3>
+          <p>חלופות בינוי, העמדת בתים, חניה, פתחים, אור, תנועה ויכולת הרחבה עתידית.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="nahalot-card">
+      <h2>מה חשוב לדעת על תשלומים חיצוניים?</h2>
+      <p>מעבר לשכר הטרחה עבור התכנון והליווי, בתהליך כזה יכולים להיות תשלומים לגורמים חיצוניים: אגרה לפתיחת תיק מידע, אגרות רישוי, מודד, מהנדס, יועצים, תשלומים לרשויות או לרמ״י ככל שיידרשו, ושירותים משפטיים או שמאיים במידת הצורך.</p>
+      <p>לכן כבר בתחילת התהליך חשוב להבין שלא כל העלויות הן חלק מעבודת התכנון עצמה. חלקן שייכות לרשויות, לוועדה או לבעלי מקצוע חיצוניים.</p>
+    </section>
+
+    <section class="nahalot-card">
+      <h2>למי העמוד הזה מתאים?</h2>
+      <p>לבעלי נחלות, משפחות במושבים, הורים שרוצים להסדיר זכויות בחייהם, ילדים שנכנסים לתהליך, משפחות עם מבנים קיימים בשטח, או מי שרוצה להתחיל תכנון בלי להיתקע בהמשך.</p>
+      <p>המטרה היא לא להפחיד. המטרה היא לעשות סדר. כי בנחלה, מי שמתחילה נכון - חוסכת לעצמה הרבה כאב ראש.</p>
+
+      <div class="nahalot-actions">
+        <a class="primary" href="https://wa.me/972507555667" target="_blank" rel="noopener">דברו איתי ב-WhatsApp</a>
+        <a href="process.html#contact">מילוי טופס</a>
+      </div>
+    </section>
+
+    <section class="nahalot-card">
+      <p class="nahalot-note">המידע בעמוד זה כללי בלבד ואינו מהווה ייעוץ משפטי, שמאי, תכנוני מחייב או תחליף לבדיקה מול רמ״י, הוועדה המקומית, המועצה, עורך דין או כל גורם מוסמך אחר. אגרות ותשלומים חיצוניים משתנים בהתאם לרשות, לוועדה, לסוג הבקשה ולדרישות המקצועיות בתיק.</p>
+    </section>
+
   </main>
+
   <div id="site-footer"></div>
-  <script>async function loadIncludes(){try{document.getElementById('site-header').innerHTML=await (await fetch('header.html')).text();document.getElementById('site-footer').innerHTML=await (await fetch('footer.html')).text();}catch(e){console.error(e)}}loadIncludes();(function(){var hero=document.getElementById('nahalotHero');var video=document.getElementById('nahalotHeroVideo');if(!hero||!video)return;function ready(){hero.classList.add('video-ready');}video.addEventListener('loadeddata',ready);video.addEventListener('canplay',ready);video.play().then(ready).catch(function(){ready();});})();</script>
+
+  <script>
+    async function loadIncludes() {
+      try {
+        document.getElementById("site-header").innerHTML = await (await fetch("header.html")).text();
+        document.getElementById("site-footer").innerHTML = await (await fetch("footer.html")).text();
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    loadIncludes();
+
+    (function () {
+      var hero = document.getElementById("nahalotHero");
+      var video = document.getElementById("nahalotHeroVideo");
+      if (!hero || !video) return;
+
+      function ready() {
+        hero.classList.add("video-ready");
+      }
+
+      video.addEventListener("loadeddata", ready);
+      video.addEventListener("canplay", ready);
+      video.play().then(ready).catch(function () {
+        ready();
+      });
+    })();
+  </script>
+
   <script src="site-tools.js"></script>
 </body>
 </html>
