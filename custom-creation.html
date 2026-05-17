@@ -15,11 +15,12 @@
   <style>
     :root{--cream:#f6f0e7;--ink:#1f1b17;--gold:#b98b55;--soft:#fffaf3;--line:rgba(31,27,23,.12)}
     body{margin:0;direction:rtl;font-family:Arial,sans-serif;background:var(--cream);color:var(--ink)}
-    .creation-hero{position:relative;min-height:76vh;background:linear-gradient(to top,rgba(0,0,0,.68),rgba(0,0,0,.18)),url('custom-creation-hero.jpg') center/cover no-repeat;display:flex;align-items:flex-end;color:#fff}
-    .creation-hero-inner{width:min(1120px,90%);margin:auto;padding:0 0 78px}
+    .creation-hero{position:relative;min-height:72vh;background:linear-gradient(to top,rgba(0,0,0,.58),rgba(0,0,0,.14)),url('custom-creation-hero.jpg') center/cover no-repeat;display:flex;align-items:flex-end;color:#fff}
+    .creation-hero-inner{width:min(1120px,90%);margin:auto;padding:0 0 72px}
     .creation-kicker{display:inline-block;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.16);border-radius:999px;padding:9px 17px;margin-bottom:18px;font-weight:700;letter-spacing:.2px}
-    .creation-hero h1{font-size:clamp(38px,6vw,72px);line-height:1.08;margin:0 0 18px;color:#fff;max-width:980px}
-    .creation-hero p{font-size:clamp(18px,2.2vw,25px);line-height:1.75;max-width:900px;margin:0;color:#fff}
+    .creation-hero h1{font-size:clamp(38px,6vw,68px);line-height:1.08;margin:0 0 18px;color:#fff;max-width:980px}
+    .creation-hero p{font-size:clamp(18px,2.2vw,24px);line-height:1.75;max-width:900px;margin:0;color:#fff}
+    .creation-mobile-copy{display:none}
     .creation-wrap{max-width:1120px;margin:auto;padding:54px 20px 90px}
     .creation-intro{background:#fff;border-radius:30px;padding:38px 34px;box-shadow:0 12px 32px rgba(0,0,0,.08);margin-bottom:28px}
     .creation-intro h2,.creation-section h2{font-size:clamp(28px,4vw,44px);line-height:1.25;margin:0 0 18px;color:#111}
@@ -43,7 +44,23 @@
     .creation-note{background:#211b16;color:#fff;border-radius:30px;padding:34px 30px;margin-top:30px}
     .creation-note h2{color:#fff;margin:0 0 14px;font-size:34px}
     .creation-note p{color:#fff;font-size:18px;line-height:1.85;margin:0 0 14px}
-    @media(max-width:850px){.creation-hero{min-height:62vh}.creation-hero-inner{padding-bottom:42px}.creation-wrap{padding:34px 14px 60px}.creation-intro,.creation-section,.creation-note{padding:24px 20px;border-radius:24px}.creation-grid,.creation-split{grid-template-columns:1fr}.creation-actions{flex-direction:column}.creation-actions a{text-align:center}.creation-hero h1{font-size:38px}}
+    @media(max-width:850px){
+      .creation-hero{min-height:54vh;background-position:center top;align-items:flex-end}
+      .creation-hero-inner{width:88%;padding-bottom:32px}
+      .creation-kicker{font-size:14px;padding:7px 12px;margin-bottom:12px;background:rgba(255,255,255,.12)}
+      .creation-hero h1{font-size:34px;line-height:1.16;margin-bottom:0;max-width:360px}
+      .creation-hero p{display:none}
+      .creation-mobile-copy{display:block;background:var(--cream);padding:24px 14px 0}
+      .creation-mobile-copy .box{background:#fff;border-radius:24px;padding:24px 20px;box-shadow:0 8px 22px rgba(0,0,0,.08)}
+      .creation-mobile-copy p{font-size:18px;line-height:1.85;margin:0;color:#2b241e}
+      .creation-wrap{padding:24px 14px 60px}
+      .creation-intro,.creation-section,.creation-note{padding:24px 20px;border-radius:24px}
+      .creation-intro h2,.creation-section h2{font-size:30px}
+      .creation-intro p,.creation-section p{font-size:17px;line-height:1.85}
+      .creation-grid,.creation-split{grid-template-columns:1fr}
+      .creation-actions{flex-direction:column}
+      .creation-actions a{text-align:center}
+    }
   </style>
 </head>
 <body>
@@ -54,6 +71,12 @@
     <div class="creation-hero-inner">
       <span class="creation-kicker">יצירה בהתאמה אישית • ישן וחדש • חומר וצבע</span>
       <h1>פריטים עם אופי, שנוצרים במיוחד עבור החלל</h1>
+      <p>לפעמים דווקא פרט אחד קטן משנה את כל התחושה: צבע חדש לשידה, שולחן שנוצר במיוחד למשרד, קיר פסיפס, מנורה, שעון או אלמנט חומרי שמכניס לחלל סיפור אישי.</p>
+    </div>
+  </section>
+
+  <section class="creation-mobile-copy">
+    <div class="box">
       <p>לפעמים דווקא פרט אחד קטן משנה את כל התחושה: צבע חדש לשידה, שולחן שנוצר במיוחד למשרד, קיר פסיפס, מנורה, שעון או אלמנט חומרי שמכניס לחלל סיפור אישי.</p>
     </div>
   </section>
