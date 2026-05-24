@@ -22,24 +22,29 @@
     .leiba-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
     .leiba-tab{padding:10px 16px;border-radius:999px;background:#faf8f4;border:1px solid rgba(0,0,0,.08);font-weight:600;}
     .leiba-tab.active{background:#9a642f;color:#fff;border-color:#9a642f;}
+
     .leiba-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px;}
     .leiba-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 8px 22px rgba(0,0,0,.08);cursor:pointer;transition:.25s ease;background:#eee;}
     .leiba-gallery img:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.14);}
     .leiba-gallery img.wide{grid-column:span 2;aspect-ratio:16/9;}
     .leiba-gallery img.tall{aspect-ratio:3/4;}
+
     .leiba-before-after{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0 8px;align-items:start;}
     .leiba-ba-item{position:relative;background:#faf8f4;border-radius:24px;padding:12px;box-shadow:0 8px 22px rgba(0,0,0,.07);}
     .leiba-ba-item img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;display:block;cursor:pointer;}
     .leiba-ba-item .label{position:absolute;top:22px;right:22px;background:rgba(0,0,0,.68);color:#fff;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;}
     .leiba-before-after.vertical .leiba-ba-item img{aspect-ratio:3/4;}
+
     .leiba-points{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;}
     .leiba-point{background:#faf8f4;border:1px solid rgba(0,0,0,.06);border-radius:22px;padding:22px;}
     .leiba-point h3{font-size:21px;margin:0 0 10px;color:#111;}
     .leiba-point p{font-size:17px;line-height:1.75;margin:0;}
+
     .leiba-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;}
     .leiba-btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid #111;background:#fff;color:#111;text-decoration:none;font-weight:600;transition:.25s ease;}
     .leiba-btn.primary{background:#9a642f;border-color:#9a642f;color:#fff;}
     .leiba-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.12);}
+
     .leiba-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:999999;padding:22px;}
     .leiba-lightbox.active{display:flex;}
     .leiba-lightbox img{max-width:min(92vw,1200px);max-height:86vh;object-fit:contain;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.35);}
@@ -61,6 +66,7 @@
       .leiba-card p{font-size:17px;line-height:1.85}
       .leiba-gallery,.leiba-before-after,.leiba-points{grid-template-columns:1fr}
       .leiba-gallery img.wide{grid-column:span 1;aspect-ratio:4/3}
+      .leiba-ba-item .label{top:20px;right:20px}
       .leiba-lightbox{padding:0}
       .leiba-lightbox img{max-width:100vw;max-height:100vh;border-radius:0}
       .leiba-lightbox-close{top:12px;left:12px;width:38px;height:38px;font-size:26px;background:rgba(0,0,0,.45)}
@@ -70,6 +76,7 @@
     }
   </style>
 </head>
+
 <body class="leiba-page">
   <div id="site-header"></div>
 
@@ -101,10 +108,18 @@
       <span class="leiba-kicker">לפני ואחרי</span>
       <h2>מהכניסה לבית - חלל שנפתח, התאוורר וקיבל שפה חדשה</h2>
       <p>כבר בכניסה לבית אפשר לראות את השינוי: במקום חלל עמוס, מחולק ונמוך בתחושה, נוצר מבט פתוח אל אזור האירוח, הקמין והספרייה. החיבור בין הריצוף, העץ, התאורה והנגרות נותן לבית שפה אחת רגועה וחמה.</p>
+
       <div class="leiba-before-after">
-        <div class="leiba-ba-item"><span class="label">לפני</span><img src="leiba-main-space-before-01.JPG" alt="לפני - החלל המרכזי בבית לפני השיפוץ"></div>
-        <div class="leiba-ba-item"><span class="label">אחרי</span><img src="leiba-main-space-after-01.jpg" alt="אחרי - החלל המרכזי פתוח ומואר אחרי השיפוץ"></div>
+        <div class="leiba-ba-item">
+          <span class="label">לפני</span>
+          <img src="leiba-main-space-before-01.JPG" alt="לפני - החלל המרכזי בבית לפני השיפוץ">
+        </div>
+        <div class="leiba-ba-item">
+          <span class="label">אחרי</span>
+          <img src="leiba-main-space-after-01.jpg" alt="אחרי - החלל המרכזי פתוח ומואר אחרי השיפוץ">
+        </div>
       </div>
+
       <div class="leiba-gallery">
         <img src="leiba-main-space-after-02.jpg" alt="אחרי - מבט נוסף מהכניסה אל הסלון והקמין">
         <img src="leiba-main-space-before-02.jpg" alt="לפני - מבט אל החלל המרכזי לפני פתיחת הבית">
@@ -117,10 +132,18 @@
       <h2>המטבח שנפתח אל הבית</h2>
       <p>במטבח בוצע שינוי משמעותי: החלון הוחלף, הקיר שעליו נשען המטבח הוסר, והחלל הפך לאופן ספייס שמחבר בין המטבח, פינת האוכל והסלון. האור מהוויטרינה נכנס עכשיו עמוק יותר אל הבית, והמטבח הפך מחדר סגור ועמוס לחלק טבעי מהחלל המרכזי.</p>
       <p>גם הפרטים הקטנים קיבלו מקום: תאורת קיר מעל מכונת הקפה, גוף תאורה מעל הדלת השקופה לכיוון הממ"ד, ואייפד שמתחבר למערכת רמקולים בוויסות באזורים שונים בבית.</p>
+
       <div class="leiba-before-after">
-        <div class="leiba-ba-item"><span class="label">לפני</span><img src="leiba-kitchen-before-02.JPG" alt="לפני - המטבח הישן לפני פתיחת החלל"></div>
-        <div class="leiba-ba-item"><span class="label">אחרי</span><img src="leiba-kitchen-window-after-01.jpg" alt="אחרי - המטבח החדש עם חלון, תאורה וקו נקי"></div>
+        <div class="leiba-ba-item">
+          <span class="label">לפני</span>
+          <img src="leiba-kitchen-before-02.JPG" alt="לפני - המטבח הישן לפני פתיחת החלל">
+        </div>
+        <div class="leiba-ba-item">
+          <span class="label">אחרי</span>
+          <img src="leiba-kitchen-window-after-01.jpg" alt="אחרי - המטבח החדש עם חלון, תאורה וקו נקי">
+        </div>
       </div>
+
       <div class="leiba-gallery">
         <img src="leiba-kitchen-before-01.jpg" alt="לפני - מבט אל המטבח הישן מהמעבר">
         <img src="leiba-kitchen-before-03.jpg" alt="לפני - מטבח ישן וחלל עמוס">
@@ -141,10 +164,18 @@
       <h2>קיר כוח שמחבר בין אחסון, אש, תאורה ואווירה</h2>
       <p>הסלון תוכנן סביב קיר כוח שמשלב ספרייה, קמין, ספסל ישיבה ותאורה. המדף מעל הספסל תוכנן לקבל תאורה, כך שגם הפרטים הקטנים מקבלים עומק ונוכחות.</p>
       <p>העץ, הקמין והאקססוריז יוצרים אזור משפחתי חם ואלגנטי. זה לא קיר “יפה”, זה קיר שעובד: הוא מאחסן, מארגן, מחמם ומייצר מוקד לבית.</p>
+
       <div class="leiba-before-after">
-        <div class="leiba-ba-item"><span class="label">לפני</span><img src="leiba-living-wall-before-01.jpg" alt="לפני - קיר הסלון לפני התכנון"></div>
-        <div class="leiba-ba-item"><span class="label">אחרי</span><img src="leiba-living-wall-after-01.jpg" alt="אחרי - קיר הסלון עם קמין, ספרייה ותאורה"></div>
+        <div class="leiba-ba-item">
+          <span class="label">לפני</span>
+          <img src="leiba-living-wall-before-01.jpg" alt="לפני - קיר הסלון לפני התכנון">
+        </div>
+        <div class="leiba-ba-item">
+          <span class="label">אחרי</span>
+          <img src="leiba-living-wall-after-01.jpg" alt="אחרי - קיר הסלון עם קמין, ספרייה ותאורה">
+        </div>
       </div>
+
       <div class="leiba-gallery">
         <img src="leiba-living-wall-after-02.jpg" alt="אחרי - פרט שולחן וקיר הסלון">
         <img src="leiba-fireplace-library-after-01.jpg" alt="אחרי - ספרייה וקמין בסלון">
@@ -155,6 +186,7 @@
         <img src="leiba-library-detail-after-01.jpg" alt="אחרי - פרט אקססוריז בספרייה">
         <img src="leiba-library-detail-after-02.jpg" alt="אחרי - פרטי מדפים בספרייה">
         <img src="leiba-coffee-table-detail-after-01.jpg" alt="אחרי - שולחנות סלון ופרטי עיצוב">
+        <img src="leiba-living-fireplace-view-after-01.jpg" alt="אחרי - מבט מהקמין אל הסלון">
       </div>
     </section>
 
@@ -163,10 +195,18 @@
       <h2>אור, רכות וחיבור בין הסלון, המטבח והחוץ</h2>
       <p>אזור הוויטרינה קיבל טיפול שמרכך את האור ומכניס תחושה נקייה ונעימה לכל החלל. הווילונות יוצרים שכבה רכה, הריהוט החדש פותח את התנועה, והאור שנכנס מהחוץ ממשיך אל פינת האוכל, המטבח והסלון.</p>
       <p>פינת האוכל מוקמה כחלק מהמהלך הפתוח של הבית. היא לא עומדת כרהיט נפרד, אלא מחברת בין המטבח, הסלון והיציאה החוצה.</p>
+
       <div class="leiba-before-after">
-        <div class="leiba-ba-item"><span class="label">לפני</span><img src="leiba-living-before-window-02.jpg" alt="לפני - אזור הוויטרינה והסלון לפני השינוי"></div>
-        <div class="leiba-ba-item"><span class="label">אחרי</span><img src="leiba-living-after-window-01.jpg" alt="אחרי - אזור הוויטרינה והסלון אחרי השינוי"></div>
+        <div class="leiba-ba-item">
+          <span class="label">לפני</span>
+          <img src="leiba-living-before-window-02.jpg" alt="לפני - אזור הוויטרינה והסלון לפני השינוי">
+        </div>
+        <div class="leiba-ba-item">
+          <span class="label">אחרי</span>
+          <img src="leiba-living-after-window-01.jpg" alt="אחרי - אזור הוויטרינה והסלון אחרי השינוי">
+        </div>
       </div>
+
       <div class="leiba-gallery">
         <img src="leiba-living-after-window-02.jpg" alt="אחרי - סלון ווילון ליד הוויטרינה">
         <img src="leiba-dining-living-after-01.jpg" alt="אחרי - פינת אוכל, סלון ומטבח פתוחים">
@@ -184,9 +224,16 @@
       <span class="leiba-kicker">ממ"ד ואזור שירות</span>
       <h2>כשהשירות נעלם מהעין, הבית נראה מסודר יותר</h2>
       <p>הממ"ד והאזור שסביבו שימשו קודם כאזור שירות גלוי: כביסה, חומרי ניקוי, מטאטא, מגב, שואב, מכונת כביסה ומייבש. בתכנון החדש הכול נסגר ומוסתר מאחורי חזית נקייה, עם נגיעות בוץ' שמחברות את האזור לשפה החומרית של הבית.</p>
+
       <div class="leiba-before-after vertical">
-        <div class="leiba-ba-item"><span class="label">לפני</span><img src="leiba-safe-room-before-01.JPG" alt="לפני - אזור שירות וממ״ד גלוי ולא מסודר"></div>
-        <div class="leiba-ba-item"><span class="label">אחרי</span><img src="leiba-safe-room-after-01.jpg" alt="אחרי - מעבר מסודר לכיוון הממ״ד עם חזית נקייה"></div>
+        <div class="leiba-ba-item">
+          <span class="label">לפני</span>
+          <img src="leiba-safe-room-before-01.JPG" alt="לפני - אזור שירות וממ״ד גלוי ולא מסודר">
+        </div>
+        <div class="leiba-ba-item">
+          <span class="label">אחרי</span>
+          <img src="leiba-safe-room-after-01.jpg" alt="אחרי - מעבר מסודר לכיוון הממ״ד עם חזית נקייה">
+        </div>
       </div>
     </section>
 
@@ -195,10 +242,18 @@
       <h2>ביטול ההנמכה ששינה את תחושת החלל</h2>
       <p>אחד השינויים המשמעותיים בבית היה ביטול המזגן המרכזי וההנמכה שחסמה את תחושת החלל. לפני השיפוץ היה קשה אפילו לצלם את החלל מהמדרגות, כי ההנמכה סגרה את המבט ויצרה תחושה נמוכה ולא נעימה.</p>
       <p>לאחר ההורדה גובה התקרה הגיע לכ-2.50 מטר, והחלל קיבל נשימה, אור ומבט פתוח הרבה יותר. בקומה התחתונה תוכננו מזגנים עיליים, ובקומה העליונה מערכת VRF. הצנרת עברה דרך הרצפה והמנועים מוקמו על גג הממ"ד, כדי לשמור על פתרון טכני נקי בלי לפגוע בעיצוב.</p>
+
       <div class="leiba-before-after">
-        <div class="leiba-ba-item"><span class="label">לפני</span><img src="leiba-open-space-before-from-stairs-01.jpg" alt="לפני - מבט מהמדרגות אל חלל חסום ונמוך"></div>
-        <div class="leiba-ba-item"><span class="label">אחרי</span><img src="leiba-open-space-after-from-stairs-01.jpg" alt="אחרי - מבט מהמדרגות אל חלל פתוח ומואר"></div>
+        <div class="leiba-ba-item">
+          <span class="label">לפני</span>
+          <img src="leiba-open-space-before-from-stairs-01.jpg" alt="לפני - מבט מהמדרגות אל חלל חסום ונמוך">
+        </div>
+        <div class="leiba-ba-item">
+          <span class="label">אחרי</span>
+          <img src="leiba-open-space-after-from-stairs-01.jpg" alt="אחרי - מבט מהמדרגות אל חלל פתוח ומואר">
+        </div>
       </div>
+
       <div class="leiba-gallery">
         <img src="leiba-stairs-before-01.jpg" alt="לפני - גרם המדרגות לפני השינוי">
         <img src="leiba-stairs-after-01.jpg" alt="אחרי - מבט לכיוון המדרגות אחרי השיפוץ">
@@ -248,11 +303,22 @@
       <h2>מהרגע שנכנסים לבית - החוויה מתחילה</h2>
       <p>במקור, הכניסה לבית כללה מבואה קטנה, חצי קיר ושירותי אורחים מימין לדלת. לצד הכניסה עמדה מראת ברזל עם שידה, שחסמה את המעבר, יצרה עומס וקטעה את הזרימה הטבעית של החלל.</p>
       <p>בתכנון החדש חצי הקיר בוטל, והכניסה הפכה לחלל אחד עם שפה ברורה: עץ טבעי, מראה מוארת לכל הגוף, תאורה נסתרת, אחסון מתוכנן ותחושת עומק כבר מהרגע הראשון שנכנסים.</p>
+
       <div class="leiba-points">
-        <div class="leiba-point"><h3>מה היה קודם?</h3><p>מבואה קטנה, חצי קיר, מראת ברזל עם שידה שחסמה את המעבר, ושירותי אורחים שנראו כמו חלל צדדי.</p></div>
-        <div class="leiba-point"><h3>מה שונה בתכנון?</h3><p>הקיר ירד, נוצר רצף בין הכניסה לשירותי האורחים, ונוספה מראה מוארת לכל הגוף יחד עם ארון עץ, תאורה ואחסון.</p></div>
-        <div class="leiba-point"><h3>מה מרגישים היום?</h3><p>כבר בכניסה מתקבלת תחושה של בית פתוח, נקי ומתוכנן, עם זרימה טובה יותר, עומק וחומריות.</p></div>
+        <div class="leiba-point">
+          <h3>מה היה קודם?</h3>
+          <p>מבואה קטנה, חצי קיר, מראת ברזל עם שידה שחסמה את המעבר, ושירותי אורחים שנראו כמו חלל צדדי.</p>
+        </div>
+        <div class="leiba-point">
+          <h3>מה שונה בתכנון?</h3>
+          <p>הקיר ירד, נוצר רצף בין הכניסה לשירותי האורחים, ונוספה מראה מוארת לכל הגוף יחד עם ארון עץ, תאורה ואחסון.</p>
+        </div>
+        <div class="leiba-point">
+          <h3>מה מרגישים היום?</h3>
+          <p>כבר בכניסה מתקבלת תחושה של בית פתוח, נקי ומתוכנן, עם זרימה טובה יותר, עומק וחומריות.</p>
+        </div>
       </div>
+
       <h3>לפני - מעבר חסום וחלל מחולק</h3>
       <div class="leiba-gallery">
         <img class="wide" src="leiba-entry-before-1.jpg" alt="לפני - מבט רחב אל מבואת הכניסה הישנה עם מראת ברזל ושידה">
@@ -260,6 +326,7 @@
         <img src="leiba-entry-before-3.jpg" alt="לפני - מבואת הכניסה לפני התכנון">
         <img src="leiba-entry-before-4.jpg" alt="לפני - כניסה לשירותי האורחים לפני השינוי">
       </div>
+
       <h3>אחרי - כניסה שהיא חלק מהסיפור של הבית</h3>
       <div class="leiba-gallery">
         <img class="wide" src="leiba-entry-after-1.jpg" alt="אחרי - ארון עץ, מראה מוארת לכל הגוף ותאורה נסתרת במבואת הכניסה">
@@ -275,6 +342,7 @@
       <h2>לפני פיתוח השטח</h2>
       <p>בכניסה לבית נדרש תכנון מדויק של פיתוח השטח. לפני התהליך הייתה רמפה נפרדת ככניסה לבית, ובצד ימין שלה היה משטח חניה. הצמחייה הייתה מפוזרת, בלי סדר ברור ובלי שפה אחת שמובילה את מי שנכנס אל הבית.</p>
       <p>גם הפח ישב במקום לא נכון ביחס לתנועה בכניסה. כחלק מהתכנון הפח עבר לצד אחר, והכניסה קיבלה תנועה נקייה, פתוחה ונוחה יותר.</p>
+
       <div class="leiba-gallery">
         <img src="leiba-out-before-01.jpg" alt="לפני - בית ללא נגישות ברורה בכניסה">
         <img src="leiba-out-before-02.jpg" alt="לפני - שביל כניסה לפני פיתוח השטח">
@@ -294,6 +362,7 @@
       <h2>הכניסה, החצר והאווירה שמתחילה עוד לפני שנכנסים</h2>
       <p>אחרי התכנון, הכניסה קיבלה סדר, נגישות ותנועה הרבה יותר ברורה. במקום אזור מבולגן ומנותק, נוצר מבוא לבית שמוביל את מי שנכנס בצורה טבעית, נקייה ומזמינה.</p>
       <p>לצד הגינה המתוכננת, כדורי התאורה וגופי התאורה מסוג אפ דאון על הקירות, נבנתה מחשבה שלמה על תאורה שמלווה את כל היקף הבית והגינה ויוצרת חוויה כבר מבחוץ.</p>
+
       <div class="leiba-gallery">
         <img src="leiba-out-01.jpg" alt="חוץ הבית - כניסה לבית">
         <img src="leiba-out-02.jpg" alt="חוץ הבית - שביל כניסה וחצר קדמית">
@@ -374,6 +443,7 @@
     const leibaLightboxPrev = document.getElementById('leibaLightboxPrev');
     const leibaLightboxNext = document.getElementById('leibaLightboxNext');
     const leibaLightboxCounter = document.getElementById('leibaLightboxCounter');
+
     let leibaCurrentIndex = 0;
     let leibaTouchStartX = 0;
     let leibaTouchStartY = 0;
@@ -384,33 +454,50 @@
       leibaLightboxCounter.textContent = `${index + 1} / ${leibaGalleryImages.length}`;
       leibaCurrentIndex = index;
     }
+
     function openLeibaLightbox(index){
       updateLeibaLightbox(index);
       leibaLightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
+
     function closeLeibaLightbox(){
       leibaLightbox.classList.remove('active');
       document.body.style.overflow = '';
     }
-    function nextLeibaImage(){updateLeibaLightbox((leibaCurrentIndex + 1) % leibaGalleryImages.length);}
-    function prevLeibaImage(){updateLeibaLightbox((leibaCurrentIndex - 1 + leibaGalleryImages.length) % leibaGalleryImages.length);}
 
-    leibaGalleryImages.forEach((img,index)=>{img.addEventListener('click',()=>openLeibaLightbox(index));});
+    function nextLeibaImage(){
+      updateLeibaLightbox((leibaCurrentIndex + 1) % leibaGalleryImages.length);
+    }
+
+    function prevLeibaImage(){
+      updateLeibaLightbox((leibaCurrentIndex - 1 + leibaGalleryImages.length) % leibaGalleryImages.length);
+    }
+
+    leibaGalleryImages.forEach((img,index)=>{
+      img.addEventListener('click',()=>openLeibaLightbox(index));
+    });
+
     leibaLightboxClose.addEventListener('click',closeLeibaLightbox);
     leibaLightboxNext.addEventListener('click',nextLeibaImage);
     leibaLightboxPrev.addEventListener('click',prevLeibaImage);
-    leibaLightbox.addEventListener('click',(e)=>{if(e.target === leibaLightbox) closeLeibaLightbox();});
+
+    leibaLightbox.addEventListener('click',(e)=>{
+      if(e.target === leibaLightbox) closeLeibaLightbox();
+    });
+
     document.addEventListener('keydown',(e)=>{
       if(!leibaLightbox.classList.contains('active')) return;
       if(e.key === 'Escape') closeLeibaLightbox();
       if(e.key === 'ArrowLeft') nextLeibaImage();
       if(e.key === 'ArrowRight') prevLeibaImage();
     });
+
     leibaLightbox.addEventListener('touchstart',(e)=>{
       leibaTouchStartX = e.changedTouches[0].screenX;
       leibaTouchStartY = e.changedTouches[0].screenY;
     },{passive:true});
+
     leibaLightbox.addEventListener('touchend',(e)=>{
       const endX = e.changedTouches[0].screenX;
       const endY = e.changedTouches[0].screenY;
