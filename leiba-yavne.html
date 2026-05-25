@@ -36,8 +36,22 @@
     .leiba-ba-item img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;display:block;cursor:pointer;}
     .leiba-ba-item .label{position:absolute;top:22px;right:22px;background:rgba(0,0,0,.68);color:#fff;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;}
     .leiba-before-after.vertical .leiba-ba-item img{aspect-ratio:3/4;}
-    .leiba-video-embed{margin-top:24px;border-radius:24px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.12);background:#faf8f4;}
-    .leiba-video-embed iframe{width:100%;height:min(720px,70vw);border:0;display:block;}
+    .leiba-video-embed{
+      margin-top:24px;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 10px 28px rgba(0,0,0,.12);
+      background:#faf8f4;
+      display:flex;
+      justify-content:center;
+    }
+    .leiba-video-embed iframe{
+      width:500px;
+      max-width:100%;
+      height:890px;
+      border:0;
+      display:block;
+    }
 
     .leiba-points{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;}
     .leiba-point{background:#faf8f4;border:1px solid rgba(0,0,0,.06);border-radius:22px;padding:22px;}
@@ -478,7 +492,17 @@
       <p>כל פרט נבחר בקפידה כדי לשקף את הטעם האישי והאהבות שלהם, ולהפוך את הבית למקום שמספר את סיפורם. גם היצירות האמנותיות שעיצבתי נולדו מתוך החזון שלהם, בשילוב צבעי הבית הנבחרים, כך שהן משתלבות בהרמוניה עם החלל ומעניקות לו עומק וייחודיות.</p>
       <p>אני מלווה את הפרויקט בשקיפות מלאה, תוך הקשבה, יצירתיות ותשומת לב לכל פרט, כדי לוודא שהתוצאה מדויקת ונכונה עבורם.</p>
       <div class="leiba-video-embed">
-        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1585837298783731&show_text=false&width=900" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true" title="סרטון מאחורי הקלעים - לייבה יבנה"></iframe>
+        <iframe 
+          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1585837298783731&show_text=false&width=500"
+          width="500"
+          height="890"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          title="סרטון מאחורי הקלעים - לייבה יבנה">
+        </iframe>
       </div>
       <div class="leiba-actions">
         <a class="leiba-btn primary" href="https://www.facebook.com/reel/1585837298783731" target="_blank" rel="noopener">לצפייה בסרטון בפייסבוק</a>
