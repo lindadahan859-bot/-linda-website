@@ -36,6 +36,8 @@
     .leiba-ba-item img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;display:block;cursor:pointer;}
     .leiba-ba-item .label{position:absolute;top:22px;right:22px;background:rgba(0,0,0,.68);color:#fff;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;}
     .leiba-before-after.vertical .leiba-ba-item img{aspect-ratio:3/4;}
+    .leiba-video-embed{margin-top:24px;border-radius:24px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.12);background:#faf8f4;}
+    .leiba-video-embed iframe{width:100%;height:min(720px,70vw);border:0;display:block;}
 
     .leiba-points{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;}
     .leiba-point{background:#faf8f4;border:1px solid rgba(0,0,0,.06);border-radius:22px;padding:22px;}
@@ -107,6 +109,7 @@
         <a class="leiba-tab active" href="#family-room">חדר משפחה</a>
         <a class="leiba-tab active" href="#entry">מבואת כניסה ושירותי אורחים</a>
         <a class="leiba-tab active" href="#outside">חוץ וחצר</a>
+        <a class="leiba-tab active" href="#behind-scenes">מאחורי הקלעים</a>
       </div>
     </section>
 
@@ -115,7 +118,7 @@
       <h2>מהכניסה לבית - חלל שנפתח, התאוורר וקיבל שפה חדשה</h2>
       <p>כבר בכניסה לבית אפשר לראות את השינוי: במקום חלל עמוס, מחולק ונמוך בתחושה, נוצר מבט פתוח אל אזור האירוח, הקמין והספרייה. החיבור בין הריצוף, העץ, התאורה והנגרות נותן לבית שפה אחת רגועה וחמה.</p>
 
-      <div class="leiba-before-after">
+      <div class="leiba-before-after" id="main-space-before-after">
         <div class="leiba-ba-item">
           <span class="label">לפני</span>
           <img src="leiba-main-space-before-01.JPG" alt="לפני - החלל המרכזי בבית לפני השיפוץ">
@@ -139,7 +142,7 @@
       <p>במטבח בוצע שינוי משמעותי: החלון הוחלף, הקיר שעליו נשען המטבח הוסר, והחלל הפך לאופן ספייס שמחבר בין המטבח, פינת האוכל והסלון. האור מהוויטרינה נכנס עכשיו עמוק יותר אל הבית, והמטבח הפך מחדר סגור ועמוס לחלק טבעי מהחלל המרכזי.</p>
       <p>גם הפרטים הקטנים קיבלו מקום: תאורת קיר מעל מכונת הקפה, גוף תאורה מעל הדלת השקופה לכיוון הממ"ד, ואייפד שמתחבר למערכת רמקולים בוויסות באזורים שונים בבית.</p>
 
-      <div class="leiba-before-after">
+      <div class="leiba-before-after" id="kitchen-before-after">
         <div class="leiba-ba-item">
           <span class="label">לפני</span>
           <img src="leiba-kitchen-before-02.JPG" alt="לפני - המטבח הישן לפני פתיחת החלל">
@@ -171,7 +174,7 @@
       <p>הסלון תוכנן סביב קיר כוח שמשלב ספרייה, קמין, ספסל ישיבה ותאורה. המדף מעל הספסל תוכנן לקבל תאורה, כך שגם הפרטים הקטנים מקבלים עומק ונוכחות.</p>
       <p>העץ, הקמין והאקססוריז יוצרים אזור משפחתי חם ואלגנטי. זה לא קיר “יפה”, זה קיר שעובד: הוא מאחסן, מארגן, מחמם ומייצר מוקד לבית.</p>
 
-      <div class="leiba-before-after">
+      <div class="leiba-before-after" id="living-before-after">
         <div class="leiba-ba-item">
           <span class="label">לפני</span>
           <img src="leiba-living-wall-before-01.jpg" alt="לפני - קיר הסלון לפני התכנון">
@@ -202,7 +205,7 @@
       <p>אזור הוויטרינה קיבל טיפול שמרכך את האור ומכניס תחושה נקייה ונעימה לכל החלל. הווילונות יוצרים שכבה רכה, הריהוט החדש פותח את התנועה, והאור שנכנס מהחוץ ממשיך אל פינת האוכל, המטבח והסלון.</p>
       <p>פינת האוכל מוקמה כחלק מהמהלך הפתוח של הבית. היא לא עומדת כרהיט נפרד, אלא מחברת בין המטבח, הסלון והיציאה החוצה.</p>
 
-      <div class="leiba-before-after">
+      <div class="leiba-before-after" id="dining-before-after">
         <div class="leiba-ba-item">
           <span class="label">לפני</span>
           <img src="leiba-living-before-window-02.jpg" alt="לפני - אזור הוויטרינה והסלון לפני השינוי">
@@ -234,7 +237,7 @@
       <p>דלת הממ״ד עצמה היא דלת ברזל כבדה, אבל בזכות אופן הפתיחה שלה אל המסדרון היא כמעט לא מורגשת בחלל. במקום תחושה של אזור טכני וסגור, נוצר מעבר מואר שמחבר בין המטבח, המשרד והחצר האחורית.</p>
       <p>שתי דלתות זכוכית אדומות ושקופות מכניסות אור וצבע למסדרון: אחת מכיוון מבואת הכניסה ואחת מכיוון החצר האחורית. במסדרון תוכננה הנמכת תקרה אחידה עם פס לד ארוך ורמקול נסתר, כך שגם אזור מעבר פשוט הפך לחלק מהחוויה של הבית.</p>
 
-      <div class="leiba-before-after vertical">
+      <div class="leiba-before-after vertical" id="safe-room-before-after">
         <div class="leiba-ba-item">
           <span class="label">לפני</span>
           <img src="leiba-safe-room-before-01.JPG" alt="לפני - אזור שירות וממ״ד גלוי ולא מסודר">
@@ -245,9 +248,19 @@
         </div>
       </div>
 
-      <div class="leiba-gallery">
+      <div class="leiba-before-after vertical" id="safe-room-corridor-before-after">
+        <div class="leiba-ba-item">
+          <span class="label">לפני</span>
+          <img src="leiba-office-storage-before-01.JPG" alt="לפני - מסדרון חשוך ועמוס ששימש מעבר למחסן ולאזור השירות">
+        </div>
+        <div class="leiba-ba-item">
+          <span class="label">אחרי</span>
+          <img src="leiba-office-corridor-garden-door-after-01.jpg" alt="אחרי - מסדרון מואר עם דלת זכוכית אדומה לכיוון החצר האחורית">
+        </div>
+      </div>
+
+      <div class="leiba-gallery" id="safe-room-corridor">
         <img src="leiba-office-corridor-red-door-after-01.jpg" alt="אחרי - מסדרון מואר עם דלת זכוכית אדומה ופס לד">
-        <img src="leiba-office-corridor-garden-door-after-01.jpg" alt="אחרי - מסדרון עם דלת זכוכית אדומה לכיוון החצר האחורית">
         <img src="leiba-office-entry-red-door-after-01.jpg" alt="אחרי - דלת זכוכית אדומה שמחברת בין החוץ, המטבח, הממ״ד והמשרד">
       </div>
     </section>
@@ -258,7 +271,7 @@
       <p>אחד השינויים המשמעותיים בבית היה ביטול המזגן המרכזי וההנמכה שחסמה את תחושת החלל. לפני השיפוץ היה קשה אפילו לצלם את החלל מהמדרגות, כי ההנמכה סגרה את המבט ויצרה תחושה נמוכה ולא נעימה.</p>
       <p>לאחר ההורדה גובה התקרה הגיע לכ-2.50 מטר, והחלל קיבל נשימה, אור ומבט פתוח הרבה יותר. בקומה התחתונה תוכננו מזגנים עיליים, ובקומה העליונה מערכת VRF. הצנרת עברה דרך הרצפה והמנועים מוקמו על גג הממ"ד, כדי לשמור על פתרון טכני נקי בלי לפגוע בעיצוב.</p>
 
-      <div class="leiba-before-after">
+      <div class="leiba-before-after" id="stairs-before-after">
         <div class="leiba-ba-item">
           <span class="label">לפני</span>
           <img src="leiba-open-space-before-from-stairs-01.jpg" alt="לפני - מבט מהמדרגות אל חלל חסום ונמוך">
@@ -272,7 +285,6 @@
       <div class="leiba-gallery">
         <img src="leiba-stairs-before-01.jpg" alt="לפני - גרם המדרגות לפני השינוי">
         <img src="leiba-stairs-after-01.jpg" alt="אחרי - מבט לכיוון המדרגות אחרי השיפוץ">
-        <img src="leiba-low-ceiling-before-01.jpg" alt="לפני - אזור נמוך וחסום ליד המדרגות">
         <img src="leiba-open-space-before-from-stairs-02.JPG" alt="לפני - מבט נוסף מהמדרגות לפני ביטול ההנמכה">
       </div>
     </section>
@@ -285,7 +297,7 @@
       <p>החיבור למסדרון המואר ולדלתות הזכוכית מאפשר גם למי שיושב במשרד לא להרגיש סגור. זה כבר לא מחסן שהפך לחדר עבודה במקרה, אלא חלל עם אווירה, צבע ונוכחות.</p>
       <p>האמנות בחדר לא משמשת רק כקישוט. היא מגדירה את האווירה, מכניסה צבע, מייצרת מוקד ויזואלי ונותנת לחלל זהות ברורה. המשפט “What You See Is Just The Beginning” מתחבר בדיוק לרעיון של החלל הזה: מה שרואים הוא רק ההתחלה של שינוי עמוק יותר.</p>
 
-      <div class="leiba-before-after">
+      <div class="leiba-before-after" id="office-before-after">
         <div class="leiba-ba-item">
           <span class="label">לפני</span>
           <img src="leiba-office-storage-before-02.JPG" alt="לפני - מחסן עמוס לפני תכנון המשרד">
@@ -297,7 +309,6 @@
       </div>
 
       <div class="leiba-gallery">
-        <img src="leiba-office-storage-before-01.JPG" alt="לפני - מסדרון ומחסן לפני התכנון">
         <img src="leiba-office-storage-before-03.JPG" alt="לפני - עומס ואחסון גלוי במחסן הישן">
         <img src="unique-art-03-cover.jpg" alt="אחרי - אמנות צבעונית במשרד הביתי">
         <img src="unique-art-03-in-space.jpg" alt="אחרי - משרד ביתי עם אמנות, תאורה ודלת אדומה">
@@ -314,6 +325,17 @@
       <h2>חלל משפחתי שמחבר בין הנכדים, השקט והבית</h2>
       <p>חדר המשפחה תוכנן כך שהנכדים יוכלו לשחק, לצפות וליהנות, בזמן שהבית נשאר שקט ונעים. הדלת השקופה מאפשרת קשר עין מהחלל הציבורי, גם כשהדלת סגורה והרעש נשאר בפנים.</p>
       <p>הקלפות והאחסון תוכננו בגובה ובאופן שמאפשרים לילדים לראות ולהגיע לדברים בעצמם. ספסל הישיבה המפנק מוסיף מקום שהייה, והקמין שמתחת לטלוויזיה יוצר בערב תחושה חמימה ואינטימית.</p>
+
+      <div class="leiba-before-after" id="family-room-before-after">
+        <div class="leiba-ba-item">
+          <span class="label">לפני</span>
+          <img src="leiba-low-ceiling-before-01.jpg" alt="לפני - חדר משפחה נמוך ועמוס לפני התכנון">
+        </div>
+        <div class="leiba-ba-item">
+          <span class="label">אחרי</span>
+          <img src="leiba-yavne-bathroom.jpg" alt="אחרי - חדר משפחה עם ספסל, אחסון פתוח ונגיש לנכדים">
+        </div>
+      </div>
 
       <h3>לפני התהליך</h3>
       <div class="leiba-gallery">
@@ -332,7 +354,6 @@
         <img src="leiba-yavne-living-room.jpg" alt="אחרי - חדר טלוויזיה משפחתי">
         <img src="leiba-yavne-kitchen.jpg" alt="אחרי - מבט רחב אל חדר המשפחה והכורסה">
         <img src="leiba-yavne-bedroom.jpg" alt="אחרי - ספסל ישיבה ואחסון בחדר המשפחה">
-        <img src="leiba-yavne-bathroom.jpg" alt="אחרי - מדרך פתוח ואחסון נגיש לנכדים">
         <img src="leiba-yavne-details.jpg" alt="אחרי - קמין, טלוויזיה וחיפוי עץ">
         <img src="leiba-yavne-lighting.jpg" alt="אחרי - גוף תאורה לבן על קיר בחדר המשפחה">
         <img src="leiba-yavne-corner.jpg" alt="אחרי - פינת ישיבה וקיר טלוויזיה">
@@ -447,6 +468,20 @@
       <div class="leiba-gallery">
         <img src="leiba-out-26.jpg" alt="חצר אחורית - בית עץ לילדים">
         <img src="leiba-out-27.jpg" alt="חצר אחורית - בית עץ, צמחייה וגינת משחק">
+      </div>
+    </section>
+
+    <section class="leiba-card" id="behind-scenes">
+      <span class="leiba-kicker">מאחורי הקלעים</span>
+      <h2>סרטון שמראה את התהליך, לא רק את התוצאה</h2>
+      <p>כל שלב בתהליך הוא פרק במסע יצירתי, שנבנה מהלב, עם אופי ונשמה וללא פשרות. עיצוב בית הוא תהליך משותף - דיאלוג פתוח שבו הלקוחות שותפים לכל החלטה.</p>
+      <p>כל פרט נבחר בקפידה כדי לשקף את הטעם האישי והאהבות שלהם, ולהפוך את הבית למקום שמספר את סיפורם. גם היצירות האמנותיות שעיצבתי נולדו מתוך החזון שלהם, בשילוב צבעי הבית הנבחרים, כך שהן משתלבות בהרמוניה עם החלל ומעניקות לו עומק וייחודיות.</p>
+      <p>אני מלווה את הפרויקט בשקיפות מלאה, תוך הקשבה, יצירתיות ותשומת לב לכל פרט, כדי לוודא שהתוצאה מדויקת ונכונה עבורם.</p>
+      <div class="leiba-video-embed">
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1585837298783731&show_text=false&width=900" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true" title="סרטון מאחורי הקלעים - לייבה יבנה"></iframe>
+      </div>
+      <div class="leiba-actions">
+        <a class="leiba-btn primary" href="https://www.facebook.com/reel/1585837298783731" target="_blank" rel="noopener">לצפייה בסרטון בפייסבוק</a>
       </div>
     </section>
 
