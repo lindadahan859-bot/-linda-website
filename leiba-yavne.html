@@ -36,6 +36,7 @@
     .leiba-ba-item img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;display:block;cursor:pointer;}
     .leiba-ba-item .label{position:absolute;top:22px;right:22px;background:rgba(0,0,0,.68);color:#fff;border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;}
     .leiba-before-after.vertical .leiba-ba-item img{aspect-ratio:3/4;}
+
     .leiba-points{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;}
     .leiba-point{background:#faf8f4;border:1px solid rgba(0,0,0,.06);border-radius:22px;padding:22px;}
     .leiba-point h3{font-size:21px;margin:0 0 10px;color:#111;}
@@ -48,7 +49,9 @@
 
     .leiba-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:999999;padding:22px;}
     .leiba-lightbox.active{display:flex;}
-    .leiba-lightbox img{max-width:min(92vw,1200px);max-height:86vh;object-fit:contain;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.35);}
+    .leiba-lightbox-content{display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:min(92vw,1200px);max-height:90vh;}
+    .leiba-lightbox img{max-width:min(92vw,1200px);max-height:78vh;object-fit:contain;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.35);}
+    .leiba-lightbox-caption{max-width:min(92vw,920px);margin-top:12px;background:rgba(255,255,255,.94);color:#111;border-radius:18px;padding:12px 18px;text-align:center;font-size:17px;line-height:1.55;font-weight:600;}
     .leiba-lightbox-close{position:absolute;top:18px;left:18px;width:46px;height:46px;border-radius:50%;border:0;background:rgba(48,48,48,.95);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:none;transition:.25s ease;font-size:34px;line-height:1;}
     .leiba-lightbox-close:hover{background:rgba(48,48,48,1);transform:scale(1.04);}
     .leiba-lightbox-nav{position:absolute;top:50%;width:52px;height:52px;border-radius:50%;background:rgba(0,0,0,0.45);backdrop-filter:blur(6px);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.25s ease;font-size:28px;}
@@ -69,11 +72,14 @@
       .leiba-gallery img.wide{grid-column:span 1;aspect-ratio:4/3}
       .leiba-ba-item .label{top:20px;right:20px}
       .leiba-lightbox{padding:0}
-      .leiba-lightbox img{max-width:100vw;max-height:100vh;border-radius:0}
+      .leiba-lightbox-content{max-width:100vw;max-height:100vh}
+      .leiba-lightbox img{max-width:100vw;max-height:78vh;border-radius:0}
+      .leiba-lightbox-caption{max-width:94vw;margin-top:10px;border-radius:14px;font-size:15px;line-height:1.45;padding:10px 14px}
       .leiba-lightbox-close{top:12px;left:12px;width:38px;height:38px;font-size:26px;background:rgba(0,0,0,.45)}
       .leiba-lightbox-nav{width:38px;height:38px;font-size:24px;background:rgba(0,0,0,.38);backdrop-filter:blur(5px)}
       .leiba-lightbox-prev{right:10px}
       .leiba-lightbox-next{left:10px}
+      .leiba-lightbox-counter{bottom:10px}
     }
   </style>
 </head>
@@ -301,19 +307,19 @@
         </div>
         <div class="leiba-ba-item">
           <span class="label">אחרי</span>
-          <img src="leiba-office-after-04.jpg" alt="אחרי - משרד ביתי עם שולחן עבודה, אחסון סמוי, ספרי עיצוב ודלת זכוכית אדומה">
+          <img src="leiba-office-after-03.jpg" alt="אחרי - משרד ביתי שתוכנן סביב עמוד קיים, עם שולחן עבודה, אחסון סמוי ודלת זכוכית אדומה">
         </div>
       </div>
 
       <div class="leiba-gallery">
         <img src="leiba-office-storage-before-03.JPG" alt="לפני - עומס ואחסון גלוי במחסן הישן">
-        <img src="unique-art-03-cover.jpg" alt="אחרי - אמנות צבעונית במשרד הביתי">
-        <img src="unique-art-03-in-space.jpg" alt="אחרי - משרד ביתי עם אמנות, תאורה ודלת אדומה">
-        <img src="unique-art-03-detail.jpg" alt="אחרי - פרט אמנות קיר במשרד הביתי">
-        <img src="leiba-office-detail-after-01.jpg" alt="אחרי - פרט מדפים ונגרות במשרד">
-        <img src="leiba-office-storage-after-01.jpg" alt="אחרי - ארונות אחסון סגורים במשרד">
-        <img src="leiba-office-after-02.jpg" alt="אחרי - מבט נוסף אל שולחן העבודה והאמנות">
-        <img src="leiba-office-after-03.jpg" alt="אחרי - משרד ביתי עם דלת אדומה ושולחן עבודה">
+        <img src="unique-art-03-cover.jpg" alt="אחרי - אמנות צבעונית שמכניסה זהות ואופי למשרד הביתי">
+        <img src="unique-art-03-in-space.jpg" alt="אחרי - משרד ביתי עם אמנות, תאורה, דלת אדומה ושפה צבעונית ברורה">
+        <img src="unique-art-03-detail.jpg" alt="אחרי - פרט אמנות קיר במשרד הביתי, עם צבע חזק ונוכחות דרמטית">
+        <img src="leiba-office-detail-after-01.jpg" alt="פרט נגרות במשרד - המשכיות העץ אל החזית הירוקה, ליצירת חיבור חומרי עדין בין אחסון, צבע ואמנות">
+        <img src="leiba-office-storage-after-01.jpg" alt="אחרי - ארונות אחסון סגורים במשרד, שמסתירים את כל מה שהיה גלוי במחסן">
+        <img src="leiba-office-after-02.jpg" alt="אחרי - מבט נוסף אל שולחן העבודה, התאורה והאמנות בחלל העבודה">
+        <img src="leiba-office-after-04.jpg" alt="אחרי - משרד ביתי עם ספרי עיצוב, תאורה חמה ואחסון סמוי">
       </div>
     </section>
 
@@ -496,7 +502,10 @@
   <div class="leiba-lightbox" id="leibaLightbox">
     <button class="leiba-lightbox-close" id="leibaLightboxClose" aria-label="סגירה">×</button>
     <button class="leiba-lightbox-nav leiba-lightbox-prev" id="leibaLightboxPrev" aria-label="התמונה הקודמת"></button>
-    <img id="leibaLightboxImg" alt="">
+    <div class="leiba-lightbox-content">
+      <img id="leibaLightboxImg" alt="">
+      <div class="leiba-lightbox-caption" id="leibaLightboxCaption"></div>
+    </div>
     <button class="leiba-lightbox-nav leiba-lightbox-next" id="leibaLightboxNext" aria-label="התמונה הבאה"></button>
     <div class="leiba-lightbox-counter" id="leibaLightboxCounter"></div>
   </div>
@@ -516,6 +525,7 @@
     const leibaGalleryImages = Array.from(document.querySelectorAll('.leiba-gallery img, .leiba-before-after img'));
     const leibaLightbox = document.getElementById('leibaLightbox');
     const leibaLightboxImg = document.getElementById('leibaLightboxImg');
+    const leibaLightboxCaption = document.getElementById('leibaLightboxCaption');
     const leibaLightboxClose = document.getElementById('leibaLightboxClose');
     const leibaLightboxPrev = document.getElementById('leibaLightboxPrev');
     const leibaLightboxNext = document.getElementById('leibaLightboxNext');
@@ -526,8 +536,12 @@
     let leibaTouchStartY = 0;
 
     function updateLeibaLightbox(index){
-      leibaLightboxImg.src = leibaGalleryImages[index].src;
-      leibaLightboxImg.alt = leibaGalleryImages[index].alt || '';
+      const currentImage = leibaGalleryImages[index];
+      const caption = currentImage.getAttribute('alt') || '';
+      leibaLightboxImg.src = currentImage.src;
+      leibaLightboxImg.alt = caption;
+      leibaLightboxCaption.textContent = caption;
+      leibaLightboxCaption.style.display = caption ? 'block' : 'none';
       leibaLightboxCounter.textContent = `${index + 1} / ${leibaGalleryImages.length}`;
       leibaCurrentIndex = index;
     }
