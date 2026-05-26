@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     body.leiba-page{background:#f7f4ef;color:#1f1f1f;}
-    html{scroll-behavior:smooth;}
+    html{scroll-behavior:auto;}
     .leiba-hero{min-height:68vh;background:linear-gradient(to top,rgba(0,0,0,.70),rgba(0,0,0,.18)),url('leiba-main-space-after-01.jpg') center/cover no-repeat;display:flex;align-items:flex-end;color:#fff;}
     .leiba-hero-inner{width:min(1120px,92%);margin:auto;padding:58px 0;}
     .leiba-hero h1{font-size:clamp(36px,6vw,64px);line-height:1.08;margin:0 0 14px;color:#fff;}
@@ -125,6 +125,7 @@
       <div class="leiba-gallery">
         <img src="leiba-out-01.jpg" alt="חוץ הבית - כניסה לבית">
         <img src="leiba-out-02.jpg" alt="חוץ הבית - שביל כניסה וחצר קדמית">
+        <img src="leiba-entry-red-door-transition-01.jpg" alt="חוץ הבית - מבואת הכניסה עם הדלת האדומה, תאורת קיר וארון סמוי שמחבר בין החוץ לפנים">
         <img src="leiba-out-03.jpg" alt="חוץ הבית - מבט אל דלת הכניסה">
         <img src="leiba-out-04.jpg" alt="חוץ הבית - מעבר מקורה">
         <img src="leiba-out-05.jpg" alt="חוץ הבית - פרט דלת אדומה">
@@ -199,6 +200,7 @@
         <img src="unique-art-03-detail.jpg" alt="אחרי - פרט אמנות קיר במשרד הביתי, עם צבע חזק ונוכחות דרמטית">
         <img src="leiba-office-detail-after-01.jpg" alt="פרט נגרות במשרד - המשכיות העץ אל החזית הירוקה, ליצירת חיבור חומרי עדין בין אחסון, צבע ואמנות">
         <img src="leiba-office-storage-after-01.jpg" alt="אחרי - ארונות אחסון סגורים במשרד, שמסתירים את כל מה שהיה גלוי במחסן">
+        <img src="leiba-office-hidden-storage-wall-01.jpg" alt="אחרי - קיר אחסון סמוי במשרד, שמסתיר מאחוריו את כל מה שהיה גלוי ומעמיס במחסן הישן">
         <img src="leiba-office-after-02.jpg" alt="אחרי - מבט נוסף אל שולחן העבודה, התאורה והאמנות בחלל העבודה">
         <img src="leiba-office-after-04.jpg" alt="אחרי - משרד ביתי עם ספרי עיצוב, תאורה חמה ואחסון סמוי">
       </div>
@@ -429,6 +431,7 @@
         <img src="leiba-yavne-entry.jpg" alt="אחרי - מבט מהכניסה אל חדר המשפחה">
         <img src="leiba-yavne-doorway.jpg" alt="אחרי - דלת זכוכית וקשר עין לחדר המשפחה">
         <img src="leiba-yavne-tv-room.jpg" alt="אחרי - חדר טלוויזיה עם כורסה וקמין">
+        <img src="leiba-tv-room-duette-window-01.jpg" alt="אחרי - חלון גדול שממסגר את הגינה כמו תמונה חיה, עם וילון דואט חשמלי אטום לשליטה מלאה באור">
         <img src="leiba-yavne-bench.jpg" alt="אחרי - ספסל ישיבה מרופד בחיפוי עץ">
         <img src="leiba-yavne-storage-bench.jpg" alt="אחרי - אחסון פתוח ונגיש מתחת לספסל">
         <img src="leiba-yavne-seat-detail.jpg" alt="אחרי - פרט ישיבה וספסל בחדר המשפחה">
@@ -614,7 +617,7 @@
       if(!slug || !slug.startsWith('img-')) return;
       const index = leibaGalleryImages.findIndex((img)=>img.dataset.imageSlug === slug);
       if(index >= 0){
-        setTimeout(()=>openLeibaLightbox(index, false), 120);
+        openLeibaLightbox(index, false);
       }
     }
 
@@ -636,7 +639,7 @@
       }
     });
 
-    window.addEventListener('load',openLeibaImageFromHash);
+    document.addEventListener('DOMContentLoaded',openLeibaImageFromHash);
 
     document.addEventListener('keydown',(e)=>{
       if(!leibaLightbox.classList.contains('active')) return;
