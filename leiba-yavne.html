@@ -26,6 +26,10 @@
     .leiba-tab:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.10);}
 
     .leiba-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px;}
+    .leiba-gallery-single{
+  grid-template-columns:minmax(260px,520px);
+  justify-content:center;
+}
     .leiba-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 8px 22px rgba(0,0,0,.08);cursor:pointer;transition:.25s ease;background:#eee;}
     .leiba-gallery img:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.14);}
     .leiba-gallery img.wide{grid-column:span 2;aspect-ratio:16/9;}
