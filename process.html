@@ -457,8 +457,9 @@
 
       <form id="processForm" class="process-form" action="https://formsubmit.co/ajax/e8fc615a018169f89920a5d28fcde840" method="post">
         <input type="hidden" name="_subject" value="פנייה חדשה מעמוד תהליך העבודה">
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
         <div class="process-field-group">
           <div class="process-field-label">סוג השירות</div>
@@ -594,6 +595,32 @@
 
         try {
           const data = new FormData(form);
+
+          const honeypotValue = (data.get("_honey") || "").toString().trim();
+          const nameValue = (data.get("name") || "").toString().toLowerCase();
+          const emailValue = (data.get("email") || "").toString().toLowerCase();
+          const messageValue = (data.get("message") || "").toString().toLowerCase();
+          const feelingValue = (data.get("feeling") || "").toString().toLowerCase();
+          const phoneValue = (data.get("phone") || "").toString();
+          const phoneDigits = phoneValue.replace(/\D/g, "");
+          const combinedText = [nameValue, emailValue, messageValue, feelingValue].join(" ");
+
+          const spamWords = [
+            "sex", "porn", "casino", "crypto", "viagra", "loan", "girl", "girlfriend", "escort",
+            "http", "https", "www", ".com", ".org", ".net", ".ru", ".xyz", "graph.org"
+          ];
+
+          const hasSpam =
+            honeypotValue !== "" ||
+            spamWords.some((word) => combinedText.includes(word)) ||
+            phoneDigits.length < 9 ||
+            phoneDigits.length > 12;
+
+          if (hasSpam) {
+            formStatus.className = "process-small-note process-error-message";
+            formStatus.textContent = "נראה שהפרטים לא תקינים. אפשר לפנות אליי ישירות ב-WhatsApp.";
+            return;
+          }
 
           const response = await fetch(form.action, {
             method: "POST",
