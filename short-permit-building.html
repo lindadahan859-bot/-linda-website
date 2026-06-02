@@ -53,371 +53,56 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    .permit-page{
-      max-width:1200px;
-      margin:auto;
-      padding:0 20px 44px;
-      direction:rtl;
-    }
-
-    .permit-hero{
-      max-width:1200px;
-      margin:0 auto;
-      padding:34px 20px 8px;
-      text-align:center;
-      direction:rtl;
-    }
-
-    .permit-hero h1{
-      font-size:46px;
-      margin:0 0 10px;
-      line-height:1.2;
-    }
-
-    .permit-hero-subtitle{
-      max-width:900px;
-      margin:0 auto 18px;
-      font-size:21px;
-      color:#444;
-      line-height:1.65;
-    }
-
-    .permit-hero-image-wrap{
-      max-width:1200px;
-      margin:0 auto 18px;
-      padding:0 20px;
-    }
-
-    .permit-hero-image{
-      width:100%;
-      height:430px;
-      display:block;
-      border-radius:26px;
-      box-shadow:0 10px 28px rgba(0,0,0,0.12);
-      object-fit:cover;
-    }
-
-    .permit-section-box{
-      background:#fff;
-      border-radius:24px;
-      padding:28px;
-      margin-bottom:16px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-    }
-
-    .permit-section-box h2{
-      margin:0 0 12px;
-      font-size:30px;
-      line-height:1.3;
-    }
-
-    .permit-section-box h3{
-      margin:18px 0 8px;
-      font-size:23px;
-      line-height:1.3;
-    }
-
-    .permit-section-box p{
-      margin:0 0 11px;
-      font-size:18px;
-      color:#222;
-      line-height:1.78;
-    }
-
-    .permit-section-box p:last-child{
-      margin-bottom:0;
-    }
-
-    .permit-highlight{
-      font-weight:700;
-      color:#000;
-    }
-
-    .permit-gold{
-      color:#9b6a37;
-      font-weight:700;
-    }
-
-    .permit-cards{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
-      gap:14px;
-      margin-top:14px;
-    }
-
-    .permit-card{
-      background:#fafaf8;
-      border:1px solid rgba(0,0,0,0.06);
-      border-radius:20px;
-      padding:20px;
-    }
-
-    .permit-card h3{
-      margin:0 0 8px;
-      font-size:21px;
-      line-height:1.3;
-    }
-
-    .permit-card p{
-      margin:0;
-      font-size:16px;
-      color:#333;
-      line-height:1.68;
-    }
-
-    .permit-warning{
-      background:#fff8ef;
-      border:1px solid rgba(155,106,55,0.22);
-    }
-
-    .permit-check-list{
-      display:grid;
-      gap:10px;
-      margin-top:10px;
-    }
-
-    .permit-check-item{
-      background:#fafaf8;
-      border-radius:16px;
-      padding:14px 16px;
-      font-size:17px;
-      line-height:1.55;
-      color:#222;
-      border:1px solid rgba(0,0,0,0.06);
-    }
-
-    .permit-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:14px;
-    }
-
-    .permit-links a{
-      display:inline-block;
-      padding:12px 16px;
-      border-radius:999px;
-      background:#fafaf8;
-      color:#111;
-      text-decoration:none;
-      border:1px solid rgba(0,0,0,0.08);
-      font-size:16px;
-    }
-
-    .permit-links a:hover{
-      background:#111;
-      color:#fff;
-    }
-
-    .permit-form-box{
-      background:#fff;
-      border-radius:24px;
-      padding:28px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-      margin-top:4px;
-    }
-
-    .permit-form-box h2{
-      margin:0 0 8px;
-      font-size:30px;
-      line-height:1.3;
-    }
-
-    .permit-form-intro{
-      margin:0 0 18px;
-      font-size:17px;
-      color:#444;
-      line-height:1.6;
-    }
-
-    .permit-form{
-      display:grid;
-      gap:14px;
-    }
-
-    .permit-field-group{
-      display:grid;
-      gap:8px;
-    }
-
-    .permit-field-label{
-      font-size:18px;
-      font-weight:700;
-      color:#111;
-    }
-
-    .permit-check-group{
-      display:grid;
-      gap:8px;
-    }
-
-    .permit-check-option{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-size:16px;
-      color:#222;
-    }
-
-    .permit-two-cols{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-    }
-
-    .permit-form input[type="text"],
-    .permit-form input[type="tel"],
-    .permit-form input[type="email"],
-    .permit-form textarea{
-      width:100%;
-      box-sizing:border-box;
-      border:1px solid #d7d7d2;
-      border-radius:14px;
-      padding:14px 16px;
-      font-size:16px;
-      font-family:'Heebo',sans-serif;
-      background:#fff;
-      color:#111;
-    }
-
-    .permit-form textarea{
-      min-height:120px;
-      resize:vertical;
-      line-height:1.7;
-    }
-
-    .permit-helper{
-      font-size:14px;
-      color:#666;
-      line-height:1.6;
-      margin-top:-2px;
-    }
-
-    .permit-contact-buttons{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:6px;
-    }
-
-    .permit-contact-buttons a,
-    .permit-contact-buttons button{
-      flex:1;
-      text-align:center;
-      padding:14px;
-      border-radius:12px;
-      font-size:16px;
-      text-decoration:none;
-      cursor:pointer;
-      box-sizing:border-box;
-      font-family:'Heebo',sans-serif;
-    }
-
-    .permit-contact-buttons a{
-      border:1px solid #ccc;
-      color:#000;
-      background:#fff;
-    }
-
-    .permit-contact-buttons button{
-      border:none;
-      background:#111;
-      color:#fff;
-    }
-
-    .permit-contact-buttons button:disabled{
-      opacity:0.7;
-      cursor:not-allowed;
-    }
-
-    .permit-small-note{
-      font-size:14px;
-      color:#666;
-      margin-top:12px;
-      line-height:1.65;
-    }
-
-    .permit-success-message{
-      color:#1d6b3a;
-    }
-
-    .permit-error-message{
-      color:#a33434;
-    }
-
-    @media (max-width: 980px){
-      .permit-cards{
-        grid-template-columns:1fr 1fr;
-      }
-    }
-
-    @media (max-width: 820px){
-      .permit-hero{
-        padding-top:26px;
-      }
-
-      .permit-hero h1{
-        font-size:34px;
-      }
-
-      .permit-hero-subtitle{
-        font-size:18px;
-        margin-bottom:14px;
-      }
-
-      .permit-hero-image-wrap{
-        padding:0 12px;
-        margin-bottom:14px;
-      }
-
-      .permit-hero-image{
-        height:300px;
-        border-radius:20px;
-      }
-
-      .permit-section-box,
-      .permit-form-box{
-        padding:20px;
-      }
-
-      .permit-section-box h2,
-      .permit-form-box h2{
-        font-size:25px;
-      }
-
-      .permit-section-box h3{
-        font-size:21px;
-      }
-
-      .permit-section-box p{
-        font-size:16px;
-      }
-
-      .permit-cards{
-        grid-template-columns:1fr;
-      }
-
-      .permit-two-cols{
-        grid-template-columns:1fr;
-      }
-
-      .permit-page{
-        padding:0 12px 36px;
-      }
-    }
+    .permit-page{max-width:1200px;margin:auto;padding:0 20px 44px;direction:rtl;}
+    .permit-hero{max-width:1200px;margin:0 auto;padding:34px 20px 8px;text-align:center;direction:rtl;}
+    .permit-hero h1{font-size:46px;margin:0 0 10px;line-height:1.2;}
+    .permit-hero-subtitle{max-width:900px;margin:0 auto 18px;font-size:21px;color:#444;line-height:1.65;}
+    .permit-hero-image-wrap{max-width:1200px;margin:0 auto 18px;padding:0 20px;}
+    .permit-hero-image{width:100%;height:430px;display:block;border-radius:26px;box-shadow:0 10px 28px rgba(0,0,0,0.12);object-fit:cover;}
+    .permit-section-box{background:#fff;border-radius:24px;padding:28px;margin-bottom:16px;box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+    .permit-section-box h2{margin:0 0 12px;font-size:30px;line-height:1.3;}
+    .permit-section-box h3{margin:18px 0 8px;font-size:23px;line-height:1.3;}
+    .permit-section-box p{margin:0 0 11px;font-size:18px;color:#222;line-height:1.78;}
+    .permit-section-box p:last-child{margin-bottom:0;}
+    .permit-section-box a{color:#8a5a2b;font-weight:700;text-decoration:underline;}
+    .permit-highlight{font-weight:700;color:#000;}
+    .permit-gold{color:#9b6a37;font-weight:700;}
+    .permit-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px;}
+    .permit-card{background:#fafaf8;border:1px solid rgba(0,0,0,0.06);border-radius:20px;padding:20px;}
+    .permit-card h3{margin:0 0 8px;font-size:21px;line-height:1.3;}
+    .permit-card p{margin:0;font-size:16px;color:#333;line-height:1.68;}
+    .permit-warning{background:#fff8ef;border:1px solid rgba(155,106,55,0.22);}
+    .permit-check-list{display:grid;gap:10px;margin-top:10px;}
+    .permit-check-item{background:#fafaf8;border-radius:16px;padding:14px 16px;font-size:17px;line-height:1.55;color:#222;border:1px solid rgba(0,0,0,0.06);}
+    .permit-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+    .permit-links a{display:inline-block;padding:12px 16px;border-radius:999px;background:#fafaf8;color:#111;text-decoration:none;border:1px solid rgba(0,0,0,0.08);font-size:16px;}
+    .permit-links a:hover{background:#111;color:#fff;}
+    .permit-form-box{background:#fff;border-radius:24px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,0.08);margin-top:4px;}
+    .permit-form-box h2{margin:0 0 8px;font-size:30px;line-height:1.3;}
+    .permit-form-intro{margin:0 0 18px;font-size:17px;color:#444;line-height:1.6;}
+    .permit-form{display:grid;gap:14px;}
+    .permit-field-group{display:grid;gap:8px;}
+    .permit-field-label{font-size:18px;font-weight:700;color:#111;}
+    .permit-check-group{display:grid;gap:8px;}
+    .permit-check-option{display:flex;align-items:center;gap:10px;font-size:16px;color:#222;}
+    .permit-two-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    .permit-form input[type="text"],.permit-form input[type="tel"],.permit-form input[type="email"],.permit-form textarea{width:100%;box-sizing:border-box;border:1px solid #d7d7d2;border-radius:14px;padding:14px 16px;font-size:16px;font-family:'Heebo',sans-serif;background:#fff;color:#111;}
+    .permit-form textarea{min-height:120px;resize:vertical;line-height:1.7;}
+    .permit-helper{font-size:14px;color:#666;line-height:1.6;margin-top:-2px;}
+    .permit-contact-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+    .permit-contact-buttons a,.permit-contact-buttons button{flex:1;text-align:center;padding:14px;border-radius:12px;font-size:16px;text-decoration:none;cursor:pointer;box-sizing:border-box;font-family:'Heebo',sans-serif;}
+    .permit-contact-buttons a{border:1px solid #ccc;color:#000;background:#fff;}
+    .permit-contact-buttons button{border:none;background:#111;color:#fff;}
+    .permit-contact-buttons button:disabled{opacity:0.7;cursor:not-allowed;}
+    .permit-small-note{font-size:14px;color:#666;margin-top:12px;line-height:1.65;}
+    .permit-success-message{color:#1d6b3a;}
+    .permit-error-message{color:#a33434;}
+    @media (max-width:980px){.permit-cards{grid-template-columns:1fr 1fr;}}
+    @media (max-width:820px){.permit-hero{padding-top:26px;}.permit-hero h1{font-size:34px;}.permit-hero-subtitle{font-size:18px;margin-bottom:14px;}.permit-hero-image-wrap{padding:0 12px;margin-bottom:14px;}.permit-hero-image{height:300px;border-radius:20px;}.permit-section-box,.permit-form-box{padding:20px;}.permit-section-box h2,.permit-form-box h2{font-size:25px;}.permit-section-box h3{font-size:21px;}.permit-section-box p{font-size:16px;}.permit-cards{grid-template-columns:1fr;}.permit-two-cols{grid-template-columns:1fr;}.permit-page{padding:0 12px 36px;}}
   </style>
 
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfessionalService",
-    "name":"לינדה דהן - אדריכלות, עיצוב פנים והיתרי בנייה",
-    "url":"https://www.lindaarch.com/short-permit-building.html",
-    "image":"https://www.lindaarch.com/facecover.jpg",
-    "description":"בדיקת התאמה לרישוי מקוצר או היתר בנייה מלא עבור בתים פרטיים, נחלות, משקים ומבנים חקלאיים.",
-    "areaServed":"Israel",
-    "telephone":"+972507555667"
-  }
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"לינדה דהן - אדריכלות, עיצוב פנים והיתרי בנייה","url":"https://www.lindaarch.com/short-permit-building.html","image":"https://www.lindaarch.com/facecover.jpg","description":"בדיקת התאמה לרישוי מקוצר או היתר בנייה מלא עבור בתים פרטיים, נחלות, משקים ומבנים חקלאיים.","areaServed":"Israel","telephone":"+972507555667"}
   </script>
 
 </head>
@@ -427,9 +112,7 @@
 
   <section class="permit-hero">
     <h1>רישוי מקוצר והיתרי בנייה</h1>
-    <p class="permit-hero-subtitle">
-      לא כל עבודה דורשת היתר מלא, אבל גם לא כל שינוי קטן באמת מתאים לרישוי מקוצר. לפני שמתחילים לבנות, להגביה, לסגור, להחליף גג או להסב שימוש - חשוב לבדוק את המסלול הנכון.
-    </p>
+    <p class="permit-hero-subtitle">לא כל עבודה דורשת היתר מלא, אבל גם לא כל שינוי קטן באמת מתאים לרישוי מקוצר. לפני שמתחילים לבנות, להגביה, לסגור, להחליף גג או להסב שימוש - חשוב לבדוק את המסלול הנכון.</p>
   </section>
 
   <div class="permit-hero-image-wrap">
@@ -440,72 +123,34 @@
 
     <section class="permit-section-box">
       <h2>מה זה רישוי מקוצר?</h2>
-      <p>
-        רישוי מקוצר הוא מסלול שמיועד לעבודות מסוימות שהחוק מאפשר לטפל בהן בדרך פשוטה ומהירה יותר מהיתר בנייה רגיל. זה יכול להתאים במקרים שבהם העבודה ברורה, מוגדרת, עומדת בהוראות התב"ע ואינה יוצרת שינוי מהותי או מורכב במבנה.
-      </p>
-      <p>
-        אבל כאן בדיוק מתחיל הבלבול: <span class="permit-highlight">העובדה שעבודה נראית קטנה לא אומרת שהיא אוטומטית במסלול מקוצר</span>. לפעמים שינוי קטן במילים הוא שינוי גדול מבחינת רישוי.
-      </p>
+      <p>רישוי מקוצר הוא מסלול שמיועד לעבודות מסוימות שהחוק מאפשר לטפל בהן בדרך פשוטה ומהירה יותר מהיתר בנייה רגיל. זה יכול להתאים במקרים שבהם העבודה ברורה, מוגדרת, עומדת בהוראות התב"ע ואינה יוצרת שינוי מהותי או מורכב במבנה.</p>
+      <p>הבדיקה נעשית בין היתר לפי <a href="https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%AA%D7%9B%D7%A0%D7%95%D7%9F_%D7%95%D7%94%D7%91%D7%A0%D7%99%D7%99%D7%94_%28%D7%94%D7%9C%D7%99%D7%9A_%D7%A8%D7%99%D7%A9%D7%95%D7%99_%D7%91%D7%93%D7%A8%D7%9A_%D7%9E%D7%A7%D7%95%D7%A6%D7%A8%D7%AA%29" target="_blank" rel="noopener">תקנות התכנון והבנייה - הליך רישוי בדרך מקוצרת</a>, יחד עם הוראות התב״ע, תיק המידע, ההיתר הקיים ועמדת הוועדה המקומית.</p>
+      <p>אבל כאן בדיוק מתחיל הבלבול: <span class="permit-highlight">העובדה שעבודה נראית קטנה לא אומרת שהיא אוטומטית במסלול מקוצר</span>. לפעמים שינוי קטן במילים הוא שינוי גדול מבחינת רישוי.</p>
     </section>
 
     <section class="permit-section-box">
       <h2>מה אפשר לבדוק במסגרת רישוי מקוצר?</h2>
-      <p>
-        התקנות כוללות סוגים שונים של עבודות ומבנים שניתן לבחון למסלול מקוצר, בכפוף לעמידה בתנאים, למיקום, לגודל, לשימוש ולשיקול דעת הוועדה המקומית.
-      </p>
-
+      <p>התקנות כוללות סוגים שונים של עבודות ומבנים שניתן לבחון למסלול מקוצר, בכפוף לעמידה בתנאים, למיקום, לגודל, לשימוש ולשיקול דעת הוועדה המקומית.</p>
       <div class="permit-cards">
-        <div class="permit-card">
-          <h3>מחסנים וסככות</h3>
-          <p>במקרים מסוימים ניתן לבדוק מחסן, סככה או מבנה עזר, בהתאם לגודל, מיקום, קווי בניין והוראות התכנית.</p>
-        </div>
-
-        <div class="permit-card">
-          <h3>גדרות וקירות</h3>
-          <p>גדרות, קירות תמך ואלמנטים חיצוניים מסוימים עשויים להתאים למסלול פשוט יותר, אך יש לבדוק גובה, מיקום והשפעה על שכנים.</p>
-        </div>
-
-        <div class="permit-card">
-          <h3>פרגולות ומצללות</h3>
-          <p>לעיתים יש פטור, לעיתים רישוי מקוצר ולעיתים נדרש היתר - תלוי בגודל, בחומר, במיקום ובתכנית החלה על המגרש.</p>
-        </div>
-
-        <div class="permit-card">
-          <h3>מבנים חקלאיים</h3>
-          <p>במשקים ונחלות יש מקרים שבהם מבנה חקלאי יכול להיבחן במסלול מקוצר, אבל נדרשת התאמה מדויקת לתקנות ולייעוד החקלאי.</p>
-        </div>
-
-        <div class="permit-card">
-          <h3>שינוי רכיבים במבנה</h3>
-          <p>החלפת רכיב קיים יכולה לעיתים להתאים למסלול מקוצר, אבל אם השינוי משנה גובה, נפח, חזיתות או שלד - זה כבר עלול להיות היתר מלא.</p>
-        </div>
-
-        <div class="permit-card">
-          <h3>תוספות ושינויים קיימים</h3>
-          <p>הרחבה, שינוי שימוש, סגירה, הגבהה או הסבה דורשים בדיקה פרטנית. אין כאן קסמים, רק תכנון נכון ובדיקה לפני שמסתבכים.</p>
-        </div>
+        <div class="permit-card"><h3>מחסנים וסככות</h3><p>במקרים מסוימים ניתן לבדוק מחסן, סככה או מבנה עזר, בהתאם לגודל, מיקום, קווי בניין והוראות התכנית.</p></div>
+        <div class="permit-card"><h3>גדרות וקירות</h3><p>גדרות, קירות תמך ואלמנטים חיצוניים מסוימים עשויים להתאים למסלול פשוט יותר, אך יש לבדוק גובה, מיקום והשפעה על שכנים.</p></div>
+        <div class="permit-card"><h3>פרגולות ומצללות</h3><p>לעיתים יש פטור, לעיתים רישוי מקוצר ולעיתים נדרש היתר - תלוי בגודל, בחומר, במיקום ובתכנית החלה על המגרש.</p></div>
+        <div class="permit-card"><h3>מבנים חקלאיים</h3><p>במשקים ונחלות יש מקרים שבהם מבנה חקלאי יכול להיבחן במסלול מקוצר, אבל נדרשת התאמה מדויקת לתקנות ולייעוד החקלאי.</p></div>
+        <div class="permit-card"><h3>שינוי רכיבים במבנה</h3><p>החלפת רכיב קיים יכולה לעיתים להתאים למסלול מקוצר, אבל אם השינוי משנה גובה, נפח, חזיתות או שלד - זה כבר עלול להיות היתר מלא.</p></div>
+        <div class="permit-card"><h3>תוספות ושינויים קיימים</h3><p>הרחבה, שינוי שימוש, סגירה, הגבהה או הסבה דורשים בדיקה פרטנית. אין כאן קסמים, רק תכנון נכון ובדיקה לפני שמסתבכים.</p></div>
       </div>
     </section>
 
     <section class="permit-section-box permit-warning">
       <h2>החלפת גג אסבסט והגבהת מבנה - איפה נופלים?</h2>
-      <p>
-        לקוחות רבים שואלים האם החלפת גג ישן, במיוחד <span class="permit-highlight">גג אסבסט</span>, יכולה להיכנס לרישוי מקוצר. אם מדובר רק בהחלפת לוחות גג ברכיב חדש באותו גובה ובאותה מעטפת, יש מקום לבדוק אם הדבר מתאים למסלול פשוט יותר.
-      </p>
-      <p>
-        אבל אם באותה פעולה גם <span class="permit-highlight">מגביהים את המבנה</span>, משנים את הקונסטרוקציה, את החתך, את החזיתות או את נפח המבנה - הוועדה יכולה לראות בכך שינוי מהותי שמצריך היתר בנייה מלא.
-      </p>
-      <p>
-        כלומר: <span class="permit-gold">החלפת גג אינה בהכרח כמו הגבהת גג</span>. זה נשמע דומה, אבל ברישוי זה יכול להיות עולם אחר.
-      </p>
+      <p>לקוחות רבים שואלים האם החלפת גג ישן, במיוחד <span class="permit-highlight">גג אסבסט</span>, יכולה להיכנס לרישוי מקוצר. אם מדובר רק בהחלפת לוחות גג ברכיב חדש באותו גובה ובאותה מעטפת, יש מקום לבדוק אם הדבר מתאים למסלול פשוט יותר.</p>
+      <p>אבל אם באותה פעולה גם <span class="permit-highlight">מגביהים את המבנה</span>, משנים את הקונסטרוקציה, את החתך, את החזיתות או את נפח המבנה - הוועדה יכולה לראות בכך שינוי מהותי שמצריך היתר בנייה מלא.</p>
+      <p>כלומר: <span class="permit-gold">החלפת גג אינה בהכרח כמו הגבהת גג</span>. זה נשמע דומה, אבל ברישוי זה יכול להיות עולם אחר.</p>
     </section>
 
     <section class="permit-section-box">
       <h2>מתי בדרך כלל נדרש היתר מלא?</h2>
-      <p>
-        יש עבודות שקשה מאוד לראות בהן רישוי מקוצר, גם אם הן נשמעות פשוטות. למשל:
-      </p>
-
+      <p>יש עבודות שקשה מאוד לראות בהן רישוי מקוצר, גם אם הן נשמעות פשוטות. למשל:</p>
       <div class="permit-check-list">
         <div class="permit-check-item">הגבהת מבנה קיים או שינוי משמעותי של גובה הגג.</div>
         <div class="permit-check-item">תוספת שטח בנייה, גלריה, קומה או הרחבה.</div>
@@ -517,31 +162,18 @@
 
     <section class="permit-section-box">
       <h2>מושבים, נחלות ומבנים חקלאיים</h2>
-      <p>
-        במושבים ונחלות הבדיקה מורכבת יותר, כי לא מספיק לשאול "מה רוצים לבנות". צריך לבדוק גם מה הייעוד, מה קיים בהיתר, מה מיקום המבנה בחלקה, האם הוא בתחום חלקה א', מה הזכויות הקיימות ומה אומרים תיק המידע והתב"ע.
-      </p>
-      <p>
-        מבנה חקלאי, לול, סככה, מחסן, פינת חי או מבנה להחזקת בעלי חיים יכולים להיראות דומים בשטח, אבל מבחינת רישוי הם לא תמיד אותו דבר.
-      </p>
-      <p>
-        לכן לפני הגשה לוועדה אני בודקת את התמונה המלאה: היתר קודם, מדידה, תב"ע, שימוש מבוקש, גובה מותר, קווי בניין ועמדת הוועדה.
-      </p>
+      <p>במושבים ונחלות הבדיקה מורכבת יותר, כי לא מספיק לשאול "מה רוצים לבנות". צריך לבדוק גם מה הייעוד, מה קיים בהיתר, מה מיקום המבנה בחלקה, האם הוא בתחום חלקה א', מה הזכויות הקיימות ומה אומרים תיק המידע והתב"ע.</p>
+      <p>מבנה חקלאי, לול, סככה, מחסן, פינת חי או מבנה להחזקת בעלי חיים יכולים להיראות דומים בשטח, אבל מבחינת רישוי הם לא תמיד אותו דבר.</p>
+      <p>לכן לפני הגשה לוועדה אני בודקת את התמונה המלאה: היתר קודם, מדידה, תב"ע, שימוש מבוקש, גובה מותר, קווי בניין ועמדת הוועדה.</p>
     </section>
 
     <section class="permit-section-box">
       <h2>איך יודעים מה המסלול הנכון?</h2>
-      <p>
-        הדרך הנכונה היא לא לנחש. בודקים את התקנות, את תיק המידע, את ההיתר הקיים ואת הדרישות של הוועדה המקומית.
-      </p>
-      <p>
-        לפעמים התוצאה תהיה רישוי מקוצר. לפעמים היתר מלא. ולפעמים דווקא תכנון קטן יותר או ניסוח מדויק יותר של הבקשה יחסכו חודשים של הלוך ושוב.
-      </p>
-      <p>
-        <span class="permit-highlight">המטרה היא לא רק להגיש בקשה. המטרה היא להגיש אותה נכון.</span>
-      </p>
-
+      <p>הדרך הנכונה היא לא לנחש. בודקים את התקנות, את תיק המידע, את ההיתר הקיים ואת הדרישות של הוועדה המקומית.</p>
+      <p>לפעמים התוצאה תהיה רישוי מקוצר. לפעמים היתר מלא. ולפעמים דווקא תכנון קטן יותר או ניסוח מדויק יותר של הבקשה יחסכו חודשים של הלוך ושוב.</p>
+      <p><span class="permit-highlight">המטרה היא לא רק להגיש בקשה. המטרה היא להגיש אותה נכון.</span></p>
       <div class="permit-links">
-        <a href="building-permits-private-homes.html">היתרי בנייה לבתים פרטיים</a>
+        <a href="building-permits-rehovot-yavne.html">היתרי בנייה לבתים פרטיים</a>
         <a href="moshavim-nahalot.html">מושבים ונחלות</a>
         <a href="plach-moshavim.html">פל"ח במושבים ונחלות</a>
         <a href="process.html">תהליך העבודה</a>
@@ -552,218 +184,57 @@
     <section class="permit-section-box">
       <h2>טעויות נפוצות לפני שמתחילים</h2>
       <div class="permit-cards">
-        <div class="permit-card">
-          <h3>"זה רק גג"</h3>
-          <p>לפעמים זה באמת רק גג. אבל אם משנים גובה, שיפוע, שלד או נפח - זו כבר לא אותה שאלה.</p>
-        </div>
-
-        <div class="permit-card">
-          <h3>"השכן עשה"</h3>
-          <p>זה שהשכן ביצע עבודה דומה לא אומר שהמסלול, ההיתר או הזכויות זהים אצלכם.</p>
-        </div>
-
-        <div class="permit-card">
-          <h3>"הוועדה תסתדר"</h3>
-          <p>הוועדה לא אוהבת ניחושים. היא אוהבת מסמכים, מדידה, תכנון ברור ונימוק מקצועי.</p>
-        </div>
+        <div class="permit-card"><h3>"זה רק גג"</h3><p>לפעמים זה באמת רק גג. אבל אם משנים גובה, שיפוע, שלד או נפח - זו כבר לא אותה שאלה.</p></div>
+        <div class="permit-card"><h3>"השכן עשה"</h3><p>זה שהשכן ביצע עבודה דומה לא אומר שהמסלול, ההיתר או הזכויות זהים אצלכם.</p></div>
+        <div class="permit-card"><h3>"הוועדה תסתדר"</h3><p>הוועדה לא אוהבת ניחושים. היא אוהבת מסמכים, מדידה, תכנון ברור ונימוק מקצועי.</p></div>
       </div>
     </section>
 
     <section class="permit-form-box" id="contact">
       <h2>רוצים לבדוק אם זה רישוי מקוצר או היתר מלא?</h2>
-      <p class="permit-form-intro">
-        מלאו כמה פרטים על העבודה המבוקשת ואחזור אליכם כדי להבין מה נכון לבדוק לפני הגשה לוועדה.
-      </p>
-
+      <p class="permit-form-intro">מלאו כמה פרטים על העבודה המבוקשת ואחזור אליכם כדי להבין מה נכון לבדוק לפני הגשה לוועדה.</p>
       <form id="permitForm" class="permit-form" action="https://formsubmit.co/ajax/e8fc615a018169f89920a5d28fcde840" method="post">
         <input type="hidden" name="_subject" value="פנייה חדשה מעמוד רישוי מקוצר והיתרי בנייה">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
-
-        <div class="permit-field-group">
-          <div class="permit-field-label">איזה סוג עבודה רוצים לבצע?</div>
-          <div class="permit-check-group">
-            <label class="permit-check-option"><input type="checkbox" name="work_type" value="רישוי מקוצר"> רישוי מקוצר</label>
-            <label class="permit-check-option"><input type="checkbox" name="work_type" value="היתר בנייה מלא"> היתר בנייה מלא</label>
-            <label class="permit-check-option"><input type="checkbox" name="work_type" value="החלפת גג אסבסט"> החלפת גג אסבסט</label>
-            <label class="permit-check-option"><input type="checkbox" name="work_type" value="הגבהת מבנה"> הגבהת מבנה</label>
-            <label class="permit-check-option"><input type="checkbox" name="work_type" value="מחסן / סככה"> מחסן / סככה</label>
-            <label class="permit-check-option"><input type="checkbox" name="work_type" value="מבנה חקלאי"> מבנה חקלאי</label>
-            <label class="permit-check-option"><input type="checkbox" name="work_type" value="אחר"> אחר</label>
-          </div>
-        </div>
-
-        <div class="permit-field-group">
-          <div class="permit-field-label">סוג הנכס</div>
-          <div class="permit-check-group">
-            <label class="permit-check-option"><input type="checkbox" name="property" value="בית פרטי"> בית פרטי</label>
-            <label class="permit-check-option"><input type="checkbox" name="property" value="נחלה / משק"> נחלה / משק</label>
-            <label class="permit-check-option"><input type="checkbox" name="property" value="מושב / קיבוץ"> מושב / קיבוץ</label>
-            <label class="permit-check-option"><input type="checkbox" name="property" value="מבנה מסחרי"> מבנה מסחרי</label>
-            <label class="permit-check-option"><input type="checkbox" name="property" value="אחר"> אחר</label>
-          </div>
-        </div>
-
-        <div class="permit-two-cols">
-          <input type="text" name="name" placeholder="שם מלא" required>
-          <input type="tel" name="phone" placeholder="מספר טלפון" required>
-        </div>
-
+        <div class="permit-field-group"><div class="permit-field-label">איזה סוג עבודה רוצים לבצע?</div><div class="permit-check-group">
+          <label class="permit-check-option"><input type="checkbox" name="work_type" value="רישוי מקוצר"> רישוי מקוצר</label>
+          <label class="permit-check-option"><input type="checkbox" name="work_type" value="היתר בנייה מלא"> היתר בנייה מלא</label>
+          <label class="permit-check-option"><input type="checkbox" name="work_type" value="החלפת גג אסבסט"> החלפת גג אסבסט</label>
+          <label class="permit-check-option"><input type="checkbox" name="work_type" value="הגבהת מבנה"> הגבהת מבנה</label>
+          <label class="permit-check-option"><input type="checkbox" name="work_type" value="מחסן / סככה"> מחסן / סככה</label>
+          <label class="permit-check-option"><input type="checkbox" name="work_type" value="מבנה חקלאי"> מבנה חקלאי</label>
+          <label class="permit-check-option"><input type="checkbox" name="work_type" value="אחר"> אחר</label>
+        </div></div>
+        <div class="permit-field-group"><div class="permit-field-label">סוג הנכס</div><div class="permit-check-group">
+          <label class="permit-check-option"><input type="checkbox" name="property" value="בית פרטי"> בית פרטי</label>
+          <label class="permit-check-option"><input type="checkbox" name="property" value="נחלה / משק"> נחלה / משק</label>
+          <label class="permit-check-option"><input type="checkbox" name="property" value="מושב / קיבוץ"> מושב / קיבוץ</label>
+          <label class="permit-check-option"><input type="checkbox" name="property" value="מבנה מסחרי"> מבנה מסחרי</label>
+          <label class="permit-check-option"><input type="checkbox" name="property" value="אחר"> אחר</label>
+        </div></div>
+        <div class="permit-two-cols"><input type="text" name="name" placeholder="שם מלא" required><input type="tel" name="phone" placeholder="מספר טלפון" required></div>
         <input type="email" name="email" placeholder="אימייל">
-
-        <div class="permit-field-group">
-          <label class="permit-field-label" for="fullAddress">כתובת / יישוב / מספר משק</label>
-          <div class="permit-helper">אפשר לכתוב עיר, מושב, נחלה, גוש חלקה או כל פרט שיש לכם.</div>
-          <input type="text" id="fullAddress" name="full_address" placeholder="למשל: כפר הנגיד, משק 78">
-        </div>
-
-        <div class="permit-field-group">
-          <label class="permit-field-label" for="existingStatus">מה קיים היום?</label>
-          <div class="permit-helper">גובה, שטח, שימוש קיים, האם יש היתר ישן, האם יש מדידה.</div>
-          <textarea id="existingStatus" name="existing_status"></textarea>
-        </div>
-
-        <div class="permit-field-group">
-          <label class="permit-field-label" for="requestedWork">מה רוצים לבצע?</label>
-          <div class="permit-helper">למשל: להחליף גג, להגביה מבנה, להקים מחסן, לסגור סככה או לבדוק אפשרות לרישוי מקוצר.</div>
-          <textarea id="requestedWork" name="requested_work"></textarea>
-        </div>
-
-        <div class="permit-field-group">
-          <label class="permit-field-label" for="details">פרטים נוספים</label>
-          <div class="permit-helper">אפשר לציין אם כבר פניתם לוועדה, אם יש תיק מידע, היתר קודם או התלבטות בין מסלולים.</div>
-          <textarea id="details" name="message"></textarea>
-        </div>
-
-        <div class="permit-field-group">
-          <div class="permit-field-label">איך נוח שאחזור אליכם?</div>
-          <div class="permit-check-group">
-            <label class="permit-check-option"><input type="checkbox" name="contact_method" value="טלפון"> טלפון</label>
-            <label class="permit-check-option"><input type="checkbox" name="contact_method" value="וואטסאפ"> וואטסאפ</label>
-            <label class="permit-check-option"><input type="checkbox" name="contact_method" value="אימייל"> אימייל</label>
-          </div>
-        </div>
-
-        <div class="permit-contact-buttons">
-          <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%93%D7%95%D7%A7%20%D7%90%D7%9D%20%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94%20%D7%9E%D7%AA%D7%90%D7%99%D7%9E%D7%94%20%D7%9C%D7%A8%D7%99%D7%A9%D7%95%D7%99%20%D7%9E%D7%A7%D7%95%D7%A6%D7%A8%20%D7%90%D7%95%20%D7%94%D7%99%D7%AA%D7%A8%20%D7%9E%D7%9C%D7%90" target="_blank" rel="noopener">בדיקה ב-WhatsApp</a>
-          <button id="submitBtn" type="submit">שליחה</button>
-        </div>
+        <div class="permit-field-group"><label class="permit-field-label" for="fullAddress">כתובת / יישוב / מספר משק</label><div class="permit-helper">אפשר לכתוב עיר, מושב, נחלה, גוש חלקה או כל פרט שיש לכם.</div><input type="text" id="fullAddress" name="full_address" placeholder="למשל: כפר הנגיד, משק 78"></div>
+        <div class="permit-field-group"><label class="permit-field-label" for="existingStatus">מה קיים היום?</label><div class="permit-helper">גובה, שטח, שימוש קיים, האם יש היתר ישן, האם יש מדידה.</div><textarea id="existingStatus" name="existing_status"></textarea></div>
+        <div class="permit-field-group"><label class="permit-field-label" for="requestedWork">מה רוצים לבצע?</label><div class="permit-helper">למשל: להחליף גג, להגביה מבנה, להקים מחסן, לסגור סככה או לבדוק אפשרות לרישוי מקוצר.</div><textarea id="requestedWork" name="requested_work"></textarea></div>
+        <div class="permit-field-group"><label class="permit-field-label" for="details">פרטים נוספים</label><div class="permit-helper">אפשר לציין אם כבר פניתם לוועדה, אם יש תיק מידע, היתר קודם או התלבטות בין מסלולים.</div><textarea id="details" name="message"></textarea></div>
+        <div class="permit-field-group"><div class="permit-field-label">איך נוח שאחזור אליכם?</div><div class="permit-check-group"><label class="permit-check-option"><input type="checkbox" name="contact_method" value="טלפון"> טלפון</label><label class="permit-check-option"><input type="checkbox" name="contact_method" value="וואטסאפ"> וואטסאפ</label><label class="permit-check-option"><input type="checkbox" name="contact_method" value="אימייל"> אימייל</label></div></div>
+        <div class="permit-contact-buttons"><a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%93%D7%95%D7%A7%20%D7%90%D7%9D%20%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94%20%D7%9E%D7%AA%D7%90%D7%99%D7%9E%D7%94%20%D7%9C%D7%A8%D7%99%D7%A9%D7%95%D7%99%20%D7%9E%D7%A7%D7%95%D7%A6%D7%A8%20%D7%90%D7%95%20%D7%94%D7%99%D7%AA%D7%A8%20%D7%9E%D7%9C%D7%90" target="_blank" rel="noopener">בדיקה ב-WhatsApp</a><button id="submitBtn" type="submit">שליחה</button></div>
       </form>
-
-      <div id="formStatus" class="permit-small-note">
-        השאירו פרטים ואחזור אליכם בהקדם. מומלץ לצרף בהמשך תמונות, מדידה או היתר ישן אם יש.
-      </div>
+      <div id="formStatus" class="permit-small-note">השאירו פרטים ואחזור אליכם בהקדם. מומלץ לצרף בהמשך תמונות, מדידה או היתר ישן אם יש.</div>
     </section>
 
   </main>
-
   <div id="site-footer"></div>
 
   <script>
-    async function loadIncludes() {
-      try {
-        const headerResponse = await fetch("header.html");
-        document.getElementById("site-header").innerHTML = await headerResponse.text();
-
-        const footerResponse = await fetch("footer.html");
-        document.getElementById("site-footer").innerHTML = await footerResponse.text();
-
-        if (typeof setupHeaderMenu === "function") {
-          setupHeaderMenu();
-        }
-      } catch (error) {
-        console.error("Error loading includes:", error);
-      }
-    }
-
+    async function loadIncludes(){try{const headerResponse=await fetch("header.html");document.getElementById("site-header").innerHTML=await headerResponse.text();const footerResponse=await fetch("footer.html");document.getElementById("site-footer").innerHTML=await footerResponse.text();if(typeof setupHeaderMenu==="function"){setupHeaderMenu();}}catch(error){console.error("Error loading includes:",error);}}
     loadIncludes();
-
-    const form = document.getElementById("permitForm");
-    const formStatus = document.getElementById("formStatus");
-    const submitButton = document.getElementById("submitBtn");
-    let permitFormStarted = false;
-
-    if (form) {
-      form.querySelectorAll("input, textarea").forEach((el) => {
-        el.addEventListener("focus", () => {
-          if (!permitFormStarted) {
-            permitFormStarted = true;
-
-            if (typeof gtag === "function") {
-              gtag("event", "permit_form_start", {
-                event_category: "Short Permit Page",
-                event_label: "User started permit form"
-              });
-            }
-
-            if (typeof fbq === "function") {
-              fbq("trackCustom", "PermitFormStart");
-            }
-          }
-        });
-      });
-
-      form.addEventListener("submit", async function(e) {
-        e.preventDefault();
-
-        submitButton.disabled = true;
-        submitButton.textContent = "שולח...";
-
-        try {
-          const data = new FormData(form);
-
-          const response = await fetch(form.action, {
-            method: "POST",
-            body: data,
-            headers: { Accept: "application/json" }
-          });
-
-          if (response.ok) {
-            form.reset();
-            formStatus.className = "permit-small-note permit-success-message";
-            formStatus.textContent = "הבקשה התקבלה בהצלחה. אחזור אליכם בהקדם.";
-
-            if (typeof gtag === "function") {
-              gtag("event", "permit_form_submit", {
-                event_category: "Short Permit Page",
-                event_label: "Permit form submitted"
-              });
-            }
-
-            if (typeof fbq === "function") {
-              fbq("trackCustom", "PermitFormSubmit");
-              fbq("track", "Lead");
-            }
-          } else {
-            throw new Error();
-          }
-        } catch (error) {
-          formStatus.className = "permit-small-note permit-error-message";
-          formStatus.textContent = "אירעה תקלה. אפשר לנסות שוב או לפנות אליי ישירות ב-WhatsApp.";
-        } finally {
-          submitButton.disabled = false;
-          submitButton.textContent = "שליחה";
-        }
-      });
-    }
-
-    document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
-      link.addEventListener("click", () => {
-        if (typeof gtag === "function") {
-          gtag("event", "whatsapp_click_permit", {
-            event_category: "Short Permit Page",
-            event_label: link.href
-          });
-        }
-
-        if (typeof fbq === "function") {
-          fbq("track", "Contact", { method: "whatsapp" });
-        }
-      });
-    });
+    const form=document.getElementById("permitForm");const formStatus=document.getElementById("formStatus");const submitButton=document.getElementById("submitBtn");let permitFormStarted=false;
+    if(form){form.querySelectorAll("input, textarea").forEach((el)=>{el.addEventListener("focus",()=>{if(!permitFormStarted){permitFormStarted=true;if(typeof gtag==="function"){gtag("event","permit_form_start",{event_category:"Short Permit Page",event_label:"User started permit form"});}if(typeof fbq==="function"){fbq("trackCustom","PermitFormStart");}}});});form.addEventListener("submit",async function(e){e.preventDefault();submitButton.disabled=true;submitButton.textContent="שולח...";try{const data=new FormData(form);const response=await fetch(form.action,{method:"POST",body:data,headers:{Accept:"application/json"}});if(response.ok){form.reset();formStatus.className="permit-small-note permit-success-message";formStatus.textContent="הבקשה התקבלה בהצלחה. אחזור אליכם בהקדם.";if(typeof gtag==="function"){gtag("event","permit_form_submit",{event_category:"Short Permit Page",event_label:"Permit form submitted"});}if(typeof fbq==="function"){fbq("trackCustom","PermitFormSubmit");fbq("track","Lead");}}else{throw new Error();}}catch(error){formStatus.className="permit-small-note permit-error-message";formStatus.textContent="אירעה תקלה. אפשר לנסות שוב או לפנות אליי ישירות ב-WhatsApp.";}finally{submitButton.disabled=false;submitButton.textContent="שליחה";}});}
+    document.querySelectorAll('a[href*="wa.me"]').forEach((link)=>{link.addEventListener("click",()=>{if(typeof gtag==="function"){gtag("event","whatsapp_click_permit",{event_category:"Short Permit Page",event_label:link.href});}if(typeof fbq==="function"){fbq("track","Contact",{method:"whatsapp"});}});});
   </script>
-
   <script src="site-tools.js"></script>
-
 </body>
 </html>
