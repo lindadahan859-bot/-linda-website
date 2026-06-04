@@ -9,8 +9,22 @@
     background:transparent!important;
     border-radius:0!important;
     box-shadow:none!important;
-    border-bottom:2px solid #9a642f!important;
-    padding-bottom:6px!important;
+    border-bottom:0!important;
+    padding-bottom:0!important;
+    transform:none!important;
+    position:relative!important;
+    top:auto!important;
+  }
+  .site-header .main-menu .menu-item-has-submenu.active-parent > .submenu-toggle:after,
+  .site-header .main-menu > a.active-page:after{
+    content:"";
+    position:absolute;
+    right:0;
+    left:0;
+    bottom:-9px;
+    height:2px;
+    background:#9a642f;
+    border-radius:999px;
   }
   .site-header .submenu a.active-page{
     background:#f7efe5!important;
@@ -20,6 +34,27 @@
   }
   .ld-current-page-bar{
     background:#f7f4ef!important;
+  }
+  .ld-current-page-inner{
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+    border-radius:0!important;
+    padding:8px 0!important;
+    color:#07345a!important;
+    font-size:16px!important;
+    gap:9px!important;
+  }
+  .ld-current-page-inner span:first-child{
+    display:none!important;
+  }
+  .ld-current-page-inner strong{
+    color:#07345a!important;
+    font-weight:700!important;
+  }
+  .ld-current-sep{
+    color:#c8352d!important;
+    font-weight:900!important;
   }
 </style>
 <header class="site-header">
@@ -100,3 +135,15 @@
 
   </div>
 </header>
+<script>
+  (function(){
+    function fixBreadcrumb(){
+      var bar=document.getElementById('ldCurrentPageBar');
+      if(!bar)return;
+      var first=bar.querySelector('.ld-current-page-inner span:first-child');
+      if(first&&first.textContent.indexOf('את נמצאת')>-1){first.remove();}
+    }
+    var t=setInterval(fixBreadcrumb,150);
+    setTimeout(function(){clearInterval(t);fixBreadcrumb();},5000);
+  })();
+</script>
