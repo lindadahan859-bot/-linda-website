@@ -158,6 +158,28 @@
         inner.insertBefore(home,sep);
       }
     }
+    function scrollToHash(hash){
+      if(!hash)return;
+      var el=document.querySelector(hash);
+      if(!el)return;
+      var header=document.querySelector('.site-header');
+      var offset=(header?header.offsetHeight:0)+24;
+      var top=el.getBoundingClientRect().top+window.pageYOffset-offset;
+      window.scrollTo({top:top,behavior:'smooth'});
+    }
+    document.addEventListener('click',function(e){
+      var a=e.target.closest&&e.target.closest('a[href="building-permits-rehovot-yavne.html#pools"]');
+      if(!a)return;
+      if(location.pathname.split('/').pop()==='building-permits-rehovot-yavne.html'){
+        e.preventDefault();
+        history.pushState(null,'','building-permits-rehovot-yavne.html#pools');
+        setTimeout(function(){scrollToHash('#pools');},80);
+      }
+    },true);
+    if(location.hash==='#pools'){
+      setTimeout(function(){scrollToHash('#pools');},600);
+      setTimeout(function(){scrollToHash('#pools');},1400);
+    }
     var t=setInterval(fixBreadcrumb,150);
     setTimeout(function(){clearInterval(t);fixBreadcrumb();},5000);
   })();
