@@ -45,7 +45,7 @@
 
 document.addEventListener('DOMContentLoaded',function(){
   var st=document.createElement('style');
-  st.textContent='html,body{max-width:100%!important;overflow-x:hidden!important}.site-tools-floating{position:fixed!important;left:18px!important;bottom:18px!important;z-index:99999!important;display:flex!important;flex-direction:column!important;gap:8px!important;align-items:flex-start!important}.site-tools-btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;font-family:Heebo,Arial,sans-serif!important;font-weight:700!important}.site-tools-btn-whatsapp{width:72px!important;height:72px!important;border-radius:50%!important;background:#25D366!important;color:#fff!important;font-size:0!important;line-height:1!important;box-shadow:0 12px 28px rgba(37,211,102,.28)!important;border:1px solid rgba(255,255,255,.6)!important}.site-tools-btn-whatsapp img{width:42px!important;height:42px!important;display:block!important;filter:brightness(0) invert(1)!important}.site-tools-btn-contact{padding:0 18px!important;min-height:46px!important;border-radius:999px!important;font-size:16px!important;background:#9a642f!important;color:#fff!important}.site-back-to-top{position:fixed!important;right:12px!important;bottom:18px!important;z-index:99999!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;width:50px!important;height:50px!important;border-radius:50%!important;background:#9a642f!important;color:#fff!important;border:0!important;font-size:27px!important}.menu-toggle,.submenu-toggle{display:flex!important;pointer-events:auto!important;cursor:pointer!important;z-index:10001!important}.main-menu.open{display:flex!important}.menu-item-has-submenu.open .submenu{display:flex!important}.main-menu a.active-page,.submenu a.active-page{background:#f1e4d3!important;color:#7a4b20!important;border-radius:999px!important;font-weight:900!important}.menu-item-has-submenu.active-parent>.submenu-toggle{color:#9a642f!important;font-weight:900!important}.menu-item-has-submenu.active-parent>.submenu-toggle:before{content:"•";font-size:22px;margin-left:6px;color:#9a642f}.ld-current-page-bar{max-width:1080px;margin:14px auto 0;padding:0 20px;box-sizing:border-box;direction:rtl;font-family:Heebo,Arial,sans-serif}.ld-current-page-inner{background:#fff8ef;border:1px solid rgba(154,100,47,.22);border-radius:999px;padding:10px 18px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;box-shadow:0 6px 18px rgba(0,0,0,.05);font-size:15px;color:#333}.ld-current-page-inner strong{color:#111}.ld-current-sep{color:#9a642f;font-weight:900}.ld-page-image{margin:0 0 24px!important;background:#fff!important;border-radius:28px!important;padding:14px!important;box-shadow:0 10px 30px rgba(0,0,0,.08)!important}.ld-page-image img{display:block!important;width:100%!important;height:360px!important;object-fit:cover!important;border-radius:20px!important}.ld-page-gallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;margin-top:18px!important}.ld-page-gallery figure{margin:0!important;background:#faf8f4!important;border-radius:20px!important;padding:10px!important;border:1px solid rgba(0,0,0,.06)!important}.ld-page-gallery img{display:block!important;width:100%!important;height:190px!important;object-fit:cover!important;border-radius:14px!important}.ld-page-gallery figcaption{font:700 15px Heebo,Arial,sans-serif!important;color:#333!important;text-align:center!important;margin-top:8px!important}@media(max-width:850px){.ld-page-image img{height:230px!important}.ld-page-gallery{grid-template-columns:1fr!important}.ld-page-gallery img{height:210px!important}.ld-current-page-bar{padding:0 14px;margin-top:10px}.ld-current-page-inner{border-radius:18px;font-size:14px}}';
+  st.textContent='html,body{max-width:100%!important;overflow-x:hidden!important}.site-tools-floating{position:fixed!important;left:18px!important;bottom:18px!important;z-index:99999!important;display:flex!important;flex-direction:column!important;gap:8px!important;align-items:flex-start!important}.site-tools-btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;font-family:Heebo,Arial,sans-serif!important;font-weight:700!important}.site-tools-btn-whatsapp{width:72px!important;height:72px!important;border-radius:50%!important;background:#25D366!important;color:#fff!important;font-size:0!important;line-height:1!important;box-shadow:0 12px 28px rgba(37,211,102,.28)!important;border:1px solid rgba(255,255,255,.6)!important}.site-tools-btn-whatsapp img{width:42px!important;height:42px!important;display:block!important;filter:brightness(0) invert(1)!important}.site-tools-btn-contact{padding:0 18px!important;min-height:46px!important;border-radius:999px!important;font-size:16px!important;background:#9a642f!important;color:#fff!important}.site-back-to-top{position:fixed!important;right:12px!important;bottom:18px!important;z-index:99999!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;width:50px!important;height:50px!important;border-radius:50%!important;background:#9a642f!important;color:#fff!important;border:0!important;font-size:27px!important}.menu-toggle,.submenu-toggle{display:flex!important;pointer-events:auto!important;cursor:pointer!important;z-index:10001!important}.main-menu.open{display:flex!important}.menu-item-has-submenu.open .submenu{display:flex!important}.main-menu a.active-page,.submenu a.active-page{background:#f1e4d3!important;color:#7a4b20!important;border-radius:999px!important;font-weight:900!important}.menu-item-has-submenu.active-parent>.submenu-toggle{color:#9a642f!important;font-weight:900!important}.menu-item-has-submenu.active-parent>.submenu-toggle:before{content:""!important}.ld-current-page-bar{max-width:1080px;margin:10px auto 0;padding:0 20px;box-sizing:border-box;direction:rtl;font-family:Heebo,Arial,sans-serif}.ld-current-page-inner{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:14px;color:#7b6a5a;line-height:1.6}.ld-current-page-inner a{color:#7b6a5a!important;text-decoration:none!important;font-weight:700}.ld-current-page-inner a:hover{color:#9a642f!important;text-decoration:underline!important}.ld-current-page-inner a:last-child{color:#111!important;font-weight:900}.ld-current-sep{color:#9a642f;font-weight:900}.ld-page-image{margin:0 0 24px!important;background:#fff!important;border-radius:28px!important;padding:14px!important;box-shadow:0 10px 30px rgba(0,0,0,.08)!important}.ld-page-image img{display:block!important;width:100%!important;height:360px!important;object-fit:cover!important;border-radius:20px!important}.ld-page-gallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;margin-top:18px!important}.ld-page-gallery figure{margin:0!important;background:#faf8f4!important;border-radius:20px!important;padding:10px!important;border:1px solid rgba(0,0,0,.06)!important}.ld-page-gallery img{display:block!important;width:100%!important;height:190px!important;object-fit:cover!important;border-radius:14px!important}.ld-page-gallery figcaption{font:700 15px Heebo,Arial,sans-serif!important;color:#333!important;text-align:center!important;margin-top:8px!important}@media(max-width:850px){.ld-page-image img{height:230px!important}.ld-page-gallery{grid-template-columns:1fr!important}.ld-page-gallery img{height:210px!important}.ld-current-page-bar{padding:0 14px;margin-top:8px}.ld-current-page-inner{font-size:13px}}';
   document.head.appendChild(st);
 
   function closeAllSubmenus(except){
@@ -110,6 +110,10 @@ document.addEventListener('DOMContentLoaded',function(){
     return path+(a.hash||'');
   }
 
+  function esc(s){
+    return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c];});
+  }
+
   function markCurrentPage(){
     var menu=document.getElementById('mainMenu');
     if(!menu)return;
@@ -140,16 +144,27 @@ document.addEventListener('DOMContentLoaded',function(){
   }
 
   function addCurrentBar(activeLink,parent){
-    if(document.getElementById('ldCurrentPageBar'))return;
+    var old=document.getElementById('ldCurrentPageBar');
+    if(old)old.remove();
     var header=document.querySelector('.site-header');
     var main=document.querySelector('main');
     if(!header||!main||!activeLink)return;
-    var section=parent?cleanText(parent.querySelector('.submenu-toggle')):'ראשי';
     var page=cleanText(activeLink);
+    var pageHref=activeLink.getAttribute('href')||'#';
+    var crumbs=['<a href="index.html">דף הבית</a>'];
+    if(parent){
+      var section=cleanText(parent.querySelector('.submenu-toggle'));
+      var firstLink=parent.querySelector('.submenu a[href]');
+      var sectionHref=firstLink?firstLink.getAttribute('href'):'#';
+      crumbs.push('<a href="'+esc(sectionHref)+'">'+esc(section)+'</a>');
+    }
+    if(page && page!=='דף הבית'){
+      crumbs.push('<a href="'+esc(pageHref)+'" aria-current="page">'+esc(page)+'</a>');
+    }
     var bar=document.createElement('div');
     bar.id='ldCurrentPageBar';
     bar.className='ld-current-page-bar';
-    bar.innerHTML='<div class="ld-current-page-inner"><span>את נמצאת בעמוד:</span><strong>'+section+'</strong><span class="ld-current-sep">›</span><strong>'+page+'</strong></div>';
+    bar.innerHTML='<nav class="ld-current-page-inner" aria-label="פירורי לחם">'+crumbs.join('<span class="ld-current-sep">›</span>')+'</nav>';
     header.insertAdjacentElement('afterend',bar);
   }
 
@@ -157,11 +172,7 @@ document.addEventListener('DOMContentLoaded',function(){
     if(!e.target.closest||!e.target.closest('.main-menu'))closeAllSubmenus(null);
   },true);
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAllSubmenus(null);});
-  window.addEventListener('hashchange',function(){
-    var old=document.getElementById('ldCurrentPageBar');
-    if(old)old.remove();
-    markCurrentPage();
-  });
+  window.addEventListener('hashchange',function(){markCurrentPage();});
 
   function addFaviconIfMissing(){
     if(!document.querySelector('link[rel="icon"]')){var l=document.createElement('link');l.rel='icon';l.type='image/png';l.href='favicon.png';document.head.appendChild(l);}
