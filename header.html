@@ -48,9 +48,11 @@
   .ld-current-page-inner span:first-child{
     display:none!important;
   }
-  .ld-current-page-inner strong{
+  .ld-current-page-inner strong,
+  .ld-current-page-inner a{
     color:#07345a!important;
     font-weight:700!important;
+    text-decoration:none!important;
   }
   .ld-current-sep{
     color:#c8352d!important;
@@ -140,8 +142,21 @@
     function fixBreadcrumb(){
       var bar=document.getElementById('ldCurrentPageBar');
       if(!bar)return;
-      var first=bar.querySelector('.ld-current-page-inner span:first-child');
+      var inner=bar.querySelector('.ld-current-page-inner');
+      if(!inner)return;
+      var first=inner.querySelector('span:first-child');
       if(first&&first.textContent.indexOf('את נמצאת')>-1){first.remove();}
+      if(!inner.querySelector('.ld-home-crumb')){
+        var home=document.createElement('a');
+        home.className='ld-home-crumb';
+        home.href='index.html';
+        home.textContent='דף הבית';
+        var sep=document.createElement('span');
+        sep.className='ld-current-sep';
+        sep.textContent='›';
+        inner.insertBefore(sep,inner.firstChild);
+        inner.insertBefore(home,sep);
+      }
     }
     var t=setInterval(fixBreadcrumb,150);
     setTimeout(function(){clearInterval(t);fixBreadcrumb();},5000);
