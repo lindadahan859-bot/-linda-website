@@ -31,7 +31,12 @@
     .creation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
     .creation-grid.two{grid-template-columns:repeat(2,1fr)}
     .creation-card{background:#faf7f1;border-radius:24px;overflow:hidden;border:1px solid var(--line)}
-    .creation-card a.image-link{display:block;background:#e8dfd3;cursor:zoom-in}
+.creation-card a.image-link{
+  display:block;
+  background:#e8dfd3;
+  cursor:zoom-in;
+}
+
 .creation-card img{
   width:100%;
   height:260px;
@@ -40,14 +45,24 @@
   object-position:center;
   background:#e8dfd3;
 }
-    .creation-card img.no-crop{object-fit:contain;background:#f4eee5;padding:8px;box-sizing:border-box}
-   .creation-card img.cabinet-photo{
-    height:260px;
-    object-fit:contain;
-    object-position:center center;
-    padding:15px;
-    background:#f4eee5;
-    box-sizing:border-box;
+
+.creation-card img.no-crop{
+  object-fit:contain;
+  background:#f4eee5;
+  padding:12px;
+  box-sizing:border-box;
+}
+
+.creation-card img.cabinet-photo{
+  object-fit:contain;
+  object-position:center center;
+  background:#f4eee5;
+  padding:14px;
+  box-sizing:border-box;
+}
+
+.creation-grid.two .creation-card img{
+  height:360px;
 }
     .creation-grid.two .creation-card img{aspect-ratio:1/1}
     .creation-card div{padding:18px}
