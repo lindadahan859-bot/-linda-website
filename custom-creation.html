@@ -64,22 +64,80 @@
 .creation-grid.two .creation-card img{
   height:360px;
 }
-    .creation-grid.two .creation-card img{aspect-ratio:1/1}
-    .creation-card div{padding:18px}
-    .creation-card h3{font-size:21px;margin:0 0 8px;color:#111}
-    .creation-card p{font-size:16px;line-height:1.75;margin:0;color:#3a322b}
-    .creation-quote{border-right:4px solid var(--gold);padding:8px 18px 8px 0;margin:22px 0 0;font-size:22px;font-weight:700}
-    .creation-video{margin-top:34px;background:#fff;border-radius:28px;padding:30px 24px;box-shadow:0 12px 30px rgba(0,0,0,.08)}
-    .creation-video-wrap{width:min(500px,100%);margin:0 auto;border-radius:24px;overflow:hidden;background:#000}
-    .creation-video-wrap iframe{display:block;width:100%;height:640px;border:0}
-    .creation-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
-    .creation-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid #111;text-decoration:none;color:#111;font-weight:700}
-    .creation-actions a.primary{background:#111;color:#fff}
-    .creation-label{display:inline-block;margin:0 0 14px;padding:7px 14px;border-radius:999px;background:#f4eee5;color:#6b533a;font-weight:700}
-    .creation-section.art-collection{background:#fffaf3}
-    .creation-note strong{color:#111}
-    @media(max-width:850px){.creation-hero{min-height:50vh}.creation-hero-inner{width:88%;padding-bottom:30px}.creation-hero h1{font-size:32px;line-height:1.16}.creation-hero p{display:none}.creation-mobile-copy{display:block;background:var(--cream);padding:22px 14px 0}.creation-mobile-copy .box{background:#fff;border-radius:24px;padding:23px 20px}.creation-wrap{padding:24px 14px 60px}.creation-intro,.creation-section,.creation-note{padding:24px 20px}.creation-grid,.creation-grid.two{grid-template-columns:1fr}.creation-video-wrap iframe{height:560px}.creation-actions{flex-direction:column}}
-  </style>
+
+.creation-card div{padding:18px}
+.creation-card h3{font-size:21px;margin:0 0 8px;color:#111}
+.creation-card p{font-size:16px;line-height:1.75;margin:0;color:#3a322b}
+.creation-quote{border-right:4px solid var(--gold);padding:8px 18px 8px 0;margin:22px 0 0;font-size:22px;font-weight:700}
+
+.creation-video{
+  margin-top:34px;
+  background:#fff;
+  border-radius:28px;
+  padding:30px 24px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.creation-video-wrap{
+  width:min(500px,100%);
+  margin:0 auto;
+  border-radius:24px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.creation-video-wrap iframe{
+  display:block;
+  width:100%;
+  height:560px;
+  border:0;
+}
+
+.creation-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:24px;
+}
+
+.creation-actions a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  min-height:46px;
+  padding:0 22px;
+  border-radius:999px;
+  border:1px solid #111;
+  text-decoration:none;
+  color:#111;
+  font-weight:700;
+}
+
+.creation-actions a.primary{
+  background:#111;
+  color:#fff;
+}
+
+.creation-label{display:inline-block;margin:0 0 14px;padding:7px 14px;border-radius:999px;background:#f4eee5;color:#6b533a;font-weight:700}
+.creation-section.art-collection{background:#fffaf3}
+.creation-note strong{color:#111}
+
+@media(max-width:850px){
+  .creation-hero{min-height:50vh}
+  .creation-hero-inner{width:88%;padding-bottom:30px}
+  .creation-hero h1{font-size:32px;line-height:1.16}
+  .creation-hero p{display:none}
+  .creation-mobile-copy{display:block;background:var(--cream);padding:22px 14px 0}
+  .creation-mobile-copy .box{background:#fff;border-radius:24px;padding:23px 20px}
+  .creation-wrap{padding:24px 14px 60px}
+  .creation-intro,.creation-section,.creation-note{padding:24px 20px}
+  .creation-grid,.creation-grid.two{grid-template-columns:1fr}
+  .creation-video-wrap iframe{height:520px}
+  .creation-actions{flex-direction:column;align-items:center}
+}
+</style>
 </head>
 <body>
   <div id="top"></div>
@@ -93,7 +151,11 @@
     </div>
   </section>
 
-  <section class="creation-mobile-copy"><div class="box"><p>פריטים, עבודות חומר ואומנות שנוצרים במיוחד לבית, למשרד ולעסק.</p></div></section>
+  <section class="creation-mobile-copy">
+    <div class="box">
+      <p>פריטים, עבודות חומר ואומנות שנוצרים במיוחד לבית, למשרד ולעסק.</p>
+    </div>
+  </section>
 
   <main class="creation-wrap">
     <section class="creation-intro">
@@ -101,7 +163,6 @@
       <p>לפעמים דווקא הפריט הכי נכון לחלל הוא זה שלא הגיע מקטלוג, אלא נוצר במיוחד עבורו.</p>
       <p>כחלק מהשפה העיצובית שלי אני משלבת חידוש רהיטים, עבודות חומר, אומנות ופריטים בהתאמה אישית לבתים ולעסקים.</p>
     </section>
-
     <section class="creation-section">
       <h2>חידוש רהיטים וישן מול חדש</h2>
       <p>יש רהיטים שלא חייבים להיפרד מהם. לפעמים מספיק לזהות את הפוטנציאל, לבחור צבע נכון ולתת להם חיים חדשים.</p>
@@ -136,9 +197,30 @@
         <p>לפעמים שינוי של פריט אחד משפיע על כל התחושה בחלל.</p>
     </div>
 </article>
-      <div class="creation-actions"><a class="primary" href="https://www.facebook.com/reel/1173862794314330" target="_blank" rel="noopener">פתיחת הרילס בפייסבוק</a></div>
-      <div class="creation-video"><div class="creation-video-wrap"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1173862794314330&show_text=false&width=500" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true"></iframe></div></div>
-    </section>
+
+</div>
+
+<div class="creation-actions">
+  <a class="primary"
+     href="https://www.facebook.com/reel/1173862794314330"
+     target="_blank"
+     rel="noopener">
+     פתיחת הרילס בפייסבוק
+  </a>
+</div>
+
+<div class="creation-video">
+  <div class="creation-video-wrap">
+    <iframe
+      src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1173862794314330&show_text=false&width=500"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      allowfullscreen="true">
+    </iframe>
+  </div>
+</div>
+
+</section>
+
 
     <section class="creation-section">
       <h2>שולחנות וריהוט בהתאמה אישית</h2>
