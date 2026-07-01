@@ -30,10 +30,10 @@
     .office-card p,.office-note p,.office-links p{font-size:19px;line-height:1.9;margin:0 0 16px;color:#2f2a25}
     .office-lead{font-size:20px;color:#2f2a25}
     .office-highlight{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:center}
-    .office-highlight img{width:100%;height:100%;min-height:360px;object-fit:cover;border-radius:22px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .office-highlight img{width:100%;height:100%;min-height:360px;object-fit:cover;border-radius:22px;box-shadow:0 8px 24px rgba(0,0,0,.08);cursor:zoom-in}
     .office-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
     .office-item{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.06)}
-    .office-item img{width:100%;height:250px;display:block;object-fit:cover;background:#eee}
+    .office-item img{width:100%;height:250px;display:block;object-fit:cover;background:#eee;cursor:zoom-in}
     .office-item.tall img{height:330px}
     .office-item-text{padding:18px}
     .office-item h3{font-size:22px;line-height:1.25;margin:0 0 9px;color:#111}
@@ -51,7 +51,18 @@
     .office-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
     .office-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid #111;text-decoration:none;color:#111;font-weight:700}
     .office-actions a.primary{background:#111;color:#fff}
-    @media(max-width:900px){.office-hero{min-height:58vh}.office-hero-inner{padding-bottom:38px}.office-wrap{padding:30px 14px 60px}.office-card,.office-note,.office-links{padding:24px 20px}.office-highlight{grid-template-columns:1fr}.office-highlight img{min-height:0;height:auto}.office-grid{grid-template-columns:1fr}.office-item img,.office-item.tall img{height:auto;aspect-ratio:4/3}.office-list,.project-links{grid-template-columns:1fr}.office-actions{flex-direction:column;align-items:flex-start}}
+    .office-lightbox{position:fixed;inset:0;z-index:999999;background:rgba(10,8,6,.92);display:none;align-items:center;justify-content:center;padding:22px;box-sizing:border-box}
+    .office-lightbox.is-open{display:flex}
+    .office-lightbox-inner{width:min(1120px,100%);max-height:100%;display:flex;flex-direction:column;align-items:center;gap:12px}
+    .office-lightbox-img{max-width:100%;max-height:76vh;object-fit:contain;border-radius:18px;background:#fff;box-shadow:0 18px 60px rgba(0,0,0,.38)}
+    .office-lightbox-caption{width:min(900px,100%);background:#fffaf3;color:#1f1b17;border-radius:18px;padding:14px 18px;text-align:center;box-sizing:border-box}
+    .office-lightbox-caption h3{font-size:21px;line-height:1.3;margin:0 0 6px;color:#111}
+    .office-lightbox-caption p{font-size:16px;line-height:1.6;margin:0;color:#3a322b}
+    .office-lightbox-btn{position:absolute;border:0;background:rgba(255,255,255,.94);color:#111;cursor:pointer;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+    .office-lightbox-close{top:18px;left:18px;width:46px;height:46px;border-radius:50%;font-size:28px;line-height:1}
+    .office-lightbox-prev,.office-lightbox-next{top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;font-size:34px;line-height:1}
+    .office-lightbox-prev{left:22px}.office-lightbox-next{right:22px}
+    @media(max-width:900px){.office-hero{min-height:58vh}.office-hero-inner{padding-bottom:38px}.office-wrap{padding:30px 14px 60px}.office-card,.office-note,.office-links{padding:24px 20px}.office-highlight{grid-template-columns:1fr}.office-highlight img{min-height:0;height:auto}.office-grid{grid-template-columns:1fr}.office-item img,.office-item.tall img{height:auto;aspect-ratio:4/3}.office-list,.project-links{grid-template-columns:1fr}.office-actions{flex-direction:column;align-items:flex-start}.office-lightbox{padding:12px}.office-lightbox-img{max-height:64vh;border-radius:14px}.office-lightbox-caption{padding:12px 14px}.office-lightbox-caption h3{font-size:18px}.office-lightbox-caption p{font-size:15px}.office-lightbox-close{top:10px;left:10px;width:42px;height:42px}.office-lightbox-prev,.office-lightbox-next{top:auto;bottom:92px;width:44px;height:44px;font-size:30px}.office-lightbox-prev{left:18px}.office-lightbox-next{right:18px}}
   </style>
 </head>
 <body>
@@ -161,6 +172,16 @@
     </section>
   </main>
 
+  <div class="office-lightbox" id="officeLightbox" aria-hidden="true">
+    <button class="office-lightbox-btn office-lightbox-close" type="button" aria-label="סגירת תמונה">×</button>
+    <button class="office-lightbox-btn office-lightbox-prev" type="button" aria-label="תמונה קודמת">‹</button>
+    <div class="office-lightbox-inner">
+      <img class="office-lightbox-img" src="" alt="">
+      <div class="office-lightbox-caption"><h3></h3><p></p></div>
+    </div>
+    <button class="office-lightbox-btn office-lightbox-next" type="button" aria-label="תמונה הבאה">›</button>
+  </div>
+
   <div id="site-footer"></div>
 
   <script>
@@ -172,6 +193,61 @@
       }catch(e){console.error(e)}
     }
     loadIncludes();
+
+    (function(){
+      const images=[...document.querySelectorAll('.office-highlight img, .office-grid img')];
+      const box=document.getElementById('officeLightbox');
+      if(!images.length||!box)return;
+      const lightboxImg=box.querySelector('.office-lightbox-img');
+      const title=box.querySelector('.office-lightbox-caption h3');
+      const text=box.querySelector('.office-lightbox-caption p');
+      const closeBtn=box.querySelector('.office-lightbox-close');
+      const prevBtn=box.querySelector('.office-lightbox-prev');
+      const nextBtn=box.querySelector('.office-lightbox-next');
+      let current=0,startX=0;
+      const items=images.map(img=>{
+        const card=img.closest('.office-item');
+        return {
+          src:img.getAttribute('src'),
+          alt:img.getAttribute('alt')||'',
+          title:card?.querySelector('h3')?.textContent||img.closest('.office-highlight')?.querySelector('h2')?.textContent||'',
+          text:card?.querySelector('p')?.textContent||img.closest('.office-highlight')?.querySelector('p')?.textContent||''
+        };
+      });
+      function show(i){
+        current=(i+items.length)%items.length;
+        const item=items[current];
+        lightboxImg.src=item.src;
+        lightboxImg.alt=item.alt;
+        title.textContent=item.title;
+        text.textContent=item.text;
+        box.classList.add('is-open');
+        box.setAttribute('aria-hidden','false');
+        document.body.style.overflow='hidden';
+      }
+      function close(){
+        box.classList.remove('is-open');
+        box.setAttribute('aria-hidden','true');
+        document.body.style.overflow='';
+        lightboxImg.src='';
+      }
+      images.forEach((img,i)=>img.addEventListener('click',()=>show(i)));
+      closeBtn.addEventListener('click',close);
+      prevBtn.addEventListener('click',()=>show(current-1));
+      nextBtn.addEventListener('click',()=>show(current+1));
+      box.addEventListener('click',e=>{if(e.target===box)close();});
+      document.addEventListener('keydown',e=>{
+        if(!box.classList.contains('is-open'))return;
+        if(e.key==='Escape')close();
+        if(e.key==='ArrowLeft')show(current+1);
+        if(e.key==='ArrowRight')show(current-1);
+      });
+      box.addEventListener('touchstart',e=>{startX=e.changedTouches[0].clientX;},{passive:true});
+      box.addEventListener('touchend',e=>{
+        const diff=e.changedTouches[0].clientX-startX;
+        if(Math.abs(diff)>45)show(diff>0?current-1:current+1);
+      },{passive:true});
+    })();
   </script>
   <script src="site-tools.js"></script>
 </body>
