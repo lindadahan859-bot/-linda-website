@@ -112,6 +112,7 @@
         <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="permitsSubmenu">היתרי בנייה</button>
         <div class="submenu" id="permitsSubmenu">
           <a href="building-permits-rehovot-yavne.html">היתרי בנייה לבתים פרטיים</a>
+          <a href="building-violations-check.html">בדיקת חריגות בנייה</a>
           <a href="takanot-rishuy-mekutzar.html">תקנות רישוי מקוצר</a>
           <a href="building-permits-rehovot-yavne.html#mamad">היתר לממ״ד ותוספות בנייה</a>
           <a href="swimming-pools-site-development.html">בריכות שחייה ופיתוח שטח</a>
@@ -148,19 +149,8 @@
       if(!inner)return;
       var first=inner.querySelector('span:first-child');
       if(first&&first.textContent.indexOf('את נמצאת')>-1){first.remove();}
-      if(!inner.querySelector('.ld-home-crumb')){
-        var home=document.createElement('a');
-        home.className='ld-home-crumb';
-        home.href='index.html';
-        home.textContent='דף הבית';
-        var sep=document.createElement('span');
-        sep.className='ld-current-sep';
-        sep.textContent='›';
-        inner.insertBefore(sep,inner.firstChild);
-        inner.insertBefore(home,sep);
-      }
     }
-    var t=setInterval(fixBreadcrumb,150);
-    setTimeout(function(){clearInterval(t);fixBreadcrumb();},5000);
+    fixBreadcrumb();
+    setTimeout(fixBreadcrumb,300);
   })();
 </script>
