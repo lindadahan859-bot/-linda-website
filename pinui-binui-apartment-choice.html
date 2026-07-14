@@ -17,22 +17,11 @@
   <link rel="apple-touch-icon" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
   <style>
-    :root{--cream:#fbf5ea;--paper:#fffaf2;--sand:#efe1cc;--rust:#b85b3a;--olive:#56613a;--olive-soft:#eef1e6;--gold:#c49a4b;--ink:#2f3128;--muted:#6f675d}
-    body{font-family:"Heebo",Arial,sans-serif;background:var(--cream);color:var(--ink);margin:0;direction:rtl}.page-wrap{max-width:1080px;margin:auto;padding:48px 20px 86px}.hero-card,.content-card,.form-box{background:var(--paper);border-radius:30px;box-shadow:0 12px 34px rgba(86,71,48,.09);padding:34px 30px;margin-bottom:24px;border:1px solid rgba(196,154,75,.16)}.hero-card{background:linear-gradient(135deg,#fffaf2,#f4eadb)}.kicker{display:inline-block;background:#efe6d7;color:var(--olive);border:1px solid rgba(196,154,75,.32);border-radius:999px;padding:8px 16px;font-weight:900;margin-bottom:18px}.hero-card h1{font-size:clamp(34px,5vw,58px);line-height:1.13;margin:0 0 16px;color:var(--rust)}.hero-card p,.content-card p{font-size:19px;line-height:1.9;color:#3e3a33}.hero-lead{font-size:22px!important;color:var(--ink)!important;max-width:880px}.content-card h2,.form-box h2{font-size:32px;margin:0 0 16px;color:var(--olive)}.content-card h3{font-size:22px;margin:0 0 10px;color:var(--ink)}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}.actions a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;border:1px solid var(--olive);color:var(--olive);background:#fff;text-decoration:none;font-weight:900}.actions a.primary{background:var(--olive);color:#fff}.actions a:hover{transform:translateY(-1px)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.grid.two{grid-template-columns:repeat(2,1fr)}.mini{background:#fff;border:1px solid rgba(196,154,75,.2);border-radius:22px;padding:20px}.mini p{font-size:17px;margin:0}.mini strong{font-size:20px;color:var(--rust)}.highlight{background:#fff5e7;border:1px solid rgba(184,91,58,.22);border-radius:24px;padding:22px;margin:18px 0}.highlight p{margin:0;color:var(--ink)}.quote{background:linear-gradient(135deg,#fff7e9,#eef1e6);border-color:rgba(196,154,75,.26)}.quote p{color:var(--olive);font-size:clamp(24px,3vw,36px);line-height:1.45;margin:0;font-weight:900}.list{display:grid;gap:12px;margin-top:16px}.list div{background:#fff;border-radius:18px;padding:17px 20px;font-size:18px;line-height:1.75;border:1px solid rgba(196,154,75,.17)}.steps{counter-reset:step;display:grid;gap:14px;margin-top:18px}.step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;background:#fff;border-radius:22px;padding:20px;border:1px solid rgba(196,154,75,.18)}.step:before{counter-increment:step;content:counter(step);width:40px;height:40px;border-radius:50%;background:var(--rust);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}.soft-panel{background:#fff;border-radius:24px;border:1px solid rgba(196,154,75,.2);padding:22px;margin-top:18px}.soft-panel h3{color:var(--rust)}.faq{display:grid;gap:12px;margin-top:18px}.faq details{background:#fff;border:1px solid rgba(196,154,75,.18);border-radius:18px;overflow:hidden}.faq summary{cursor:pointer;list-style:none;padding:18px 22px;font-size:19px;font-weight:900;position:relative;color:var(--olive)}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";position:absolute;left:22px;top:50%;transform:translateY(-50%);font-size:28px;color:var(--rust)}.faq details[open] summary:after{content:"−"}.faq-answer{padding:0 22px 20px;font-size:18px;line-height:1.85;color:#3e3a33}.process-form{display:grid;gap:16px}.process-field-group{display:grid;gap:8px}.process-field-label{font-size:18px;font-weight:900;color:var(--ink)}.process-check-group{display:grid;gap:8px}.process-check-option{display:flex;align-items:center;gap:10px;font-size:16px;color:#222}.process-two-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}.process-form input[type="text"],.process-form input[type="tel"],.process-form input[type="email"],.process-form input[type="number"],.process-form textarea,.process-form select{width:100%;box-sizing:border-box;border:1px solid #d8c7ad;border-radius:15px;padding:14px 16px;font-size:16px;font-family:"Heebo",Arial,sans-serif;background:#fff;color:#111}.process-form textarea{min-height:120px;resize:vertical;line-height:1.7}.process-helper{font-size:14px;color:var(--muted);line-height:1.6;margin-top:-2px}.process-contact-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}.process-contact-buttons a,.process-contact-buttons button{flex:1;text-align:center;padding:14px;border-radius:14px;font-size:16px;text-decoration:none;cursor:pointer;box-sizing:border-box;font-family:"Heebo",Arial,sans-serif;font-weight:900}.process-contact-buttons a{border:1px solid var(--olive);color:var(--olive);background:#fff}.process-contact-buttons button{border:none;background:var(--rust);color:#fff}.process-small-note{font-size:14px;color:var(--muted);margin-top:12px;line-height:1.65}.note{font-size:14px!important;color:#666!important;line-height:1.75!important}.visual-note{font-size:16px!important;color:var(--muted)!important}.link-line a{color:var(--rust);text-decoration:underline;text-underline-offset:4px;font-weight:900}
-    .story-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.flow-card{background:#fff;border:1px solid rgba(196,154,75,.2);border-radius:24px;padding:20px;min-height:190px;position:relative;overflow:hidden}.flow-number{width:34px;height:34px;border-radius:50%;background:var(--olive);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:12px}.flow-card:nth-child(1) .flow-number{background:var(--rust)}.flow-card:nth-child(3) .flow-number{background:var(--gold)}.flow-card h3{font-size:22px;margin:0 0 8px}.flow-card p{font-size:17px;line-height:1.75;margin:0}.flow-illustration{height:80px;margin-top:16px;background:linear-gradient(135deg,#f9efe0,#eef1e6);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--olive);font-size:38px}.site-preview{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}.preview-art{background:linear-gradient(135deg,#fff,#eef1e6);border-radius:26px;padding:22px;border:1px solid rgba(196,154,75,.22);min-height:310px;position:relative;overflow:hidden}.preview-art:before{content:"";position:absolute;inset:18px;border:1px dashed rgba(86,97,58,.25);border-radius:22px}.screen{position:relative;background:#f7f0e4;border:10px solid #3f4335;border-bottom-width:18px;border-radius:18px;width:74%;height:120px;margin:20px auto 10px;box-shadow:0 12px 24px rgba(0,0,0,.1);display:grid;grid-template-columns:repeat(2,1fr);gap:4px;padding:6px}.screen span{background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--olive)}.table-art{position:relative;margin:auto;width:86%;height:110px;background:#fff;border:1px solid rgba(196,154,75,.3);border-radius:16px;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px}.table-art div{border-radius:12px;background:#f0eadf;display:flex;align-items:center;justify-content:center;color:var(--rust);font-weight:900}.bubble{position:absolute;background:#fff;border:1px solid rgba(184,91,58,.22);border-radius:999px;padding:8px 13px;font-weight:900;color:var(--rust);box-shadow:0 6px 14px rgba(0,0,0,.05)}.b1{right:22px;top:30px}.b2{left:24px;top:70px}.b3{right:60px;bottom:32px}.spark{color:var(--gold);font-size:22px}
-    @media(max-width:900px){.grid,.grid.two,.story-flow,.process-two-cols,.site-preview{grid-template-columns:1fr}.page-wrap{padding:34px 14px 58px}.hero-card,.content-card,.form-box{padding:24px 20px}.content-card h2,.form-box h2{font-size:28px}.hero-card p,.content-card p,.list div,.faq-answer{font-size:17px}.actions,.process-contact-buttons{flex-direction:column}.actions a{text-align:center}.preview-art{min-height:250px}.screen{width:86%}}
+    :root{--cream:#fbf5ea;--paper:#fffaf2;--sand:#efe1cc;--rust:#b85b3a;--olive:#56613a;--gold:#c49a4b;--ink:#2f3128;--muted:#6f675d}
+    body{font-family:"Heebo",Arial,sans-serif;background:var(--cream);color:var(--ink);margin:0;direction:rtl}.page-wrap{max-width:1080px;margin:auto;padding:48px 20px 86px}.hero-card,.content-card,.form-box{background:var(--paper);border-radius:30px;box-shadow:0 12px 34px rgba(86,71,48,.09);padding:34px 30px;margin-bottom:24px;border:1px solid rgba(196,154,75,.16)}.hero-card{background:linear-gradient(135deg,#fffaf2,#f4eadb)}.kicker{display:inline-block;background:#efe6d7;color:var(--olive);border:1px solid rgba(196,154,75,.32);border-radius:999px;padding:8px 16px;font-weight:900;margin-bottom:18px}.hero-card h1{font-size:clamp(34px,5vw,58px);line-height:1.13;margin:0 0 16px;color:var(--rust)}.hero-card p,.content-card p{font-size:19px;line-height:1.9;color:#3e3a33}.hero-lead{font-size:22px!important;color:var(--ink)!important;max-width:880px}.content-card h2,.form-box h2{font-size:32px;margin:0 0 16px;color:var(--olive)}.content-card h3{font-size:22px;margin:0 0 10px;color:var(--ink)}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}.actions a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;border:1px solid var(--olive);color:var(--olive);background:#fff;text-decoration:none;font-weight:900}.actions a.primary{background:var(--olive);color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.mini{background:#fff;border:1px solid rgba(196,154,75,.2);border-radius:22px;padding:20px}.mini p{font-size:17px;margin:0}.mini strong{font-size:20px;color:var(--rust)}.highlight{background:#fff5e7;border:1px solid rgba(184,91,58,.22);border-radius:24px;padding:22px;margin:18px 0}.highlight p{margin:0;color:var(--ink)}.quote{background:linear-gradient(135deg,#fff7e9,#eef1e6);border-color:rgba(196,154,75,.26)}.quote p{color:var(--olive);font-size:clamp(24px,3vw,36px);line-height:1.45;margin:0;font-weight:900}.list{display:grid;gap:12px;margin-top:16px}.list div{background:#fff;border-radius:18px;padding:17px 20px;font-size:18px;line-height:1.75;border:1px solid rgba(196,154,75,.17)}.steps{counter-reset:step;display:grid;gap:14px;margin-top:18px}.step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;background:#fff;border-radius:22px;padding:20px;border:1px solid rgba(196,154,75,.18)}.step:before{counter-increment:step;content:counter(step);width:40px;height:40px;border-radius:50%;background:var(--rust);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}.soft-panel{background:#fff;border-radius:24px;border:1px solid rgba(196,154,75,.2);padding:22px;margin-top:18px}.soft-panel h3{color:var(--rust)}.story-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.flow-card{background:#fff;border:1px solid rgba(196,154,75,.2);border-radius:24px;padding:20px;min-height:190px}.flow-number{width:34px;height:34px;border-radius:50%;background:var(--olive);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:12px}.flow-card:nth-child(1) .flow-number{background:var(--rust)}.flow-card:nth-child(3) .flow-number{background:var(--gold)}.flow-card p{font-size:17px;line-height:1.75;margin:0}.flow-illustration{height:80px;margin-top:16px;background:linear-gradient(135deg,#f9efe0,#eef1e6);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--olive);font-size:38px}.site-preview{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}.preview-art{background:linear-gradient(135deg,#fff,#eef1e6);border-radius:26px;padding:22px;border:1px solid rgba(196,154,75,.22);min-height:310px;position:relative;overflow:hidden}.preview-art:before{content:"";position:absolute;inset:18px;border:1px dashed rgba(86,97,58,.25);border-radius:22px}.screen{position:relative;background:#f7f0e4;border:10px solid #3f4335;border-bottom-width:18px;border-radius:18px;width:74%;height:120px;margin:20px auto 10px;box-shadow:0 12px 24px rgba(0,0,0,.1);display:grid;grid-template-columns:repeat(2,1fr);gap:4px;padding:6px}.screen span{background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--olive)}.table-art{position:relative;margin:auto;width:86%;height:110px;background:#fff;border:1px solid rgba(196,154,75,.3);border-radius:16px;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px}.table-art div{border-radius:12px;background:#f0eadf;display:flex;align-items:center;justify-content:center;color:var(--rust);font-weight:900}.bubble{position:absolute;background:#fff;border:1px solid rgba(184,91,58,.22);border-radius:999px;padding:8px 13px;font-weight:900;color:var(--rust);box-shadow:0 6px 14px rgba(0,0,0,.05)}.b1{right:22px;top:30px}.b2{left:24px;top:70px}.b3{right:60px;bottom:32px}.faq{display:grid;gap:12px;margin-top:18px}.faq details{background:#fff;border:1px solid rgba(196,154,75,.18);border-radius:18px;overflow:hidden}.faq summary{cursor:pointer;list-style:none;padding:18px 22px;font-size:19px;font-weight:900;position:relative;color:var(--olive)}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";position:absolute;left:22px;top:50%;transform:translateY(-50%);font-size:28px;color:var(--rust)}.faq details[open] summary:after{content:"−"}.faq-answer{padding:0 22px 20px;font-size:18px;line-height:1.85;color:#3e3a33}.process-form{display:grid;gap:16px}.process-field-group{display:grid;gap:8px}.process-field-label{font-size:18px;font-weight:900;color:var(--ink)}.process-check-group{display:grid;gap:8px}.process-check-option{display:flex;align-items:center;gap:10px;font-size:16px;color:#222}.process-two-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}.process-form input[type="text"],.process-form input[type="tel"],.process-form input[type="email"],.process-form textarea{width:100%;box-sizing:border-box;border:1px solid #d8c7ad;border-radius:15px;padding:14px 16px;font-size:16px;font-family:"Heebo",Arial,sans-serif;background:#fff;color:#111}.process-form textarea{min-height:120px;resize:vertical;line-height:1.7}.process-helper{font-size:14px;color:var(--muted);line-height:1.6;margin-top:-2px}.process-contact-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}.process-contact-buttons a,.process-contact-buttons button{flex:1;text-align:center;padding:14px;border-radius:14px;font-size:16px;text-decoration:none;cursor:pointer;box-sizing:border-box;font-family:"Heebo",Arial,sans-serif;font-weight:900}.process-contact-buttons a{border:1px solid var(--olive);color:var(--olive);background:#fff}.process-contact-buttons button{border:none;background:var(--rust);color:#fff}.process-small-note{font-size:14px;color:var(--muted);margin-top:12px;line-height:1.65}.note{font-size:14px!important;color:#666!important;line-height:1.75!important}@media(max-width:900px){.grid,.story-flow,.process-two-cols,.site-preview{grid-template-columns:1fr}.page-wrap{padding:34px 14px 58px}.hero-card,.content-card,.form-box{padding:24px 20px}.content-card h2,.form-box h2{font-size:28px}.hero-card p,.content-card p,.list div,.faq-answer{font-size:17px}.actions,.process-contact-buttons{flex-direction:column}.preview-art{min-height:250px}.screen{width:86%}}
   </style>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"מה כולל ליווי דיירים בפינוי בינוי?","acceptedAnswer":{"@type":"Answer","text":"הליווי כולל הבנת שלב הפרויקט, מעבר על תוכניות וטבלאות, הכנה לכנס דיירים, ניתוח כיווני אוויר, חניות, מחסנים, סביבת הבניין ובחירת הדירה החדשה לפי הצרכים של הדייר."}},
-      {"@type":"Question","name":"האם הליווי מחליף עורך דין או שמאי?","acceptedAnswer":{"@type":"Answer","text":"לא. הליווי הוא אדריכלי ותכנוני. הוא עוזר להבין תוכניות, שאלות מקצועיות ומשמעות יומיומית של הבחירה, ואינו מחליף ייעוץ משפטי, שמאי או הנדסי."}},
-      {"@type":"Question","name":"האם אפשר להגיע איתי לכנס דיירים?","acceptedAnswer":{"@type":"Answer","text":"כן, כחלק מחבילת ליווי רחבה ניתן להתכונן לכנס דיירים, להגיע לכנס ולסכם לאחריו את הנקודות החשובות ואת השאלות שנשארו פתוחות."}},
-      {"@type":"Question","name":"כמה עולה ליווי כזה?","acceptedAnswer":{"@type":"Answer","text":"העלות נקבעת לפי שלב הפרויקט, כמות החומר, מספר החלופות והאם נדרש ליווי לכנס דיירים או לבחירת הדירה. לאחר שיחה ראשונית וקבלת החומר נשלחת הצעת מחיר מסודרת."}}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"מה כולל ליווי דיירים בפינוי בינוי?","acceptedAnswer":{"@type":"Answer","text":"הליווי כולל הבנת שלב הפרויקט, מעבר על תוכניות וטבלאות, הכנה לכנס דיירים, ניתוח כיווני אוויר, חניות, מחסנים, סביבת הבניין ובחירת הדירה החדשה לפי הצרכים של הדייר."}},{"@type":"Question","name":"האם הליווי מחליף עורך דין או שמאי?","acceptedAnswer":{"@type":"Answer","text":"לא. הליווי הוא אדריכלי ותכנוני ואינו מחליף ייעוץ משפטי, שמאי או הנדסי."}},{"@type":"Question","name":"כמה עולה ליווי כזה?","acceptedAnswer":{"@type":"Answer","text":"העלות נקבעת לפי שלב הפרויקט, כמות החומר, מספר החלופות והאם נדרש ליווי לכנס דיירים או לבחירת הדירה."}}]}
   </script>
 </head>
 <body>
@@ -43,12 +32,10 @@
       <h1>לא נשארים לבד מול פינוי בינוי</h1>
       <p class="hero-lead">פגישות זום, כנס דיירים, שמאי, טבלת ניקוד, בנק דירות, חניה, מחסן, כיווני אוויר, אפליקציה חדשה ומסמכים מהבנק. זה נשמע טכני, אבל עבור הדיירים זו תקופה מלאה בלחץ ובשאלות.</p>
       <p>אני מלווה דיירים ובני משפחותיהם בתהליך פינוי בינוי, מסבירה את התוכניות בשפה פשוטה, עוזרת להבין מה חשוב לשאול ומלווה את בחירת הדירה החדשה מתוך ביטחון ולא מתוך לחץ.</p>
-      <div class="actions"><a class="primary" href="#contact">בדיקת התאמה לליווי</a><a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A0%D7%99%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%A4%D7%99%D7%A0%D7%95%D7%99%20%D7%91%D7%99%D7%A0%D7%95%D7%99%20%D7%95%D7%A6%D7%A8%D7%99%D7%9A%20%D7%A2%D7%96%D7%A8%D7%94%20%D7%91%D7%94%D7%91%D7%A0%D7%AA%20%D7%94%D7%AA%D7%94%D7%9C%D7%99%D7%9A" target="_blank" rel="noopener">פנייה ב-WhatsApp</a></div>
+      <div class="actions"><a class="primary" href="#contact">בדיקת התאמה לליווי</a><a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A0%D7%99%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%A4%D7%99%D7%A0%D7%95%D7%99%20%D7%91%D7%99%D7%A0%D7%95%D7%99%20%D7%95%D7%A6%D7%A8%D7%99%D7%9A%20%D7%A2%D7%96%D7%A8%D7%94" target="_blank" rel="noopener">פנייה ב-WhatsApp</a></div>
     </section>
 
-    <section class="content-card quote">
-      <p>פינוי בינוי הוא לא רק פרויקט בנייה. זו החלטה על איכות חיים לעשרות שנים.</p>
-    </section>
+    <section class="content-card quote"><p>פינוי בינוי הוא לא רק פרויקט בנייה. זו החלטה על איכות חיים לעשרות שנים.</p></section>
 
     <section class="content-card">
       <div class="site-preview">
@@ -58,9 +45,7 @@
           <div class="highlight"><p><strong>המטרה שלי היא להפוך את כל המידע הזה למשהו שאפשר להבין ולקבל איתו החלטה רגועה.</strong></p></div>
         </div>
         <div class="preview-art" aria-label="איור כללי של פגישת זום ותוכניות פינוי בינוי">
-          <span class="bubble b1">איזה כיוון?</span>
-          <span class="bubble b2">איזו קומה?</span>
-          <span class="bubble b3">מה מותר?</span>
+          <span class="bubble b1">איזה כיוון?</span><span class="bubble b2">איזו קומה?</span><span class="bubble b3">מה מותר?</span>
           <div class="screen"><span>👤</span><span>👤</span><span>👤</span><span>👤</span></div>
           <div class="table-art"><div>תוכנית</div><div>תמהיל</div></div>
         </div>
@@ -115,10 +100,7 @@
     <section class="content-card">
       <h2>איך נקבע היקף הליווי?</h2>
       <p>בשלב הזה אני לא מציינת מחיר קבוע באתר, כי כל פרויקט שונה. יש דיירים שצריכים פגישת אבחון ממוקדת, ויש משפחות שצריכות ליווי רחב יותר שכולל מעבר על הרבה בניינים, חלופות, חניות, מחסנים, כנס דיירים ובחירת דירה.</p>
-      <div class="soft-panel">
-        <h3>העלות נקבעת לפי היקף העבודה</h3>
-        <p>לאחר שיחה ראשונית וקבלת החומר, אשלח הצעת מחיר מסודרת לפי שלב הפרויקט, כמות התוכניות, מספר החלופות והאם נדרש ליווי לכנס דיירים או ליום בחירת הדירה.</p>
-      </div>
+      <div class="soft-panel"><h3>העלות נקבעת לפי היקף העבודה</h3><p>לאחר שיחה ראשונית וקבלת החומר, אשלח הצעת מחיר מסודרת לפי שלב הפרויקט, כמות התוכניות, מספר החלופות והאם נדרש ליווי לכנס דיירים או ליום בחירת הדירה.</p></div>
     </section>
 
     <section class="content-card">
@@ -141,81 +123,34 @@
         <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_template" value="table">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-
-        <div class="process-two-cols">
-          <input type="text" name="name" placeholder="שם מלא" required>
-          <input type="tel" name="phone" placeholder="טלפון" required>
-        </div>
+        <div class="process-two-cols"><input type="text" name="name" placeholder="שם מלא" required><input type="tel" name="phone" placeholder="טלפון" required></div>
         <input type="email" name="email" placeholder="אימייל">
-
-        <div class="process-two-cols">
-          <input type="text" name="project_city" placeholder="עיר / מקום הפרויקט">
-          <input type="text" name="project_name" placeholder="שם הפרויקט או הרחוב">
-        </div>
-
-        <div class="process-field-group">
-          <div class="process-field-label">באיזה שלב הפרויקט עכשיו?</div>
-          <div class="process-check-group">
-            <label class="process-check-option"><input type="checkbox" name="project_stage" value="לפני כנס דיירים"> לפני כנס דיירים</label>
-            <label class="process-check-option"><input type="checkbox" name="project_stage" value="אחרי פגישת זום / כנס דיירים"> אחרי פגישת זום / כנס דיירים</label>
-            <label class="process-check-option"><input type="checkbox" name="project_stage" value="שמאי הגיע לניקוד הדירה"> שמאי הגיע לניקוד הדירה</label>
-            <label class="process-check-option"><input type="checkbox" name="project_stage" value="קיבלנו תמהיל או בנק דירות"> קיבלנו תמהיל או בנק דירות</label>
-            <label class="process-check-option"><input type="checkbox" name="project_stage" value="לקראת בחירת דירה"> לקראת בחירת דירה</label>
-            <label class="process-check-option"><input type="checkbox" name="project_stage" value="לקראת פינוי / שכירות חלופית"> לקראת פינוי / שכירות חלופית</label>
-          </div>
-        </div>
-
-        <div class="process-field-group">
-          <div class="process-field-label">מה חשוב לכם לבדוק?</div>
-          <div class="process-check-group">
-            <label class="process-check-option"><input type="checkbox" name="needs" value="בחירת דירה"> בחירת דירה</label>
-            <label class="process-check-option"><input type="checkbox" name="needs" value="איזו קומה ואיזה כיוון"> איזו קומה ואיזה כיוון</label>
-            <label class="process-check-option"><input type="checkbox" name="needs" value="כיווני אוויר ושמש"> כיווני אוויר ושמש</label>
-            <label class="process-check-option"><input type="checkbox" name="needs" value="חניה ומחסן"> חניה ומחסן</label>
-            <label class="process-check-option"><input type="checkbox" name="needs" value="תוספת בנייה או שינוי שלא ברור אם נלקח בחשבון"> תוספת בנייה או שינוי שלא ברור אם נלקח בחשבון</label>
-            <label class="process-check-option"><input type="checkbox" name="needs" value="הכנה לכנס דיירים"> הכנה לכנס דיירים</label>
-            <label class="process-check-option"><input type="checkbox" name="needs" value="ליווי לכנס דיירים"> ליווי לכנס דיירים</label>
-            <label class="process-check-option"><input type="checkbox" name="needs" value="הבנת מסמכים / אפליקציה / הודעות יזם"> הבנת מסמכים, אפליקציה או הודעות יזם</label>
-          </div>
-        </div>
-
-        <div class="process-two-cols">
-          <input type="text" name="current_rooms" placeholder="כמה חדרים יש בדירה הקיימת?">
-          <input type="text" name="wanted_rooms" placeholder="כמה חדרים תרצו בדירה החדשה?">
-        </div>
-
-        <div class="process-field-group">
-          <div class="process-field-label">האם אתם מעוניינים לשדרג?</div>
-          <div class="process-helper">למשל להוסיף חדר, להגדיל שטח או לבדוק אפשרות לדירה אחרת בתוספת תשלום.</div>
-          <div class="process-check-group">
-            <label class="process-check-option"><input type="radio" name="upgrade_interest" value="כן"> כן</label>
-            <label class="process-check-option"><input type="radio" name="upgrade_interest" value="לא"> לא</label>
-            <label class="process-check-option"><input type="radio" name="upgrade_interest" value="לא בטוחים"> לא בטוחים</label>
-          </div>
-        </div>
-
-        <div class="process-field-group">
-          <label class="process-field-label" for="documents">אילו מסמכים כבר יש לכם?</label>
-          <div class="process-helper">תוכניות, טבלת דירות, מכתב מהיזם, הודעה על כנס, מסמכי שמאי או כל חומר אחר.</div>
-          <input type="text" id="documents" name="documents" placeholder="למשל: קיבלנו תמהיל דירות ותוכנית קומה">
-        </div>
-
-        <div class="process-field-group">
-          <label class="process-field-label" for="message">מה הכי מלחיץ או לא ברור לכם כרגע?</label>
-          <textarea id="message" name="message" placeholder="כתבו בקצרה מה השלב, מה קיבלתם ומה תרצו להבין"></textarea>
-        </div>
-
-        <div class="process-contact-buttons">
-          <a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A0%D7%99%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%A4%D7%99%D7%A0%D7%95%D7%99%20%D7%91%D7%99%D7%A0%D7%95%D7%99%20%D7%95%D7%A6%D7%A8%D7%99%D7%9A%20%D7%A2%D7%96%D7%A8%D7%94" target="_blank" rel="noopener">שליחת חומר ב-WhatsApp</a>
-          <button id="submitBtn" type="submit">שליחה</button>
-        </div>
+        <div class="process-two-cols"><input type="text" name="project_city" placeholder="עיר / מקום הפרויקט"><input type="text" name="project_name" placeholder="שם הפרויקט או הרחוב"></div>
+        <div class="process-field-group"><div class="process-field-label">באיזה שלב הפרויקט עכשיו?</div><div class="process-check-group">
+          <label class="process-check-option"><input type="checkbox" name="project_stage" value="לפני כנס דיירים"> לפני כנס דיירים</label>
+          <label class="process-check-option"><input type="checkbox" name="project_stage" value="אחרי פגישת זום / כנס דיירים"> אחרי פגישת זום / כנס דיירים</label>
+          <label class="process-check-option"><input type="checkbox" name="project_stage" value="שמאי הגיע לניקוד הדירה"> שמאי הגיע לניקוד הדירה</label>
+          <label class="process-check-option"><input type="checkbox" name="project_stage" value="קיבלנו תמהיל או בנק דירות"> קיבלנו תמהיל או בנק דירות</label>
+          <label class="process-check-option"><input type="checkbox" name="project_stage" value="לקראת בחירת דירה"> לקראת בחירת דירה</label>
+          <label class="process-check-option"><input type="checkbox" name="project_stage" value="לקראת פינוי / שכירות חלופית"> לקראת פינוי / שכירות חלופית</label>
+        </div></div>
+        <div class="process-field-group"><div class="process-field-label">מה חשוב לכם לבדוק?</div><div class="process-check-group">
+          <label class="process-check-option"><input type="checkbox" name="needs" value="בחירת דירה"> בחירת דירה</label>
+          <label class="process-check-option"><input type="checkbox" name="needs" value="איזו קומה ואיזה כיוון"> איזו קומה ואיזה כיוון</label>
+          <label class="process-check-option"><input type="checkbox" name="needs" value="כיווני אוויר ושמש"> כיווני אוויר ושמש</label>
+          <label class="process-check-option"><input type="checkbox" name="needs" value="חניה ומחסן"> חניה ומחסן</label>
+          <label class="process-check-option"><input type="checkbox" name="needs" value="תוספת בנייה או שינוי שלא ברור אם נלקח בחשבון"> תוספת בנייה או שינוי שלא ברור אם נלקח בחשבון</label>
+          <label class="process-check-option"><input type="checkbox" name="needs" value="הכנה לכנס דיירים"> הכנה לכנס דיירים</label>
+          <label class="process-check-option"><input type="checkbox" name="needs" value="ליווי לכנס דיירים"> ליווי לכנס דיירים</label>
+          <label class="process-check-option"><input type="checkbox" name="needs" value="הבנת מסמכים / אפליקציה / הודעות יזם"> הבנת מסמכים, אפליקציה או הודעות יזם</label>
+        </div></div>
+        <div class="process-two-cols"><input type="text" name="current_rooms" placeholder="כמה חדרים יש בדירה הקיימת?"><input type="text" name="wanted_rooms" placeholder="כמה חדרים תרצו בדירה החדשה?"></div>
+        <div class="process-field-group"><div class="process-field-label">האם אתם מעוניינים לשדרג?</div><div class="process-helper">למשל להוסיף חדר, להגדיל שטח או לבדוק אפשרות לדירה אחרת בתוספת תשלום.</div><div class="process-check-group"><label class="process-check-option"><input type="radio" name="upgrade_interest" value="כן"> כן</label><label class="process-check-option"><input type="radio" name="upgrade_interest" value="לא"> לא</label><label class="process-check-option"><input type="radio" name="upgrade_interest" value="לא בטוחים"> לא בטוחים</label></div></div>
+        <div class="process-field-group"><label class="process-field-label" for="documents">אילו מסמכים כבר יש לכם?</label><div class="process-helper">תוכניות, טבלת דירות, מכתב מהיזם, הודעה על כנס, מסמכי שמאי או כל חומר אחר.</div><input type="text" id="documents" name="documents" placeholder="למשל: קיבלנו תמהיל דירות ותוכנית קומה"></div>
+        <div class="process-field-group"><label class="process-field-label" for="message">מה הכי מלחיץ או לא ברור לכם כרגע?</label><textarea id="message" name="message" placeholder="כתבו בקצרה מה השלב, מה קיבלתם ומה תרצו להבין"></textarea></div>
+        <div class="process-contact-buttons"><a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A0%D7%99%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%A4%D7%99%D7%A0%D7%95%D7%99%20%D7%91%D7%99%D7%A0%D7%95%D7%99%20%D7%95%D7%A6%D7%A8%D7%99%D7%9A%20%D7%A2%D7%96%D7%A8%D7%94" target="_blank" rel="noopener">שליחת חומר ב-WhatsApp</a><button id="submitBtn" type="submit">שליחה</button></div>
       </form>
       <div id="formStatus" class="process-small-note">אפשר לשלוח לאחר מכן תוכניות וצילומי מסך ב-WhatsApp. ככל שהחומר ברור יותר, כך גם ההכוונה תהיה מדויקת יותר.</div>
-    </section>
-
-    <section class="content-card">
-      <h2>רוצים להתחיל מפוסט ולהגיע לעמוד?</h2>
-      <p class="link-line">אפשר לפרסם קרוסלה שמראה את המעבר מבלבול בפגישות זום ובכנסי דיירים, דרך ליווי מקצועי, ועד בחירה רגועה יותר. בסוף להפנות לכאן: <a href="pinui-binui-apartment-choice.html">ליווי אישי לדיירי פינוי בינוי</a>.</p>
     </section>
 
     <section class="content-card"><p class="note">המידע בעמוד זה כללי בלבד ואינו מהווה ייעוץ משפטי, שמאי, הנדסי או התחייבות מטעם יזם, חברה קבלנית או רשות. כל החלטה בפרויקט פינוי בינוי צריכה להיבדק לפי ההסכם, התוכניות, בעלי המקצוע המוסמכים והמסמכים הרשמיים של הפרויקט.</p></section>
