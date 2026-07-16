@@ -31,9 +31,15 @@
     .pinui-media-card{padding:18px}
     .pinui-image,.pinui-video{width:100%;height:auto;display:block;border-radius:24px;border:1px solid rgba(196,154,75,.22);box-shadow:0 12px 28px rgba(67,54,37,.1);background:#efe8dc}
     .pinui-video{max-height:760px;object-fit:contain}
-    .pinui-video-wrap{position:relative}
-    .pinui-sound-toggle{position:absolute;left:16px;bottom:16px;width:42px;height:42px;border:0;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.92);color:#2f3128;box-shadow:0 5px 16px rgba(0,0,0,.18);font-size:20px;cursor:pointer;z-index:3}
-    .pinui-sound-toggle:hover{transform:scale(1.05)}
+    .pinui-video-wrap{position:relative;border-radius:24px;overflow:hidden}
+    .pinui-video-wrap--crop .pinui-video{transform:scale(1.095);transform-origin:center;box-shadow:none}
+    .pinui-sound-toggle{position:absolute;left:14px;bottom:14px;width:38px;height:38px;padding:0;border:1px solid rgba(255,255,255,.24);border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(20,22,25,.68);color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.22);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);cursor:pointer;z-index:4;transition:background .2s ease,transform .2s ease,border-color .2s ease}
+    .pinui-sound-toggle:hover{transform:translateY(-1px);background:rgba(20,22,25,.82);border-color:rgba(255,255,255,.4)}
+    .pinui-sound-toggle:focus-visible{outline:2px solid #fff;outline-offset:3px}
+    .pinui-sound-toggle svg{width:19px;height:19px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .pinui-sound-toggle .sound-on{display:none}
+    .pinui-sound-toggle.is-audible .sound-off{display:none}
+    .pinui-sound-toggle.is-audible .sound-on{display:block}
     .pinui-caption{font-size:15px!important;color:var(--muted)!important;text-align:center;margin:12px 0 0!important}
     .pinui-quote{background:linear-gradient(135deg,#fff7e9,#eef1e6);border-color:rgba(196,154,75,.26)}
     .pinui-quote p{color:var(--olive);font-size:clamp(24px,3vw,36px);line-height:1.45;margin:0;font-weight:900}
@@ -58,7 +64,7 @@
     .pinui-contact-buttons a{border:1px solid var(--olive);color:var(--olive);background:#fff}
     .pinui-contact-buttons button{border:none;background:var(--rust);color:#fff}
     .pinui-note{font-size:14px!important;color:#666!important;margin:0!important}
-    @media(max-width:900px){.pinui-page{padding:34px 14px 58px}.pinui-card,.pinui-form-box{padding:24px 20px}.pinui-page h2{font-size:28px}.pinui-page p,.pinui-list div,.pinui-faq-answer{font-size:17px}.pinui-actions,.pinui-contact-buttons{flex-direction:column}.pinui-image-grid,.pinui-two-cols{grid-template-columns:1fr}.pinui-sound-toggle{left:12px;bottom:12px;width:40px;height:40px}}
+    @media(max-width:900px){.pinui-page{padding:34px 14px 58px}.pinui-card,.pinui-form-box{padding:24px 20px}.pinui-page h2{font-size:28px}.pinui-page p,.pinui-list div,.pinui-faq-answer{font-size:17px}.pinui-actions,.pinui-contact-buttons{flex-direction:column}.pinui-image-grid,.pinui-two-cols{grid-template-columns:1fr}.pinui-sound-toggle{left:10px;bottom:10px;width:36px;height:36px;border-radius:11px}.pinui-video-wrap--crop .pinui-video{transform:scale(1.11)}}
   </style>
 </head>
 <body>
@@ -78,7 +84,10 @@
           <source src="linda-dahan-building-renewal-guide.mp4" type="video/mp4">
           <img class="pinui-image" src="linda-dahan-building-renewal-guide.jpg" alt="פינוי בינוי - לא נשארים לבד עם התוכניות וההחלטות">
         </video>
-        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול">🔇</button>
+        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול" aria-pressed="false">
+          <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>
+          <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        </button>
       </div>
       <p class="pinui-caption">כשהתוכניות, השאלות והאפשרויות מתחילות להצטבר.</p>
     </section>
@@ -105,7 +114,10 @@
           <source src="linda-dahan-apartment-selection.mp4" type="video/mp4">
           <img class="pinui-image" src="linda-dahan-apartment-selection.jpg" alt="לא בוחרים רק דירה חדשה - בוחרים איכות חיים">
         </video>
-        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול">🔇</button>
+        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול" aria-pressed="false">
+          <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>
+          <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        </button>
       </div>
       <p class="pinui-caption">המטרה היא בחירה נכונה, לא בחירה מהירה.</p>
     </section>
@@ -143,12 +155,15 @@
     </section>
 
     <section class="pinui-card pinui-media-card">
-      <div class="pinui-video-wrap">
+      <div class="pinui-video-wrap pinui-video-wrap--crop">
         <video class="pinui-video" autoplay muted loop playsinline preload="metadata" poster="linda-dahan-new-home.jpg" aria-label="בסוף זה הבית שלכם">
           <source src="linda-dahan-new-home.mp4" type="video/mp4">
           <img class="pinui-image" src="linda-dahan-new-home.jpg" alt="זוג בבית החדש לאחר בחירה נכונה בפינוי בינוי">
         </video>
-        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול">🔇</button>
+        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול" aria-pressed="false">
+          <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>
+          <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        </button>
       </div>
       <p class="pinui-caption">השקט לדעת שבחרתם נכון.</p>
     </section>
@@ -159,7 +174,10 @@
           <source src="linda-dahan-home-connects-generations.mp4" type="video/mp4">
           <img class="pinui-image" src="linda-dahan-home-connects-generations.jpg" alt="הבית החדש מחבר בין הדורות אחרי בחירה נכונה">
         </video>
-        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול">🔇</button>
+        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול" aria-pressed="false">
+          <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>
+          <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        </button>
       </div>
       <p class="pinui-caption">כשבוחרים נכון, מרוויחים מקום שבו הקשר והמשפחה ממשיכים יחד.</p>
     </section>
@@ -213,21 +231,19 @@
       const button=wrap.querySelector(".pinui-sound-toggle");
       if(!video||!button)return;
       button.addEventListener("click",async()=>{
-        if(video.muted){
-          document.querySelectorAll(".pinui-video-wrap video").forEach((other)=>{
-            if(other!==video){other.muted=true;const otherButton=other.closest(".pinui-video-wrap")?.querySelector(".pinui-sound-toggle");if(otherButton){otherButton.textContent="🔇";otherButton.setAttribute("aria-label","הפעלת קול");otherButton.title="הפעלת קול";}}
-          });
-          video.muted=false;
-          button.textContent="🔊";
-          button.setAttribute("aria-label","השתקת קול");
-          button.title="השתקת קול";
-          try{await video.play();}catch(error){}
-        }else{
-          video.muted=true;
-          button.textContent="🔇";
-          button.setAttribute("aria-label","הפעלת קול");
-          button.title="הפעלת קול";
-        }
+        const activateSound=video.muted;
+        document.querySelectorAll(".pinui-video-wrap").forEach((otherWrap)=>{
+          const otherVideo=otherWrap.querySelector("video");
+          const otherButton=otherWrap.querySelector(".pinui-sound-toggle");
+          if(otherVideo&&otherVideo!==video)otherVideo.muted=true;
+          if(otherButton&&otherButton!==button){otherButton.classList.remove("is-audible");otherButton.setAttribute("aria-pressed","false");otherButton.setAttribute("aria-label","הפעלת קול");otherButton.title="הפעלת קול";}
+        });
+        video.muted=!activateSound;
+        if(activateSound){try{await video.play();}catch(error){console.warn("Audio playback was blocked:",error);}}
+        button.classList.toggle("is-audible",activateSound);
+        button.setAttribute("aria-pressed",String(activateSound));
+        button.setAttribute("aria-label",activateSound?"השתקת קול":"הפעלת קול");
+        button.title=activateSound?"השתקת קול":"הפעלת קול";
       });
     });
 
