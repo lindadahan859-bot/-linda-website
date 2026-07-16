@@ -13,11 +13,9 @@
   <meta property="og:url" content="https://www.lindaarch.com/pinui-binui-apartment-choice.html">
   <meta property="og:image" content="https://www.lindaarch.com/linda-dahan-building-renewal-guide.jpg">
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="shortcut icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .pinui-page{--cream:#fbf5ea;--paper:#fffaf2;--rust:#b85b3a;--olive:#56613a;--gold:#c49a4b;--ink:#2f3128;--muted:#6f675d;max-width:1080px;margin:auto;padding:48px 20px 86px;color:var(--ink);font-family:"Heebo",Arial,sans-serif;direction:rtl}
+    .pinui-page{--paper:#fffaf2;--rust:#b85b3a;--olive:#56613a;--gold:#c49a4b;--ink:#2f3128;--muted:#6f675d;max-width:1080px;margin:auto;padding:48px 20px 86px;color:var(--ink);font-family:"Heebo",Arial,sans-serif;direction:rtl}
     .pinui-page *{box-sizing:border-box}
     .pinui-card,.pinui-form-box{background:var(--paper);border-radius:30px;box-shadow:0 12px 34px rgba(86,71,48,.09);padding:34px 30px;margin-bottom:24px;border:1px solid rgba(196,154,75,.16)}
     .pinui-hero{background:linear-gradient(135deg,#fffaf2,#f4eadb)}
@@ -30,13 +28,13 @@
     .pinui-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
     .pinui-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;border:1px solid var(--olive);color:var(--olive);background:#fff;text-decoration:none;font-weight:900}
     .pinui-actions a.pinui-primary{background:var(--olive);color:#fff}
-    .pinui-image-card{padding:18px}
-    .pinui-image{width:100%;height:auto;display:block;border-radius:24px;border:1px solid rgba(196,154,75,.22);box-shadow:0 12px 28px rgba(67,54,37,.1)}
+    .pinui-media-card{padding:18px}
+    .pinui-image,.pinui-video{width:100%;height:auto;display:block;border-radius:24px;border:1px solid rgba(196,154,75,.22);box-shadow:0 12px 28px rgba(67,54,37,.1);background:#efe8dc}
+    .pinui-video{max-height:760px;object-fit:contain}
     .pinui-caption{font-size:15px!important;color:var(--muted)!important;text-align:center;margin:12px 0 0!important}
     .pinui-quote{background:linear-gradient(135deg,#fff7e9,#eef1e6);border-color:rgba(196,154,75,.26)}
     .pinui-quote p{color:var(--olive);font-size:clamp(24px,3vw,36px);line-height:1.45;margin:0;font-weight:900}
     .pinui-highlight{background:#fff5e7;border:1px solid rgba(184,91,58,.22);border-radius:24px;padding:22px;margin:18px 0}
-    .pinui-highlight p{margin:0;color:var(--ink)}
     .pinui-side{background:linear-gradient(135deg,#fff5e7,#eef1e6);border:2px solid rgba(184,91,58,.22)}
     .pinui-side strong{color:var(--rust)}
     .pinui-list,.pinui-steps,.pinui-faq{display:grid;gap:12px;margin-top:16px}
@@ -47,27 +45,18 @@
     .pinui-image-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .pinui-faq details{background:#fff;border:1px solid rgba(196,154,75,.18);border-radius:18px;overflow:hidden}
     .pinui-faq summary{cursor:pointer;list-style:none;padding:18px 22px;font-size:19px;font-weight:900;color:var(--olive)}
-    .pinui-faq summary::-webkit-details-marker{display:none}
     .pinui-faq-answer{padding:0 22px 20px;font-size:18px;line-height:1.85;color:#3e3a33}
     .pinui-form{display:grid;gap:16px}
-    .pinui-field-group{display:grid;gap:8px}
-    .pinui-label{font-size:18px;font-weight:900;color:var(--ink)}
-    .pinui-check-group{display:grid;gap:8px}
-    .pinui-check-option{display:flex;align-items:center;gap:10px;font-size:16px;color:#222}
     .pinui-two-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .pinui-form input[type="text"],.pinui-form input[type="tel"],.pinui-form input[type="email"],.pinui-form textarea{width:100%;box-sizing:border-box;border:1px solid #d8c7ad;border-radius:15px;padding:14px 16px;font-size:16px;font-family:"Heebo",Arial,sans-serif;background:#fff;color:#111}
-    .pinui-form textarea{min-height:120px;resize:vertical;line-height:1.7}
-    .pinui-helper,.pinui-small-note{font-size:14px;color:var(--muted);line-height:1.6}
-    .pinui-contact-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-    .pinui-contact-buttons a,.pinui-contact-buttons button{flex:1;text-align:center;padding:14px;border-radius:14px;font-size:16px;text-decoration:none;cursor:pointer;box-sizing:border-box;font-family:"Heebo",Arial,sans-serif;font-weight:900}
+    .pinui-form input,.pinui-form textarea{width:100%;border:1px solid #d8c7ad;border-radius:15px;padding:14px 16px;font-size:16px;font-family:"Heebo",Arial,sans-serif;background:#fff;color:#111}
+    .pinui-form textarea{min-height:120px;resize:vertical}
+    .pinui-contact-buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .pinui-contact-buttons a,.pinui-contact-buttons button{flex:1;text-align:center;padding:14px;border-radius:14px;font-size:16px;text-decoration:none;cursor:pointer;font-family:"Heebo",Arial,sans-serif;font-weight:900}
     .pinui-contact-buttons a{border:1px solid var(--olive);color:var(--olive);background:#fff}
     .pinui-contact-buttons button{border:none;background:var(--rust);color:#fff}
-    .pinui-note{font-size:14px!important;color:#666!important;line-height:1.75!important;margin:0!important}
+    .pinui-note{font-size:14px!important;color:#666!important;margin:0!important}
     @media(max-width:900px){.pinui-page{padding:34px 14px 58px}.pinui-card,.pinui-form-box{padding:24px 20px}.pinui-page h2{font-size:28px}.pinui-page p,.pinui-list div,.pinui-faq-answer{font-size:17px}.pinui-actions,.pinui-contact-buttons{flex-direction:column}.pinui-image-grid,.pinui-two-cols{grid-template-columns:1fr}}
   </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"מה כולל ליווי דיירים בפינוי בינוי?","acceptedAnswer":{"@type":"Answer","text":"הליווי כולל הבנת שלב הפרויקט, מעבר על תוכניות, תמהילי דירות וטבלאות ניקוד, הצגת החלופות, בדיקת כיווני אוויר, חניה, מחסן, סביבת הבניין ובחירת הדירה לפי צורכי בעל הדירה והמשפחה."}},{"@type":"Question","name":"את מייצגת את היזם או הקבלן?","acceptedAnswer":{"@type":"Answer","text":"לא. הליווי הוא פרטי ועצמאי עבור בעל הדירה, בני המשפחה או היורשים. המטרה היא להציג את האפשרויות בצורה ברורה ולעזור לקבל החלטה מושכלת."}},{"@type":"Question","name":"האם הליווי מחליף עורך דין או שמאי?","acceptedAnswer":{"@type":"Answer","text":"לא. הליווי הוא אדריכלי ותכנוני ואינו מחליף ייעוץ משפטי, שמאי או הנדסי."}}]}
-  </script>
 </head>
 <body>
   <div id="site-header"></div>
@@ -80,8 +69,12 @@
       <div class="pinui-actions"><a class="pinui-primary" href="#contact">בדיקת התאמה לליווי</a><a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A0%D7%99%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%A4%D7%99%D7%A0%D7%95%D7%99%20%D7%91%D7%99%D7%A0%D7%95%D7%99%20%D7%95%D7%A6%D7%A8%D7%99%D7%9A%20%D7%A2%D7%96%D7%A8%D7%94" target="_blank" rel="noopener">פנייה ב-WhatsApp</a></div>
     </section>
 
-    <section class="pinui-card pinui-image-card">
-      <img class="pinui-image" src="linda-dahan-building-renewal-guide.jpg" alt="פינוי בינוי - לא נשארים לבד עם התוכניות וההחלטות">
+    <section class="pinui-card pinui-media-card">
+      <video class="pinui-video" autoplay muted loop playsinline preload="metadata" poster="linda-dahan-building-renewal-guide.jpg" aria-label="פינוי בינוי לא נשארים לבד">
+        <source src="linda-dahan-building-renewal-guide.mov" type="video/quicktime">
+        <img class="pinui-image" src="linda-dahan-building-renewal-guide.jpg" alt="פינוי בינוי - לא נשארים לבד עם התוכניות וההחלטות">
+      </video>
+      <p class="pinui-caption">כשהתוכניות, השאלות והאפשרויות מתחילות להצטבר.</p>
     </section>
 
     <section class="pinui-card pinui-quote"><p>דירה היא לא רק נדל״ן. היא איכות החיים שלכם לעשרות שנים.</p></section>
@@ -95,65 +88,79 @@
 
     <section class="pinui-card">
       <h2>הרגע שבו מבינים שלא צריך לעבור את זה לבד</h2>
-      <p>בעלי דירות ובני משפחה מספרים לי שבהתחלה חשבו שיוכלו להסתדר לבד. ואז מגיעות התוכניות, פגישת הזום, השמאי, הניקוד, תמהיל הדירות והצורך לבחור בין כמה בניינים ודירות.</p>
-      <div class="pinui-highlight"><p><strong>בשלב הזה הם מבינים שהשאלה היא לא רק איזו דירה מקבלים, אלא איזו בחירה תהיה נכונה להם לחיים עצמם.</strong></p></div>
-      <p>לפעמים מדובר בזוג שגר בדירה שנים. לפעמים זו דירה מושכרת. לפעמים יש כמה יורשים שצריכים לקבל החלטה משותפת. לכל בעל דירה יש סיפור אחר, ולכן גם הבחירה לא יכולה להיות אוטומטית.</p>
+      <p>בהתחלה נדמה שאפשר להסתדר לבד. ואז מגיעות התוכניות, פגישת הזום, השמאי, הניקוד, תמהיל הדירות והצורך לבחור בין כמה בניינים ודירות.</p>
+      <div class="pinui-highlight"><p><strong>בשלב הזה מבינים שהשאלה היא לא רק איזו דירה מקבלים, אלא איזו בחירה תהיה נכונה לחיים עצמם.</strong></p></div>
+      <p>לפעמים מדובר בזוג שגר בדירה שנים. לפעמים זו דירה מושכרת. לפעמים יש כמה יורשים שצריכים לקבל החלטה משותפת. לכל בעל דירה יש סיפור אחר.</p>
     </section>
 
-    <section class="pinui-card pinui-image-card">
-      <img class="pinui-image" src="linda-dahan-apartment-selection.jpg" alt="לא בוחרים רק דירה חדשה - בוחרים איכות חיים">
+    <section class="pinui-card pinui-media-card">
+      <video class="pinui-video" autoplay muted loop playsinline preload="metadata" poster="linda-dahan-apartment-selection.jpg" aria-label="לא בוחרים רק דירה חדשה">
+        <source src="linda-dahan-apartment-selection.mov" type="video/quicktime">
+        <img class="pinui-image" src="linda-dahan-apartment-selection.jpg" alt="לא בוחרים רק דירה חדשה - בוחרים איכות חיים">
+      </video>
+      <p class="pinui-caption">המטרה היא בחירה נכונה, לא בחירה מהירה.</p>
     </section>
 
     <section class="pinui-card">
       <h2>מה בודקים לפני שבוחרים דירה?</h2>
       <div class="pinui-list">
         <div>איזו דירה, איזו קומה ואיזה כיוון באמת מתאימים לאורח החיים שלכם.</div>
-        <div>מיקום הבניין בתוך המתחם: רחוב, פארק, גן ילדים, בית כנסת, מסחר או שטחים ציבוריים.</div>
-        <div>מה רואים מהמרפסת, האם יש בניין ממול, שביל ראשי, כניסה לחניון או אזור רועש.</div>
+        <div>מיקום הבניין בתוך המתחם: רחוב, פארק, גן ילדים, מסחר או שטחים ציבוריים.</div>
+        <div>מה רואים מהמרפסת והאם יש בניין ממול, שביל ראשי, כניסה לחניון או אזור רועש.</div>
         <div>מיקום החניה והמחסן, נוחות ההגעה והקשר ללובי ולמעליות.</div>
         <div>הבנת טבלת הדירות, ניקוד השמאי, בנק הדירות וסדר הבחירה.</div>
-        <div>מה המשמעות של דירה מושכרת, כמה יורשים, דירה קיימת עם תוספות או משפחה שיש לה צרכים מיוחדים.</div>
+        <div>דירה מושכרת, כמה יורשים, דירה קיימת עם תוספות או משפחה עם צרכים מיוחדים.</div>
       </div>
     </section>
 
     <section class="pinui-card">
       <h2>איך הליווי עובד?</h2>
       <div class="pinui-steps">
-        <div class="pinui-step"><div><h3>שיחת אבחון</h3><p>מבינים באיזה שלב הפרויקט נמצא, מה כבר קיבלתם, מה מדאיג אתכם ומה צריך לבדוק.</p></div></div>
-        <div class="pinui-step"><div><h3>איסוף חומר</h3><p>תוכניות, תמהיל דירות, טבלאות ניקוד, מיקומי חניות, מחסנים, הודעות מהיזם וכל מסמך רלוונטי.</p></div></div>
-        <div class="pinui-step"><div><h3>ניתוח אדריכלי</h3><p>מעבר על החלופות, בדיקת מיקום, כיווני אוויר, מרפסות, סביבת הבניין והמשמעות היומיומית של כל בחירה.</p></div></div>
-        <div class="pinui-step"><div><h3>הצגת כל האפשרויות</h3><p>אני מסבירה את היתרונות והחסרונות של כל חלופה, כדי שתוכלו לקבל החלטה מתוך ידע ולא מתוך לחץ.</p></div></div>
-        <div class="pinui-step"><div><h3>בחירת הדירה</h3><p>מקבלים סדר עדיפויות ברור והכוונה מקצועית שמבוססת על אורח החיים שלכם ועל מה שחשוב לכם באמת.</p></div></div>
+        <div class="pinui-step"><div><h3>שיחת אבחון</h3><p>מבינים באיזה שלב הפרויקט נמצא, מה כבר קיבלתם ומה צריך לבדוק.</p></div></div>
+        <div class="pinui-step"><div><h3>איסוף חומר</h3><p>תוכניות, תמהיל דירות, טבלאות ניקוד, חניות, מחסנים והודעות מהיזם.</p></div></div>
+        <div class="pinui-step"><div><h3>ניתוח אדריכלי</h3><p>מעבר על החלופות, המיקום, כיווני האוויר, המרפסות וסביבת הבניין.</p></div></div>
+        <div class="pinui-step"><div><h3>הצגת כל האפשרויות</h3><p>היתרונות והחסרונות של כל חלופה מוצגים בצורה ברורה.</p></div></div>
+        <div class="pinui-step"><div><h3>בחירת הדירה</h3><p>מקבלים סדר עדיפויות והכוונה שמבוססים על אורח החיים שלכם.</p></div></div>
       </div>
     </section>
 
     <section class="pinui-card">
       <h2>בסוף לא זוכרים רק את מספר הדירה</h2>
-      <p>זוכרים את האור שנכנס הביתה, את המרפסת, את השקט, את הקרבה למעלית, את הנוף ואת התחושה שבחרתם נכון. זו הסיבה שאני מסתכלת על התהליך לא רק דרך תוכניות, אלא דרך החיים שיקרו בדירה החדשה.</p>
+      <p>זוכרים את האור, את המרפסת, את השקט, את הנוף ואת התחושה שבחרתם נכון. זו הסיבה שאני מסתכלת על התהליך דרך החיים שיקרו בדירה החדשה.</p>
       <div class="pinui-image-grid">
         <div><img class="pinui-image" src="linda-dahan-family-future-home.jpg" alt="הרגעים המשפחתיים בבית החדש הם המטרה"><p class="pinui-caption">הרגעים האלה הם המטרה.</p></div>
         <div><img class="pinui-image" src="linda-dahan-new-home.jpg" alt="בסוף זה הבית שלכם אחרי פינוי בינוי"><p class="pinui-caption">בסוף, זה הבית שלכם.</p></div>
       </div>
     </section>
 
-    <section class="pinui-card pinui-image-card">
-      <img class="pinui-image" src="linda-dahan-home-for-generations.jpg" alt="הבית החדש מחבר בין הדורות אחרי בחירה נכונה בפינוי בינוי">
+    <section class="pinui-card pinui-media-card">
+      <video class="pinui-video" autoplay muted loop playsinline preload="metadata" poster="linda-dahan-new-home.jpg" aria-label="בסוף זה הבית שלכם">
+        <source src="linda-dahan-new-home.mov" type="video/quicktime">
+        <img class="pinui-image" src="linda-dahan-new-home.jpg" alt="זוג בבית החדש לאחר בחירה נכונה בפינוי בינוי">
+      </video>
+      <p class="pinui-caption">השקט לדעת שבחרתם נכון.</p>
+    </section>
+
+    <section class="pinui-card pinui-media-card">
+      <video class="pinui-video" autoplay muted loop playsinline preload="metadata" poster="linda-dahan-home-connects-generations.jpg" aria-label="הבית החדש מחבר בין הדורות">
+        <source src="linda-dahan-home-connects-generations.mov" type="video/quicktime">
+        <img class="pinui-image" src="linda-dahan-home-connects-generations.jpg" alt="הבית החדש מחבר בין הדורות אחרי בחירה נכונה">
+      </video>
+      <p class="pinui-caption">כשבוחרים נכון, מרוויחים מקום שבו הקשר והמשפחה ממשיכים יחד.</p>
     </section>
 
     <section class="pinui-card">
       <h2>איך נקבע היקף הליווי?</h2>
-      <p>בשלב הזה אני לא מציינת מחיר קבוע באתר, כי כל פרויקט שונה. יש דיירים שצריכים פגישת אבחון ממוקדת, ויש משפחות שצריכות ליווי רחב יותר שכולל מעבר על הרבה בניינים, חלופות, חניות, מחסנים, כנס דיירים ובחירת דירה.</p>
-      <div class="pinui-highlight"><p><strong>לאחר שיחה ראשונית וקבלת החומר, אשלח הצעת מחיר מסודרת לפי שלב הפרויקט וכמות העבודה הנדרשת.</strong></p></div>
+      <p>כל פרויקט שונה. יש דיירים שצריכים פגישת אבחון ממוקדת, ויש משפחות שצריכות ליווי רחב יותר הכולל מעבר על כמה בניינים, חלופות, חניות, מחסנים וכנס דיירים.</p>
+      <div class="pinui-highlight"><p><strong>לאחר שיחה ראשונית וקבלת החומר, אשלח הצעת מחיר מסודרת לפי שלב הפרויקט וכמות העבודה.</strong></p></div>
     </section>
 
     <section class="pinui-card">
       <h2>שאלות שדיירים שואלים</h2>
       <div class="pinui-faq">
-        <details><summary>מה זה בנק דירות?</summary><div class="pinui-faq-answer">בדרך כלל מדובר במאגר הדירות שממנו בעלי הדירות בוחרים את דירות התמורה, בהתאם להסכם, לניקוד ולסדר הבחירה. חשוב להבין אילו דירות נמצאות במאגר ומה המשמעות של כל חלופה.</div></details>
-        <details><summary>האם חייבים לחזור לאותו מיקום?</summary><div class="pinui-faq-answer">לא תמיד. בפרויקטים רבים אין התחייבות שכל דייר יחזור בדיוק לאותו מקום, ולכן חשוב להבין את סדר הבחירה, את הניקוד ואת החלופות הקיימות.</div></details>
-        <details><summary>האם כדאי לבחור רק לפי קומה?</summary><div class="pinui-faq-answer">לא. קומה היא רק חלק מההחלטה. לפעמים דירה בקומה נמוכה יותר עם כיוון טוב, שקט ונוף פתוח יכולה להיות נכונה יותר מדירה גבוהה שפונה לרעש, מסחר או בניין צמוד.</div></details>
-        <details><summary>האם את מחליפה עורך דין, שמאי או מהנדס?</summary><div class="pinui-faq-answer">לא. אני לא מחליפה ייעוץ משפטי, שמאי או הנדסי. הליווי שלי הוא אדריכלי ותכנוני: להבין תוכניות, לזהות שאלות חשובות ולבחור נכון יותר מבחינת איכות חיים.</div></details>
-        <details><summary>אפשר להגיע איתך לכנס דיירים?</summary><div class="pinui-faq-answer">כן, בליווי רחב ניתן לכלול הכנה לכנס, הגעה לכנס דיירים וסיכום מסודר לאחריו.</div></details>
+        <details><summary>מה זה בנק דירות?</summary><div class="pinui-faq-answer">מאגר הדירות שממנו בעלי הדירות בוחרים את דירות התמורה, בהתאם להסכם, לניקוד ולסדר הבחירה.</div></details>
+        <details><summary>האם כדאי לבחור רק לפי קומה?</summary><div class="pinui-faq-answer">לא. קומה היא רק חלק מההחלטה. כיוון, שקט, נוף, סביבת הבניין ונוחות יומיומית חשובים לא פחות.</div></details>
+        <details><summary>האם את מחליפה עורך דין או שמאי?</summary><div class="pinui-faq-answer">לא. הליווי הוא אדריכלי ותכנוני ואינו מחליף ייעוץ משפטי, שמאי או הנדסי.</div></details>
       </div>
     </section>
 
@@ -162,36 +169,32 @@
       <p>מלאו כמה פרטים ואחזור אליכם כדי להבין באיזה שלב אתם נמצאים ומה נכון לבדוק.</p>
       <form id="pinuiBinuiForm" class="pinui-form" action="https://formsubmit.co/ajax/e8fc615a018169f89920a5d28fcde840" method="post">
         <input type="hidden" name="_subject" value="פנייה חדשה - ליווי דיירים בפינוי בינוי">
-        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="pinui-two-cols"><input type="text" name="name" placeholder="שם מלא" required><input type="tel" name="phone" placeholder="טלפון" required></div>
         <input type="email" name="email" placeholder="אימייל">
         <div class="pinui-two-cols"><input type="text" name="project_city" placeholder="עיר / מקום הפרויקט"><input type="text" name="project_name" placeholder="שם הפרויקט או הרחוב"></div>
-        <div class="pinui-field-group"><div class="pinui-label">באיזה שלב הפרויקט עכשיו?</div><div class="pinui-check-group">
-          <label class="pinui-check-option"><input type="checkbox" name="project_stage" value="לפני כנס דיירים"> לפני כנס דיירים</label>
-          <label class="pinui-check-option"><input type="checkbox" name="project_stage" value="אחרי פגישת זום / כנס דיירים"> אחרי פגישת זום / כנס דיירים</label>
-          <label class="pinui-check-option"><input type="checkbox" name="project_stage" value="שמאי הגיע לניקוד הדירה"> שמאי הגיע לניקוד הדירה</label>
-          <label class="pinui-check-option"><input type="checkbox" name="project_stage" value="קיבלנו תמהיל או בנק דירות"> קיבלנו תמהיל או בנק דירות</label>
-          <label class="pinui-check-option"><input type="checkbox" name="project_stage" value="לקראת בחירת דירה"> לקראת בחירת דירה</label>
-        </div></div>
-        <div class="pinui-field-group"><div class="pinui-label">מה חשוב לכם לבדוק?</div><div class="pinui-check-group">
-          <label class="pinui-check-option"><input type="checkbox" name="needs" value="בחירת דירה"> בחירת דירה</label>
-          <label class="pinui-check-option"><input type="checkbox" name="needs" value="איזו קומה ואיזה כיוון"> איזו קומה ואיזה כיוון</label>
-          <label class="pinui-check-option"><input type="checkbox" name="needs" value="חניה ומחסן"> חניה ומחסן</label>
-          <label class="pinui-check-option"><input type="checkbox" name="needs" value="דירה מושכרת או יורשים"> דירה מושכרת או כמה יורשים</label>
-          <label class="pinui-check-option"><input type="checkbox" name="needs" value="הבנת מסמכים / הודעות יזם"> הבנת מסמכים או הודעות יזם</label>
-        </div></div>
-        <div class="pinui-field-group"><label class="pinui-label" for="documents">אילו מסמכים כבר יש לכם?</label><div class="pinui-helper">תוכניות, טבלת דירות, מכתב מהיזם, הודעה על כנס, מסמכי שמאי או כל חומר אחר.</div><input type="text" id="documents" name="documents" placeholder="למשל: קיבלנו תמהיל דירות ותוכנית קומה"></div>
-        <div class="pinui-field-group"><label class="pinui-label" for="message">מה הכי מלחיץ או לא ברור לכם כרגע?</label><textarea id="message" name="message" placeholder="כתבו בקצרה מה השלב, מה קיבלתם ומה תרצו להבין"></textarea></div>
-        <div class="pinui-contact-buttons"><a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A0%D7%99%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%A4%D7%99%D7%A0%D7%95%D7%99%20%D7%91%D7%99%D7%A0%D7%95%D7%99%20%D7%95%D7%A6%D7%A8%D7%99%D7%9A%20%D7%A2%D7%96%D7%A8%D7%94" target="_blank" rel="noopener">שליחת חומר ב-WhatsApp</a><button id="submitBtn" type="submit">שליחה</button></div>
+        <textarea name="message" placeholder="באיזה שלב הפרויקט ומה חשוב לכם לבדוק?"></textarea>
+        <div class="pinui-contact-buttons"><a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A0%D7%99%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%A4%D7%99%D7%A0%D7%95%D7%99%20%D7%91%D7%99%D7%A0%D7%95%D7%99" target="_blank" rel="noopener">פנייה ב-WhatsApp</a><button type="submit" id="pinuiSubmitBtn">שליחה</button></div>
       </form>
-      <div id="formStatus" class="pinui-small-note">אפשר לשלוח לאחר מכן תוכניות וצילומי מסך ב-WhatsApp. ככל שהחומר ברור יותר, כך גם ההכוונה תהיה מדויקת יותר.</div>
+      <p id="pinuiFormStatus" class="pinui-note">השאירו פרטים ואחזור אליכם בהקדם.</p>
     </section>
-
-    <section class="pinui-card"><p class="pinui-note">המידע בעמוד זה כללי בלבד ואינו מהווה ייעוץ משפטי, שמאי, הנדסי או התחייבות מטעם יזם, חברה קבלנית או רשות. כל החלטה בפרויקט פינוי בינוי צריכה להיבדק לפי ההסכם, התוכניות, בעלי המקצוע המוסמכים והמסמכים הרשמיים של הפרויקט.</p></section>
   </main>
   <div id="site-footer"></div>
-  <script>async function loadIncludes(){try{document.getElementById('site-header').innerHTML=await(await fetch('header.html')).text();document.getElementById('site-footer').innerHTML=await(await fetch('footer.html')).text()}catch(e){console.error(e)}}loadIncludes();</script><script src="site-tools.js"></script>
+  <script>
+    async function loadIncludes(){
+      try{
+        const headerResponse=await fetch("header.html");
+        document.getElementById("site-header").innerHTML=await headerResponse.text();
+        const footerResponse=await fetch("footer.html");
+        document.getElementById("site-footer").innerHTML=await footerResponse.text();
+        if(typeof setupHeaderMenu==="function"){setupHeaderMenu();}
+      }catch(error){console.error("Error loading includes:",error);}
+    }
+    loadIncludes();
+    const form=document.getElementById("pinuiBinuiForm");
+    if(form){form.addEventListener("submit",async function(event){event.preventDefault();const button=document.getElementById("pinuiSubmitBtn");const status=document.getElementById("pinuiFormStatus");button.disabled=true;button.textContent="שולחת...";try{const response=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});if(!response.ok)throw new Error();form.reset();status.textContent="הפנייה התקבלה. אחזור אליכם בהקדם.";}catch(error){status.textContent="אירעה תקלה בשליחה. אפשר לפנות אליי ב-WhatsApp.";}finally{button.disabled=false;button.textContent="שליחה";}});}
+  </script>
+  <script src="site-tools.js"></script>
 </body>
 </html>
