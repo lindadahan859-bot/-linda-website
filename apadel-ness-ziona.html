@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XSD3XG8TL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,7 +9,6 @@
     gtag('config', 'G-4XSD3XG8TL');
   </script>
 
-  <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -41,31 +39,41 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    body{margin:0;direction:rtl;font-family:Arial,sans-serif;background:#f7f4ef;color:#222}
-    .hero{min-height:56vh;background:linear-gradient(135deg,#151515,#3f3f3f);display:flex;align-items:flex-end;color:#fff;position:relative;overflow:hidden}
-    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.04),transparent 45%),repeating-linear-gradient(90deg,transparent 0,transparent 95px,rgba(255,255,255,.035) 96px)}
-    .hero-inner{width:min(1120px,90%);margin:auto;padding:72px 0 58px;position:relative;z-index:1}
-    .kicker{display:inline-block;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.12);border-radius:999px;padding:8px 16px;margin-bottom:16px;font-weight:700}
-    .hero h1{font-size:clamp(38px,5vw,68px);line-height:1.12;margin:0 0 14px;color:#fff}
-    .hero p{font-size:clamp(18px,2vw,23px);line-height:1.7;max-width:850px;margin:0;color:#fff}
-    .wrap{max-width:1120px;margin:auto;padding:46px 20px 86px}
-    .card{background:#fff;border-radius:28px;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:34px 30px;margin-bottom:24px}
-    .card h2{font-size:34px;line-height:1.25;margin:0 0 16px;color:#111}
+    :root{--cream:#f6f1e8;--sand:#e8dccb;--sage:#b8c7b3;--green:#496452;--deep:#294035;--ink:#23312a;--white:#fffdf9}
+    body{margin:0;direction:rtl;font-family:Arial,sans-serif;background:var(--cream);color:var(--ink)}
+    .hero{min-height:62vh;background:linear-gradient(135deg,#efe6d7 0%,#dfe8dc 100%);display:flex;align-items:center;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;background:rgba(255,255,255,.38);top:-170px;left:-120px}
+    .hero:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:rgba(73,100,82,.08);bottom:-160px;right:-90px}
+    .hero-inner{width:min(1180px,90%);margin:auto;padding:70px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;position:relative;z-index:1}
+    .kicker{display:inline-block;background:rgba(255,255,255,.66);border:1px solid rgba(73,100,82,.18);color:var(--green);border-radius:999px;padding:8px 16px;margin-bottom:18px;font-weight:700}
+    .hero h1{font-size:clamp(40px,5vw,70px);line-height:1.08;margin:0 0 16px;color:var(--deep)}
+    .hero p{font-size:clamp(18px,2vw,23px);line-height:1.8;max-width:760px;margin:0;color:#3d4c44}
+    .court-wrap{background:rgba(255,253,249,.78);border:1px solid rgba(73,100,82,.16);border-radius:34px;padding:26px;box-shadow:0 18px 50px rgba(62,82,68,.12)}
+    .court-title{font-size:15px;color:#607168;margin-bottom:12px;text-align:center}
+    .court-svg{width:100%;height:auto;display:block}
+    .wrap{max-width:1120px;margin:auto;padding:50px 20px 86px}
+    .card{background:var(--white);border-radius:28px;box-shadow:0 10px 28px rgba(54,70,60,.08);padding:34px 30px;margin-bottom:24px;border:1px solid rgba(73,100,82,.08)}
+    .card h2{font-size:34px;line-height:1.25;margin:0 0 16px;color:var(--deep)}
     .card p{font-size:19px;line-height:1.9;margin:0 0 16px}
-    .tag{display:inline-block;background:#e8e2d8;color:#111;border-radius:999px;padding:6px 12px;font-size:14px;font-weight:700;margin-bottom:12px}
+    .tag{display:inline-block;background:#e6eee3;color:var(--green);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:700;margin-bottom:12px}
     .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-    .fact{background:#f7f4ef;border-radius:20px;padding:22px}
-    .fact strong{display:block;font-size:24px;margin-bottom:6px;color:#111}
-    .fact span{font-size:16px;line-height:1.6;color:#555}
+    .fact{background:linear-gradient(180deg,#f4f7f2,#edf1eb);border-radius:20px;padding:22px;border:1px solid rgba(73,100,82,.08)}
+    .fact strong{display:block;font-size:25px;margin-bottom:6px;color:var(--deep)}
+    .fact span{font-size:16px;line-height:1.6;color:#607168}
     .list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
-    .list div{background:#f7f4ef;border-radius:18px;padding:18px;font-size:18px;line-height:1.65}
-    .credit{background:#111;color:#fff}
-    .credit h2,.credit p{color:#fff}
-    .placeholder{min-height:320px;border-radius:24px;border:1px dashed #aaa;background:linear-gradient(135deg,#f2eee7,#e7e0d5);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:#555;font-size:20px;line-height:1.7}
+    .list div{background:#f5f0e7;border-radius:18px;padding:18px;font-size:18px;line-height:1.65;border-right:4px solid var(--sage)}
+    .credit{background:linear-gradient(135deg,#dfe8dc,#f3ede3);border:none}
+    .credit h2,.credit p{color:var(--deep)}
+    .placeholder{min-height:300px;border-radius:24px;border:1px dashed #99aa9e;background:linear-gradient(135deg,#f6f1e8,#e8efe6);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:#5e6d64;font-size:19px;line-height:1.7}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+    .step{background:#f7f3eb;border-radius:18px;padding:18px;position:relative}
+    .step b{display:block;color:var(--green);font-size:14px;margin-bottom:8px}
+    .step span{font-size:17px;line-height:1.5}
     .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
-    .actions a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid #111;text-decoration:none;color:#111;font-weight:700}
-    .actions a.primary{background:#111;color:#fff}
-    @media(max-width:850px){.hero{min-height:46vh}.hero-inner{padding:56px 0 32px}.hero h1{font-size:33px}.hero p,.card p{font-size:17px}.wrap{padding:28px 14px 58px}.card{padding:24px 20px}.card h2{font-size:28px}.facts,.list{grid-template-columns:1fr}.actions{flex-direction:column}.actions a{text-align:center}}
+    .actions a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid var(--deep);text-decoration:none;color:var(--deep);font-weight:700}
+    .actions a.primary{background:var(--deep);color:#fff}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:28px;padding:52px 0}.hero{min-height:auto}.court-wrap{max-width:620px}.process{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){.hero h1{font-size:34px}.hero p,.card p{font-size:17px}.wrap{padding:28px 14px 58px}.card{padding:24px 20px}.card h2{font-size:28px}.facts,.list,.process{grid-template-columns:1fr}.actions{flex-direction:column}.actions a{text-align:center}.court-wrap{padding:16px;border-radius:24px}}
   </style>
 </head>
 <body>
@@ -74,9 +82,28 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <span class="kicker">פרויקט מסחרי וספורטיבי בנס ציונה</span>
-      <h1>מתחם הפדל APADEL</h1>
-      <p>תכנון מתחם ספורט ומסחר ברחוב הספורט 6 בנס ציונה, על שטח של כ-5 דונם, הכולל 9 מגרשי פדל ומבנה מרכזי לשירות הקהל והפעלת המתחם.</p>
+      <div>
+        <span class="kicker">פרויקט מסחרי וספורטיבי בנס ציונה</span>
+        <h1>מתחם הפדל APADEL</h1>
+        <p>תכנון מתחם ספורט ומסחר ברחוב הספורט 6 בנס ציונה, על שטח של כ-5 דונם, הכולל 9 מגרשי פדל ומבנה מרכזי לשירות הקהל והפעלת המתחם.</p>
+      </div>
+
+      <div class="court-wrap" aria-label="תרשים עקרוני של מגרש פדל">
+        <div class="court-title">תרשים השראה עקרוני של מגרש פדל</div>
+        <svg class="court-svg" viewBox="0 0 760 470" role="img" aria-label="תרשים גרפי של מגרש פדל עם רשת וקווי משחק">
+          <rect x="45" y="35" width="670" height="400" rx="18" fill="#9eb79f"/>
+          <rect x="78" y="62" width="604" height="346" rx="8" fill="#6e9a78" stroke="#f7f3eb" stroke-width="5"/>
+          <line x1="380" y1="62" x2="380" y2="408" stroke="#f7f3eb" stroke-width="5"/>
+          <line x1="78" y1="235" x2="682" y2="235" stroke="#f7f3eb" stroke-width="5"/>
+          <line x1="205" y1="62" x2="205" y2="408" stroke="#f7f3eb" stroke-width="4"/>
+          <line x1="555" y1="62" x2="555" y2="408" stroke="#f7f3eb" stroke-width="4"/>
+          <rect x="358" y="58" width="44" height="354" fill="rgba(255,255,255,.18)"/>
+          <line x1="380" y1="55" x2="380" y2="415" stroke="#294035" stroke-width="8" stroke-dasharray="6 7"/>
+          <circle cx="300" cy="160" r="13" fill="#f1d35f" stroke="#fff" stroke-width="4"/>
+          <path d="M545 315 q30 -45 52 -4 q-15 18 -45 10" fill="none" stroke="#294035" stroke-width="10" stroke-linecap="round"/>
+          <circle cx="592" cy="312" r="8" fill="#294035"/>
+        </svg>
+      </div>
     </div>
   </section>
 
@@ -86,7 +113,6 @@
       <h2>מתחם שמחבר בין ספורט, אירוח ופעילות מסחרית</h2>
       <p>מתחם APADEL תוכנן כמרכז ספורטיבי פעיל ומזמין, שבו חוויית המשתמש מתחילה כבר מהכניסה למגרש וממשיכה דרך התנועה במתחם, אזורי השירות, הקפיטריה, החנות והמלתחות.</p>
       <p>התכנון נדרש לתת מענה במקביל לפעילות ספורטיבית אינטנסיבית, קהל מבקרים, תפעול יום יומי, שירות, נגישות, בטיחות וזרימה נכונה בין המגרשים לבין המבנה המרכזי.</p>
-
       <div class="facts">
         <div class="fact"><strong>כ-5 דונם</strong><span>שטח המגרש הכולל</span></div>
         <div class="fact"><strong>9 מגרשים</strong><span>מגרשי פדל במתחם</span></div>
@@ -108,7 +134,12 @@
     <section class="card">
       <h2>מתכנון ועד אישור הבנייה</h2>
       <p>הפרויקט כלל תכנון אדריכלי, הכנת תכניות להגשה, הגשת רישוי, התנהלות מול הרשויות וליווי התהליך עד לקבלת אישור הבנייה.</p>
-      <p>בפרויקט מסוג זה, העבודה אינה מסתכמת בתכנון המגרשים והמבנה בלבד. נדרש לחבר בין דרישות הלקוח, צורכי ההפעלה, מגבלות המגרש, דרישות הרשות, תקנים, נגישות, בטיחות ותיאום בין כלל הגורמים המקצועיים.</p>
+      <div class="process">
+        <div class="step"><b>01</b><span>גיבוש פרוגרמה וחלוקת המתחם</span></div>
+        <div class="step"><b>02</b><span>תכנון המבנה והמגרשים</span></div>
+        <div class="step"><b>03</b><span>הכנת תכניות והגשת רישוי</span></div>
+        <div class="step"><b>04</b><span>התנהלות מול הרשויות וקבלת אישור</span></div>
+      </div>
     </section>
 
     <section class="card credit">
@@ -120,7 +151,7 @@
 
     <section class="card">
       <h2>הדמיות ותכניות הפרויקט</h2>
-      <div class="placeholder">הדמיות, תכנית העמדה ותכניות המבנה יתווספו לעמוד עם השלמת חומרי הפרויקט.</div>
+      <div class="placeholder">ההדמיות, תכנית ההעמדה ותכניות המבנה יתווספו כאן עם השלמת חומרי הפרויקט.</div>
     </section>
 
     <section class="card">
@@ -134,7 +165,6 @@
   </main>
 
   <div id="site-footer"></div>
-
   <script>
     async function loadIncludes(){
       try{
