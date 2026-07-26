@@ -33,6 +33,7 @@
   <meta property="og:description" content="תכנון מתחם ספורט ומסחר על שטח של כ-5 דונם, הכולל 9 מגרשי פדל ומבנה מרכזי עם קפיטריה, חנות, מלתחות, שירותים וממ״ד.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.lindaarch.com/apadel-ness-ziona.html">
+  <meta property="og:image" content="https://www.lindaarch.com/apadel-ness-ziona-main-render.jpeg">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
@@ -64,16 +65,25 @@
     .list div{background:#f5f0e7;border-radius:18px;padding:18px;font-size:18px;line-height:1.65;border-right:4px solid var(--sage)}
     .credit{background:linear-gradient(135deg,#dfe8dc,#f3ede3);border:none}
     .credit h2,.credit p{color:var(--deep)}
-    .placeholder{min-height:300px;border-radius:24px;border:1px dashed #99aa9e;background:linear-gradient(135deg,#f6f1e8,#e8efe6);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:#5e6d64;font-size:19px;line-height:1.7}
     .process{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
     .step{background:#f7f3eb;border-radius:18px;padding:18px;position:relative}
     .step b{display:block;color:var(--green);font-size:14px;margin-bottom:8px}
     .step span{font-size:17px;line-height:1.5}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:22px}
+    .gallery figure{margin:0;background:#f7f3eb;border-radius:22px;overflow:hidden;border:1px solid rgba(73,100,82,.10)}
+    .gallery figure.main{grid-column:1/-1}
+    .gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;cursor:pointer;transition:transform .3s ease}
+    .gallery figure:hover img{transform:scale(1.02)}
+    .gallery figcaption{padding:14px 16px;font-size:16px;line-height:1.6;color:#56665d}
     .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
     .actions a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid var(--deep);text-decoration:none;color:var(--deep);font-weight:700}
     .actions a.primary{background:var(--deep);color:#fff}
+    .lightbox{position:fixed;inset:0;background:rgba(20,30,25,.92);display:none;align-items:center;justify-content:center;z-index:999999;padding:24px}
+    .lightbox.active{display:flex}
+    .lightbox img{max-width:92vw;max-height:84vh;object-fit:contain;border-radius:16px}
+    .lightbox button{position:absolute;top:18px;left:18px;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:#111;font-size:30px;cursor:pointer}
     @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:28px;padding:52px 0}.hero{min-height:auto}.court-wrap{max-width:620px}.process{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:650px){.hero h1{font-size:34px}.hero p,.card p{font-size:17px}.wrap{padding:28px 14px 58px}.card{padding:24px 20px}.card h2{font-size:28px}.facts,.list,.process{grid-template-columns:1fr}.actions{flex-direction:column}.actions a{text-align:center}.court-wrap{padding:16px;border-radius:24px}}
+    @media(max-width:650px){.hero h1{font-size:34px}.hero p,.card p{font-size:17px}.wrap{padding:28px 14px 58px}.card{padding:24px 20px}.card h2{font-size:28px}.facts,.list,.process,.gallery{grid-template-columns:1fr}.gallery figure.main{grid-column:auto}.actions{flex-direction:column}.actions a{text-align:center}.court-wrap{padding:16px;border-radius:24px}}
   </style>
 </head>
 <body>
@@ -151,7 +161,15 @@
 
     <section class="card">
       <h2>הדמיות ותכניות הפרויקט</h2>
-      <div class="placeholder">ההדמיות, תכנית ההעמדה ותכניות המבנה יתווספו כאן עם השלמת חומרי הפרויקט.</div>
+      <div class="gallery">
+        <figure class="main"><img src="apadel-ness-ziona-main-render.jpeg" alt="הדמיה ראשית של מתחם APADEL בנס ציונה עם תשעה מגרשי פדל, מבנה מסחרי ורחבת כניסה"><figcaption>מבט ראשי על המתחם, רחבת הכניסה, המבנה המרכזי ומגרשי הפדל.</figcaption></figure>
+        <figure><img src="apadel-ness-ziona-aerial-entrance.jpeg" alt="מבט אווירי על הכניסה, החניה והמבנה המרכזי במתחם APADEL בנס ציונה"><figcaption>הכניסה למתחם, מערך החניה והקשר בין המבנה למגרשים.</figcaption></figure>
+        <figure><img src="apadel-ness-ziona-aerial-view.jpeg" alt="מבט אווירי רחב על מתחם APADEL ומגרשי הפדל בנס ציונה"><figcaption>מבט אווירי רחב המציג את חלוקת המתחם והתנועה בו.</figcaption></figure>
+        <figure><img src="apadel-ness-ziona-padel-courts.jpeg" alt="הדמיה רחבה של תשעת מגרשי הפדל במתחם APADEL"><figcaption>מערך המגרשים, אזורי המעבר והקשר אל המבנה המרכזי.</figcaption></figure>
+        <figure><img src="apadel-ness-ziona-sports-complex.jpeg" alt="מבט פנימי על מתחם הספורט APADEL ומבנה הקפיטריה והאירוח"><figcaption>מבט מתוך המגרשים לכיוון המבנה ואזורי האירוח.</figcaption></figure>
+        <figure><img src="apadel-ness-ziona-site-plan.jpeg" alt="תכנית העמדה ממבט על של מתחם APADEL בנס ציונה"><figcaption>תכנית העמדה המציגה תשעה מגרשים, מבנה מרכזי, חניה ופיתוח שטח.</figcaption></figure>
+        <figure><img src="apadel-ness-ziona-central-building.jpeg" alt="מבט על המבנה המרכזי והרחבה במתחם APADEL"><figcaption>המבנה המרכזי, אזורי הישיבה והרחבה שבין המגרשים.</figcaption></figure>
+      </div>
     </section>
 
     <section class="card">
@@ -164,6 +182,7 @@
     </section>
   </main>
 
+  <div class="lightbox" id="apadelLightbox" aria-hidden="true"><button type="button" aria-label="סגירה">×</button><img src="" alt=""></div>
   <div id="site-footer"></div>
   <script>
     async function loadIncludes(){
@@ -176,6 +195,13 @@
       }catch(e){console.error(e);}
     }
     loadIncludes();
+    const lightbox=document.getElementById('apadelLightbox');
+    const lightboxImg=lightbox.querySelector('img');
+    document.querySelectorAll('.gallery img').forEach(img=>img.addEventListener('click',()=>{lightboxImg.src=img.src;lightboxImg.alt=img.alt;lightbox.classList.add('active');lightbox.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}));
+    function closeLightbox(){lightbox.classList.remove('active');lightbox.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+    lightbox.querySelector('button').addEventListener('click',closeLightbox);
+    lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
   </script>
   <script src="site-tools.js"></script>
 </body>
