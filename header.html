@@ -1,112 +1,28 @@
 <style>
-  .site-header .main-menu .menu-item-has-submenu.active-parent > .submenu-toggle:before{
-    content:none!important;
-  }
+  .site-header .main-menu .menu-item-has-submenu.active-parent > .submenu-toggle:before{content:none!important;}
   .site-header .main-menu .menu-item-has-submenu.active-parent > .submenu-toggle,
-  .site-header .main-menu > a.active-page{
-    color:#9a642f!important;
-    font-weight:800!important;
-    background:transparent!important;
-    border-radius:0!important;
-    box-shadow:none!important;
-    border-bottom:0!important;
-    padding-bottom:0!important;
-    transform:none!important;
-    position:relative!important;
-    top:auto!important;
-  }
+  .site-header .main-menu > a.active-page{color:#9a642f!important;font-weight:800!important;background:transparent!important;border-radius:0!important;box-shadow:none!important;border-bottom:0!important;padding-bottom:0!important;transform:none!important;position:relative!important;top:auto!important;}
   .site-header .main-menu .menu-item-has-submenu.active-parent > .submenu-toggle:after,
-  .site-header .main-menu > a.active-page:after{
-    content:"";
-    position:absolute;
-    right:0;
-    left:0;
-    bottom:-9px;
-    height:2px;
-    background:#9a642f;
-    border-radius:999px;
-  }
-  .site-header .submenu a.active-page{
-    background:#f7efe5!important;
-    color:#9a642f!important;
-    border-radius:14px!important;
-    font-weight:900!important;
-  }
+  .site-header .main-menu > a.active-page:after{content:"";position:absolute;right:0;left:0;bottom:-9px;height:2px;background:#9a642f;border-radius:999px;}
+  .site-header .submenu a.active-page{background:#f7efe5!important;color:#9a642f!important;border-radius:14px!important;font-weight:900!important;}
   .ld-current-page-bar{background:#f7f4ef!important;}
-  .ld-current-page-inner{
-    background:transparent!important;
-    border:0!important;
-    box-shadow:none!important;
-    border-radius:0!important;
-    padding:8px 0!important;
-    color:#07345a!important;
-    font-size:16px!important;
-    gap:9px!important;
-  }
+  .ld-current-page-inner{background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:8px 0!important;color:#07345a!important;font-size:16px!important;gap:9px!important;}
   .ld-current-page-inner span:first-child{display:none!important;}
-  .ld-current-page-inner strong,
-  .ld-current-page-inner a{
-    color:#07345a!important;
-    font-weight:700!important;
-    text-decoration:none!important;
-  }
+  .ld-current-page-inner strong,.ld-current-page-inner a{color:#07345a!important;font-weight:700!important;text-decoration:none!important;}
   .ld-current-sep{color:#c8352d!important;font-weight:900!important;}
-
-  body .site-tools-floating{
-    left:14px!important;
-    align-items:flex-start!important;
-    direction:ltr!important;
-  }
-  .site-tools-btn-whatsapp{
-    width:56px!important;
-    height:56px!important;
-    box-shadow:0 8px 20px rgba(37,211,102,.24)!important;
-  }
-  .site-tools-btn-whatsapp img{
-    width:31px!important;
-    height:31px!important;
-  }
-  .site-tools-btn-contact{
-    padding:0 13px!important;
-    min-height:38px!important;
-    font-size:15px!important;
-  }
-  .google-reviews-float{
-    position:fixed;
-    left:14px;
-    bottom:136px;
-    width:56px;
-    height:56px;
-    z-index:100000;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:#fff;
-    border:1px solid rgba(0,0,0,.10);
-    box-shadow:0 8px 22px rgba(0,0,0,.14);
-    text-decoration:none;
-    font-family:Arial,sans-serif;
-    line-height:1;
-  }
-  .google-reviews-float .g-letter{
-    font-size:24px;
-    font-weight:800;
-    color:#4285F4;
-    margin-bottom:1px;
-  }
-  .google-reviews-float .g-stars{
-    font-size:9px;
-    color:#f4b400;
-    letter-spacing:-1px;
-  }
-  .google-reviews-float:hover{
-    transform:translateY(-2px);
-  }
+  body .site-tools-floating{left:14px!important;align-items:flex-start!important;direction:ltr!important;}
+  .site-tools-btn-whatsapp{width:56px!important;height:56px!important;box-shadow:0 8px 20px rgba(37,211,102,.24)!important;}
+  .site-tools-btn-whatsapp img{width:31px!important;height:31px!important;}
+  .site-tools-btn-contact{padding:0 13px!important;min-height:38px!important;font-size:15px!important;}
+  .site-back-to-top{width:43px!important;height:43px!important;font-size:22px!important;}
+  .google-reviews-float{position:fixed;left:14px;bottom:136px;width:56px;height:56px;z-index:100000;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:50%;background:#fff;border:1px solid rgba(0,0,0,.10);box-shadow:0 8px 22px rgba(0,0,0,.14);text-decoration:none;font-family:Arial,sans-serif;line-height:1;}
+  .google-reviews-float .g-letter{font-size:24px;font-weight:800;color:#4285F4;margin-bottom:1px;}
+  .google-reviews-float .g-stars{font-size:9px;color:#f4b400;letter-spacing:-1px;}
+  .google-reviews-float:hover{transform:translateY(-2px);}
   @media(max-width:850px){
     body .site-tools-floating{left:14px!important;bottom:14px!important;align-items:flex-start!important;direction:ltr!important;}
     .site-tools-btn-contact{padding:0 12px!important;min-height:36px!important;font-size:15px!important;}
+    .site-back-to-top{width:42px!important;height:42px!important;font-size:21px!important;}
     .google-reviews-float{left:14px;bottom:126px;width:56px;height:56px;}
     .google-reviews-float .g-letter{font-size:23px;}
     .google-reviews-float .g-stars{font-size:9px;}
@@ -114,94 +30,19 @@
 </style>
 <header class="site-header">
   <div class="header-wrap">
-    <a class="brand" href="index.html" aria-label="לינדה דהן - דף הבית">
-      <img src="logo-black.png" alt="לינדה דהן">
-    </a>
+    <a class="brand" href="index.html" aria-label="לינדה דהן - דף הבית"><img src="logo-black.png" alt="לינדה דהן"></a>
     <button class="menu-toggle" id="menuToggle" aria-label="פתחי תפריט" aria-expanded="false" aria-controls="mainMenu" type="button">☰</button>
     <nav class="main-menu" id="mainMenu" aria-label="תפריט ראשי">
       <a href="index.html">בית</a>
-      <div class="menu-item-has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="storySubmenu">הסיפור שלי</button>
-        <div class="submenu" id="storySubmenu">
-          <a href="story.html">הסיפור שלי</a>
-          <a href="index.html#testimonials">לקוחות מספרים</a>
-        </div>
-      </div>
-      <div class="menu-item-has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="processSubmenu">תהליך העבודה</button>
-        <div class="submenu" id="processSubmenu">
-          <a href="building-permits-rehovot-yavne.html">היתר בנייה</a>
-        </div>
-      </div>
-      <div class="menu-item-has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="artSubmenu">אומנות ייחודית</button>
-        <div class="submenu" id="artSubmenu">
-          <a href="unique-art.html">אומנות ייחודית</a>
-          <a href="custom-creation.html">יצירה בהתאמה אישית</a>
-        </div>
-      </div>
-      <div class="menu-item-has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="projectsSubmenu">פרויקטים</button>
-        <div class="submenu" id="projectsSubmenu">
-          <a href="interior-design-rehovot.html">עיצוב פנים ברחובות</a>
-          <a href="office-design-science-park.html">עיצוב משרדים בפארק המדע</a>
-          <a href="home-office-design.html">עיצוב משרד ביתי</a>
-          <a href="leiba-yavne.html">בית פרטי ביבנה</a>
-          <a href="nahala-kfar-hanagid.html">נחלה בכפר הנגיד</a>
-          <a href="kfar-hanagid-home-design.html">בית קדמי בנחלה - כפר הנגיד</a>
-          <a href="baron-contractor-office-rehovot.html">משרד קבלן ברחובות</a>
-          <a href="blenheim-rehovot.html">רחובות דופלקס</a>
-          <a href="weizmann-rehovot-zen-home.html">מכון ויצמן למדע</a>
-          <a href="rehovot-eisenberg-project.html">מגדלי אייזינברג רחובות</a>
-          <a href="bnei-brak-jewelry-store.html">חנות תכשיטים בבני ברק</a>
-          <a href="karmia-house-permit.html">קיבוץ כרמיה - תכנון והיתר בניה</a>
-        </div>
-      </div>
-      <div class="menu-item-has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="nahalotSubmenu">מושבים ונחלות</button>
-        <div class="submenu" id="nahalotSubmenu">
-          <a href="moshavim-nahalot.html">תכנון נחלות ומשקים</a>
-          <a href="nahala-planning-before-permit.html">בדיקות לפני היתר בנחלה</a>
-          <a href="rmi-hivun-nahala.html">היוון ודמי רכישה מול רמ״י</a>
-          <a href="plach-moshavim.html">פל״ח במושבים ונחלות</a>
-          <a href="third-house-nahala.html">בית שלישי ובן ממשיך</a>
-          <a href="parcelatzia-nahala.html">פרצלציה ופיצול מגרש בנחלה</a>
-          <a href="nahala-betterment-tax.html">היטל השבחה ומס שבח בנחלות</a>
-          <a href="nahala-kfar-hanagid.html">נחלה בכפר הנגיד</a>
-        </div>
-      </div>
-      <div class="menu-item-has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="faqSubmenu">מרכז ידע</button>
-        <div class="submenu" id="faqSubmenu">
-          <a href="faq.html">שאלות נפוצות</a>
-          <a href="pergola-permit-guide.html">פרגולה: פטור, דיווח או היתר?</a>
-          <a href="swimming-pools-site-development.html">בריכות שחייה ופיתוח שטח</a>
-          <a href="takanot-rishuy-mekutzar.html">רישוי מקוצר</a>
-          <a href="building-violations-check.html">בדיקת חריגות בנייה</a>
-          <a href="pinui-binui-apartment-choice.html">פינוי בינוי ובחירת דירה</a>
-          <a href="commercial-office-purchase-costs.html">רכישת משרד מסחרי - עלויות מעבר למחיר הנכס</a>
-          <a href="office-investment-tenant-fitout.html">משרד להשקעה - לשפץ לפני שוכר או לחכות?</a>
-        </div>
-      </div>
+      <div class="menu-item-has-submenu"><button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="storySubmenu">הסיפור שלי</button><div class="submenu" id="storySubmenu"><a href="story.html">הסיפור שלי</a><a href="index.html#testimonials">לקוחות מספרים</a></div></div>
+      <div class="menu-item-has-submenu"><button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="processSubmenu">תהליך העבודה</button><div class="submenu" id="processSubmenu"><a href="building-permits-rehovot-yavne.html">היתר בנייה</a></div></div>
+      <div class="menu-item-has-submenu"><button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="artSubmenu">אומנות ייחודית</button><div class="submenu" id="artSubmenu"><a href="unique-art.html">אומנות ייחודית</a><a href="custom-creation.html">יצירה בהתאמה אישית</a></div></div>
+      <div class="menu-item-has-submenu"><button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="projectsSubmenu">פרויקטים</button><div class="submenu" id="projectsSubmenu"><a href="interior-design-rehovot.html">עיצוב פנים ברחובות</a><a href="office-design-science-park.html">עיצוב משרדים בפארק המדע</a><a href="home-office-design.html">עיצוב משרד ביתי</a><a href="leiba-yavne.html">בית פרטי ביבנה</a><a href="nahala-kfar-hanagid.html">נחלה בכפר הנגיד</a><a href="kfar-hanagid-home-design.html">בית קדמי בנחלה - כפר הנגיד</a><a href="baron-contractor-office-rehovot.html">משרד קבלן ברחובות</a><a href="blenheim-rehovot.html">רחובות דופלקס</a><a href="weizmann-rehovot-zen-home.html">מכון ויצמן למדע</a><a href="rehovot-eisenberg-project.html">מגדלי אייזינברג רחובות</a><a href="bnei-brak-jewelry-store.html">חנות תכשיטים בבני ברק</a><a href="karmia-house-permit.html">קיבוץ כרמיה - תכנון והיתר בניה</a></div></div>
+      <div class="menu-item-has-submenu"><button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="nahalotSubmenu">מושבים ונחלות</button><div class="submenu" id="nahalotSubmenu"><a href="moshavim-nahalot.html">תכנון נחלות ומשקים</a><a href="nahala-planning-before-permit.html">בדיקות לפני היתר בנחלה</a><a href="rmi-hivun-nahala.html">היוון ודמי רכישה מול רמ״י</a><a href="plach-moshavim.html">פל״ח במושבים ונחלות</a><a href="third-house-nahala.html">בית שלישי ובן ממשיך</a><a href="parcelatzia-nahala.html">פרצלציה ופיצול מגרש בנחלה</a><a href="nahala-betterment-tax.html">היטל השבחה ומס שבח בנחלות</a><a href="nahala-kfar-hanagid.html">נחלה בכפר הנגיד</a></div></div>
+      <div class="menu-item-has-submenu"><button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="faqSubmenu">מרכז ידע</button><div class="submenu" id="faqSubmenu"><a href="faq.html">שאלות נפוצות</a><a href="pergola-permit-guide.html">פרגולה: פטור, דיווח או היתר?</a><a href="swimming-pools-site-development.html">בריכות שחייה ופיתוח שטח</a><a href="takanot-rishuy-mekutzar.html">רישוי מקוצר</a><a href="building-violations-check.html">בדיקת חריגות בנייה</a><a href="pinui-binui-apartment-choice.html">פינוי בינוי ובחירת דירה</a><a href="commercial-office-purchase-costs.html">רכישת משרד מסחרי - עלויות מעבר למחיר הנכס</a><a href="office-investment-tenant-fitout.html">משרד להשקעה - לשפץ לפני שוכר או לחכות?</a></div></div>
       <a href="index.html#contact" class="header-cta">צור קשר</a>
     </nav>
   </div>
 </header>
-<a class="google-reviews-float" href="https://share.google/JIxmK9ualbxrkAkhL" target="_blank" rel="noopener" aria-label="ביקורות Google" title="ביקורות Google" onclick="if(window.gtag){gtag('event','google_reviews_click',{event_category:'Reviews',event_label:location.pathname});}if(window.fbq){fbq('trackCustom','GoogleReviewsClick',{page:location.pathname});}">
-  <span class="g-letter">G</span>
-  <span class="g-stars">★★★★★</span>
-</a>
-<script>
-  (function(){
-    function fixBreadcrumb(){
-      var bar=document.getElementById('ldCurrentPageBar');
-      if(!bar)return;
-      var inner=bar.querySelector('.ld-current-page-inner');
-      if(!inner)return;
-      var first=inner.querySelector('span:first-child');
-      if(first&&first.textContent.indexOf('את נמצאת')>-1){first.remove();}
-    }
-    fixBreadcrumb();
-    setTimeout(fixBreadcrumb,300);
-  })();
-</script>
+<a class="google-reviews-float" href="https://share.google/JIxmK9ualbxrkAkhL" target="_blank" rel="noopener" aria-label="ביקורות Google" title="ביקורות Google" onclick="if(window.gtag){gtag('event','google_reviews_click',{event_category:'Reviews',event_label:location.pathname});}if(window.fbq){fbq('trackCustom','GoogleReviewsClick',{page:location.pathname});}"><span class="g-letter">G</span><span class="g-stars">★★★★★</span></a>
+<script>(function(){function fixBreadcrumb(){var bar=document.getElementById('ldCurrentPageBar');if(!bar)return;var inner=bar.querySelector('.ld-current-page-inner');if(!inner)return;var first=inner.querySelector('span:first-child');if(first&&first.textContent.indexOf('את נמצאת')>-1){first.remove();}}fixBreadcrumb();setTimeout(fixBreadcrumb,300);})();</script>
