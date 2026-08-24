@@ -51,6 +51,54 @@
     text-decoration:none!important;
   }
   .ld-current-sep{color:#c8352d!important;font-weight:900!important;}
+
+  .site-tools-btn-whatsapp{
+    width:56px!important;
+    height:56px!important;
+    box-shadow:0 8px 20px rgba(37,211,102,.24)!important;
+  }
+  .site-tools-btn-whatsapp img{
+    width:31px!important;
+    height:31px!important;
+  }
+  .google-reviews-float{
+    position:fixed;
+    left:82px;
+    bottom:72px;
+    width:56px;
+    height:56px;
+    z-index:100000;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#fff;
+    border:1px solid rgba(0,0,0,.10);
+    box-shadow:0 8px 22px rgba(0,0,0,.14);
+    text-decoration:none;
+    font-family:Arial,sans-serif;
+    line-height:1;
+  }
+  .google-reviews-float .g-letter{
+    font-size:24px;
+    font-weight:800;
+    color:#4285F4;
+    margin-bottom:1px;
+  }
+  .google-reviews-float .g-stars{
+    font-size:10px;
+    color:#f4b400;
+    letter-spacing:-1px;
+  }
+  .google-reviews-float:hover{
+    transform:translateY(-2px);
+  }
+  @media(max-width:850px){
+    .site-tools-floating{left:14px!important;bottom:14px!important;}
+    .google-reviews-float{left:78px;bottom:68px;width:54px;height:54px;}
+    .google-reviews-float .g-letter{font-size:23px;}
+  }
 </style>
 <header class="site-header">
   <div class="header-wrap">
@@ -127,6 +175,10 @@
     </nav>
   </div>
 </header>
+<a class="google-reviews-float" href="https://share.google/JIxmK9ualbxrkAkhL" target="_blank" rel="noopener" aria-label="ביקורות Google" title="ביקורות Google" onclick="if(window.gtag){gtag('event','google_reviews_click',{event_category:'Reviews',event_label:location.pathname});}if(window.fbq){fbq('trackCustom','GoogleReviewsClick',{page:location.pathname});}">
+  <span class="g-letter">G</span>
+  <span class="g-stars">★★★★★</span>
+</a>
 <script>
   (function(){
     function fixBreadcrumb(){
