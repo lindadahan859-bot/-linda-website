@@ -237,6 +237,32 @@
       margin-top:22px;
     }
 
+    .ab-dental-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:22px;
+    }
+
+    .ab-dental-item{
+      margin:0;
+    }
+
+    .ab-dental-item img{
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      border-radius:20px;
+      display:block;
+    }
+
+    .ab-dental-item figcaption{
+      font-size:15px;
+      line-height:1.7;
+      color:#555;
+      margin-top:9px;
+    }
+
     .concept{
       padding:0;
       overflow:hidden;
@@ -410,7 +436,8 @@
       .concept-grid,
       .projects,
       .case-grid,
-      .audience-grid{
+      .audience-grid,
+      .ab-dental-grid{
         grid-template-columns:1fr;
       }
 
@@ -700,6 +727,35 @@
       </a>.
     </p>
 </section>
+
+<section class="case">
+<h2>AB Dental | כשהגרפיקה הופכת לחלק מהחלל</h2>
+<p class="lead">
+      בפרויקט עבור AB Dental תכננתי ועיצבתי את הגרפיקה לקירות כחלק מהשפה של המשרד.
+      במקום להוסיף תמונות כקישוט בסוף התהליך, כל אלמנט הותאם לקיר, לפרופורציות של החלל,
+      לתאורה ולזהות של החברה.
+    </p>
+<p class="lead">
+      העבודה כללה תמונה גדולה המוארת מתוך ארגז תאורה, גרפיקה של מפת העולם,
+      תמונת נוף וחיתוך אותיות. העבודה עם AB Dental המשיכה גם לעיצוב תערוכות של החברה בעולם,
+      כך שהשפה החזותית קיבלה ביטוי גם במשרד וגם במרחבים מסחריים נוספים.
+    </p>
+<div class="ab-dental-grid">
+<figure class="ab-dental-item">
+<img alt="גרפיקת מפת העולם בעיצוב מותאם לקיר במשרדי AB Dental" loading="lazy" src="ab-dental-office-world-map.jpg"/>
+<figcaption>גרפיקת קיר של מפת העולם כחלק מהשפה החזותית של המשרד.</figcaption>
+</figure>
+<figure class="ab-dental-item">
+<img alt="תמונה מוארת מתוך ארגז תאורה במשרדי AB Dental בעיצוב לינדה דהן" loading="lazy" src="ab-dental-office-backlit-wall.jpg"/>
+<figcaption>תמונה גדולה המוארת מבפנים באמצעות ארגז תאורה והופכת למוקד בחלל.</figcaption>
+</figure>
+<figure class="ab-dental-item">
+<img alt="תמונת נוף וחיתוך אותיות כחלק מעיצוב הקירות במשרדי AB Dental" loading="lazy" src="ab-dental-office-landscape-lettering.jpg"/>
+<figcaption>תמונת נוף וחיתוך אותיות המותאמים לקיר ולמעבר במשרד.</figcaption>
+</figure>
+</div>
+</section>
+
 <div class="quote">
     משרד מתוכנן נכון אינו רק משרד יפה.
     הוא צריך לעבוד נכון ביום הראשון,
