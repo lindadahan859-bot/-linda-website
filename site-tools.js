@@ -1,5 +1,6 @@
 (function(){
   var GA_ID='G-4XSD3XG8TL';
+  var ADS_ID='AW-18418656145';
   var META_ID='127944994281591';
 
   if(!window.dataLayer)window.dataLayer=[];
@@ -11,6 +12,7 @@
     document.head.appendChild(ga);
     window.gtag('js',new Date());
     window.gtag('config',GA_ID);
+    window.gtag('config',ADS_ID);
   }
 
   if(!window.fbq){
