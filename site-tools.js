@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded',function(){
       for(var i=0;i<forms.length;i++){
         var form=forms[i];
         var captcha=form.querySelector('input[name="_captcha"]');
-        if(captcha)captcha.value='true';else{captcha=document.createElement('input');captcha.type='hidden';captcha.name='_captcha';captcha.value='true';form.insertBefore(captcha,form.firstChild);}
+        if(captcha)captcha.value='false';else{captcha=document.createElement('input');captcha.type='hidden';captcha.name='_captcha';captcha.value='false';form.insertBefore(captcha,form.firstChild);}
         if(!form.querySelector('input[name="_honey"]')){var honey=document.createElement('input');honey.type='text';honey.name='_honey';honey.tabIndex=-1;honey.autocomplete='off';honey.setAttribute('aria-hidden','true');honey.style.display='none';form.insertBefore(honey,form.firstChild);}
         if(!form.querySelector('[name="source"]')){
           var wrap=document.createElement('div');wrap.className='ld-source-wrap';
