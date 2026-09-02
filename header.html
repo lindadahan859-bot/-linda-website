@@ -13,19 +13,10 @@
   body .site-tools-floating{left:14px!important;align-items:flex-start!important;direction:ltr!important;}
   .site-tools-btn-whatsapp{width:56px!important;height:56px!important;box-shadow:0 8px 20px rgba(37,211,102,.24)!important;}
   .site-tools-btn-whatsapp img{width:31px!important;height:31px!important;}
-  .site-tools-btn-contact{padding:0 13px!important;min-height:38px!important;font-size:15px!important;}
   .site-back-to-top{width:43px!important;height:43px!important;font-size:22px!important;}
-  .google-reviews-float{position:fixed;left:14px;bottom:136px;width:56px;height:56px;z-index:100000;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:50%;background:#fff;border:1px solid rgba(0,0,0,.10);box-shadow:0 8px 22px rgba(0,0,0,.14);text-decoration:none;font-family:Arial,sans-serif;line-height:1;}
-  .google-reviews-float .g-letter{font-size:24px;font-weight:800;color:#4285F4;margin-bottom:1px;}
-  .google-reviews-float .g-stars{font-size:9px;color:#f4b400;letter-spacing:-1px;}
-  .google-reviews-float:hover{transform:translateY(-2px);}
   @media(max-width:850px){
     body .site-tools-floating{left:14px!important;bottom:14px!important;align-items:flex-start!important;direction:ltr!important;}
-    .site-tools-btn-contact{padding:0 12px!important;min-height:36px!important;font-size:15px!important;}
     .site-back-to-top{width:42px!important;height:42px!important;font-size:21px!important;}
-    .google-reviews-float{left:14px;bottom:126px;width:56px;height:56px;}
-    .google-reviews-float .g-letter{font-size:23px;}
-    .google-reviews-float .g-stars{font-size:9px;}
   }
 </style>
 <header class="site-header">
@@ -44,5 +35,4 @@
     </nav>
   </div>
 </header>
-<a class="google-reviews-float" href="https://www.google.com/maps/place//data=!4m4!3m3!1s0xa23c7bab27456c47:0x9eed7ddf4c6b8389!9m1!1b1" target="_blank" rel="noopener" aria-label="ביקורות Google" title="ביקורות Google" onclick="if(window.gtag){gtag('event','google_reviews_click',{event_category:'Reviews',event_label:location.pathname});}if(window.fbq){fbq('trackCustom','GoogleReviewsClick',{page:location.pathname});}"><span class="g-letter">G</span><span class="g-stars">★★★★★</span></a>
 <script>(function(){function fixBreadcrumb(){var bar=document.getElementById('ldCurrentPageBar');if(!bar)return;var inner=bar.querySelector('.ld-current-page-inner');if(!inner)return;var first=inner.querySelector('span:first-child');if(first&&first.textContent.indexOf('את נמצאת')>-1){first.remove();}}fixBreadcrumb();setTimeout(fixBreadcrumb,300);})();</script>
