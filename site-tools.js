@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded',function(){
     for(var i=0;i<cards.length;i++){
       var card=cards[i];if(card.dataset.imageClickBound==='1')continue;
       var mainLink=card.querySelector('.project-buttons a[href$=".html"],.project-buttons a[href*=".html"],a.outline-btn[href$=".html"],a.outline-btn[href*=".html"]');var img=card.querySelector('img');if(!img||!mainLink)continue;
-      card.dataset.imageClickBound='1';img.setAttribute('tabindex','0');img.setAttribute('role','link');img.setAttribute('aria-label','כניסה לפרויקט');
+      card.dataset.imageClickBound='1';img.setAttribute('tabindex','0');img.setAttribute('role','link');img.setAttribute('aria-label','לפרויקט: '+img.alt);
       img.addEventListener('click',function(link){return function(ev){ev.preventDefault();ev.stopPropagation();window.location.href=link.getAttribute('href');};}(mainLink));
       img.addEventListener('keydown',function(link){return function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();window.location.href=link.getAttribute('href');}};}(mainLink));
     }
@@ -249,5 +249,27 @@ document.addEventListener('DOMContentLoaded',function(){
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden){panel.hidden=true;a11y.setAttribute('aria-expanded','false');a11y.focus();}});
   }
 
-  if(!document.getElementById('site-back-to-top')){var up=document.createElement('button');up.id='site-back-to-top';up.className='site-back-to-top';up.type='button';up.textContent='↑';up.onclick=function(){window.scrollTo({top:0,behavior:'smooth'});};document.body.appendChild(up);}
+  if(!document.getElementById('site-back-to-top')){var up=document.createElement('button');up.id='site-back-to-top';up.className='site-back-to-top';up.type='button';up.textContent='↑';up.setAttribute('aria-label','חזרה לראש העמוד');up.onclick=function(){window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});};document.body.appendChild(up);}
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('[data-background-video]').forEach(function (button) {
+    const video = document.getElementById(button.dataset.backgroundVideo);
+    if (!video) return;
+    function updateButton() {
+      button.textContent = video.paused ? 'הפעלת סרטון הרקע' : 'השהיית סרטון הרקע';
+    }
+    video.addEventListener('play', updateButton);
+    video.addEventListener('pause', updateButton);
+    button.addEventListener('click', function () {
+      if (video.paused) video.play().catch(updateButton);
+      else video.pause();
+    });
+    reducedMotion.addEventListener('change', function (event) {
+      if (event.matches) video.pause();
+    });
+    button.hidden = false;
+    if (!reducedMotion.matches) video.play().catch(updateButton);
+  });
 });

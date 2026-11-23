@@ -425,7 +425,7 @@
   </style>
 </head>
 
-<body>
+<body><a class="skip-link" href="#main-content">דילוג לתוכן הראשי</a>
 
 <div id="top"></div>
 <div id="site-header"></div>
@@ -435,12 +435,11 @@
 
   <video
     id="nahalotHeroVideo"
-    autoplay
     muted
     loop
     playsinline
     preload="auto"
-  >
+   poster="Y-enter5.jpg" aria-hidden="true">
     <source
       src="moshavim-nahalot-hero.mp4"
       type="video/mp4"
@@ -469,10 +468,10 @@
 
   </div>
 
-</section>
+<button class="hero-motion-toggle" type="button" data-background-video="nahalotHeroVideo" hidden>הפעלת סרטון הרקע</button></section>
 
 
-<main class="nahalot-wrap">
+<main id="main-content" tabindex="-1" class="nahalot-wrap">
 
 
 <section class="nahalot-card">
@@ -640,7 +639,7 @@
 
   <div class="field-video-wrap">
 
-    <iframe
+    <iframe title="סרטון על תכנון בנחלות ובמושבים"
       src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1499062615232330&show_text=false&width=500"
       allowfullscreen="true"
       allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
@@ -1649,12 +1648,7 @@ loadIncludes();
     ready
   );
 
-  video
-    .play()
-    .then(ready)
-    .catch(function(){
-      ready();
-    });
+  if (video.readyState >= 2) ready();
 
 })();
 

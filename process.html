@@ -351,7 +351,7 @@
     }
   </style>
 </head>
-<body>
+<body><a class="skip-link" href="#main-content">דילוג לתוכן הראשי</a>
 
   <div id="site-header"></div>
 
@@ -364,7 +364,7 @@
     <img class="process-hero-image" src="facecover.jpg" alt="תהליך העבודה - לינדה דהן">
   </div>
 
-  <main class="process-page">
+  <main id="main-content" tabindex="-1" class="process-page">
 
     <section class="process-section-box">
       <h2>משהו לא מרגיש נכון</h2>
@@ -486,15 +486,15 @@
         </div>
 
         <div class="process-two-cols">
-          <input type="text" name="name" placeholder="שם מלא" required>
-          <input type="tel" name="phone" placeholder="מספר טלפון" required>
+          <div class="contact-field"><label class="contact-field-label" for="contact-field-name">שם מלא (חובה)</label><input id="contact-field-name" type="text" name="name" placeholder="שם מלא" required></div>
+          <div class="contact-field"><label class="contact-field-label" for="contact-field-phone">מספר טלפון (חובה)</label><input id="contact-field-phone" type="tel" name="phone" placeholder="מספר טלפון" required></div>
         </div>
 
-        <input type="email" name="email" placeholder="אימייל">
+        <div class="contact-field"><label class="contact-field-label" for="contact-field-email">אימייל</label><input id="contact-field-email" type="email" name="email" placeholder="אימייל"></div>
 
         <div class="process-two-cols">
-          <input type="text" name="rooms" placeholder="כמה חדרים יש בנכס?">
-          <input type="number" name="size_sqm" placeholder="גודל הנכס במ״ר" min="1" step="1">
+          <div class="contact-field"><label class="contact-field-label" for="contact-field-rooms">כמה חדרים יש בנכס?</label><input id="contact-field-rooms" type="text" name="rooms" placeholder="כמה חדרים יש בנכס?"></div>
+          <div class="contact-field"><label class="contact-field-label" for="contact-field-size_sqm">גודל הנכס במ״ר</label><input id="contact-field-size_sqm" type="number" name="size_sqm" placeholder="גודל הנכס במ״ר" min="1" step="1"></div>
         </div>
 
         <div class="process-field-group">
@@ -536,7 +536,7 @@
         </div>
       </form>
 
-      <div id="formStatus" class="process-small-note">השאירו פרטים ואחזור אליכם בהקדם. ככל שתכתבו יותר מדויק, כך גם המענה יהיה מדויק יותר.</div>
+      <div id="formStatus" role="status" aria-atomic="true" class="process-small-note">השאירו פרטים ואחזור אליכם בהקדם. ככל שתכתבו יותר מדויק, כך גם המענה יהיה מדויק יותר.</div>
     </section>
 
   </main>

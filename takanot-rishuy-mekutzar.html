@@ -106,7 +106,7 @@
   </script>
 
 </head>
-<body>
+<body><a class="skip-link" href="#main-content">דילוג לתוכן הראשי</a>
 
   <div id="site-header"></div>
 
@@ -119,7 +119,7 @@
     <img class="permit-hero-image" src="facecover.jpg" alt="תקנות רישוי מקוצר והיתרי בנייה - לינדה דהן">
   </div>
 
-  <main class="permit-page">
+  <main id="main-content" tabindex="-1" class="permit-page">
 
     <section class="permit-section-box">
       <h2>מה זה רישוי מקוצר?</h2>
@@ -218,8 +218,8 @@
           <label class="permit-check-option"><input type="checkbox" name="property" value="מבנה מסחרי"> מבנה מסחרי</label>
           <label class="permit-check-option"><input type="checkbox" name="property" value="אחר"> אחר</label>
         </div></div>
-        <div class="permit-two-cols"><input type="text" name="name" placeholder="שם מלא" required><input type="tel" name="phone" placeholder="מספר טלפון" required></div>
-        <input type="email" name="email" placeholder="אימייל">
+        <div class="permit-two-cols"><div class="contact-field"><label class="contact-field-label" for="contact-field-name">שם מלא (חובה)</label><input id="contact-field-name" type="text" name="name" placeholder="שם מלא" required></div><div class="contact-field"><label class="contact-field-label" for="contact-field-phone">מספר טלפון (חובה)</label><input id="contact-field-phone" type="tel" name="phone" placeholder="מספר טלפון" required></div></div>
+        <div class="contact-field"><label class="contact-field-label" for="contact-field-email">אימייל</label><input id="contact-field-email" type="email" name="email" placeholder="אימייל"></div>
         <div class="permit-field-group"><label class="permit-field-label" for="fullAddress">כתובת / יישוב / מספר משק</label><div class="permit-helper">אפשר לכתוב עיר, מושב, נחלה, גוש חלקה או כל פרט שיש לכם.</div><input type="text" id="fullAddress" name="full_address" placeholder="למשל: כפר הנגיד, משק 78"></div>
         <div class="permit-field-group"><label class="permit-field-label" for="existingStatus">מה קיים היום?</label><div class="permit-helper">גובה, שטח, שימוש קיים, האם יש היתר ישן, האם יש מדידה.</div><textarea id="existingStatus" name="existing_status"></textarea></div>
         <div class="permit-field-group"><label class="permit-field-label" for="requestedWork">מה רוצים לבצע?</label><div class="permit-helper">למשל: להחליף גג, להגביה מבנה, להקים מחסן, לסגור סככה או לבדוק אפשרות לרישוי מקוצר.</div><textarea id="requestedWork" name="requested_work"></textarea></div>
@@ -227,7 +227,7 @@
         <div class="permit-field-group"><div class="permit-field-label">איך נוח שאחזור אליכם?</div><div class="permit-check-group"><label class="permit-check-option"><input type="checkbox" name="contact_method" value="טלפון"> טלפון</label><label class="permit-check-option"><input type="checkbox" name="contact_method" value="וואטסאפ"> וואטסאפ</label><label class="permit-check-option"><input type="checkbox" name="contact_method" value="אימייל"> אימייל</label></div></div>
         <div class="permit-contact-buttons"><a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%93%D7%95%D7%A7%20%D7%90%D7%9D%20%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94%20%D7%9E%D7%AA%D7%90%D7%99%D7%9E%D7%94%20%D7%9C%D7%A8%D7%99%D7%A9%D7%95%D7%99%20%D7%9E%D7%A7%D7%95%D7%A6%D7%A8%20%D7%90%D7%95%20%D7%94%D7%99%D7%AA%D7%A8%20%D7%9E%D7%9C%D7%90" target="_blank" rel="noopener">בדיקה ב-WhatsApp</a><button id="submitBtn" type="submit">שליחה</button></div>
       </form>
-      <div id="formStatus" class="permit-small-note">השאירו פרטים ואחזור אליכם בהקדם. מומלץ לצרף בהמשך תמונות, מדידה או היתר ישן אם יש.</div>
+      <div id="formStatus" role="status" aria-atomic="true" class="permit-small-note">השאירו פרטים ואחזור אליכם בהקדם. מומלץ לצרף בהמשך תמונות, מדידה או היתר ישן אם יש.</div>
     </section>
 
   </main>

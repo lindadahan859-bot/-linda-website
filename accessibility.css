@@ -1,0 +1,58 @@
+.skip-link {
+  position: fixed;
+  inset-block-start: .75rem;
+  inset-inline-start: .75rem;
+  z-index: 100000;
+  padding: .75rem 1rem;
+  color: #111;
+  background: #fff;
+  border: 2px solid #111;
+  border-radius: .25rem;
+}
+.skip-link:not(:focus) { clip-path: inset(50%); }
+#main-content { scroll-margin-block-start: 6rem; }
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid #164caa;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px #fff;
+}
+.contact-field-label {
+  display: block;
+  margin-block: .25rem .15rem;
+  font-weight: 600;
+}
+.accessibility-footer { padding: .75rem; text-align: center; }
+.accessibility-footer a { color: inherit; text-decoration: underline; }
+.hero-motion-toggle {
+  position: absolute;
+  inset-inline-start: .75rem;
+  inset-block-end: .75rem;
+  z-index: 5;
+  color: #111;
+  background: #fff;
+  border: 1px solid #111;
+  border-radius: .35rem;
+  padding: .45rem .65rem;
+  font: inherit;
+}
+.home-page #lindaPopup {
+  box-sizing: border-box;
+  margin: 0;
+  max-width: none;
+  max-height: none;
+  border: 0;
+  overflow: auto;
+}
+.home-page #lindaPopup[open] { display: flex; }
+.home-page #lindaPopup .close-btn { border: 1px solid #555; padding: 0; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  .home-page .testimonial-track { transition: none; }
+  .home-page #lindaPopup .popup-box { animation: none; }
+}
+.contact-field { min-width: 0; }
+.contact-field > :is(input, textarea) {
+  box-sizing: border-box;
+  inline-size: 100%;
+  border-color: #767676;
+}

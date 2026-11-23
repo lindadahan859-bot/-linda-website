@@ -33,13 +33,6 @@
     .pinui-video{max-height:760px;object-fit:contain}
     .pinui-video-wrap{position:relative;border-radius:24px;overflow:hidden}
     .pinui-video-wrap--crop .pinui-video{transform:scale(1.095);transform-origin:center;box-shadow:none}
-    .pinui-sound-toggle{position:absolute;left:14px;bottom:14px;width:38px;height:38px;padding:0;border:1px solid rgba(255,255,255,.24);border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(20,22,25,.68);color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.22);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);cursor:pointer;z-index:4;transition:background .2s ease,transform .2s ease,border-color .2s ease}
-    .pinui-sound-toggle:hover{transform:translateY(-1px);background:rgba(20,22,25,.82);border-color:rgba(255,255,255,.4)}
-    .pinui-sound-toggle:focus-visible{outline:2px solid #fff;outline-offset:3px}
-    .pinui-sound-toggle svg{width:19px;height:19px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-    .pinui-sound-toggle .sound-on{display:none}
-    .pinui-sound-toggle.is-audible .sound-off{display:none}
-    .pinui-sound-toggle.is-audible .sound-on{display:block}
     .pinui-caption{font-size:15px!important;color:var(--muted)!important;text-align:center;margin:12px 0 0!important}
     .pinui-quote{background:linear-gradient(135deg,#fff7e9,#eef1e6);border-color:rgba(196,154,75,.26)}
     .pinui-quote p{color:var(--olive);font-size:clamp(24px,3vw,36px);line-height:1.45;margin:0;font-weight:900}
@@ -64,12 +57,12 @@
     .pinui-contact-buttons a{border:1px solid var(--olive);color:var(--olive);background:#fff}
     .pinui-contact-buttons button{border:none;background:var(--rust);color:#fff}
     .pinui-note{font-size:14px!important;color:#666!important;margin:0!important}
-    @media(max-width:900px){.pinui-page{padding:34px 14px 58px}.pinui-card,.pinui-form-box{padding:24px 20px}.pinui-page h2{font-size:28px}.pinui-page p,.pinui-list div,.pinui-faq-answer{font-size:17px}.pinui-actions,.pinui-contact-buttons{flex-direction:column}.pinui-image-grid,.pinui-two-cols{grid-template-columns:1fr}.pinui-sound-toggle{left:10px;bottom:10px;width:36px;height:36px;border-radius:11px}.pinui-video-wrap--crop .pinui-video{transform:scale(1.11)}}
+    @media(max-width:900px){.pinui-page{padding:34px 14px 58px}.pinui-card,.pinui-form-box{padding:24px 20px}.pinui-page h2{font-size:28px}.pinui-page p,.pinui-list div,.pinui-faq-answer{font-size:17px}.pinui-actions,.pinui-contact-buttons{flex-direction:column}.pinui-image-grid,.pinui-two-cols{grid-template-columns:1fr}.pinui-video-wrap--crop .pinui-video{transform:scale(1.11)}}
   </style>
 </head>
-<body>
+<body><a class="skip-link" href="#main-content">דילוג לתוכן הראשי</a>
   <div id="site-header"></div>
-  <main class="pinui-page">
+  <main id="main-content" tabindex="-1" class="pinui-page">
     <section class="pinui-card pinui-hero">
       <span class="pinui-kicker">פינוי בינוי • בחירת דירה • ליווי אישי</span>
       <h1>לא נשארים לבד מול פינוי בינוי</h1>
@@ -80,14 +73,10 @@
 
     <section class="pinui-card pinui-media-card">
       <div class="pinui-video-wrap">
-        <video class="pinui-video" autoplay muted loop playsinline preload="metadata" poster="linda-dahan-building-renewal-guide.jpg" aria-label="פינוי בינוי לא נשארים לבד">
+        <video class="pinui-video" controls playsinline preload="metadata" poster="linda-dahan-building-renewal-guide.jpg" aria-label="פינוי בינוי לא נשארים לבד">
           <source src="linda-dahan-building-renewal-guide.mp4" type="video/mp4">
           <img class="pinui-image" src="linda-dahan-building-renewal-guide.jpg" alt="פינוי בינוי - לא נשארים לבד עם התוכניות וההחלטות">
         </video>
-        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול" aria-pressed="false">
-          <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>
-          <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
-        </button>
       </div>
       <p class="pinui-caption">כשהתוכניות, השאלות והאפשרויות מתחילות להצטבר.</p>
     </section>
@@ -130,14 +119,10 @@
 
     <section class="pinui-card pinui-media-card">
       <div class="pinui-video-wrap">
-        <video class="pinui-video" autoplay muted loop playsinline preload="metadata" poster="linda-dahan-apartment-selection.jpg" aria-label="לא בוחרים רק דירה חדשה">
+        <video class="pinui-video" controls playsinline preload="metadata" poster="linda-dahan-apartment-selection.jpg" aria-label="לא בוחרים רק דירה חדשה">
           <source src="linda-dahan-apartment-selection.mp4" type="video/mp4">
           <img class="pinui-image" src="linda-dahan-apartment-selection.jpg" alt="לא בוחרים רק דירה חדשה - בוחרים איכות חיים">
         </video>
-        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול" aria-pressed="false">
-          <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>
-          <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
-        </button>
       </div>
       <p class="pinui-caption">המטרה היא בחירה נכונה, לא בחירה מהירה.</p>
     </section>
@@ -187,28 +172,20 @@
 
     <section class="pinui-card pinui-media-card">
       <div class="pinui-video-wrap pinui-video-wrap--crop">
-        <video class="pinui-video" autoplay muted loop playsinline preload="metadata" poster="linda-dahan-new-home.jpg" aria-label="בסוף זה הבית שלכם">
+        <video class="pinui-video" controls playsinline preload="metadata" poster="linda-dahan-new-home.jpg" aria-label="בסוף זה הבית שלכם">
           <source src="linda-dahan-new-home.mp4" type="video/mp4">
           <img class="pinui-image" src="linda-dahan-new-home.jpg" alt="זוג בבית החדש לאחר בחירה נכונה בפינוי בינוי">
         </video>
-        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול" aria-pressed="false">
-          <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>
-          <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
-        </button>
       </div>
       <p class="pinui-caption">השקט לדעת שבחרתם נכון.</p>
     </section>
 
     <section class="pinui-card pinui-media-card">
       <div class="pinui-video-wrap">
-        <video class="pinui-video" autoplay muted loop playsinline preload="metadata" poster="linda-dahan-home-connects-generations.jpg" aria-label="הבית החדש מחבר בין הדורות">
+        <video class="pinui-video" controls playsinline preload="metadata" poster="linda-dahan-home-connects-generations.jpg" aria-label="הבית החדש מחבר בין הדורות">
           <source src="linda-dahan-home-connects-generations.mp4" type="video/mp4">
           <img class="pinui-image" src="linda-dahan-home-connects-generations.jpg" alt="הבית החדש מחבר בין הדורות אחרי בחירה נכונה">
         </video>
-        <button class="pinui-sound-toggle" type="button" aria-label="הפעלת קול" title="הפעלת קול" aria-pressed="false">
-          <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="m16 9 5 5"/><path d="m21 9-5 5"/></svg>
-          <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
-        </button>
       </div>
       <p class="pinui-caption">כשבוחרים נכון, מרוויחים מקום שבו הקשר והמשפחה ממשיכים יחד.</p>
     </section>
@@ -237,13 +214,13 @@
         <input type="hidden" name="_subject" value="פנייה חדשה - ליווי דיירים בפינוי בינוי">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
-        <div class="pinui-two-cols"><input type="text" name="name" placeholder="שם מלא" required><input type="tel" name="phone" placeholder="טלפון" required></div>
-        <input type="email" name="email" placeholder="אימייל">
-        <div class="pinui-two-cols"><input type="text" name="project_city" placeholder="עיר / מקום הפרויקט"><input type="text" name="project_name" placeholder="שם הפרויקט או הרחוב"></div>
-        <textarea name="message" placeholder="באיזה שלב הפרויקט, אילו מסמכים קיבלתם ומה חשוב לכם לבדוק?"></textarea>
+        <div class="pinui-two-cols"><div class="contact-field"><label class="contact-field-label" for="contact-field-name">שם מלא (חובה)</label><input id="contact-field-name" type="text" name="name" placeholder="שם מלא" required></div><div class="contact-field"><label class="contact-field-label" for="contact-field-phone">טלפון (חובה)</label><input id="contact-field-phone" type="tel" name="phone" placeholder="טלפון" required></div></div>
+        <div class="contact-field"><label class="contact-field-label" for="contact-field-email">אימייל</label><input id="contact-field-email" type="email" name="email" placeholder="אימייל"></div>
+        <div class="pinui-two-cols"><div class="contact-field"><label class="contact-field-label" for="contact-field-project_city">עיר / מקום הפרויקט</label><input id="contact-field-project_city" type="text" name="project_city" placeholder="עיר / מקום הפרויקט"></div><div class="contact-field"><label class="contact-field-label" for="contact-field-project_name">שם הפרויקט או הרחוב</label><input id="contact-field-project_name" type="text" name="project_name" placeholder="שם הפרויקט או הרחוב"></div></div>
+        <div class="contact-field"><label class="contact-field-label" for="contact-field-message">תיאור הפנייה</label><textarea id="contact-field-message" name="message" placeholder="באיזה שלב הפרויקט, אילו מסמכים קיבלתם ומה חשוב לכם לבדוק?"></textarea></div>
         <div class="pinui-contact-buttons"><a href="https://wa.me/972507555667?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%A0%D7%93%D7%94%2C%20%D7%90%D7%A0%D7%99%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%A4%D7%99%D7%A0%D7%95%D7%99%20%D7%91%D7%99%D7%A0%D7%95%D7%99" target="_blank" rel="noopener">פנייה ב-WhatsApp</a><button type="submit" id="pinuiSubmitBtn">שליחה</button></div>
       </form>
-      <p id="pinuiFormStatus" class="pinui-note">השאירו פרטים ואחזור אליכם בהקדם.</p>
+      <p id="pinuiFormStatus" role="status" aria-atomic="true" class="pinui-note">השאירו פרטים ואחזור אליכם בהקדם.</p>
     </section>
   </main>
   <div id="site-footer"></div>
@@ -259,26 +236,10 @@
     }
     loadIncludes();
 
-    document.querySelectorAll(".pinui-video-wrap").forEach((wrap)=>{
-      const video=wrap.querySelector("video");
-      const button=wrap.querySelector(".pinui-sound-toggle");
-      if(!video||!button)return;
-      button.addEventListener("click",async()=>{
-        const activateSound=video.muted;
-        document.querySelectorAll(".pinui-video-wrap").forEach((otherWrap)=>{
-          const otherVideo=otherWrap.querySelector("video");
-          const otherButton=otherWrap.querySelector(".pinui-sound-toggle");
-          if(otherVideo&&otherVideo!==video)otherVideo.muted=true;
-          if(otherButton&&otherButton!==button){otherButton.classList.remove("is-audible");otherButton.setAttribute("aria-pressed","false");otherButton.setAttribute("aria-label","הפעלת קול");otherButton.title="הפעלת קול";}
-        });
-        video.muted=!activateSound;
-        if(activateSound){try{await video.play();}catch(error){console.warn("Audio playback was blocked:",error);}}
-        button.classList.toggle("is-audible",activateSound);
-        button.setAttribute("aria-pressed",String(activateSound));
-        button.setAttribute("aria-label",activateSound?"השתקת קול":"הפעלת קול");
-        button.title=activateSound?"השתקת קול":"הפעלת קול";
-      });
-    });
+    const videos = Array.from(document.querySelectorAll('.pinui-video'));
+    videos.forEach(video => video.addEventListener('play', () => {
+      videos.filter(other => other !== video).forEach(other => other.pause());
+    }));
 
     const form=document.getElementById("pinuiBinuiForm");
     if(form){form.addEventListener("submit",async function(event){event.preventDefault();const button=document.getElementById("pinuiSubmitBtn");const status=document.getElementById("pinuiFormStatus");button.disabled=true;button.textContent="שולחת...";try{const response=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});if(!response.ok)throw new Error();form.reset();status.textContent="הפנייה התקבלה. אחזור אליכם בהקדם.";}catch(error){status.textContent="אירעה תקלה בשליחה. אפשר לפנות אליי ב-WhatsApp.";}finally{button.disabled=false;button.textContent="שליחה";}});}
